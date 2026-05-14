@@ -1,0 +1,317 @@
+/* ============================================================
+   Lingua Latina — layout.css
+   Top navigation, page header, chapter introduction, footer.
+   ============================================================ */
+
+/* ----- Top navigation (site-wide menu) ----- */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:
+    linear-gradient(to bottom, rgba(74,20,28,.97), rgba(74,20,28,.93));
+  color:var(--vellum);
+  border-bottom:1px solid var(--gilt);
+  box-shadow:0 2px 8px rgba(30,15,5,.25);
+}
+.site-nav-inner{
+  max-width:980px;
+  margin:0 auto;
+  padding:.6rem 1.4rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.site-brand{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-variant:small-caps;
+  letter-spacing:.1em;
+  font-size:1.15rem;
+  color:var(--vellum);
+  border:none;
+  flex:0 0 auto;
+}
+.site-brand:hover{color:#fff; border:none}
+.site-brand::before{
+  content:"❦";
+  color:var(--gilt);
+  margin-right:.5em;
+}
+.site-nav-spacer{flex:1}
+.site-nav-list{
+  display:flex;
+  list-style:none;
+  margin:0;
+  padding:0;
+  gap:.15rem;
+  flex-wrap:wrap;
+}
+.site-nav-list a{
+  display:inline-block;
+  padding:.35rem .8rem;
+  color:var(--parchment-deep);
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.08em;
+  font-size:.95rem;
+  border:1px solid transparent;
+  border-radius:2px;
+  transition:all .15s ease;
+}
+.site-nav-list a:hover{
+  background:rgba(160,122,42,.18);
+  color:var(--vellum);
+  border-color:rgba(160,122,42,.4);
+}
+.site-nav-list a.active{
+  background:rgba(160,122,42,.25);
+  color:var(--vellum);
+  border-color:var(--gilt);
+}
+.site-nav-list a .num{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.85em;
+  color:var(--gilt);
+  margin-right:.3em;
+}
+.site-nav-list a.active .num{color:#e7c87a}
+
+/* Mobile nav */
+@media (max-width:640px){
+  .site-nav-inner{padding:.5rem 1rem; gap:.4rem}
+  .site-brand{font-size:1rem}
+  .site-nav-spacer{display:none}
+  .site-nav-list{width:100%; justify-content:space-between}
+  .site-nav-list a{padding:.3rem .55rem; font-size:.85rem}
+}
+
+/* ----- Frontispiece (used on index) ----- */
+.frontis{
+  text-align:center;
+  padding:5rem 1rem 3rem;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+.frontis::before, .frontis::after{
+  content:"❦";
+  display:block;
+  color:var(--gilt);
+  font-size:1.4rem;
+  margin:.2rem 0;
+}
+.frontis .kicker{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  font-size:.78rem;
+  color:var(--muted);
+  margin-bottom:1.2rem;
+}
+.frontis h1.title{
+  font-weight:500;
+  font-size:clamp(2.4rem, 6vw, 4.2rem);
+  line-height:1.05;
+  margin:.2rem 0;
+  color:var(--burgundy-deep);
+  letter-spacing:.01em;
+}
+.frontis h1.title em{
+  font-style:italic;
+  color:var(--ink);
+  font-weight:400;
+}
+.frontis .subtitle{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1.15rem;
+  margin-top:.6rem;
+}
+.frontis .epigraph{
+  font-style:italic;
+  color:var(--muted);
+  font-size:1rem;
+  margin:1.8rem auto 0;
+  max-width:560px;
+}
+.frontis .epigraph cite{
+  font-style:normal;
+  font-variant:small-caps;
+  letter-spacing:.05em;
+}
+
+/* ----- Chapter header (top of each capitulum page) ----- */
+.chapter-header{
+  margin:2.8rem 0 1.4rem;
+  padding-bottom:.6rem;
+  border-bottom:1px solid var(--rule);
+}
+.chapter-header .eyebrow{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--gilt);
+  font-size:.78rem;
+  margin-bottom:.3rem;
+}
+.chapter-header h1{
+  font-weight:500;
+  font-size:clamp(2rem, 5vw, 3rem);
+  color:var(--burgundy-deep);
+  display:flex;
+  align-items:baseline;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.chapter-header h1 .roman{
+  font-style:italic;
+  color:var(--burgundy);
+}
+.chapter-header h1 .name{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.65em;
+  color:var(--muted);
+  letter-spacing:.05em;
+}
+.chapter-header .blurb{
+  font-style:italic;
+  color:var(--ink-soft);
+  margin-top:.5rem;
+  max-width:70ch;
+}
+
+/* ----- Section headings within pages ----- */
+h2.section-title{
+  font-weight:500;
+  font-size:1.9rem;
+  color:var(--burgundy);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:.4rem;
+  margin:2.6rem 0 1.4rem;
+  display:flex;
+  align-items:baseline;
+  gap:.8rem;
+}
+h2.section-title .roman{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  color:var(--gilt);
+  font-size:1.1rem;
+  letter-spacing:.15em;
+}
+
+/* ----- Usage hint banner ----- */
+.usage-hint{
+  background:linear-gradient(to right, rgba(160,122,42,.08), transparent);
+  border-left:3px solid var(--gilt);
+  padding:.9rem 1.2rem;
+  margin:1.5rem 0 2rem;
+  font-size:.97rem;
+  color:var(--ink-soft);
+  border-radius:2px;
+}
+.usage-hint strong{
+  font-variant:small-caps;
+  letter-spacing:.08em;
+  color:var(--burgundy);
+  font-weight:600;
+}
+.usage-hint kbd{
+  display:inline-block;
+  font-family:'IM Fell English', serif;
+  font-size:.85em;
+  padding:.05em .4em;
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  box-shadow:0 1px 0 var(--rule);
+}
+
+/* ----- Chapter-to-chapter pager (prev/next) ----- */
+.pager{
+  display:flex;
+  gap:1rem;
+  margin:3rem 0 1rem;
+  padding-top:1.6rem;
+  border-top:1px solid var(--rule);
+}
+.pager a, .pager span{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:.2rem;
+  padding:1rem 1.2rem;
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  font-style:italic;
+  color:var(--ink-soft);
+  transition:all .15s ease;
+  text-decoration:none;
+  min-width:0;
+}
+.pager a:hover{
+  background:var(--parchment-deep);
+  border-color:var(--burgundy);
+  color:var(--burgundy-deep);
+}
+.pager .pager-direction{
+  font-variant:small-caps;
+  letter-spacing:.1em;
+  font-size:.78rem;
+  color:var(--gilt);
+  font-style:normal;
+}
+.pager .pager-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.1rem;
+  font-style:normal;
+  color:var(--burgundy-deep);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.pager .pager-prev{text-align:left}
+.pager .pager-prev::before{content:"⟵ "; color:var(--gilt)}
+.pager .pager-next{text-align:right}
+.pager .pager-next::after{content:" ⟶"; color:var(--gilt)}
+.pager .pager-empty{
+  background:transparent;
+  border:1px dashed rgba(139,111,58,.4);
+  color:var(--muted);
+  font-style:italic;
+  text-align:center;
+  font-size:.9rem;
+}
+
+@media (max-width:560px){
+  .pager{flex-direction:column}
+}
+
+/* ----- Footer / colophon ----- */
+.colophon{
+  text-align:center;
+  margin-top:4rem;
+  padding-top:2rem;
+  border-top:1px solid var(--rule);
+  font-style:italic;
+  color:var(--muted);
+  font-size:.95rem;
+}
+.colophon::before{
+  content:"❧";
+  display:block;
+  color:var(--gilt);
+  font-size:1.3rem;
+  margin-bottom:.6rem;
+}
+.colophon a{
+  color:var(--muted);
+  border-bottom:1px dotted var(--muted);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap. VI — Via Latīna in Italiā · Lingua Latīna</title>
+
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/exercise.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<div data-site-nav></div>
+
+<div class="wrap">
+
+  <!-- ====== CHAPTER HEADER (populated by JS from data) ====== -->
+  <header class="chapter-header">
+    <div class="eyebrow">Lingua Latīna · Exercitia</div>
+    <h1 data-chapter-title></h1>
+    <p class="blurb" data-chapter-blurb></p>
+  </header>
+
+  <!-- ====== USAGE HINT ====== -->
+  <div class="usage-hint">
+    <strong>Ūsus.</strong> Escreva nas lacunas (os macrons são opcionais).
+    Pressione <kbd>Enter</kbd> para ir ao próximo campo. Clique em
+    <em>Aperī responsa</em> para corrigir; <em>Mundā</em> para limpar.
+  </div>
+
+  <!-- ====== TABLE OF CONTENTS (populated by JS) ====== -->
+  <div data-chapter-toc></div>
+
+  <!-- ====== EXERCISES (populated by JS) ====== -->
+  <section data-exercises></section>
+
+  <!-- ====== PREV/NEXT PAGER (populated by JS) ====== -->
+  <div data-pager></div>
+
+  <!-- ====== COLOPHON ====== -->
+  <div class="colophon">
+    Capitulum VI — <em>Via Latīna in Italiā</em><br>
+    <a href="index.html">Tornāre ad initium</a>
+  </div>
+
+</div>
+
+<!-- ====== SCRIPTS ====== -->
+<script src="data/chapters.js"></script>
+<script src="data/cap-vi.js"></script>
+<script src="assets/js/grader.js"></script>
+<script src="assets/js/auxilia.js"></script>
+<script src="assets/js/exercise.js"></script>
+<script src="assets/js/nav.js"></script>
+<script>
+  const SLUG = 'vi';
+  document.addEventListener('DOMContentLoaded', function () {
+    LL.mountSiteNav(SLUG);
+    LL.mountChapterHeader(SLUG);
+    LL.mountChapterTOC(SLUG);
+    LL.mountChapter(SLUG);
+    LL.mountPager(SLUG);
+  });
+</script>
+
+</body>
+</html>

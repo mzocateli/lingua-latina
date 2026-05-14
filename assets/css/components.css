@@ -1,0 +1,172 @@
+/* ============================================================
+   Lingua Latina — components.css
+   Shared components: chapter cards (index), summary grid,
+   call-to-action buttons.
+   ============================================================ */
+
+/* ----- Summary grid (Compendium Grammaticae cards) ----- */
+.summary-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.2rem;
+  margin-top:1rem;
+}
+.summary-card{
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:1.2rem 1.3rem;
+  box-shadow:var(--shadow);
+}
+.summary-card h4{
+  font-size:1.3rem;
+  color:var(--burgundy);
+  margin:0 0 .4rem;
+  font-weight:600;
+}
+.summary-card .cap{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.85rem;
+  color:var(--gilt);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.summary-card ul{
+  padding-left:1.1rem;
+  margin:.5rem 0 0;
+}
+.summary-card li{
+  margin:.35rem 0;
+  font-size:.97rem;
+}
+.summary-card .ex{
+  display:inline-block;
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  color:var(--ink);
+  background:rgba(160,122,42,.12);
+  padding:0 .35em;
+  border-radius:2px;
+}
+.summary-card .note{
+  display:block;
+  color:var(--muted);
+  font-size:.88rem;
+  font-style:italic;
+  margin-top:.2rem;
+}
+
+/* ----- Chapter cards (index page) ----- */
+.chapter-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:1.2rem;
+  margin-top:1.4rem;
+}
+.chapter-card{
+  display:flex;
+  flex-direction:column;
+  padding:1.4rem 1.5rem 1.5rem;
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--gilt);
+  border-radius:2px;
+  text-decoration:none;
+  box-shadow:var(--shadow);
+  transition:all .2s ease;
+  min-height:170px;
+  position:relative;
+  overflow:hidden;
+}
+.chapter-card:hover{
+  border-left-color:var(--burgundy);
+  background:#fbf7eb;
+  transform:translateY(-1px);
+  border-bottom-color:var(--rule);
+}
+.chapter-card .roman{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:3.6rem;
+  color:var(--gilt);
+  line-height:.85;
+  margin:0;
+  letter-spacing:.02em;
+  opacity:.55;
+}
+.chapter-card .label{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.12em;
+  color:var(--muted);
+  font-size:.78rem;
+  margin-bottom:.2rem;
+}
+.chapter-card .title{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:500;
+  font-size:1.5rem;
+  color:var(--burgundy-deep);
+  margin-top:.5rem;
+  line-height:1.15;
+}
+.chapter-card .focus{
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:.92rem;
+  margin-top:.4rem;
+  line-height:1.4;
+}
+.chapter-card .count{
+  margin-top:auto;
+  padding-top:.8rem;
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.85rem;
+  color:var(--muted);
+}
+.chapter-card .count::before{content:"❦ "; color:var(--gilt); font-style:normal}
+
+/* ----- Quick anchors / TOC within a page ----- */
+.toc{
+  background:rgba(251,246,232,.6);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--gilt);
+  padding:.9rem 1.1rem;
+  margin:1.4rem 0 1.8rem;
+  border-radius:2px;
+}
+.toc-title{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.1em;
+  color:var(--burgundy);
+  font-size:.92rem;
+  margin-bottom:.4rem;
+  font-weight:600;
+}
+.toc-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem .8rem;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.toc-list a{
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--ink-soft);
+  padding:.1rem .5rem;
+  border:1px solid rgba(139,111,58,.4);
+  border-radius:2px;
+  background:rgba(255,255,255,.4);
+  transition:all .15s ease;
+}
+.toc-list a:hover{
+  background:var(--parchment-deep);
+  color:var(--burgundy-deep);
+  border-color:var(--burgundy);
+}

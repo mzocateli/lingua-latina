@@ -1,0 +1,424 @@
+/* ============================================================
+   Lingua Latina — exercise.css
+   The exercise component: head, tip, body grid, auxilia,
+   inputs/blanks, reveal answer, score, scoring states.
+   ============================================================ */
+
+/* ----- Exercise card ----- */
+.exercise{
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--burgundy);
+  border-radius:2px;
+  padding:1.2rem 1.4rem 1.4rem;
+  margin:1.4rem 0;
+  box-shadow:var(--shadow);
+  position:relative;
+  scroll-margin-top:4rem; /* anchor jumps clear the sticky nav */
+}
+
+.exercise-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin-bottom:.2rem;
+}
+.ex-num{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  font-weight:600;
+  letter-spacing:.06em;
+  font-size:1.15rem;
+  color:var(--burgundy-deep);
+}
+.ex-tag{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.82rem;
+  color:var(--muted);
+  letter-spacing:.05em;
+}
+
+/* ----- Tip (Auxilium block at top of exercise) ----- */
+.tip{
+  margin:1rem 0 1.2rem;
+  padding:0;
+  background:linear-gradient(to right, rgba(160,122,42,.10), rgba(160,122,42,.03));
+  border:1px solid rgba(160,122,42,.35);
+  border-left:3px solid var(--gilt);
+  border-radius:2px;
+  overflow:hidden;
+}
+.tip-marker{
+  display:flex;
+  align-items:baseline;
+  gap:.5rem;
+  padding:.5rem .9rem .45rem;
+  background:rgba(160,122,42,.12);
+  border-bottom:1px dotted rgba(160,122,42,.45);
+}
+.tip-ornament{color:var(--gilt); font-size:1.05rem; line-height:1}
+.tip-label{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.12em;
+  font-weight:600;
+  color:var(--burgundy);
+  font-size:.92rem;
+}
+.tip-sub{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.88rem;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+.tip-text{
+  padding:.75rem .95rem .85rem;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:.96rem;
+  line-height:1.55;
+}
+.tip-text strong{
+  font-style:normal;
+  font-variant:small-caps;
+  letter-spacing:.06em;
+  color:var(--burgundy);
+  font-weight:600;
+}
+.tip-text em{color:var(--ink)}
+
+/* ----- Exemplum (italic note between tip and questions) ----- */
+.exemplum{
+  font-style:italic;
+  color:var(--muted);
+  margin:.2rem 0 .7rem .4rem;
+  padding:.3rem 0 .3rem .7rem;
+  border-left:1px dotted var(--rule);
+  font-size:.95rem;
+}
+.exemplum::before{
+  content:"Exemplum — ";
+  font-variant:small-caps;
+  letter-spacing:.06em;
+  font-style:normal;
+  color:var(--burgundy);
+}
+
+/* ----- Exercise body grid (main + auxilia sidebar) ----- */
+.exercise-body{
+  display:flex;
+  gap:1.4rem;
+  align-items:flex-start;
+}
+.exercise-main{
+  flex:1 1 auto;
+  min-width:0;
+}
+.exercise-main > *:first-child{margin-top:0}
+
+ol.questions{
+  margin:.6rem 0 .8rem;
+  padding-left:1.4rem;
+}
+ol.questions li{
+  margin:.55rem 0;
+  line-height:1.5;
+}
+
+/* ----- Auxilia sidebar ----- */
+.auxilia{
+  flex:0 0 210px;
+  position:sticky;
+  top:5rem;  /* sticky beneath site-nav */
+  background:rgba(251,246,232,.6);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:.8rem .85rem .9rem;
+  font-size:.85rem;
+  line-height:1.45;
+  color:var(--ink-soft);
+  box-shadow:0 1px 0 rgba(60,40,20,.04);
+}
+.auxilia-title{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.14em;
+  font-weight:600;
+  color:var(--burgundy);
+  font-size:.82rem;
+  text-align:center;
+  padding-bottom:.4rem;
+  margin-bottom:.5rem;
+  border-bottom:1px solid var(--rule);
+}
+.auxilia-title::before,.auxilia-title::after{
+  content:"·";
+  color:var(--gilt);
+  margin:0 .35rem;
+}
+.aux-group{margin-bottom:.7rem}
+.aux-group:last-child{margin-bottom:0}
+.aux-label{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.78rem;
+  color:var(--gilt);
+  letter-spacing:.05em;
+  text-transform:lowercase;
+  margin-bottom:.25rem;
+  border-bottom:1px dotted rgba(160,122,42,.4);
+  padding-bottom:.15rem;
+}
+.aux-group ul{
+  margin:0;
+  padding-left:.4rem;
+  list-style:none;
+}
+.aux-group li{
+  margin:.18rem 0;
+  line-height:1.4;
+}
+.aux-group ul.aux-words{padding-left:0}
+.aux-group ul.aux-words.inline{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.15rem .55rem;
+}
+.aux-group ul.aux-words.inline li{margin:.1rem 0}
+.aux-gloss{
+  font-size:.75rem;
+  color:var(--muted);
+  font-style:italic;
+}
+.aux-group i{color:var(--ink); font-style:italic}
+.aux-group b{
+  font-weight:600;
+  font-variant:small-caps;
+  letter-spacing:.06em;
+  color:var(--burgundy);
+  font-size:.8rem;
+}
+
+/* Paradigm tables */
+table.paradigm{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.82rem;
+  margin:.1rem 0;
+}
+table.paradigm th{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.06em;
+  font-weight:500;
+  color:var(--burgundy);
+  font-size:.78rem;
+  text-align:left;
+  padding:.1rem .3rem;
+  border-bottom:1px solid rgba(139,111,58,.4);
+}
+table.paradigm td{
+  padding:.12rem .3rem;
+  vertical-align:baseline;
+}
+table.paradigm td:first-child{
+  color:var(--muted);
+  font-style:italic;
+  font-size:.78rem;
+  white-space:nowrap;
+  padding-right:.4rem;
+}
+table.paradigm td i{
+  color:var(--ink);
+  font-style:italic;
+  white-space:nowrap;
+}
+table.paradigm td:not(:first-child){
+  font-family:'EB Garamond', serif;
+  font-style:italic;
+  color:var(--ink);
+}
+table.paradigm tr:nth-child(even) td{
+  background:rgba(160,122,42,.04);
+}
+
+/* ----- Inputs (blanks) ----- */
+input.blank{
+  display:inline-block;
+  width:3em;
+  min-width:3em;
+  max-width:100%;
+  border:none;
+  border-bottom:1px solid var(--ink-soft);
+  background:transparent;
+  font-family:inherit;
+  font-size:inherit;
+  font-style:italic;
+  color:var(--ink);
+  padding:0 .25em 1px;
+  margin:0 .15em;
+  outline:none;
+  transition:background .2s ease, border-color .2s ease, color .2s ease;
+  vertical-align:baseline;
+  text-align:center;
+  box-sizing:content-box;
+}
+input.blank:focus{
+  border-bottom-color:var(--burgundy);
+  background:rgba(160,122,42,.10);
+}
+input.blank.blank-md{width:6em; min-width:6em; text-align:left}
+input.blank.blank-lg{width:11em; min-width:11em; text-align:left}
+input.blank.blank-xl{width:14em; min-width:14em; text-align:left}
+input.blank.blank-xxl{width:18em; min-width:18em; text-align:left}
+
+input.blank.correct{
+  border-bottom-color:var(--correct);
+  border-bottom-width:2px;
+  color:var(--correct);
+  background:rgba(61,90,42,.08);
+}
+input.blank.wrong{
+  border-bottom-color:var(--wrong);
+  border-bottom-width:2px;
+  color:var(--wrong);
+  background:rgba(163,51,74,.08);
+}
+.corrected{
+  display:inline-block;
+  margin-left:.25em;
+  padding:0 .35em;
+  background:rgba(61,90,42,.12);
+  border:1px dashed var(--correct);
+  border-radius:2px;
+  color:var(--correct);
+  font-style:italic;
+  font-size:.88em;
+}
+.corrected::before{content:"→ "; font-style:normal; color:var(--gilt)}
+
+/* ----- Score badge ----- */
+.score{
+  display:inline-block;
+  margin-left:.8em;
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.06em;
+  font-size:.95rem;
+  color:var(--burgundy);
+  padding:.15rem .6rem;
+  border:1px solid var(--rule);
+  background:var(--parchment-deep);
+  border-radius:2px;
+}
+.score.perfect{
+  color:var(--correct);
+  border-color:var(--correct);
+  background:rgba(61,90,42,.08);
+}
+.score::before{content:"❦ "; color:var(--gilt)}
+
+/* ----- Action buttons ----- */
+.controls{
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:.6rem;
+}
+.reveal-btn{
+  appearance:none;
+  border:1px solid var(--rule);
+  background:var(--parchment-deep);
+  color:var(--burgundy-deep);
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  font-weight:600;
+  letter-spacing:.1em;
+  font-size:.92rem;
+  padding:.4rem 1rem;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .18s ease;
+}
+.reveal-btn:hover{
+  background:var(--burgundy);
+  color:var(--vellum);
+  border-color:var(--burgundy-deep);
+}
+.reveal-btn::before{content:"❦ "; color:var(--gilt)}
+.reveal-btn:hover::before{color:var(--vellum)}
+
+.clear-btn{
+  appearance:none;
+  border:1px solid var(--rule);
+  background:transparent;
+  color:var(--muted);
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  font-weight:500;
+  letter-spacing:.08em;
+  font-size:.88rem;
+  padding:.35rem .8rem;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .15s ease;
+}
+.clear-btn:hover{
+  color:var(--ink);
+  border-color:var(--ink-soft);
+}
+
+/* ----- Answer reveal block ----- */
+.answer{
+  display:none;
+  margin-top:.8rem;
+  padding:.8rem 1rem;
+  background:rgba(61,90,42,.08);
+  border-left:2px solid var(--correct);
+  font-size:.95rem;
+}
+.answer.show{display:block; animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.answer ol{margin:.3rem 0 0; padding-left:1.4rem}
+.answer li{margin:.25rem 0}
+.answer .key{
+  color:var(--correct);
+  font-weight:500;
+  font-style:italic;
+}
+.answer-header{
+  display:block;
+  font-variant:small-caps;
+  letter-spacing:.08em;
+  color:var(--correct);
+  font-weight:600;
+  margin-bottom:.3rem;
+}
+
+/* ----- Mobile: collapse sidebar above questions ----- */
+@media (max-width: 760px){
+  .exercise-body{
+    flex-direction:column;
+    gap:.9rem;
+  }
+  .auxilia{
+    flex:1 1 auto;
+    width:100%;
+    position:static;
+    order:-1;
+    font-size:.82rem;
+    padding:.65rem .8rem;
+  }
+  .auxilia-title{
+    font-size:.78rem;
+    padding-bottom:.3rem;
+    margin-bottom:.4rem;
+  }
+  table.paradigm{font-size:.78rem}
+  .exercise{padding:1rem 1.1rem}
+}
