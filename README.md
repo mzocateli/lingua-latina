@@ -1,11 +1,5 @@
 # Lingua Latīna — Quaestiōnēs Selectae
-
-
-
-\---
-
-
-
+---
 ## Conteúdo atual
 
 |Capitulum|Tópico|Exercícios|
@@ -15,7 +9,7 @@
 |VII|Dativo, demonstrativo, relativo|4|
 |VIII|Genitivo, preço, *quī/is*|7|
 
-\---
+---
 
 ## Estrutura
 
@@ -103,9 +97,8 @@
 
 Respostas com alternativas equivalentes usam `|`: `"eīs|iīs"` aceita ambas.
 
-\---
+---
 
 ## Crédito
 
 Exercícios baseados em *Lingua Latina per se Illustrata · Pars I: Familia Romana* (Hans H. Ørberg, Domus Latina / Focus Publishing). Esta página é um recurso de estudo pessoal, não substitui o livro nem é endossado pelo editor.
-
