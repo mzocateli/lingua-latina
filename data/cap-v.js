@@ -102,6 +102,213 @@ window.LL.chapters['v'] = {
       ]
     },
     {
+      "index": 200,
+      "number": 2,
+      "title": "Exercitium 2",
+      "tag": "concordância de adjetivos: multus, unus, ūllus, nūllus",
+      "tip": {
+        "text": "Adjetivos da 1ª–2ª declinação seguem <em>-us, -a, -um</em>: <em>multus / multa / multum</em>. Eles concordam com o substantivo em gênero, número <em>e caso</em> — pista de gênero pela própria terminação do substantivo (<em>-us, -er</em> → m, <em>-a</em> → f, <em>-um</em> → n).",
+        "qualifier": null
+      },
+      "exemplum": "Iūlius nōn ūn{us} fīli{um}, sed du{ōs} fīli{ōs} habet.",
+      "questions": [
+        "In familiā Iūliī sunt Mārcus et Quīntus, duo fīli{} eius.",
+        "Iūlius nōn ūn{md} fīli{md} habet, sed du{md} fīli{md}.",
+        "Iūlia est ūna fīli{} Iūliī.",
+        "Iūlius nōn duās fīli{md} habet, sed ūn{md} fīli{md}.",
+        "Mēdus est servus quī nummōs su{md} habet; in sacculō eius decem numm{} sunt.",
+        "Mēdus ūn{md} numm{md} nōn habet, sed multōs nummōs habet.",
+        "In sacculō Iūliī ūn{md} numm{md} est? Immo centum numm{} sunt.",
+        "Iūlius nōn ūn{md} numm{md} habet, sed mult{md} numm{md} habet.",
+        "Dāvus bacul{} habet; in manū eius bacul{} est.",
+        "Mēdus nūll{md} verb{md} dīcit — tacet.",
+        "In hortō sunt mult{md} ros{md} et mult{md} līli{md}.",
+        "Iūlia mult{md} ros{md} et mult{md} līli{md} videt."
+      ],
+      "answers": [
+        "ī",
+        "um",
+        "um",
+        "ōs",
+        "ōs",
+        "a",
+        "ās",
+        "am",
+        "am",
+        "ōs",
+        "ī",
+        "um",
+        "um",
+        "us",
+        "us",
+        "ī",
+        "um",
+        "um",
+        "ōs",
+        "ōs",
+        "um",
+        "um",
+        "um",
+        "um",
+        "ae",
+        "ae",
+        "a",
+        "a",
+        "ās",
+        "ās",
+        "a",
+        "a"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "1ª/2ª decl.",
+          "type": "table",
+          "headers": [
+            "",
+            "m. (-us)",
+            "f. (-a)",
+            "n. (-um)"
+          ],
+          "rows": [
+            [
+              "nōm. sg.",
+              "-us",
+              "-a",
+              "-um"
+            ],
+            [
+              "acc. sg.",
+              "-um",
+              "-am",
+              "-um"
+            ],
+            [
+              "nōm. pl.",
+              "-ī",
+              "-ae",
+              "-a"
+            ],
+            [
+              "acc. pl.",
+              "-ōs",
+              "-ās",
+              "-a"
+            ]
+          ]
+        },
+        {
+          "label": "exempla",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>multus, -a, -um</i>",
+            "<i>ūnus, -a, -um</i>",
+            "<i>nūllus, -a, -um</i>"
+          ]
+        }
+      ],
+      "references": [
+        "acusativo",
+        "concordancia"
+      ]
+    },
+    {
+      "index": 201,
+      "number": 3,
+      "title": "Exercitium 3",
+      "tag": "verbo: 3ª pessoa singular vs. plural",
+      "tip": {
+        "text": "Um sujeito → verbo em <em>-t</em>; vários sujeitos → verbo em <em>-nt</em>. Algumas formas notáveis: <em>est / sunt</em>, <em>habet / habent</em>, <em>amat / amant</em>, <em>dormit / dormiunt</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Iūlius in vīllā habi{}.",
+        "Pater et māter et tres līberī in vīllā habi{}.",
+        "Iūlius multōs servōs ha{}.",
+        "Iūlius et Aemilia tres līberōs ha{}.",
+        "Iūlius Aemiliam a{}; Aemilia quoque virum suum a{}.",
+        "Pater et māter līberōs suōs a{}.",
+        "Servī dominum salū{}; ancilla quoque dominum salū{}.",
+        "Aemilia imper{}; puerī pā{}.",
+        "Iūlia can{}; puerī can{} et rī{}.",
+        "Quīntus dor{}.",
+        "Servī in cubiculīs dor{}."
+      ],
+      "answers": [
+        "tat",
+        "tant",
+        "bet",
+        "bent",
+        "mat",
+        "mat",
+        "mant",
+        "tant",
+        "tat",
+        "at",
+        "ent",
+        "tat",
+        "tant",
+        "dent",
+        "mit",
+        "miunt"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "indicātīvus",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "3ª p.",
+              "-t",
+              "-nt"
+            ],
+            [
+              "[1]",
+              "-at",
+              "-ant"
+            ],
+            [
+              "[2]",
+              "-et",
+              "-ent"
+            ],
+            [
+              "[3]",
+              "-it",
+              "-unt"
+            ],
+            [
+              "[4]",
+              "-it",
+              "-iunt"
+            ]
+          ]
+        },
+        {
+          "label": "exempla",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>est / sunt</i>",
+            "<i>habet / habent</i>",
+            "<i>amat / amant</i>",
+            "<i>dormit / dormiunt</i>"
+          ]
+        }
+      ],
+      "references": [
+        "concordancia"
+      ]
+    },
+    {
       "index": 1,
       "number": 4,
       "title": "Exercitium 4",
@@ -179,6 +386,204 @@ window.LL.chapters['v'] = {
         "ablativo",
         "concordancia"
       ]
+    },
+    {
+      "index": 202,
+      "number": 5,
+      "title": "Exercitium 5",
+      "tag": "ablativo: m/n -ō, f -ā, pl -īs",
+      "tip": {
+        "text": "Depois de <em>cum, in, ex, ab, sine</em> use ablativo. Pista de gênero: <em>-us/-er</em> → m → abl. <em>-ō</em>; <em>-a</em> → f → abl. <em>-ā</em>; <em>-um</em> → n → abl. <em>-ō</em>. Plural: <em>-īs</em> sempre.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Iūlius habitat in magn{} vill{} cum Aemili{}, cum līber{} et cum serv{}.",
+        "Aemilia in peristyl{} est cum Mārc{} et Quīnt{} et Iūli{}, sed sine vir{} suō.",
+        "Aemilia cum magn{} famili{} in vīll{} est.",
+        "In hort{} sunt rosae et līlia.",
+        "In vīllā Iūliī magnum ātrium est cum impluvi{}.",
+        "In impluvi{} aqua est; ex impluvi{} aqua sūmitur.",
+        "Mārcus et Quīntus in parv{} cubicul{} dormiunt.",
+        "Aemilia in magn{} cubicul{} cum vir{} dormit.",
+        "Servī in cubicul{} parv{} dormiunt.",
+        "Aemilia in peristyl{} cum līber{} adest, sed sine vir{} suō."
+      ],
+      "answers": [
+        "ā",
+        "ā",
+        "ā",
+        "īs",
+        "īs",
+        "ō",
+        "ō",
+        "ō",
+        "ā",
+        "ō",
+        "ā",
+        "ā",
+        "ā",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "ō",
+        "īs",
+        "īs",
+        "ō",
+        "īs",
+        "ō"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "ablātīvus",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "m / n",
+              "-ō",
+              "-īs"
+            ],
+            [
+              "f",
+              "-ā",
+              "-īs"
+            ]
+          ]
+        },
+        {
+          "label": "praep. + abl.",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>in</i>",
+            "<i>cum</i>",
+            "<i>ex</i>",
+            "<i>ab</i>",
+            "<i>sine</i>"
+          ]
+        }
+      ],
+      "references": [
+        "ablativo"
+      ]
+    },
+    {
+      "index": 203,
+      "number": 6,
+      "title": "Exercitium 6",
+      "tag": "pronome <em>is, ea, id</em>",
+      "tip": {
+        "text": "O pronome <em>is, ea, id</em> retoma um nome já mencionado. Sg: <em>is / ea / id</em> (nōm.), <em>eum / eam / id</em> (acc.), <em>eius</em> (gen.), <em>eō / eā / eō</em> (abl.). Pl: <em>iī / eae / ea</em> (nōm.), <em>eōs / eās / ea</em> (acc.), <em>eōrum / eārum / eōrum</em> (gen.).",
+        "qualifier": null
+      },
+      "exemplum": "Mārcus puer Iūliī est. Pater {eius} (= Mārcī) Iūlius est.",
+      "questions": [
+        "Aemilia est fēmina; nāsus {} est foedus? Nōn — pulcher est.",
+        "Iūlius multōs servōs habet. Dominus {md} est Iūlius.",
+        "Iūlius servum vocat; servus {md} audit dominum.",
+        "Iūlius servōs vocat; servī {md} audiunt dominum.",
+        "Iūlia rosam tenet; flōs {md} pulcher est.",
+        "Aemilia ancillās habet. Domina {md} est Aemilia.",
+        "Iūlia rosam carpit; māter {md} videt.",
+        "Iūlia rosās pulchrās videt et {md} carpit.",
+        "In hortō multa līlia sunt; {md} pulchra sunt; Iūlia {md} videt.",
+        "Iūlius pater est; vīlla {md} (= Iūliī) magna est, et in {md} multī servī habitant."
+      ],
+      "answers": [
+        "eius",
+        "eōrum",
+        "eum",
+        "eōs",
+        "eius",
+        "eārum",
+        "eam",
+        "eās",
+        "ea",
+        "ea",
+        "is|eius",
+        "eō"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "is, ea, id",
+          "type": "table",
+          "headers": [
+            "",
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            [
+              "nōm. sg.",
+              "is",
+              "ea",
+              "id"
+            ],
+            [
+              "acc. sg.",
+              "eum",
+              "eam",
+              "id"
+            ],
+            [
+              "gen. sg.",
+              "eius",
+              "eius",
+              "eius"
+            ],
+            [
+              "abl. sg.",
+              "eō",
+              "eā",
+              "eō"
+            ]
+          ]
+        },
+        {
+          "label": "plural",
+          "type": "table",
+          "headers": [
+            "",
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            [
+              "nōm.",
+              "iī",
+              "eae",
+              "ea"
+            ],
+            [
+              "acc.",
+              "eōs",
+              "eās",
+              "ea"
+            ],
+            [
+              "gen.",
+              "eōrum",
+              "eārum",
+              "eōrum"
+            ]
+          ]
+        }
+      ],
+      "references": []
     },
     {
       "index": 2,
@@ -286,6 +691,87 @@ window.LL.chapters['v'] = {
       ]
     },
     {
+      "index": 204,
+      "number": 8,
+      "title": "Exercitium 8",
+      "tag": "preposições com ablativo: <em>in, cum, ex, ab, sine</em>",
+      "tip": {
+        "text": "<em>in</em> + abl. = onde (sem movimento); <em>cum</em> = com; <em>ex</em> = de dentro de; <em>ab</em> = de (afastamento, agente); <em>sine</em> = sem. Identifique o substantivo e dê a forma ablativa.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Aemilia est in {lg} cum {md} sine {lg}. <em>(peristȳlum, līberī, vir suus)</em>",
+        "Iūlia in {lg} est; ab {md} discēdit. <em>(hortus, Aemilia)</em>",
+        "Iūlia cum {md} discēdit; ab {md} videtur. <em>(Aemilia, ea)</em>",
+        "Iūlia ex {lg} venit cum {md}. <em>(hortus, rosa)</em>",
+        "Iūlia cum {md} ab {md} discēdit. <em>(ūna rosa, iī = puerī)</em>",
+        "Iūlius habitat in {lg} cum {lg}. <em>(vīlla, impluvium ← n!)</em>",
+        "Aqua est in {md}; ex {md} sūmitur et in {md} pōnitur. <em>(ātrium, impluvium, aqua)</em>",
+        "Iūlius est in {md} cum {md} sine {md}. <em>(oppidum, servī, Aemilia)</em>"
+      ],
+      "answers": [
+        "peristȳlō",
+        "līberīs",
+        "virō suō",
+        "hortō",
+        "Aemiliā",
+        "Aemiliā",
+        "eā",
+        "hortō",
+        "rosīs",
+        "ūnā rosā",
+        "iīs|eīs",
+        "vīllā",
+        "impluviō",
+        "ātriō",
+        "impluviō",
+        "aquā",
+        "oppidō",
+        "servīs",
+        "Aemiliā"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "abl.",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "m/n",
+              "-ō",
+              "-īs"
+            ],
+            [
+              "f",
+              "-ā",
+              "-īs"
+            ]
+          ]
+        },
+        {
+          "label": "praep.",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>in</i>",
+            "<i>cum</i>",
+            "<i>ex</i>",
+            "<i>ab</i>",
+            "<i>sine</i>"
+          ]
+        }
+      ],
+      "references": [
+        "ablativo"
+      ]
+    },
+    {
       "index": 3,
       "number": 9,
       "title": "Exercitium 9",
@@ -356,6 +842,198 @@ window.LL.chapters['v'] = {
       ],
       "references": [
         "acusativo"
+      ]
+    },
+    {
+      "index": 205,
+      "number": 10,
+      "title": "Exercitium 10 — léctiō grammatica",
+      "tag": "ablativo: nomes/análise",
+      "tip": {
+        "text": "Aqui você identifica que caso e número uma forma representa. Lembre: o ablativo sg. termina em <em>-ō / -ā / -ō</em>; o pl. em <em>-īs</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "<em>Servō</em> nōn nōminātīvus, sed {lg} est. <em>Servīs</em> quoque {lg} est.",
+        "<em>Servīs</em> nōn ablātīvus singulāris, sed {lg} est.",
+        "<em>Servō</em> est ablātīvus {md}.",
+        "<em>Ancillā</em> ablātīvus est; <em>ancillīs</em> quoque {lg} est.",
+        "<em>Ancillā</em> {lg} est; <em>ancillīs</em> est {lg}.",
+        "Singulāris: nōminātīvus <em>servus</em>, ablātīvus serv{}.",
+        "Plūrālis: nōminātīvus <em>servī</em>, ablātīvus serv{}.",
+        "Singulāris: nōminātīvus <em>ancilla</em>, ablātīvus ancill{}.",
+        "Plūrālis: nōminātīvus <em>ancillae</em>, ablātīvus ancill{}.",
+        "Singulāris: nōminātīvus <em>cubiculum</em>, ablātīvus cubicul{}.",
+        "Plūrālis: nōminātīvus <em>cubicula</em>, ablātīvus cubicul{}."
+      ],
+      "answers": [
+        "ablātīvus singulāris|ablātīvus",
+        "ablātīvus plūrālis|ablātīvus",
+        "ablātīvus plūrālis",
+        "singulāris",
+        "ablātīvus plūrālis|ablātīvus",
+        "ablātīvus singulāris",
+        "ablātīvus plūrālis",
+        "ō",
+        "īs",
+        "ā",
+        "īs",
+        "ō",
+        "īs"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "ablātīvus",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "m. (-us)",
+              "-ō",
+              "-īs"
+            ],
+            [
+              "f. (-a)",
+              "-ā",
+              "-īs"
+            ],
+            [
+              "n. (-um)",
+              "-ō",
+              "-īs"
+            ]
+          ]
+        },
+        {
+          "label": "vocābula",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>ablātīvus</i>",
+            "<i>singulāris</i> (sg.)",
+            "<i>plūrālis</i> (pl.)"
+          ]
+        }
+      ],
+      "references": [
+        "ablativo"
+      ]
+    },
+    {
+      "index": 206,
+      "number": 11,
+      "title": "Exercitium 11 — léctiō grammatica",
+      "tag": "imperativo plural; indicativo sg./pl.",
+      "tip": {
+        "text": "Imperativo: sg. termina no tema (<em>-ā/-ē/-e/-ī</em>); pl. acrescenta <em>-te</em> (com vogal ligante na 3ª: <em>-ite</em>). Indicativo 3ª pessoa: sg. <em>-t</em>, pl. <em>-nt</em> (ou <em>-iunt</em>).",
+        "qualifier": null
+      },
+      "exemplum": "<em>tacēte!</em> = imperātīvus plūrālis. <em>tacent</em> = indicātīvus plūrālis.",
+      "questions": [
+        "<em>Cantāte!</em> nōn imperātīvus singulāris, sed {xl} est.",
+        "<em>Tace!</em> nōn imperātīvus plūrālis, sed imperātīvus {lg} est.",
+        "<em>Audī!</em> est {xl}. <em>Audīte!</em> est {xl}.",
+        "<em>Cantat</em> est {xl}. <em>Cantant</em> est {xl}.",
+        "Imperātīvus sg. de <em>tacēre</em>: ta{}. De <em>agere</em>: a{}. De <em>audīre</em>: aud{}.",
+        "Imperātīvus pl. de <em>cantāre</em>: cant{md}. De <em>tacēre</em>: tac{md}. De <em>agere</em>: ag{md}. De <em>audīre</em>: aud{md}.",
+        "Indicātīvus sg. de <em>tacēre</em>: tac{}. De <em>agere</em>: ag{}. De <em>audīre</em>: aud{}.",
+        "Indicātīvus pl. de <em>cantāre</em>: cant{md}. De <em>tacēre</em>: tac{md}. De <em>agere</em>: ag{md}. De <em>audīre</em>: aud{md}."
+      ],
+      "answers": [
+        "imperātīvus plūrālis",
+        "singulāris|imperātīvus singulāris",
+        "imperātīvus singulāris",
+        "imperātīvus plūrālis",
+        "indicātīvus singulāris",
+        "indicātīvus plūrālis",
+        "cē",
+        "e",
+        "ī",
+        "āte",
+        "ēte",
+        "ite",
+        "īte",
+        "et",
+        "it",
+        "it",
+        "ant",
+        "ent",
+        "unt",
+        "iunt"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "imperātīvus",
+          "type": "table",
+          "headers": [
+            "cōn.",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "[1] vocā-",
+              "-ā",
+              "-āte"
+            ],
+            [
+              "[2] vidē-",
+              "-ē",
+              "-ēte"
+            ],
+            [
+              "[3] discēd-",
+              "-e",
+              "-ite"
+            ],
+            [
+              "[4] audī-",
+              "-ī",
+              "-īte"
+            ]
+          ]
+        },
+        {
+          "label": "indicātīvus",
+          "type": "table",
+          "headers": [
+            "cōn.",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "[1]",
+              "-at",
+              "-ant"
+            ],
+            [
+              "[2]",
+              "-et",
+              "-ent"
+            ],
+            [
+              "[3]",
+              "-it",
+              "-unt"
+            ],
+            [
+              "[4]",
+              "-it",
+              "-iunt"
+            ]
+          ]
+        }
+      ],
+      "references": [
+        "imperativo"
       ]
     }
   ],

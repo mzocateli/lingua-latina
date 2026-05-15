@@ -9,6 +9,131 @@ window.LL.chapters['vii'] = {
   "blurb": "Foco: dativo singular/plural; pronome <em>is, ea, id</em>; demonstrativo <em>hic, haec, hoc</em>; relativo.",
   "exercises": [
     {
+      "index": 400,
+      "number": 1,
+      "title": "Exercitium 1",
+      "tag": "léxico do capítulo VII",
+      "tip": {
+        "text": "Vocabulário central de Cap. VII: <em>exspectat</em> (espera), <em>tenet</em> (segura), <em>lacrimat</em> (chora — lágrimas), <em>oculus</em> (olho), <em>speculum</em> (espelho), <em>aperit/claudit</em> (abre/fecha), <em>vertere se</em> (virar-se), <em>tergēre</em> (enxugar), <em>immō</em> (pelo contrário), <em>formōsus</em> (bonito).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Aemilia in peristȳlō Iūlium {md}. <em>(espera)</em>",
+        "Iūlia rosam ante nāsum {md}. <em>(segura)</em>",
+        "Iūlia {md}; in {md} eius {md} sunt. <em>(chora; olhos; lágrimas)</em>",
+        "Iūlia {md} sūmit et sē in eō videt. <em>(espelho — acus. n.)</em>",
+        "Syra ōstium {md} et intrat. <em>(abre)</em>",
+        "Iūlia: 'Syra, {md} ōstium!' Syra ōstium {md}. <em>(fechar — imp. + ind.)</em>",
+        "Syra: 'Foedus? {md} formōsus est nāsus tuus!' <em>(pelo contrário)</em>",
+        "Iūlia sē {md} et Syram post sē videt. <em>(verte se)</em>",
+        "Syra: '{md} oculōs, Iūlia! {md} laeta!' <em>(enxuga; sê)</em>"
+      ],
+      "answers": [
+        "exspectat",
+        "tenet",
+        "lacrimat",
+        "oculīs",
+        "lacrimae",
+        "speculum",
+        "aperit",
+        "claude",
+        "claudit",
+        "immō",
+        "vertit",
+        "terge",
+        "es"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "verba",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>exspectāre</i>",
+            "<i>tenēre</i>",
+            "<i>lacrimāre</i>",
+            "<i>aperīre / claudere</i>",
+            "<i>vertere sē</i>",
+            "<i>tergēre</i>"
+          ]
+        },
+        {
+          "label": "vocab.",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>oculus</i>",
+            "<i>speculum</i>",
+            "<i>immō</i>",
+            "<i>formōsus</i>"
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "index": 401,
+      "number": 3,
+      "title": "Exercitium 3",
+      "tag": "<em>sē</em> reflexivo vs. <em>eum, eam</em>",
+      "tip": {
+        "text": "Use <em>sē</em> (reflexivo) quando o objeto é o <em>próprio sujeito</em> da oração. Use <em>eum, eam, eōs, eās</em> quando o objeto é <em>outra pessoa</em>. Pergunte: <em>'a quem se refere?'</em> — se ao sujeito, é reflexivo.",
+        "qualifier": null
+      },
+      "exemplum": "Iūlia <u>sē</u> in speculō videt (= Iūlia vê Iūlia). Iūlia <u>eam</u> videt (= Iūlia vê outra fêmea).",
+      "questions": [
+        "Aemilia Iūliam vocat: Aemilia {md} vocat. <em>(outra pessoa)</em>",
+        "Iūlia in speculō {md} videt et {md} interrogat. <em>(reflexivo, 2×)</em>",
+        "Iūlia ōstium post {md} claudit. <em>(reflexivo)</em>",
+        "Syra Iūliam videt: Syra {md} videt; Iūlia autem nōn {md} videt — vertit sē. <em>(eam; sē)</em>",
+        "Iūlia speculum ante Syram tenet; Syra nāsum suum in eō videt: Syra {md} videt et {md} (= Syra) oculōs claudit. <em>(sē; eam — Syra fecha os olhos)</em>",
+        "Aemilia ad Iūlium adit; {md} (= sē) ad eum vertit et {md} (= eum) salūtat. <em>(sē, eum)</em>",
+        "Iūlius fīliam suam videt; Iūlia ad eum currit et {md} (= sē) ad patrem vertit.",
+        "Quīntus Mārcum nōn {md} videt — frāter eius abest. <em>(eum)</em>",
+        "Mārcus rīdet: {md} (= sē) rīdentem in speculō videt et {md} (= eum, Quīntum) quoque rīdentem aspicit."
+      ],
+      "answers": [
+        "eam",
+        "sē",
+        "sē",
+        "sē",
+        "eam",
+        "sē",
+        "sē",
+        "eam",
+        "sē",
+        "eam",
+        "sē",
+        "eum",
+        "sē",
+        "eum"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "pronomes",
+          "type": "list",
+          "items": [
+            "<b>sē</b> = reflexivo (= sujeito)",
+            "<b>eum / eam</b> = outra pessoa"
+          ]
+        },
+        {
+          "label": "exempla",
+          "type": "list",
+          "items": [
+            "<i>Iūlia sē videt</i> = vê a si mesma",
+            "<i>Iūlia eam videt</i> = vê outra fêmea"
+          ]
+        }
+      ],
+      "references": [
+        "pronome-is"
+      ]
+    },
+    {
       "index": 8,
       "number": 4,
       "title": "Exercitium 4",
@@ -60,6 +185,65 @@ window.LL.chapters['vii'] = {
       "references": [
         "demonstrativo-hic"
       ]
+    },
+    {
+      "index": 402,
+      "number": 6,
+      "title": "Exercitium 6",
+      "tag": "conjunções correlativas",
+      "tip": {
+        "text": "<em>et … et</em> = tanto … quanto. <em>neque … neque</em> = nem … nem. <em>nōn sōlum … sed etiam</em> = não só … mas também.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Mārcus nōn {md} Iūliam pulsat, {md} eam rīdet. <em>(não só … mas também)</em>",
+        "{md} māla {md} pira in saccīs sunt. <em>(tanto … quanto)</em>",
+        "Iūlius nōn sōlum mala dat fīliīs, {md} pira. <em>(mas também)</em>",
+        "Iūlius {md} fīliōs {md} fīliam habet; {md} servōs {md} ancillās. <em>(tanto…quanto, 2 pares)</em>",
+        "Iūlia in cubiculō suō {md} ridet {md} cantat — plōrat tantum. <em>(nem … nem)</em>",
+        "{md} Iūlius puerīs mala dat, sed etiam ancillīs. <em>(não só)</em>",
+        "{md} pater {md} māter fīliōs amant. <em>(tanto…quanto)</em>",
+        "Iūlius nōn sōlum fīliīs mala dat, {md} ancillīs.",
+        "Iūlia sōla est: {md} ridet {md} cantat, {md} clāmat {md} verbera dat. <em>(nem … nem, 2 pares)</em>",
+        "Mēdus {md} dominum vidēre {md} eī servīre vult. <em>(nem … nem)</em>"
+      ],
+      "answers": [
+        "sōlum",
+        "sed etiam",
+        "et",
+        "et",
+        "sed etiam",
+        "et",
+        "et",
+        "et",
+        "et",
+        "neque",
+        "neque",
+        "nōn sōlum",
+        "et",
+        "et",
+        "sed etiam",
+        "neque",
+        "neque",
+        "neque",
+        "neque",
+        "neque",
+        "neque"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "correlativas",
+          "type": "list",
+          "items": [
+            "<i>et … et</i> = tanto … quanto",
+            "<i>neque … neque</i> = nem … nem",
+            "<i>nōn sōlum … sed etiam</i> = não só … mas também"
+          ]
+        }
+      ],
+      "references": []
     },
     {
       "index": 9,
@@ -226,6 +410,70 @@ window.LL.chapters['vii'] = {
         "demonstrativo-hic",
         "relativo-concordancia"
       ]
+    },
+    {
+      "index": 403,
+      "number": 9,
+      "title": "Exercitium 9",
+      "tag": "léxico: chegada de Iūlius, frutas, abraço",
+      "tip": {
+        "text": "Vocabulário: <em>advenit</em> (chega), <em>ostiārius</em> (porteiro), <em>mālum</em> (maçã), <em>pirum</em> (pera), <em>plēnus</em> (cheio), <em>inest/insunt</em> (está/estão dentro), <em>osculum</em> (beijo), <em>illīc</em> (lá), <em>currit</em> (corre), <em>nōnne?</em> (espera 'sim').",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Iūlius ad vīllam {md}; puerī: '{md}, pater!' <em>(chega; saudação plural)</em>",
+        "Ōstium ab {md} aperitur. <em>(servo da porta — abl. sg.)</em>",
+        "In saccīs sunt {md} et {md}. <em>(maçãs e peras)</em>",
+        "Saccī nōn vacuī, sed {md} sunt. <em>(cheios)</em>",
+        "In ūnō sacco {md} mālum, in altero {md} multa pira. <em>(está dentro; estão dentro)</em>",
+        "Iūlius mālum Mārcō {md}: pater fīliō mālum {md}.",
+        "Iūlia ad patrem currit eīque {md} {md}. <em>(adit; osculum)</em>",
+        "Iūlia nōn in ātriō, sed {md} (em outro lugar) in cubiculō est.",
+        "Iūlia {md} cubiculō {md} et ad ātrium {md}. <em>(ē; exit; eunt?)</em>",
+        "Iūlia ad patrem {md}. <em>(corre)</em>",
+        "Iūlia: '{md} pulchra haec rosa est?' <em>(nōnne? — espera sim)</em>"
+      ],
+      "answers": [
+        "advenit",
+        "salvēte",
+        "ostiāriō",
+        "māla",
+        "pira",
+        "plēnī",
+        "inest",
+        "insunt",
+        "dat",
+        "dat",
+        "adit",
+        "osculum",
+        "illīc",
+        "ē",
+        "exit",
+        "exeunt",
+        "currit",
+        "nōnne"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "vocab.",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>advenīre</i> — chegar",
+            "<i>ostiārius</i>",
+            "<i>mālum</i> · <i>pirum</i>",
+            "<i>plēnus</i> ↔ <i>vacuus</i>",
+            "<i>īnesse / īnsum</i> — estar dentro",
+            "<i>osculum</i> — beijo",
+            "<i>illīc</i> — lá",
+            "<i>currere</i> — correr",
+            "<i>nōnne?</i> — espera 'sim'"
+          ]
+        }
+      ],
+      "references": []
     },
     {
       "index": 11,

@@ -95,6 +95,205 @@ window.LL.chapters['vi'] = {
       ]
     },
     {
+      "index": 300,
+      "number": 3,
+      "title": "Exercitium 3",
+      "tag": "<em>ā</em> vs. <em>ab</em>",
+      "tip": {
+        "text": "<em>ā</em> e <em>ab</em> são a mesma preposição: <em>ab</em> antes de vogal ou <em>h</em>; <em>ā</em> antes de consoante. Compare: <em>ā Rōmā</em>, <em>ā Tūsculō</em>, <em>ā Iūliō</em> — <em>ab Aemiliā</em>, <em>ab oppidō</em>, <em>ab īs</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Iūlius nōn {md} Rōmā, sed {md} oppidō Tūsculō venit.",
+        "Iūlia {md} hortō venit cum rosīs; {md} mātre nōn discēdit.",
+        "Servī {md} oppidō ad vīllam ambulant; {md} Iūliō vocantur.",
+        "Mēdus {md} Rōmā nōn discēdit; {md} amīcā suā exspectātur.",
+        "Aemilia {md} virō suō salūtātur; {md} eō amātur.",
+        "Iūlius {md} servīs portātur; {md} ancillā salūtātur."
+      ],
+      "answers": [
+        "ā",
+        "ab",
+        "ab",
+        "ā",
+        "ab",
+        "ā",
+        "ā",
+        "ab",
+        "ab",
+        "ā",
+        "ab",
+        "ā"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "ā / ab",
+          "type": "list",
+          "items": [
+            "<b>ab</b> antes de <i>a, e, i, o, u, h</i>",
+            "<b>ā</b> antes das demais consoantes"
+          ]
+        },
+        {
+          "label": "exempla",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>ā Rōmā</i>",
+            "<i>ab oppidō</i>",
+            "<i>ā Iūliō</i>",
+            "<i>ab Aemiliā</i>",
+            "<i>ab eō</i>",
+            "<i>ā mātre</i>"
+          ]
+        }
+      ],
+      "references": [
+        "lugar"
+      ]
+    },
+    {
+      "index": 301,
+      "number": 4,
+      "title": "Exercitium 4",
+      "tag": "léxico: vias, oppida, viagem",
+      "tip": {
+        "text": "Recall: <em>quō?</em> = para onde (acus.) — <em>ad / in</em> + acus. ou nome de cidade no acus.; <em>unde?</em> = de onde (abl.) — <em>ā/ab/ex</em> + abl. ou nome de cidade no abl. puro.",
+        "qualifier": null
+      },
+      "exemplum": "Via Appia est inter {Rōmam} et {Brundisium}.",
+      "questions": [
+        "Via Appia est inter {md} et {md}. <em>(Roma, Brundisium)</em>",
+        "Brundisium, Capua, Ostia magna {md} sunt; Tūsculum et Tibur quoque {md} sunt.",
+        "Cornelius habitat in {md} Tūsculō.",
+        "Iūlius nōn ad {md}, sed ad {md} suam it.",
+        "Iūlius ab {md} ad {md} venit.",
+        "Iūlius {md} vehitur, nōn ambulat: portātur {md}.",
+        "Aemilia {md} suum (= Iūlium) videt et salūtat; {md} ōsculum dat.",
+        "Servī {md} salūtant; ancilla quoque {md} salūtat.",
+        "Iūlius in {md} habitat cum {md} suā Iūliō et cum līberīs.",
+        "Iūlius {md} videt et cum {md} colloquitur.",
+        "Iūlia in {md} est cum {md} suā et cum {md}.",
+        "Aemilia {md} ā servīs portātur."
+      ],
+      "answers": [
+        "Rōmam",
+        "Brundisium",
+        "oppida",
+        "oppida",
+        "oppidum",
+        "oppidum",
+        "vīllam",
+        "oppidō",
+        "vīllam",
+        "lectīcā",
+        "duōs servōs",
+        "dominum",
+        "eum",
+        "dominum",
+        "dominō",
+        "vīllā",
+        "uxōre|viro",
+        "Aemiliam",
+        "eā",
+        "hortō",
+        "Aemiliam",
+        "rosīs",
+        "litterās"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "vocābula",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>oppidum</i> (n)",
+            "<i>vīlla</i> (f)",
+            "<i>lectīca</i> (f)",
+            "<i>dominus</i> (m)",
+            "<i>uxor</i> (f)",
+            "<i>litterae</i> (f.pl.)"
+          ]
+        }
+      ],
+      "references": [
+        "lugar"
+      ]
+    },
+    {
+      "index": 302,
+      "number": 5,
+      "title": "Exercitium 5",
+      "tag": "relativo masculino: <em>quī, quem, quōs</em>",
+      "tip": {
+        "text": "O relativo concorda em <em>gênero e número</em> com o antecedente; o <em>caso</em> vem da função dentro da relativa. M. sg.: <em>quī</em> (nōm.), <em>quem</em> (acus.). M. pl.: <em>quī</em> (nōm.), <em>quōs</em> (acus.).",
+        "qualifier": null
+      },
+      "exemplum": "Servus {quī} saccum portat est Syrus.",
+      "questions": [
+        "Servus {} saccum portat est Syrus.",
+        "Servī {} dominum portant sunt Dāvus et Ursus.",
+        "Servus {} dominus vocat est Mēdus.",
+        "Servī {} ambulant ante lectīcam sunt servī Iūliī.",
+        "Servus {} Iūlius vocat nōn audit eum.",
+        "Mēdus, {} sacculum domini habet, ad Rōmam it.",
+        "Iūlius servōs {} saccōs portant nōn videt.",
+        "Servī {} dominum amant fidēlēs sunt.",
+        "Dominus servōs {} ad vīllam portant vocat.",
+        "Dominus servōs {} ā vīllā revocat."
+      ],
+      "answers": [
+        "quī",
+        "quōs",
+        "quem",
+        "quī",
+        "quem",
+        "quī",
+        "quōs",
+        "quī",
+        "quōs",
+        "quōs"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "quī, quae, quod (m.)",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "nōm.",
+              "quī",
+              "quī"
+            ],
+            [
+              "acc.",
+              "quem",
+              "quōs"
+            ]
+          ]
+        },
+        {
+          "label": "regra",
+          "type": "list",
+          "items": [
+            "gênero e número ← antecedente",
+            "caso ← função na oração relativa"
+          ]
+        }
+      ],
+      "references": [
+        "relativo-intro"
+      ]
+    },
+    {
       "index": 5,
       "number": 6,
       "title": "Exercitium 6",
@@ -170,6 +369,86 @@ window.LL.chapters['vi'] = {
       ]
     },
     {
+      "index": 303,
+      "number": 7,
+      "title": "Exercitium 7",
+      "tag": "ativa ↔ passiva: <em>-t/-nt</em> vs <em>-tur/-ntur</em>",
+      "tip": {
+        "text": "Ativa: sg <em>-t</em>, pl <em>-nt</em>. Passiva: sg <em>-tur</em>, pl <em>-ntur</em>. Em cada par, dê primeiro a ativa e depois a passiva.",
+        "qualifier": null
+      },
+      "exemplum": "<em>ambulat / portātur</em> — Iūlius ambulat, sed lectīcā portātur.",
+      "questions": [
+        "Iūlius {md}, sed lectīcā {md}. <em>(ambulāre / portāre)</em>",
+        "Aemilia Iūlium {md}; Iūlius quoque ab Aemiliā {md}. <em>(amāre)</em>",
+        "Puerī rosās pulchrās {md}; rosae pulchrae ā puerīs {md}. <em>(amāre)</em>",
+        "Servī dominum {md}; dominus ā servīs {md}. <em>(timēre)</em>",
+        "Quīntus Mārcum {md}; Mārcus ā Quīntō {md}. <em>(vidēre)</em>",
+        "Mārcus Iūliam {md}; Iūlia ā Mārcō {md}. <em>(pulsāre)</em>",
+        "Aemilia puerōs {md}; puerī ā mātre {md}. <em>(vocāre — auditur na chave!)</em>",
+        "Mātrēs fīliōs {md}; fīliī ā mātribus {md}.",
+        "Servus dominum {md}; dominus ā servō {md}. <em>(vehere)</em>",
+        "Servī dominum {md}; dominus {md}. <em>(vehere; ambulat)</em>",
+        "Rosae puellam {md}. <em>(dēlectāre passiva pl.: puellae ā rosīs dēlectantur)</em>",
+        "Iūlius pecūniam {md}; pecūnia {md} ā Iūliō. <em>(pōnere/numerāre)</em>",
+        "Nummī in mēnsā {md} et {md}. <em>(pōnere/numerāre pass.)</em>"
+      ],
+      "answers": [
+        "ambulat",
+        "portātur",
+        "amat",
+        "amātur",
+        "amant",
+        "amantur",
+        "timent",
+        "timentur",
+        "videt",
+        "vidētur",
+        "pulsat",
+        "pulsātur",
+        "vocat",
+        "audītur",
+        "vocant",
+        "audiuntur",
+        "vehit",
+        "vehitur",
+        "vehunt",
+        "ambulant",
+        "dēlectantur",
+        "pōnit",
+        "numerat",
+        "pōnuntur",
+        "numerantur"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "voz",
+          "type": "table",
+          "headers": [
+            "",
+            "ātīva",
+            "passīva"
+          ],
+          "rows": [
+            [
+              "sg.",
+              "-t",
+              "-tur"
+            ],
+            [
+              "pl.",
+              "-nt",
+              "-ntur"
+            ]
+          ]
+        }
+      ],
+      "references": [
+        "voz-passiva"
+      ]
+    },
+    {
       "index": 6,
       "number": 8,
       "title": "Exercitium 8",
@@ -231,6 +510,107 @@ window.LL.chapters['vi'] = {
       "references": [
         "voz-passiva"
       ]
+    },
+    {
+      "index": 304,
+      "number": 9,
+      "title": "Exercitium 9",
+      "tag": "ablativo de meio / instrumento",
+      "tip": {
+        "text": "O <strong>ablativo sem preposição</strong> indica meio ou instrumento — responde a <em>quō?</em> (com quê?). Não confunda com agente (<em>ā/ab</em> + abl., pessoa que faz). Aqui usa-se com verbos como <em>portāre, vehī</em>.",
+        "qualifier": null
+      },
+      "exemplum": "Iūlius {lectīcā} portātur. Mēdus {equō} vehitur.",
+      "questions": [
+        "Mēdus {md} vehitur. <em>(equus)</em>",
+        "Iūlius {md} portātur. <em>(lectīca)</em>",
+        "Aemilia {md} fīliōs vocat. <em>(verba)</em>",
+        "Dominus servum {md} verberat. <em>(baculum)</em>",
+        "Servī saccōs {md} portant. <em>(umerī, pl.)</em>",
+        "Iūlius {md} ab oppidō ad vīllam venit. <em>(lectīca)</em>",
+        "Mēdus per {lg} Rōmam ambulat. <em>(via Latīna — abl. com prep!)</em>"
+      ],
+      "answers": [
+        "equō",
+        "lectīcā",
+        "verbīs",
+        "baculō",
+        "umerīs",
+        "lectīcā",
+        "viā Latīnā"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "abl. instr.",
+          "type": "list",
+          "items": [
+            "sem preposição",
+            "responde <em>quō?</em> / <em>quibus?</em>",
+            "≠ agente (<em>ā/ab</em> + abl.)"
+          ]
+        },
+        {
+          "label": "exempla",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>equō</i>",
+            "<i>lectīcā</i>",
+            "<i>baculō</i>",
+            "<i>verbīs</i>",
+            "<i>umerīs</i>"
+          ]
+        }
+      ],
+      "references": [
+        "ablativo"
+      ]
+    },
+    {
+      "index": 305,
+      "number": 10,
+      "title": "Exercitium 10",
+      "tag": "léxico do capítulo VI",
+      "tip": {
+        "text": "Palavras-chave do capítulo: <em>equō</em> (no cavalo), <em>ubi</em> (onde), <em>fessus</em> (cansado), <em>amīca</em> (namorada/amiga), <em>pulsat</em> (bate à porta), <em>intra!</em> (entra!), <em>per</em> (através de).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Cornēlius nōn ambulat, sed {md} vehitur. <em>(no cavalo)</em>",
+        "{md} habitat Mēdus? Rōmae habitat. <em>(onde?)</em>",
+        "Servī, quī saccōs portant, {md} sunt. <em>(cansados)</em>",
+        "Lydia est {md} Mēdī, Rōmae habitat. <em>(namorada)</em>",
+        "Mēdus ad ōstium adit et ōstium {md}: 'Lydia! {md}!' <em>(bate; entra!)</em>",
+        "Mēdus {md} viam Latīnam ad Rōmam ambulat. <em>(através de)</em>"
+      ],
+      "answers": [
+        "equō",
+        "ubi",
+        "fessī",
+        "amīca",
+        "pulsat",
+        "intrā",
+        "per"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "vocābula",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>equus</i> — cavalo",
+            "<i>fessus</i> — cansado",
+            "<i>amīca</i> — amiga, namorada",
+            "<i>pulsāre</i> — bater (na porta)",
+            "<i>intrā!</i> — entra!",
+            "<i>per</i> + acus. — através de"
+          ]
+        }
+      ],
+      "references": []
     },
     {
       "index": 7,

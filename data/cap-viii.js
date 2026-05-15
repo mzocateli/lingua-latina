@@ -9,6 +9,73 @@ window.LL.chapters['viii'] = {
   "blurb": "Foco: verbos em <em>-iō</em> (3ª mista); genitivo e ablativo de preço; paradigma completo de <em>quī</em> e <em>is/ea/id</em>.",
   "exercises": [
     {
+      "index": 500,
+      "number": 1,
+      "title": "Exercitium 1",
+      "tag": "léxico de Cap. VIII",
+      "tip": {
+        "text": "Vocabulário: <em>taberna</em>, <em>gemma</em>, <em>margarīta</em>, <em>ōrnāmentum</em>, <em>vēndere/emere</em>, <em>aliī</em>, <em>tabernārius</em>, <em>cōnsistere</em>, <em>aspicere/abīre</em>, <em>accipere</em>, <em>ānulus</em>, <em>collum</em>, <em>ōrnāre</em>, <em>digitus</em>, <em>pecūniōsus</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Albīnus habet {md}, in quā sunt {md} et {md} et alia {md}. <em>(loja; pedras; pérolas; enfeites)</em>",
+        "Albīnus gemmās et margarītās {md}. <em>(vende)</em>",
+        "{md} tabernāriī libros vēndunt, alii māla et pira. <em>(outros)</em>",
+        "{md} tabernam habet est {md}. <em>(quem; lojista)</em>",
+        "Fēminae ante tabernam {md}. <em>(param)</em>",
+        "Fēminae pecūniōsae multa ōrnāmenta {md}. <em>(compram)</em>",
+        "Aliae fēminae, {md} pauca habent, ōrnāmenta {md} et {md}. <em>(que; olham; vão embora)</em>",
+        "Aemilia ōrnāmenta ā virō suō {md}. <em>(recebe)</em>",
+        "Aemilia {md} in digitō et margarītās in {md} habet. <em>(anel; pescoço)</em>",
+        "Ānulī et margarītae fēminās {md}. <em>(adornam)</em>",
+        "Anulus in {md} pōnitur. <em>(dedo — abl.)</em>",
+        "Mēdus nōn est {md}: in sacculō eius pauca nummī sunt. <em>(rico)</em>"
+      ],
+      "answers": [
+        "tabernam",
+        "gemmae",
+        "margarītae",
+        "ōrnāmenta",
+        "vēndit",
+        "aliī",
+        "quī",
+        "tabernārius",
+        "cōnsistunt",
+        "emunt",
+        "quae",
+        "aspiciunt",
+        "abeunt",
+        "accipit",
+        "ānulum",
+        "collō",
+        "ōrnant",
+        "digitō",
+        "pecūniōsus"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "vocābula",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>taberna</i>",
+            "<i>gemma · margarīta</i>",
+            "<i>ōrnāmentum</i>",
+            "<i>tabernārius</i>",
+            "<i>vēndere / emere</i>",
+            "<i>cōnsistere</i>",
+            "<i>aspicere / abīre</i>",
+            "<i>accipere</i>",
+            "<i>ānulus · collum · digitus</i>",
+            "<i>pecūniōsus</i> — rico"
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
       "index": 12,
       "number": 3,
       "title": "Exercitium 3",
@@ -76,6 +143,101 @@ window.LL.chapters['viii'] = {
       ]
     },
     {
+      "index": 501,
+      "number": 4,
+      "title": "Exercitium 4",
+      "tag": "verbos compostos com <em>ad-, ab-, ex-, in-</em>",
+      "tip": {
+        "text": "Compostos de <em>īre</em> (ir): <em>ad-īre</em> (ir até) → <em>adit / adeunt</em>; <em>ab-īre</em> (ir embora) → <em>abit / abeunt</em>; <em>ex-īre</em> → <em>exit / exeunt</em>. Compostos de <em>esse</em>: <em>in-esse</em> → <em>inest / īnsunt</em>; <em>ad-esse</em> → <em>adest / adsunt</em>; <em>ab-esse</em> → <em>abest / absunt</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Iūlius ad vīllam {md}; multī viri ad tabernam {md}. <em>(advenit, adveniunt)</em>",
+        "Mēdus ē tabernā {md}. <em>(sai)</em>",
+        "Lydia ad tabernam {md}. <em>(vai a)</em>",
+        "Mēdus {md}; aliī virī quoque {md}. <em>(vai embora; vão embora)</em>",
+        "Lydia et Mēdus ex tabernā {md}.",
+        "Multī virī ad tabernam {md} et {md}.",
+        "In sacculō Mēdī pecūnia {md}; in sacculīs aliōrum nummī {md}.",
+        "Mēdus et Lydia ante tabernam {md}; aliī virī {md}.",
+        "Iūlius in vīllā {md}; Aemilia quoque {md}."
+      ],
+      "answers": [
+        "advenit",
+        "adveniunt",
+        "exit",
+        "adit",
+        "abit",
+        "abeunt",
+        "exeunt",
+        "adeunt",
+        "abeunt",
+        "inest",
+        "īnsunt",
+        "adsunt",
+        "absunt",
+        "adest",
+        "abest"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "compostos de īre",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "ad-īre",
+              "adit",
+              "adeunt"
+            ],
+            [
+              "ab-īre",
+              "abit",
+              "abeunt"
+            ],
+            [
+              "ex-īre",
+              "exit",
+              "exeunt"
+            ]
+          ]
+        },
+        {
+          "label": "compostos de esse",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "in-esse",
+              "inest",
+              "īnsunt"
+            ],
+            [
+              "ad-esse",
+              "adest",
+              "adsunt"
+            ],
+            [
+              "ab-esse",
+              "abest",
+              "absunt"
+            ]
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
       "index": 13,
       "number": 5,
       "title": "Exercitium 5",
@@ -127,6 +289,71 @@ window.LL.chapters['viii'] = {
       ],
       "references": [
         "interrogativos"
+      ]
+    },
+    {
+      "index": 502,
+      "number": 6,
+      "title": "Exercitium 6",
+      "tag": "léxico: comércio na taberna",
+      "tip": {
+        "text": "<em>clāmāre</em> (gritar), <em>monstrāre</em> (apontar), <em>ostendere</em> (mostrar), <em>cōnstat</em> (custa), <em>pretium</em> (preço), <em>gemmātus</em> (com pedra preciosa), <em>sēstertius</em>, <em>octōgintā</em> (80), <em>tantus … quantus</em> (tão grande quanto), <em>convenīre</em> (encaixar).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "questions": [
+        "Albīnus {md}: 'Ōrnāmenta! Ōrnāmenta fēminārum!' <em>(grita)</em>",
+        "Lydia: 'Aspice {md} tabernam!' — {md} taberna est Albīnī. <em>(aquela)</em>",
+        "Lydia tabernam digitō {md}. <em>(aponta)</em>",
+        "Albīnus margarītās Lydiae {md}, {md} ānulōs ostendit. <em>(mostra; ostende)</em>",
+        "Mēdus: 'Quot sēstertiīs {md} ānulus?'",
+        "Albīnus: 'Hic ānulus {md} centum sēstertiīs cōnstat.' <em>(gemmatus — concorda com ānulus)</em>",
+        "{md} ānulī est centum sēstertiī; alius ānulus {md} sēstertiīs cōnstat. <em>(pretium; octōgintā)</em>",
+        "Mēdus: '{md} gemma nōn ad {md} ānulum convenit.' <em>(tão grande; tão pequeno → tantus quantus)</em>"
+      ],
+      "answers": [
+        "clāmat",
+        "illam",
+        "illa",
+        "mōnstrat",
+        "ostendit",
+        "et",
+        "cōnstat",
+        "gemmātus",
+        "pretium",
+        "octōgintā",
+        "tanta",
+        "tantum"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "verba",
+          "type": "words",
+          "inline": false,
+          "words": [
+            "<i>clāmāre</i>",
+            "<i>monstrāre</i>",
+            "<i>ostendere</i>",
+            "<i>cōnstāre</i> (+abl)",
+            "<i>convenīre</i>"
+          ]
+        },
+        {
+          "label": "vocab.",
+          "type": "words",
+          "inline": true,
+          "words": [
+            "<i>pretium</i>",
+            "<i>gemmātus</i>",
+            "<i>sēstertius</i>",
+            "<i>octōgintā</i> (80)",
+            "<i>tantus … quantus</i>"
+          ]
+        }
+      ],
+      "references": [
+        "preco"
       ]
     },
     {
@@ -554,6 +781,132 @@ window.LL.chapters['viii'] = {
             [
               "abl.",
               "eā",
+              "iīs"
+            ]
+          ]
+        }
+      ],
+      "references": [
+        "paradigma-qui",
+        "paradigma-is"
+      ]
+    },
+    {
+      "index": 503,
+      "number": 14,
+      "title": "Exercitium 14",
+      "tag": "interrogativo/relativo neutro <em>quid, quod, id</em>",
+      "tip": {
+        "text": "Para coisas (neutro), use <em>quid?</em> (interrog., independente) ou <em>quod</em> (relativo/interrog. com substantivo). O pronome anafórico neutro é <em>id</em>. Gen. <em>cuius / eius</em>; dat. <em>cui / eī</em>; abl. <em>quō / eō</em>.",
+        "qualifier": null
+      },
+      "exemplum": "<u>Quid</u> in saccō est? Mālum quod inest. <u>Id</u> mālum magnum est.",
+      "questions": [
+        "{md} in saccō est? Mālum est in saccō. {md} mālum? Mālum {md} inest est rubrum. {md} mālum Iūlius capit.",
+        "{md} in mēnsā pōnitur? Sacculus pōnitur. {md} sacculus? Sacculus {md} ā Dāvō pōnitur in mēnsā. {md} sacculus vacuus est.",
+        "{md} ōrnāmentī pretium est centum sēstertiī? Pretium ānulī est centum sēstertiī. Ōrnāmentum {md} pretium est centum nummī est ānulus. {md} ōrnāmentī pretium est magnum.",
+        "{md} Iūlius mālum dat? Mārcō mālum dat. Puer {md} Iūlius mālum dat est Mārcus. Iūlius {md} mālum dat.",
+        "{md} sacculō nummī sunt? In sacculō Mēdī sunt. Sacculus in {md} nummī sunt est Mēdī. In {md} sacculō nummī sunt.",
+        "{md} ōrnāmenta in tabernā Albīnī sunt? Multa ōrnāmenta sunt. Ōrnāmenta {md} in tabernā sunt sunt pulchra. {md} ōrnāmenta pulchra sunt.",
+        "{md} sunt margarītae? In collō Lydiae sunt. Margarītae {md} in collō Lydiae sunt sunt pulchrae. {md} margarītae pulchrae sunt.",
+        "{md} ōrnāmentōrum pretia magna sunt? Ānulōrum gemmātōrum. Ōrnāmenta {md} pretia magna sunt sunt ānulī gemmātī. {md} ōrnāmentōrum pretia magna sunt.",
+        "{md} ānulīs gemmae sunt? In ānulīs gemmātīs. Ānulī in {md} gemmae sunt vēnduntur magnō pretiō. In {md} ānulīs gemmae sunt.",
+        "{md} ōrnāmentīs collum ōrnātur? Margarītīs. Ōrnāmenta {md} collum ōrnātur sunt margarītae. {md} ōrnāmentīs collum ōrnātur."
+      ],
+      "answers": [
+        "quid",
+        "quod",
+        "quod",
+        "id",
+        "quid",
+        "quod",
+        "quod",
+        "id",
+        "cuius",
+        "cuius",
+        "eius",
+        "cui",
+        "cui",
+        "eī",
+        "quō",
+        "quō",
+        "eō",
+        "quae",
+        "quae",
+        "ea",
+        "quae",
+        "quae",
+        "ea",
+        "quōrum",
+        "quōrum",
+        "eōrum",
+        "quibus",
+        "quibus",
+        "iīs|eīs",
+        "quibus",
+        "quibus",
+        "iīs|eīs"
+      ],
+      "phraseMode": false,
+      "auxilia": [
+        {
+          "label": "quī/quae/quod (n.)",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "nōm./acc.",
+              "quod (quid)",
+              "quae"
+            ],
+            [
+              "gen.",
+              "cuius",
+              "quōrum"
+            ],
+            [
+              "dat.",
+              "cui",
+              "quibus"
+            ],
+            [
+              "abl.",
+              "quō",
+              "quibus"
+            ]
+          ]
+        },
+        {
+          "label": "is/ea/id (n.)",
+          "type": "table",
+          "headers": [
+            "",
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            [
+              "nōm./acc.",
+              "id",
+              "ea"
+            ],
+            [
+              "gen.",
+              "eius",
+              "eōrum"
+            ],
+            [
+              "dat.",
+              "eī",
+              "iīs"
+            ],
+            [
+              "abl.",
+              "eō",
               "iīs"
             ]
           ]
