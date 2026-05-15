@@ -1,5 +1,5 @@
 // Auto-generated. Lingua Latina — Capitulum VIII
-// Edit this file to adjust questions, answers, or auxilia.
+// Edit this file to adjust questions, answers, content, or references.
 window.LL = window.LL || {};
 window.LL.chapters = window.LL.chapters || {};
 window.LL.chapters['viii'] = {
@@ -69,6 +69,10 @@ window.LL.chapters['viii'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "dativo",
+        "verbos-io"
       ]
     },
     {
@@ -120,6 +124,9 @@ window.LL.chapters['viii'] = {
             "<i>quī, quae, quod</i> <span class=\"aux-gloss\">qual</span>"
           ]
         }
+      ],
+      "references": [
+        "interrogativos"
       ]
     },
     {
@@ -186,6 +193,9 @@ window.LL.chapters['viii'] = {
             "<i>capit / capiunt</i>"
           ]
         }
+      ],
+      "references": [
+        "verbos-io"
       ]
     },
     {
@@ -243,6 +253,9 @@ window.LL.chapters['viii'] = {
             "<i>vīgintī</i>"
           ]
         }
+      ],
+      "references": [
+        "preco"
       ]
     },
     {
@@ -299,6 +312,9 @@ window.LL.chapters['viii'] = {
           ],
           "gloss": "(indeclināb.)"
         }
+      ],
+      "references": [
+        "preco"
       ]
     },
     {
@@ -424,6 +440,10 @@ window.LL.chapters['viii'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "paradigma-qui",
+        "paradigma-is"
       ]
     },
     {
@@ -538,7 +558,51 @@ window.LL.chapters['viii'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "paradigma-qui",
+        "paradigma-is"
       ]
     }
-  ]
+  ],
+  "content": {
+    "topics": [
+      {
+        "id": "genitivo",
+        "title": "Genitivo: posse e relação",
+        "bookRef": "Cap. VIII, ll. 1–35; gramm. ll. 134–223",
+        "body": "\n                <p>O <strong>genitivo</strong> exprime posse, relação ou origem —\n                \"de\" em português, mas com terminação própria:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m./n.</th><th>f.</th></tr>\n                  <tr><td>sg.</td><td>-ī (<em>servī, cubiculī</em>)</td><td>-ae (<em>ancillae</em>)</td></tr>\n                  <tr><td>pl.</td><td>-ōrum (<em>servōrum</em>)</td><td>-ārum (<em>ancillārum</em>)</td></tr>\n                </table>\n                <p>Em latim o genitivo precede ou segue o nome a que se refere, e a\n                ordem é flexível: <em>filius Iūliī</em> = <em>Iūliī filius</em>\n                (\"filho de Júlio\").</p>\n                <div class=\"ex-block\">\n                  Mēdus <strong>servus Iūliī</strong> est. — Pretium\n                  <strong>rosārum</strong>. — Ānulus <strong>magnī pretiī</strong>.\n                </div>\n            "
+      },
+      {
+        "id": "preco",
+        "title": "Preço: genitivo <em>vs.</em> ablativo",
+        "bookRef": "Cap. VIII, ll. 83–133",
+        "body": "\n                <p>Latim tem duas construções para indicar preço/valor:</p>\n                <ul>\n                  <li><strong>Genitivo de preço</strong> — com verbo <em>esse</em>:\n                  <em>magnī, parvī, tantī, quantī, plūris, minōris</em>\n                  (valor \"abstrato\"). <br>\n                  <em>Ānulus magnī pretiī est.</em></li>\n                  <li><strong>Ablativo de preço</strong> — com verbos <em>cōnstat,\n                  emit, vēndit</em> (preço efetivo, em moedas). <br>\n                  <em>Ānulus centum sēstertiīs cōnstat.</em></li>\n                </ul>\n                <p>Os numerais <em>vīgintī, octōgintā, nōnāgintā, centum</em> são\n                <strong>indeclināveis</strong> — não mudam de forma — mas o substantivo\n                que segue declina: <em>centum sēstertiīs</em> (abl.).</p>\n            "
+      },
+      {
+        "id": "verbos-io",
+        "title": "Verbos em <em>-iō</em>: a 3ª conjugação mista",
+        "bookRef": "Cap. VIII, gramm. ll. 134–223",
+        "body": "\n                <p>Alguns verbos da 3ª conjugação têm um <em>-i-</em> antes da\n                desinência em algumas formas. São os chamados\n                <strong>verbos em <em>-iō</em></strong> (ou 3ª mista):\n                <em>capiō, accipiō, aspiciō, faciō, iaciō</em>.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>indicativo</th><th>imperativo</th></tr>\n                  <tr><td>sg. 3ª</td><td>capit, accipit</td><td>cape!, accipe!</td></tr>\n                  <tr><td>pl. 3ª</td><td>capiunt, accipiunt</td><td>capite!, accipite!</td></tr>\n                </table>\n                <p>Compare com a 3ª regular (<em>discēdere</em>: discēdit, discēdunt;\n                discēde!, discēdite!) — diferença está só na presença do\n                <em>-i-</em> nas formas de plural e algumas outras.</p>\n            "
+      },
+      {
+        "id": "paradigma-qui",
+        "title": "Paradigma completo de <em>quī, quae, quod</em>",
+        "bookRef": "Cap. VIII, gramm. ll. 134–223",
+        "body": "\n                <p>Em Cap. VI viu-se o relativo só no nominativo. Aqui completa-se\n                o paradigma — você precisa decorar essa tabela para entender bem\n                latim daqui para a frente.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>quī</td><td>quae</td><td>quod</td></tr>\n                  <tr><td>acus. sg.</td><td>quem</td><td>quam</td><td>quod</td></tr>\n                  <tr><td>gen. sg.</td><td>cuius</td><td>cuius</td><td>cuius</td></tr>\n                  <tr><td>dat. sg.</td><td>cui</td><td>cui</td><td>cui</td></tr>\n                  <tr><td>abl. sg.</td><td>quō</td><td>quā</td><td>quō</td></tr>\n                  <tr><td>nōm. pl.</td><td>quī</td><td>quae</td><td>quae</td></tr>\n                  <tr><td>acus. pl.</td><td>quōs</td><td>quās</td><td>quae</td></tr>\n                  <tr><td>gen. pl.</td><td>quōrum</td><td>quārum</td><td>quōrum</td></tr>\n                  <tr><td>dat. pl.</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n                  <tr><td>abl. pl.</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n                </table>\n                <p>O interrogativo <em>quis?, quae?, quid?</em> tem só algumas\n                formas distintas (nōm. sg. m. <em>quis</em>, n. <em>quid</em>); fora\n                isso, é igual ao relativo.</p>\n            "
+      },
+      {
+        "id": "paradigma-is",
+        "title": "Paradigma completo de <em>is, ea, id</em>",
+        "bookRef": "Cap. VIII, gramm. ll. 134–223",
+        "body": "\n                <p>O pronome anafórico <em>is, ea, id</em> (\"ele, ela, isso\") aparece\n                em todos os casos — útil para retomar pessoas e coisas já mencionadas\n                sem repetir o nome.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>is</td><td>ea</td><td>id</td></tr>\n                  <tr><td>acus. sg.</td><td>eum</td><td>eam</td><td>id</td></tr>\n                  <tr><td>gen. sg.</td><td>eius</td><td>eius</td><td>eius</td></tr>\n                  <tr><td>dat. sg.</td><td>eī</td><td>eī</td><td>eī</td></tr>\n                  <tr><td>abl. sg.</td><td>eō</td><td>eā</td><td>eō</td></tr>\n                  <tr><td>nōm. pl.</td><td>iī</td><td>eae</td><td>ea</td></tr>\n                  <tr><td>acus. pl.</td><td>eōs</td><td>eās</td><td>ea</td></tr>\n                  <tr><td>gen. pl.</td><td>eōrum</td><td>eārum</td><td>eōrum</td></tr>\n                  <tr><td>dat. pl.</td><td>eīs / iīs</td><td>eīs / iīs</td><td>eīs / iīs</td></tr>\n                  <tr><td>abl. pl.</td><td>eīs / iīs</td><td>eīs / iīs</td><td>eīs / iīs</td></tr>\n                </table>\n                <p>As formas <em>eīs</em> e <em>iīs</em> são equivalentes; ambas\n                aparecem nos textos clássicos.</p>\n            "
+      },
+      {
+        "id": "interrogativos",
+        "title": "Partículas interrogativas",
+        "bookRef": "Cap. VIII, ll. 36–82",
+        "body": "\n                <p>Latim distingue várias maneiras de fazer pergunta — cada partícula\n                sugere a resposta que se espera:</p>\n                <ul>\n                  <li><strong>-ne?</strong> — pergunta neutra\n                  (<em>Estne Iūlius dominus?</em>)</li>\n                  <li><strong>num?</strong> — espera resposta <em>negativa</em>\n                  (<em>\"é mesmo verdade que…?\"</em>, <em>\"será que?\"</em>)</li>\n                  <li><strong>nōnne?</strong> — espera resposta <em>afirmativa</em>\n                  (<em>\"não é verdade que…?\"</em>, <em>\"porventura não?\"</em>)</li>\n                </ul>\n                <p>Outras partículas que iniciam pergunta:\n                <em>cūr?</em> (por quê), <em>ubi?</em> (onde), <em>quō?</em>\n                (para onde), <em>unde?</em> (de onde), <em>quālis?</em> (de que\n                qualidade), <em>quantus?</em> (de que tamanho), <em>quot?</em>\n                (quantos, indeclināb.), <em>quam</em> + adj. (quão).</p>\n            "
+      }
+    ]
+  }
 };

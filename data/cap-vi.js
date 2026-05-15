@@ -1,5 +1,5 @@
 // Auto-generated. Lingua Latina — Capitulum VI
-// Edit this file to adjust questions, answers, or auxilia.
+// Edit this file to adjust questions, answers, content, or references.
 window.LL = window.LL || {};
 window.LL.chapters = window.LL.chapters || {};
 window.LL.chapters['vi'] = {
@@ -89,6 +89,9 @@ window.LL.chapters['vi'] = {
             "<i>it / eunt</i>"
           ]
         }
+      ],
+      "references": [
+        "lugar"
       ]
     },
     {
@@ -161,6 +164,9 @@ window.LL.chapters['vi'] = {
             "<i>Tūsculum · Tūsculō · Tūsculī</i>"
           ]
         }
+      ],
+      "references": [
+        "nomes-cidades"
       ]
     },
     {
@@ -221,6 +227,9 @@ window.LL.chapters['vi'] = {
             "→ <i>Servus ā dominō vocātur</i>"
           ]
         }
+      ],
+      "references": [
+        "voz-passiva"
       ]
     },
     {
@@ -331,7 +340,38 @@ window.LL.chapters['vi'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "voz-passiva"
       ]
     }
-  ]
+  ],
+  "content": {
+    "topics": [
+      {
+        "id": "lugar",
+        "title": "Lugar: <em>quō? unde? ubi?</em>",
+        "bookRef": "Cap. VI, ll. 1–45",
+        "body": "\n                <p>Três perguntas, três construções:</p>\n                <ul>\n                  <li><strong>quō?</strong> (para onde) → <em>ad / in</em> + <em>acusativo</em></li>\n                  <li><strong>unde?</strong> (de onde) → <em>ā / ab / ex</em> + <em>ablativo</em></li>\n                  <li><strong>ubi?</strong> (onde) → <em>in</em> + <em>ablativo</em></li>\n                </ul>\n                <p>Note que <em>in</em> aceita os dois casos, e a diferença de sentido\n                é decidida pelo caso: <em>in vīllam</em> (para dentro da vila) vs.\n                <em>in vīllā</em> (dentro da vila).</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>ad vīllam</strong> it (quō?), servī <strong>ab oppidō</strong>\n                  veniunt (unde?), Aemilia <strong>in vīllā</strong> est (ubi?).\n                </div>\n                <p><em>ā</em> e <em>ab</em> são a mesma palavra: <em>ab</em> aparece\n                antes de vogal ou <em>h</em>; <em>ā</em>, antes de consoante.</p>\n            "
+      },
+      {
+        "id": "nomes-cidades",
+        "title": "Nomes de cidade: sem preposição",
+        "bookRef": "Cap. VI, ll. 46–95",
+        "body": "\n                <p>Nomes de cidade (e de pequenas ilhas) fogem da regra geral —\n                <em>não levam preposição</em> e usam casos próprios:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>1ª decl. (Rōma)</th><th>2ª decl. (Tūsculum)</th></tr>\n                  <tr><td>quō? (para)</td><td>Rōmam</td><td>Tūsculum</td></tr>\n                  <tr><td>unde? (de)</td><td>Rōmā</td><td>Tūsculō</td></tr>\n                  <tr><td>ubi? (em)</td><td>Rōmae</td><td>Tūsculī</td></tr>\n                </table>\n                <p>A forma <em>Rōmae</em> / <em>Tūsculī</em> é o <strong>locativo</strong>,\n                um caso vestigial que sobrevive sobretudo em nomes de cidade. Para\n                cidades de plural ou da 3ª declinação as terminações são outras\n                (<em>Athēnīs</em>, <em>Carthāgine</em>), mas em Cap. VI você só\n                encontra 1ª e 2ª.</p>\n                <div class=\"ex-block\">\n                  Mēdus <strong>Rōmā</strong> venit et <strong>Tūsculum</strong> it;\n                  Cornēlius <strong>Tūsculī</strong> habitat.\n                </div>\n            "
+      },
+      {
+        "id": "voz-passiva",
+        "title": "Voz passiva: <em>-tur, -ntur</em>",
+        "bookRef": "Cap. VI, ll. 46–95; gramm. ll. 96–139",
+        "body": "\n                <p>A voz passiva inverte o ponto de vista da frase. Em latim,\n                a marca passiva é a terminação verbal:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>ativa</th><th>passiva</th></tr>\n                  <tr><td>3ª pers. sg.</td><td>-t</td><td>-tur</td></tr>\n                  <tr><td>3ª pers. pl.</td><td>-nt</td><td>-ntur</td></tr>\n                </table>\n                <p>O <strong>agente</strong> (quem faz a ação) é introduzido por\n                <em>ā / ab</em> + ablativo. O que era objeto direto (acusativo) passa\n                a sujeito (nominativo).</p>\n                <div class=\"ex-block\">\n                  <strong>Ativa:</strong> Dominus servum vocat.<br>\n                  <strong>Passiva:</strong> Servus <em>ā dominō</em> vocātur.\n                </div>\n                <p>Verifica sempre as três peças: <em>quem é agora o sujeito? quem é\n                o agente (ā/ab + abl.)? a terminação do verbo é -tur/-ntur?</em></p>\n            "
+      },
+      {
+        "id": "relativo-intro",
+        "title": "Pronome relativo <em>quī, quae, quod</em>",
+        "bookRef": "Cap. VI, ll. 46–95",
+        "body": "\n                <p>O relativo <strong>concorda em gênero e número</strong> com seu\n                antecedente — mas o <em>caso</em> depende da função que ele exerce\n                <em>dentro da oração relativa</em>:</p>\n                <ul>\n                  <li><em>Servus <strong>quī</strong> Rōmam it…</em> — quī (m. nōm. sg.)\n                  porque é sujeito da relativa</li>\n                  <li><em>Servus <strong>quem</strong> Iūlius vocat…</em> — quem\n                  (m. acus. sg.) porque é objeto direto da relativa</li>\n                </ul>\n                <p>O paradigma completo aparece em Cap. VIII; aqui em Cap. VI você\n                vê só as formas mais frequentes: <em>quī, quae, quod</em> (nōm.).</p>\n            "
+      }
+    ]
+  }
 };

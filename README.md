@@ -6,7 +6,7 @@
 |-|-|-|
 |V|Acusativo, ablativo, imperativo|4|
 |VI|Movimento, locativo, voz passiva|4|
-|VII|Dativo, demonstrativo, relativo|4|
+|VII|Dativo, demonstrativo, relativo|7 (4 do livro + 3 originais)|
 |VIII|Genitivo, preço, *quī/is*|7|
 
 ---
@@ -15,54 +15,54 @@
 
 ```
 .
-├── index.html              # Página inicial: cartões de capítulos + compêndio
-├── cap-v.html              # Páginas dos capítulos (estrutura idêntica,
-├── cap-vi.html             # mudam apenas o slug e o arquivo de dados)
+├── index.html               # Cartões de capítulos + compêndio
+├── cap-v.html               # Páginas dos capítulos (template comum,
+├── cap-vi.html              # muda apenas o slug e o arquivo de dados)
 ├── cap-vii.html
 ├── cap-viii.html
 ├── assets/
 │   ├── css/
-│   │   ├── theme.css       # Variáveis, fontes, cores, textura de pergaminho
-│   │   ├── layout.css      # Nav, cabeçalho, pager, footer
-│   │   ├── exercise.css    # Componente de exercício (dica, inputs, auxilia)
-│   │   └── components.css  # Cartões de capítulo, TOC, summary cards
+│   │   ├── theme.css        # Variáveis, fontes, textura de pergaminho
+│   │   ├── layout.css       # Nav, header, pager, footer
+│   │   ├── exercise.css     # Componente de exercício
+│   │   ├── components.css   # Cartões, TOC, summary cards
+│   │   └── content.css      # Explicātiōnēs e botão "Vide explicātiōnem"
 │   └── js/
-│       ├── nav.js          # Renderiza menu superior e pager prev/next
-│       ├── grader.js       # Normalização e correção de inputs
-│       ├── auxilia.js      # Renderiza painel lateral a partir de dados
-│       └── exercise.js     # Renderiza exercício completo e monta capítulo
+│       ├── nav.js           # Menu superior + pager prev/next
+│       ├── grader.js        # Normalização e correção
+│       ├── auxilia.js       # Painel lateral
+│       ├── exercise.js      # Renderiza exercício e monta capítulo
+│       └── content.js       # Explicātiōnēs + botão de referência
 ├── data/
-│   ├── chapters.js         # Índice de capítulos (slug, numeral, título)
-│   ├── cap-v.js            # Dados do Capítulo V
-│   ├── cap-vi.js           # …
+│   ├── chapters.js          # Índice de capítulos
+│   ├── cap-v.js             # Dados do Capítulo V (exercícios + content)
+│   ├── cap-vi.js
 │   ├── cap-vii.js
 │   └── cap-viii.js
-├── scripts/
-│   ├── build\_data.py       # Gera os data/cap-\*.js do quiz monolítico antigo
-│   └── build\_pages.py      # Gera cap-\*.html a partir de um template comum
-└── .nojekyll               # Desabilita Jekyll no GitHub Pages
+└── .nojekyll                # Desabilita Jekyll no GitHub Pages
 ```
 
-### Componentes / serviços reutilizáveis (todos em `window.LL`)
+### Componentes/serviços (todos em `window.LL`)
 
-* **`renderSiteNav(activeSlug)` / `mountSiteNav(activeSlug)`** — barra de navegação superior com cartões de capítulos. `activeSlug` destaca o capítulo corrente.
-* **`renderPager(activeSlug)` / `mountPager(activeSlug)`** — botões prev/next entre capítulos, no fim de cada página.
-* **`renderAuxilia(groups)`** — painel lateral a partir de uma lista de grupos (`{type:'table' | 'list' | 'words', …}`).
-* **`renderExercise(data)`** — exercício completo (cabeçalho, dica, lacunas, controles, gabarito, auxilia).
-* **`mountChapter(slug)`** — monta todos os exercícios de um capítulo no `\[data-exercises]`.
-* **`mountChapterHeader(slug)`** / **`mountChapterTOC(slug)`** — populam título e sumário a partir dos dados.
-* **`gradeExercise(article)`** / **`clearExercise(article)`** — correção e limpeza de um exercício.
-* **`isCorrect(user, expected, opts)`** / **`normalize(s)`** / **`stripMacrons(s)`** — utilidades de comparação tolerantes a macrons, maiúsculas e pontuação.
+* **`renderSiteNav(activeSlug)` / `mountSiteNav(activeSlug)`** — barra superior com capítulo ativo destacado.
+* **`renderPager(activeSlug)` / `mountPager(activeSlug)`** — botões prev/next no fim de cada página.
+* **`mountChapter(slug)`** / **`mountChapterHeader(slug)`** / **`mountChapterTOC(slug)`** — montagem do capítulo.
+* **`mountChapterContent(slug)`** — seção *Explicātiōnēs* (tópicos colapsáveis).
+* **`renderReferenceButton(refs, chapter)`** — botão *Vide explicātiōnem* num exercício.
+* **`renderExercise(data, chapter)`** — exercício completo.
+* **`renderAuxilia(groups)`** — painel lateral.
+* **`gradeExercise(article)`** / **`ungradeExercise(article)`** / **`clearExercise(article)`** — correção, des-correção, limpar.
+* **`isCorrect(user, expected, opts)`** / **`normalize(s)`** / **`stripMacrons(s)`** — utilidades.
 
 ### Forma dos dados de um exercício
 
 ```js
 {
-  number: 1,                               // número no livro
-  title:  "Exercitium 1",                  // título exibido
+  number: 1,                               // número (ou "A"/"B"/… para drills)
+  title:  "Exercitium 1",
   tag:    "terminações nominais e verbais",
   tip: {
-    text:      "Pergunte sempre…",         // HTML permitido (<em>, <strong>)
+    text:      "Pergunte sempre…",         // HTML permitido
     qualifier: null                        // ou "o mais importante deste capítulo"
   },
   exemplum: null,                          // opcional, HTML
@@ -71,34 +71,44 @@
     …
   ],
   answers: \["us", "um", …],                // ordem segue as {} das questions
-  phraseMode: false,                       // true permite matching mais frouxo (frases)
-  auxilia: \[                               // lista de grupos no painel lateral
+  phraseMode: false,                       // true: matching tolera ordem livre e ab≡ā
+  auxilia: \[ … ],                          // grupos do painel lateral
+  references: \['acusativo']                // ids de tópicos da seção Explicātiōnēs
+}
+```
+
+Alternativas equivalentes usam `|`: `"eīs|iīs"` aceita ambas.
+
+### Forma do conteúdo/explicações
+
+```js
+chapter.content = {
+  topics: \[
     {
-      label: "terminationes",
-      type:  "table",
-      headers: \["", "sg.", "pl."],
-      rows: \[\["m. nōm.", "-us", "-ī"], …]
+      id:      'acusativo',
+      title:   'Acusativo: o caso do objeto direto',
+      bookRef: 'Cap. V, ll. 1–46',         // citação ao livro Familia Romana
+      body:    `<p>HTML completo da explicação…</p>`
     },
-    {
-      label: "verbum",
-      type:  "list",
-      items: \["sg. <i>-t</i> · pl. <i>-nt</i>", …]
-    },
-    {
-      label: "vocābula",
-      type:  "words",
-      inline: true,                        // exibe inline (chips), senão como lista
-      words: \["<i>ambulat</i>", …],
-      gloss: "(opcional, texto pequeno abaixo)"
-    }
+    …
   ]
 }
 ```
 
-Respostas com alternativas equivalentes usam `|`: `"eīs|iīs"` aceita ambas.
+As explicações estão em pt-BR. Citações ao livro usam o formato `Cap. X, ll. M–N` (versūs dentro do capítulo) ou `Cap. X, gramm. ll. M–N` (seção *Grammatica Latīna*). O texto da explicação é original.
+
+---
+
+## Detalhes da correção
+
+* **Macrons opcionais**: `servō` ≡ `servo`.
+* **Maiúsculas/pontuação**: ignoradas.
+* **Frases (phraseMode)**: a ordem das palavras é livre e `ab ≡ ā` (mesma preposição em ambientes diferentes). Usado nos exercícios de transformação (Cap. VI Ex. 8; Cap. VIII Ex. 3).
+* **Enter**: salta para a próxima lacuna; o último Enter corrige.
+* **Aperī responsa**: corrige; **Occulta responsa**: remove a correção sem apagar o input; **Mundā**: limpa tudo.
 
 ---
 
 ## Crédito
 
-Exercícios baseados em *Lingua Latina per se Illustrata · Pars I: Familia Romana* (Hans H. Ørberg, Domus Latina / Focus Publishing). Esta página é um recurso de estudo pessoal, não substitui o livro nem é endossado pelo editor.
+Exercícios baseados em *Lingua Latina per se Illustrata · Pars I: Familia Romana* (Hans H. Ørberg). Recurso de estudo pessoal; não substitui o livro. As explicações da seção *Explicātiōnēs* são originais — não reproduzem o conteúdo do livro, apenas remetem a ele.

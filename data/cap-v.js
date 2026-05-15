@@ -1,5 +1,5 @@
 // Auto-generated. Lingua Latina — Capitulum V
-// Edit this file to adjust questions, answers, or auxilia.
+// Edit this file to adjust questions, answers, content, or references.
 window.LL = window.LL || {};
 window.LL.chapters = window.LL.chapters || {};
 window.LL.chapters['v'] = {
@@ -95,6 +95,10 @@ window.LL.chapters['v'] = {
             "<i>est / sunt</i> · <i>habet / habent</i>"
           ]
         }
+      ],
+      "references": [
+        "acusativo",
+        "concordancia"
       ]
     },
     {
@@ -170,6 +174,10 @@ window.LL.chapters['v'] = {
             "<i>cum, in, ex, ab, sine</i> + abl."
           ]
         }
+      ],
+      "references": [
+        "ablativo",
+        "concordancia"
       ]
     },
     {
@@ -272,6 +280,9 @@ window.LL.chapters['v'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "imperativo"
       ]
     },
     {
@@ -342,7 +353,38 @@ window.LL.chapters['v'] = {
             ]
           ]
         }
+      ],
+      "references": [
+        "acusativo"
       ]
     }
-  ]
+  ],
+  "content": {
+    "topics": [
+      {
+        "id": "acusativo",
+        "title": "Acusativo: o caso do objeto direto",
+        "bookRef": "Cap. V, ll. 1–46",
+        "body": "\n                <p>Quando um substantivo é <strong>sujeito</strong> de uma oração, está\n                no <em>nominativo</em>; quando é <strong>objeto direto</strong> (o que recebe a ação\n                do verbo), passa ao <em>acusativo</em>. Em latim, isso muda a terminação:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>nōm. sg.</th><th>acus. sg.</th><th>nōm. pl.</th><th>acus. pl.</th></tr>\n                  <tr><td>m. (servus)</td><td>servus</td><td>servum</td><td>servī</td><td>servōs</td></tr>\n                  <tr><td>f. (ancilla)</td><td>ancilla</td><td>ancillam</td><td>ancillae</td><td>ancillās</td></tr>\n                  <tr><td>n. (cubiculum)</td><td>cubiculum</td><td>cubiculum</td><td>cubicula</td><td>cubicula</td></tr>\n                </table>\n                <p>Nota a peculiaridade dos <em>neutros</em>: nominativo e acusativo\n                têm sempre a mesma forma (sg. <em>-um</em>, pl. <em>-a</em>).</p>\n                <div class=\"ex-block\">\n                  <strong>Iūlius</strong> (nōm.) <strong>servum</strong> (acus.) vocat —\n                  <em>Júlio chama o escravo</em>.\n                </div>\n                <p>Para identificar caso e número, pergunte-se: <em>quem faz?</em>\n                (sujeito → nom.) <em>quem/o quê recebe a ação?</em> (objeto → acus.).</p>\n            "
+      },
+      {
+        "id": "ablativo",
+        "title": "Ablativo: depois de preposições",
+        "bookRef": "Cap. V, ll. 47–105",
+        "body": "\n                <p>O <strong>ablativo</strong> é o caso obrigatório depois de várias\n                preposições — <em>cum, in, ex, ab, sine, dē, prō</em>. Em Cap. V você\n                encontra principalmente <em>cum</em> (com) e <em>in</em> (em).</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>sg.</th><th>pl.</th></tr>\n                  <tr><td>m. / n.</td><td>servō / cubiculō</td><td>servīs / cubiculīs</td></tr>\n                  <tr><td>f.</td><td>ancillā</td><td>ancillīs</td></tr>\n                </table>\n                <p>O macron sobre o <em>-ā</em> do feminino singular é a única\n                marca visual que distingue <em>ancilla</em> (nōm.) de <em>ancillā</em> (abl.).\n                Adjetivos concordam em caso, número e gênero: <em>cum magnō hortō</em>,\n                <em>in magnā vīllā</em>.</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>in vīllā</strong> habitat <strong>cum Aemiliā</strong>\n                  et <strong>cum līberīs</strong>.\n                </div>\n            "
+      },
+      {
+        "id": "imperativo",
+        "title": "Imperativo: ordens e pedidos",
+        "bookRef": "Cap. V, ll. 47–105; gramm. ll. 106–156",
+        "body": "\n                <p>O <strong>imperativo</strong> singular é o tema verbal puro\n                (<em>vocā!, vidē!, discēde!, audī!</em>). O plural acrescenta <em>-te</em>\n                — com vogal ligante <em>-i-</em> na 3ª conjugação:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th>conj.</th><th>sg.</th><th>pl.</th></tr>\n                  <tr><td>1ª (vocāre)</td><td>vocā!</td><td>vocāte!</td></tr>\n                  <tr><td>2ª (vidēre)</td><td>vidē!</td><td>vidēte!</td></tr>\n                  <tr><td>3ª (discēdere)</td><td>discēde!</td><td>discēdite!</td></tr>\n                  <tr><td>4ª (audīre)</td><td>audī!</td><td>audīte!</td></tr>\n                </table>\n                <p>Use o singular quando se fala a <em>uma</em> pessoa, o plural quando\n                se fala a <em>várias</em>. O nome da pessoa interpelada vai no\n                <em>vocativo</em>, que para a maioria dos nomes coincide com o nominativo\n                (<em>Mārce!</em> é exceção — vocativo de <em>Mārcus</em>).</p>\n            "
+      },
+      {
+        "id": "concordancia",
+        "title": "Concordância nome–adjetivo",
+        "bookRef": "Cap. V (transversal)",
+        "body": "\n                <p>Em latim, o adjetivo <strong>concorda</strong> com o substantivo a que\n                se refere em <em>caso</em>, <em>número</em> e <em>gênero</em>. Ele não\n                precisa estar contíguo: <em>multās rosās pulchrās videt</em> e\n                <em>rosās pulchrās multās videt</em> querem dizer a mesma coisa.</p>\n                <p>Os adjetivos da 1ª–2ª classe seguem as mesmas terminações dos substantivos\n                em <em>-us, -a, -um</em>: <em>magnus, magna, magnum; magnī, magnae, magna…</em></p>\n                <div class=\"ex-block\">\n                  <strong>Multī servī</strong> in <strong>magnā vīllā</strong> habitant.\n                </div>\n                <p>Se a terminação não combinar, é sinal de que há erro em algum lugar —\n                ou de que o adjetivo está concordando com outro substantivo na frase.</p>\n            "
+      }
+    ]
+  }
 };

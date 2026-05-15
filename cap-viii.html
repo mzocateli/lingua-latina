@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/exercise.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/content.css">
 </head>
 <body>
 
@@ -16,30 +17,27 @@
 
 <div class="wrap">
 
-  <!-- ====== CHAPTER HEADER (populated by JS from data) ====== -->
   <header class="chapter-header">
     <div class="eyebrow">Lingua Latīna · Exercitia</div>
     <h1 data-chapter-title></h1>
     <p class="blurb" data-chapter-blurb></p>
   </header>
 
-  <!-- ====== USAGE HINT ====== -->
   <div class="usage-hint">
     <strong>Ūsus.</strong> Escreva nas lacunas (os macrons são opcionais).
     Pressione <kbd>Enter</kbd> para ir ao próximo campo. Clique em
     <em>Aperī responsa</em> para corrigir; <em>Mundā</em> para limpar.
+    Em exercício que custa, clica <em>Vide explicātionem</em> para revisar a regra.
   </div>
 
-  <!-- ====== TABLE OF CONTENTS (populated by JS) ====== -->
+  <section data-chapter-content></section>
+
   <div data-chapter-toc></div>
 
-  <!-- ====== EXERCISES (populated by JS) ====== -->
   <section data-exercises></section>
 
-  <!-- ====== PREV/NEXT PAGER (populated by JS) ====== -->
   <div data-pager></div>
 
-  <!-- ====== COLOPHON ====== -->
   <div class="colophon">
     Capitulum VIII — <em>Taberna Rōmāna</em><br>
     <a href="index.html">Tornāre ad initium</a>
@@ -47,11 +45,11 @@
 
 </div>
 
-<!-- ====== SCRIPTS ====== -->
 <script src="data/chapters.js"></script>
 <script src="data/cap-viii.js"></script>
 <script src="assets/js/grader.js"></script>
 <script src="assets/js/auxilia.js"></script>
+<script src="assets/js/content.js"></script>
 <script src="assets/js/exercise.js"></script>
 <script src="assets/js/nav.js"></script>
 <script>
@@ -59,6 +57,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     LL.mountSiteNav(SLUG);
     LL.mountChapterHeader(SLUG);
+    LL.mountChapterContent(SLUG);
     LL.mountChapterTOC(SLUG);
     LL.mountChapter(SLUG);
     LL.mountPager(SLUG);

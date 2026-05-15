@@ -34,21 +34,52 @@
       .trim();
   }
 
+  // Tokenize a normalized string into words.
+  function tokenize(s) {
+    return normalize(s).split(/\s+/).filter(Boolean);
+  }
+
+  // Canonical form for tokens where Latin allows allomorphs.
+  // 'ab' is just 'ā' before vowels; 'ex' is just 'ē' before vowels.
+  // After macron stripping these become 'a'/'ab' and 'e'/'ex' — fold them.
+  const TOKEN_ALIASES = { 'ab': 'a', 'ex': 'e' };
+  function canonToken(t) {
+    return TOKEN_ALIASES[t] || t;
+  }
+
+  // Does the haystack multiset contain every token in needles?
+  // (Order-free comparison; canonicalizes ab/a and ex/e.)
+  function multisetContains(haystack, needles) {
+    const counts = {};
+    for (const h of haystack) {
+      const c = canonToken(h);
+      counts[c] = (counts[c] || 0) + 1;
+    }
+    for (const n of needles) {
+      const c = canonToken(n);
+      if (!counts[c]) return false;
+      counts[c]--;
+    }
+    return true;
+  }
+
   // Compare a single user input against an expected answer.
   // expected may contain '|' to allow alternatives.
-  // opts.phraseMode: looser matching for multi-word answers.
+  // opts.phraseMode: order-free, multiset-based matching with ab/ā equivalence.
   function isCorrect(userInput, expected, opts) {
     if (!userInput) return false;
     const u = normalize(userInput);
     const alts = String(expected).split('|').map(normalize);
     const phrase = opts && opts.phraseMode;
+
     if (phrase) {
+      const userTokens = tokenize(userInput);
       return alts.some(function (a) {
         if (!a) return false;
-        if (u === a) return true;
-        if (u.includes(a)) return true;
-        if (a.includes(u) && u.length >= Math.max(3, a.length * 0.6)) return true;
-        return false;
+        const expectedTokens = tokenize(a);
+        // Every expected word must appear in the user's input
+        // (extras like the subject from the lead-in are OK).
+        return multisetContains(userTokens, expectedTokens);
       });
     }
     return alts.includes(u);
@@ -121,17 +152,28 @@
   }
   NS.gradeExercise = gradeExercise;
 
-  function clearExercise(article) {
+  // Remove grading marks (classes, inline corrections, score badge)
+  // WITHOUT touching what the user typed.
+  function ungradeExercise(article) {
     exerciseInputs(article).forEach(function (inp) {
-      inp.value = '';
       inp.classList.remove('correct', 'wrong');
       const next = inp.nextElementSibling;
       if (next && next.classList && next.classList.contains('corrected')) next.remove();
-      // also reset auto-width
-      inp.style.width = '';
     });
     const badge = article.querySelector('.score');
     if (badge) badge.remove();
+  }
+  NS.ungradeExercise = ungradeExercise;
+
+  function clearExercise(article) {
+    // Remove all grading state…
+    ungradeExercise(article);
+    // …then clear what the user typed and reset auto-expanded widths.
+    exerciseInputs(article).forEach(function (inp) {
+      inp.value = '';
+      inp.style.width = '';
+    });
+    // Close the answer reveal if it's open.
     const ans = article.querySelector('.answer');
     if (ans && ans.classList.contains('show')) {
       ans.classList.remove('show');

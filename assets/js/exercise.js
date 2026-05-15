@@ -109,7 +109,14 @@
     reveal.addEventListener('click', function () {
       const shown = ans.classList.toggle('show');
       reveal.textContent = shown ? 'Occulta responsa' : 'Aperī responsa';
-      if (shown) NS.gradeExercise(article);
+      if (shown) {
+        NS.gradeExercise(article);
+      } else {
+        // Hiding the answers also clears the inline corrections,
+        // the correct/wrong borders, and the score badge —
+        // but keeps whatever the user has typed.
+        NS.ungradeExercise(article);
+      }
     });
     clear.addEventListener('click', function () {
       NS.clearExercise(article);
@@ -176,7 +183,9 @@
   }
 
   // ----- Render full exercise -----
-  function renderExercise(data) {
+  // `chapter` is optional context, used to resolve reference topic ids
+  // into a "Vide explicātionem" button.
+  function renderExercise(data, chapter) {
     const art = el('article', {
       className: 'exercise',
       id: 'ex-' + data.number,
@@ -206,6 +215,12 @@
 
     const ctl = renderControls(art);
     main.appendChild(ctl.controls);
+
+    // Reference button (links to explanation section)
+    if (data.references && NS.renderReferenceButton) {
+      const refBtn = NS.renderReferenceButton(data.references, chapter);
+      if (refBtn) ctl.controls.appendChild(refBtn);
+    }
 
     // Build answer reveal contents
     const ansContents = renderAnswerReveal(data.questions, data.answers);
@@ -242,7 +257,7 @@
     }
     container.innerHTML = '';
     (chapter.exercises || []).forEach(function (ex) {
-      container.appendChild(renderExercise(ex));
+      container.appendChild(renderExercise(ex, chapter));
     });
   }
   NS.mountChapter = mountChapter;

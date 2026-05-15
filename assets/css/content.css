@@ -1,0 +1,205 @@
+/* ============================================================
+   Lingua Latina — content.css
+   Per-chapter explanations section ("Explicātiōnēs") and the
+   "Vide explicātionem" button shown next to exercise controls.
+   ============================================================ */
+
+/* ----- Content section container ----- */
+.content-section{
+  margin:2rem 0 2.4rem;
+}
+.content-intro{
+  font-style:italic;
+  color:var(--ink-soft);
+  margin:.4rem 0 1rem;
+  max-width:70ch;
+  font-size:.97rem;
+}
+
+/* ----- One topic (collapsible <details>) ----- */
+.content-topic{
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--gilt);
+  border-radius:2px;
+  margin:.7rem 0;
+  box-shadow:0 1px 0 rgba(60,40,20,.04);
+  scroll-margin-top:5rem; /* clear sticky nav when scrolled-to */
+  transition:border-left-color .2s ease, box-shadow .2s ease;
+}
+.content-topic[open]{
+  border-left-color:var(--burgundy);
+  box-shadow:var(--shadow);
+}
+
+.content-topic-summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:baseline;
+  gap:.55rem;
+  flex-wrap:wrap;
+  padding:.7rem .95rem;
+  user-select:none;
+  border-radius:2px;
+  transition:background .15s ease;
+}
+.content-topic-summary:hover{
+  background:rgba(160,122,42,.06);
+}
+/* Hide default disclosure triangle in webkit + firefox */
+.content-topic-summary::-webkit-details-marker{display:none}
+.content-topic-summary{list-style:none}
+
+.content-topic-marker{
+  color:var(--gilt);
+  font-size:.95rem;
+  line-height:1;
+  transition:transform .2s ease, color .2s ease;
+  display:inline-block;
+}
+.content-topic[open] .content-topic-marker{
+  color:var(--burgundy);
+  transform:rotate(45deg);
+}
+
+.content-topic-title{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  color:var(--burgundy-deep);
+  font-size:1.15rem;
+  letter-spacing:.01em;
+  flex:1 1 auto;
+  min-width:0;
+}
+.content-topic-title em{font-style:italic; color:var(--ink)}
+
+.content-topic-ref{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  font-size:.8rem;
+  color:var(--muted);
+  letter-spacing:.02em;
+  flex:0 0 auto;
+  text-align:right;
+}
+.content-topic-ref::before{
+  content:"❧ ";
+  color:var(--gilt);
+}
+
+.content-topic-body{
+  padding:0 1rem 1rem 1.4rem;
+  border-top:1px dotted rgba(139,111,58,.35);
+  margin-top:0;
+}
+.content-topic-body p{
+  margin:.7rem 0;
+  line-height:1.55;
+}
+.content-topic-body p:first-child{margin-top:.85rem}
+.content-topic-body ul{
+  margin:.5rem 0 .7rem;
+  padding-left:1.3rem;
+}
+.content-topic-body li{margin:.25rem 0; line-height:1.5}
+.content-topic-body em{font-style:italic; color:var(--ink)}
+.content-topic-body strong{
+  font-weight:600;
+  font-variant:small-caps;
+  letter-spacing:.04em;
+  color:var(--burgundy);
+}
+.content-topic-body table{
+  width:auto;
+  border-collapse:collapse;
+  margin:.7rem 0;
+  font-size:.93rem;
+}
+.content-topic-body th{
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  letter-spacing:.05em;
+  font-weight:600;
+  color:var(--burgundy);
+  font-size:.82rem;
+  text-align:left;
+  padding:.15rem .55rem;
+  border-bottom:1px solid var(--rule);
+}
+.content-topic-body td{
+  padding:.18rem .55rem;
+  vertical-align:baseline;
+  font-style:italic;
+}
+.content-topic-body td:first-child{
+  color:var(--muted);
+  font-style:italic;
+  font-variant:small-caps;
+  letter-spacing:.05em;
+  font-size:.82rem;
+}
+.content-topic-body tr:nth-child(even) td{
+  background:rgba(160,122,42,.04);
+}
+
+/* ----- "Vide explicātionem" reference button ----- */
+.ref-btn{
+  appearance:none;
+  border:1px dashed var(--gilt);
+  background:transparent;
+  color:var(--burgundy);
+  font-family:'Cormorant Garamond', serif;
+  font-variant:small-caps;
+  font-weight:500;
+  letter-spacing:.08em;
+  font-size:.88rem;
+  padding:.35rem .8rem;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .15s ease;
+  text-decoration:none;
+  display:inline-block;
+}
+.ref-btn:hover{
+  background:rgba(160,122,42,.12);
+  border-color:var(--burgundy);
+  color:var(--burgundy-deep);
+}
+
+.ref-btn-group{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.3rem;
+}
+.ref-btn-label{
+  font-family:'IM Fell English', serif;
+  font-style:italic;
+  color:var(--muted);
+  font-size:.85rem;
+  margin-right:.1rem;
+}
+.ref-btn-small{
+  padding:.25rem .55rem;
+  font-size:.82rem;
+  letter-spacing:.05em;
+}
+
+/* Smooth scrolling for the in-page anchor jumps */
+html{
+  scroll-behavior:smooth;
+}
+
+@media (max-width:640px){
+  .content-topic-summary{padding:.55rem .8rem}
+  .content-topic-title{font-size:1.05rem}
+  .content-topic-ref{
+    width:100%;
+    text-align:left;
+    flex-basis:100%;
+    margin-left:1.5rem;
+    margin-top:.05rem;
+  }
+  .content-topic-body{padding:0 .8rem .85rem 1rem}
+}
