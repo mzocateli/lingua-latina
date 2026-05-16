@@ -752,6 +752,36 @@ window.LL.chapters['vi'] = {
         "bookRef": "Cap. VI, ll. 46–95",
         "body": "\n                <p>O relativo <strong>concorda em gênero e número</strong> com seu\n                antecedente — mas o <em>caso</em> depende da função que ele exerce\n                <em>dentro da oração relativa</em>:</p>\n                <ul>\n                  <li><em>Servus <strong>quī</strong> Rōmam it…</em> — quī (m. nōm. sg.)\n                  porque é sujeito da relativa</li>\n                  <li><em>Servus <strong>quem</strong> Iūlius vocat…</em> — quem\n                  (m. acus. sg.) porque é objeto direto da relativa</li>\n                </ul>\n                <p>O paradigma completo aparece em Cap. VIII; aqui em Cap. VI você\n                vê só as formas mais frequentes: <em>quī, quae, quod</em> (nōm.).</p>\n            "
       }
-    ]
+    ],
+    "grammar": {
+      "intro": "Os pontos formais introduzidos no capítulo: <em>acusativo plural</em>, construções de movimento e localização com nomes de cidades, <em>voz passiva</em> com agente, e o paradigma do pronome relativo no masculino.",
+      "sections": [
+        {
+          "heading": "Acusātīvus plūrālis",
+          "bookRef": "Cap. VI, gramm. ll. 110–136",
+          "body": "\n            <p>O capítulo apresenta o <em>plural</em> do acusativo, completando o\n            paradigma que começou em V:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>nōm. sg.</th><th>acus. sg.</th><th>nōm. pl.</th><th>acus. pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>servus</td><td>servum</td><td>servī</td><td>serv<strong>ōs</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>via</td><td>viam</td><td>viae</td><td>vi<strong>ās</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>oppidum</td><td>oppidum</td><td>oppida</td><td>oppida</td></tr>\n            </table>\n            <p>O neutro, lembre-se, tem sempre <em>nōm. = acus.</em>: pl. <em>-a</em>.</p>\n            <div class=\"ex-block\">\n              Iūlius mult<strong>ōs</strong> serv<strong>ōs</strong> habet, et Aemilia mult<strong>ās</strong>\n              ancill<strong>ās</strong>. — Inter Rōm<strong>am</strong> et Brundisi<strong>um</strong> est via Appia.\n            </div>\n            "
+        },
+        {
+          "heading": "Cidades: <em>Rōmam, Rōmā, Rōmae</em>",
+          "bookRef": "Cap. VI, ll. 1–58; gramm. ll. 137–162",
+          "body": "\n            <p>Os nomes de <em>cidades</em> (e de algumas ilhas pequenas) seguem\n            uma sintaxe especial — sem preposição:</p>\n            <table class=\"paradigm\">\n              <tr><th>função</th><th>caso</th><th>exemplo</th></tr>\n              <tr><td class=\"label\">para onde (<em>quō?</em>)</td><td>acusativo puro</td><td>Rōm<strong>am</strong>, Tūscul<strong>um</strong></td></tr>\n              <tr><td class=\"label\">de onde (<em>unde?</em>)</td><td>ablativo puro</td><td>Rōm<strong>ā</strong>, Tūscul<strong>ō</strong></td></tr>\n              <tr><td class=\"label\">onde (<em>ubi?</em>)</td><td>locātīvus</td><td>Rōm<strong>ae</strong>, Tūscul<strong>ī</strong></td></tr>\n            </table>\n            <p>O <strong>locativo</strong> aparece pela primeira vez aqui — é um caso\n            arcaico que sobrevive só com nomes de cidade/ilha/<em>domus</em>/<em>rūs</em>.\n            Sua forma é igual ao genitivo singular (1ª/2ª decl.).</p>\n            <p>Para outros lugares, continua a regra geral: <em>ad/in</em> + acus.;\n            <em>ex/ab</em> + abl.; <em>in</em> + abl. (estado).</p>\n            <div class=\"ex-block\">\n              Iūlius Tūscul<strong>ō</strong> Rōm<strong>am</strong> nōn it.<br>\n              Cornēlius Tūscul<strong>ī</strong> habitat. — Lȳdia Rōm<strong>ae</strong> habitat.\n            </div>\n            "
+        },
+        {
+          "heading": "Vox passīva: <em>-tur, -ntur</em>",
+          "bookRef": "Cap. VI, ll. 60–95; gramm. ll. 163–200",
+          "body": "\n            <p>A voz <em>passiva</em> se forma trocando as terminações da ativa:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>ātīva</th><th>passīva</th></tr>\n              <tr><td class=\"label\">3ª p. sg.</td><td>-t (<em>vocat, videt, pōnit, audit</em>)</td><td>-tur (<em>vocātur, vidētur, pōnitur, audītur</em>)</td></tr>\n              <tr><td class=\"label\">3ª p. pl.</td><td>-nt (<em>vocant, vident, pōnunt, audiunt</em>)</td><td>-ntur (<em>vocantur, videntur, pōnuntur, audiuntur</em>)</td></tr>\n            </table>\n            <p>O <em>agente</em> (quem faz a ação) entra com <strong>ā/ab + ablativo</strong>\n            (pessoa) ou <strong>ablativo sem preposição</strong> (coisa, instrumento):</p>\n            <div class=\"ex-block\">\n              Mēdus <strong>ā Iūliō</strong> vocātur. (agente pessoal)<br>\n              Iūlius <strong>lectīcā</strong> portātur. (instrumento)<br>\n              Saccī <strong>ā servīs</strong> portantur. — Servī <strong>ā dominō</strong> timentur.\n            </div>\n            <p>Note como o <em>sujeito ativo</em> vira <em>agente em ablativo</em>, e o\n            <em>objeto ativo</em> sobe a <em>sujeito passivo</em>.</p>\n            "
+        },
+        {
+          "heading": "Prōnōmen relātīvum (m.): <em>quī, quem, quōs</em>",
+          "bookRef": "Cap. VI, ll. 41–58",
+          "body": "\n            <p>O capítulo introduz o relativo masculino plural — completando o que\n            havia começado em III (apenas singular):</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>quī</td><td>quī</td></tr>\n              <tr><td class=\"label\">acus.</td><td>quem</td><td>qu<strong>ōs</strong></td></tr>\n            </table>\n            <p>O gênero e número vêm do <em>antecedente</em>; o caso, da\n            <em>função na subordinada</em>.</p>\n            <div class=\"ex-block\">\n              Servus <em>quī</em> saccum portat est Syrus. — Servī <em>quōs</em> Iūlius vocat sunt Dāvus et Mēdus.\n            </div>\n            "
+        },
+        {
+          "heading": "Praepositiōnēs <em>ā / ab</em>",
+          "bookRef": "Cap. VI (transversal)",
+          "body": "\n            <p>São a mesma preposição em ambientes fonéticos diferentes:</p>\n            <ul>\n              <li><strong>ab</strong> antes de vogal ou <em>h-</em>: <em>ab oppidō, ab Aemiliā, ab hortō</em></li>\n              <li><strong>ā</strong> antes das demais consoantes: <em>ā Rōmā, ā Iūliō, ā mātre</em></li>\n            </ul>\n            <p>A mesma alternância acontece com <strong>ex / ē</strong> (não vista neste\n            capítulo, mas começa em VII).</p>\n            "
+        }
+      ]
+    }
   }
 };

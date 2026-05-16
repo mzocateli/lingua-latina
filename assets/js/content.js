@@ -66,12 +66,51 @@
     return det;
   }
 
+  // ----- Grammatica section (paradigms, formal grammar) -----
+  function renderGrammar(grammar, numeral) {
+    if (!grammar) return null;
+    const wrap = el('section', { className: 'grammar-section' });
+    wrap.appendChild(el('h2', {
+      className: 'section-title grammar-title',
+      html: 'Grammatica Latīna <span class="roman">· cap. ' +
+            String(numeral || '').toLowerCase() + '</span>'
+    }));
+    if (grammar.intro) {
+      wrap.appendChild(el('p', { className: 'grammar-intro', html: grammar.intro }));
+    }
+    (grammar.sections || []).forEach(function (s) {
+      const block = el('article', { className: 'grammar-block' });
+      if (s.heading) {
+        block.appendChild(el('h3', {
+          className: 'grammar-heading',
+          html: s.heading
+        }));
+      }
+      if (s.bookRef) {
+        block.appendChild(el('div', {
+          className: 'grammar-bookref',
+          html: s.bookRef
+        }));
+      }
+      if (s.body) {
+        block.appendChild(el('div', { className: 'grammar-body', html: s.body }));
+      }
+      wrap.appendChild(block);
+    });
+    return wrap;
+  }
+
   // ----- Whole chapter content section -----
   function mountChapterContent(slug, selector) {
     const chapter = NS.chapters && NS.chapters[slug];
     const target = document.querySelector(selector || '[data-chapter-content]');
     if (!target) return;
-    if (!chapter || !chapter.content || !chapter.content.topics) {
+    if (!chapter || !chapter.content) {
+      target.hidden = true;
+      return;
+    }
+    const content = chapter.content;
+    if (!content.grammar && !(content.topics && content.topics.length)) {
       target.hidden = true;
       return;
     }
@@ -79,20 +118,28 @@
     target.innerHTML = '';
     target.classList.add('content-section');
 
-    target.appendChild(el('h2', {
-      className: 'section-title',
-      html: 'Explicātiōnēs <span class="roman">· referentiae · cap. ' +
-            String(chapter.numeral || '').toLowerCase() + '</span>'
-    }));
-    target.appendChild(el('p', {
-      className: 'content-intro',
-      html: 'Resumo breve para acompanhar o livro. Para a explicação completa, ' +
-            'consulta as linhas indicadas em <em>Familia Romana</em>. Clica num tópico para expandir.'
-    }));
+    // Grammatica first (no preamble — it's the formal grammar block)
+    const grammar = renderGrammar(content.grammar, chapter.numeral);
+    if (grammar) target.appendChild(grammar);
 
-    chapter.content.topics.forEach(function (t) {
-      target.appendChild(renderTopic(t));
-    });
+    // Explicātiōnēs second (collapsible topics)
+    if (content.topics && content.topics.length) {
+      const exp = el('section', { className: 'topics-section' });
+      exp.appendChild(el('h2', {
+        className: 'section-title',
+        html: 'Explicātiōnēs <span class="roman">· referentiae · cap. ' +
+              String(chapter.numeral || '').toLowerCase() + '</span>'
+      }));
+      exp.appendChild(el('p', {
+        className: 'content-intro',
+        html: 'Resumo breve para acompanhar o livro. Para a explicação completa, ' +
+              'consulta as linhas indicadas em <em>Familia Romana</em>. Clica num tópico para expandir.'
+      }));
+      content.topics.forEach(function (t) {
+        exp.appendChild(renderTopic(t));
+      });
+      target.appendChild(exp);
+    }
   }
   NS.mountChapterContent = mountChapterContent;
 

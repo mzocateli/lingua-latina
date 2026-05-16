@@ -203,3 +203,143 @@ html{
   }
   .content-topic-body{padding:0 .8rem .85rem 1rem}
 }
+
+/* ============================================================
+   Grammatica Latīna section
+   Formal grammar block, presented before the collapsible
+   Explicātiōnēs. Mirrors the GRAMMATICA LATINA section that
+   closes each chapter in the printed Familia Romana.
+   ============================================================ */
+.grammar-section{
+  margin: 0 0 2.5rem;
+  padding: 1.4rem 1.6rem 1.6rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.65) 0%,
+    rgba(248,242,228,0.55) 100%
+  );
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  position: relative;
+}
+.grammar-section::before{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(155, 28, 28, 0.18);
+  border-radius: 4px;
+  pointer-events: none;
+}
+.grammar-title{
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+.grammar-intro{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 1.3rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.grammar-block{
+  margin: 0 0 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px dashed rgba(155, 28, 28, 0.2);
+}
+.grammar-block:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.grammar-heading{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.01em;
+}
+.grammar-bookref{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.7rem;
+}
+.grammar-body{
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.grammar-body p{
+  margin: 0 0 0.7rem;
+}
+.grammar-body p:last-child{
+  margin-bottom: 0;
+}
+.grammar-body table.paradigm{
+  border-collapse: collapse;
+  margin: 0.6rem 0 0.9rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.98rem;
+}
+.grammar-body table.paradigm th,
+.grammar-body table.paradigm td{
+  border: 1px solid var(--rule);
+  padding: 0.32rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+.grammar-body table.paradigm th{
+  background: rgba(155, 28, 28, 0.06);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent);
+  font-family: 'Cormorant Garamond', serif;
+}
+.grammar-body table.paradigm td.label{
+  font-style: italic;
+  color: var(--muted);
+  font-family: 'Cormorant Garamond', serif;
+  white-space: nowrap;
+}
+.grammar-body .ex-block{
+  margin: 0.6rem 0;
+  padding: 0.55rem 0.95rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(155, 28, 28, 0.035);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--ink);
+}
+.grammar-body .ex-block em{
+  font-style: normal;
+  font-family: 'IM Fell English', serif;
+  color: var(--muted);
+}
+.grammar-body code,
+.grammar-body .form{
+  font-family: 'IM Fell English', serif;
+  font-style: normal;
+  background: rgba(0,0,0,0.04);
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-size: 0.95em;
+}
+
+.topics-section{
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 640px){
+  .grammar-section{ padding: 1rem 1rem 1.1rem; }
+  .grammar-section::before{ inset: 3px; }
+  .grammar-heading{ font-size: 1.12rem; }
+  .grammar-body{ font-size: 0.97rem; }
+  .grammar-body table.paradigm{ font-size: 0.92rem; }
+  .grammar-body table.paradigm th,
+  .grammar-body table.paradigm td{ padding: 0.25rem 0.5rem; }
+}

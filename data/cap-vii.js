@@ -824,6 +824,36 @@ window.LL.chapters['vii'] = {
         "bookRef": "Cap. VII, ll. 30–104",
         "body": "\n                <p><strong>Suus, sua, suum</strong> é o possessivo de 3ª pessoa\n                <em>reflexivo</em> — refere-se ao próprio sujeito da oração.\n                Concorda com aquilo que é <em>possuído</em>, não com o dono:</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>suam</strong> uxōrem amat. —\n                  <em>Júlio ama a sua (própria) esposa.</em><br>\n                  Iūlius <strong>eius</strong> uxōrem amat. —\n                  <em>Júlio ama a esposa <u>dele</u> (de outra pessoa).</em>\n                </div>\n                <p>Compare com <em>meus, tuus, noster, vester</em> (1ª/2ª pessoas) e\n                com <em>eius</em> (genitivo de <em>is/ea/id</em>, usado quando o\n                possuidor <strong>não</strong> é o sujeito).</p>\n            "
       }
-    ]
+    ],
+    "grammar": {
+      "intro": "Os pontos formais do capítulo: o <em>dativo</em> (caso do destinatário), o reflexivo <em>sē</em>, o demonstrativo <em>hic, haec, hoc</em>, e a distinção entre acusativo de direção e ablativo de localização.",
+      "sections": [
+        {
+          "heading": "Datīvus",
+          "bookRef": "Cap. VII, ll. 95–120; gramm. ll. 121–152",
+          "body": "\n            <p>O <strong>dativo</strong> é o caso do <em>destinatário</em> da ação —\n            a quem se dá, a quem se diz, para quem se faz. Responde a\n            <em>cui?</em> (a quem?, sg.) ou <em>quibus?</em> (a quem?, pl.).</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>serv<strong>ō</strong></td><td>serv<strong>īs</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>ancill<strong>ae</strong></td><td>ancill<strong>īs</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>oppid<strong>ō</strong></td><td>oppid<strong>īs</strong></td></tr>\n            </table>\n            <p>Note que o dativo singular m./n. (<em>-ō</em>) é <em>idêntico ao ablativo</em>;\n            só o contexto e a preposição (ou sua ausência) distinguem:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>dat.</th><th>abl.</th></tr>\n              <tr><td class=\"label\">m./n. sg.</td><td>-ō (sem prep.)</td><td>-ō (com prep. <em>cum, in, ex, ab</em>)</td></tr>\n              <tr><td class=\"label\">f. sg.</td><td>-ae (igual ao gen.!)</td><td>-ā</td></tr>\n              <tr><td class=\"label\">pl.</td><td>-īs</td><td>-īs</td></tr>\n            </table>\n            <p>O pronome <em>is, ea, id</em> tem dat. sg. <em>eī</em> (m./f./n., invariável)\n            e dat. pl. <em>iīs / eīs</em>; o relativo, dat. sg. <em>cui</em>, dat. pl. <em>quibus</em>.</p>\n            <div class=\"ex-block\">\n              Iūlius Mārc<strong>ō</strong> mālum dat. — Iūlius fīli<strong>īs</strong> māla dat.<br>\n              Iūlius ancill<strong>ae</strong> mālum dat. — Iūlius ancill<strong>īs</strong> māla dat.<br>\n              Iūlius <strong>eī</strong> (= Iūliae) mālum dat. — Iūlia mal<strong>ō</strong> suō ōsculum dat.\n            </div>\n            "
+        },
+        {
+          "heading": "Reflexīvum: <em>sē</em>",
+          "bookRef": "Cap. VII, ll. 6–30",
+          "body": "\n            <p>Quando o objeto da ação é o <em>próprio sujeito</em>, usa-se o\n            reflexivo <strong>sē</strong> (= ele(s)/ela(s) mesmo(s)). É invariável,\n            só para 3ª pessoa, e só aparece em casos oblíquos.</p>\n            <table class=\"paradigm\">\n              <tr><th>função</th><th>refere-se a</th><th>forma</th></tr>\n              <tr><td class=\"label\">objeto ≠ sujeito</td><td>outra pessoa</td><td><em>eum / eam / eōs / eās</em></td></tr>\n              <tr><td class=\"label\">objeto = sujeito</td><td>o próprio sujeito</td><td><em>sē</em></td></tr>\n            </table>\n            <div class=\"ex-block\">\n              Iūlia <strong>sē</strong> in speculō videt. (Iūlia vê <em>Iūlia</em>)<br>\n              Iūlia <strong>eam</strong> videt. (Iūlia vê <em>outra fêmea</em>)<br>\n              Iūlia ōstium post <strong>sē</strong> claudit. (atrás de si mesma)\n            </div>\n            "
+        },
+        {
+          "heading": "Acus. de direção × abl. de localização",
+          "bookRef": "Cap. VII, ll. 5–25; cf. cap. VI",
+          "body": "\n            <p>Com <em>in</em>, a diferença entre <strong>movimento para dentro</strong>\n            e <strong>permanência</strong> aparece pela escolha do caso, não pela\n            preposição:</p>\n            <table class=\"paradigm\">\n              <tr><th>sentido</th><th>caso</th><th>exemplo</th></tr>\n              <tr><td class=\"label\">movimento (quō?)</td><td>in + <strong>acus.</strong></td><td><em>in cubicul<strong>um</strong> intrat</em></td></tr>\n              <tr><td class=\"label\">localização (ubi?)</td><td>in + <strong>abl.</strong></td><td><em>in cubicul<strong>ō</strong> est</em></td></tr>\n            </table>\n            <p>O mesmo vale para <em>sub, super</em>: <em>+acus.</em> para movimento,\n            <em>+abl.</em> para repouso.</p>\n            "
+        },
+        {
+          "heading": "Demonstrātīvum: <em>hic, haec, hoc</em>",
+          "bookRef": "Cap. VII, ll. 85–95",
+          "body": "\n            <p>O demonstrativo <strong>hic, haec, hoc</strong> aponta para algo\n            <em>próximo ao falante</em> (= isto/este aqui). Cap. VII introduz só o\n            nominativo sg.:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n              <tr><td class=\"label\">nōm. sg.</td><td>hic</td><td>haec</td><td>hoc</td></tr>\n            </table>\n            <p>O paradigma completo (com gen. <em>huius</em>, dat. <em>huic</em>, acus.\n            <em>hunc/hanc/hoc</em>) virá em VIII. Compare com:</p>\n            <ul>\n              <li><strong>is, ea, id</strong> — anafórico, neutro de distância\n              (= ele/aquilo já mencionado).</li>\n              <li><strong>hic, haec, hoc</strong> — perto do falante (= este).</li>\n              <li><strong>ille, illa, illud</strong> (cap. VIII) — distante (= aquele).</li>\n            </ul>\n            <div class=\"ex-block\">\n              <strong>Haec</strong> rosa pulchra est. — <strong>Hoc</strong> mālum tuum est, Iūlia.\n            </div>\n            "
+        },
+        {
+          "heading": "Possessīvum <em>suus</em> (revisão)",
+          "bookRef": "Cap. VII (transversal); cf. cap. IV",
+          "body": "\n            <p>O reflexivo <em>sē</em> tem como adjetivo possessivo correspondente\n            <strong>suus, -a, -um</strong> (= seu próprio): usa-se quando o possuidor\n            é o <em>sujeito</em>. Para outro possuidor, <em>eius / eōrum / eārum</em>.</p>\n            <div class=\"ex-block\">\n              Iūlia mal<strong>ō suō</strong> ōsculum dat. (o próprio mālum de Iūlia)<br>\n              Iūlia mālum <strong>eius</strong> (= patris) videt. (o de outro)\n            </div>\n            "
+        }
+      ]
+    }
   }
 };
