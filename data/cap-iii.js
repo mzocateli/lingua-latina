@@ -678,6 +678,234 @@ window.LL.chapters['iii'] = {
           "body": "\n            <p>Duas conjunções essenciais aparecem aqui:</p>\n            <ul>\n              <li><strong>quia</strong> — \"porque\", causal. É a resposta a <em>cūr?</em></li>\n              <li><strong>neque</strong> = <em>et nōn</em> — \"e não\". Pode unir\n              frases inteiras (<em>Iūlius dormit neque Quīntum audit</em>) ou\n              elementos paralelos.</li>\n            </ul>\n            <div class=\"ex-block\">\n              <strong>Cūr</strong> Iūlia plōrat? — Iūlia plōrat <strong>quia</strong> Mārcus eam pulsat.<br>\n              Iūlius nōn venit, <strong>neque</strong> respondet, <strong>neque</strong> Quīntum audit.\n            </div>\n            "
         }
       ]
+    },
+    "vocabulary": {
+      "intro": "As palavras novas introduzidas em <em>Cap. III</em>. Quase todas são <em>verbos</em> — pela primeira vez no livro aparecem ações concretas (cantar, chorar, bater, perguntar). Junto, vêm os primeiros pronomes pessoais no acusativo (<em>mē, tē, eum, eam</em>) e os pronomes relativos/interrogativos no caso oblíquo.",
+      "groups": [
+        {
+          "label": "Nōmina · 1ª (-a)",
+          "tag": "f.",
+          "entries": [
+            {
+              "lemma": "mamma, -ae",
+              "gloss": "mamãe (forma infantil de <i>māter</i>)",
+              "note": "diminutivo afetivo"
+            },
+            {
+              "lemma": "persōna, -ae",
+              "gloss": "personagem, papel",
+              "note": "originalmente: máscara de teatro"
+            },
+            {
+              "lemma": "scaena, -ae",
+              "gloss": "cena (de uma peça ou narrativa)"
+            }
+          ]
+        },
+        {
+          "label": "Adiectīva",
+          "tag": "-us, -a, -um",
+          "entries": [
+            {
+              "lemma": "improbus, -a, -um",
+              "gloss": "malcomportado, ruim, desonesto",
+              "note": "≠ <i>probus</i> (< <i>in-</i> + <i>probus</i>)"
+            },
+            {
+              "lemma": "probus, -a, -um",
+              "gloss": "bom (de caráter), honesto"
+            },
+            {
+              "lemma": "īrātus, -a, -um",
+              "gloss": "irado, com raiva"
+            },
+            {
+              "lemma": "laetus, -a, -um",
+              "gloss": "alegre, contente"
+            }
+          ]
+        },
+        {
+          "label": "Verba",
+          "tag": "1ª, 2ª, 3ª, 4ª conjugações",
+          "entries": [
+            {
+              "lemma": "cantat, cantant",
+              "gloss": "canta",
+              "note": "[1] <i>cantāre</i>"
+            },
+            {
+              "lemma": "plōrat, plōrant",
+              "gloss": "chora",
+              "note": "[1] <i>plōrāre</i>"
+            },
+            {
+              "lemma": "pulsat, pulsant",
+              "gloss": "bate (em alguém ou em algo)",
+              "note": "[1] <i>pulsāre</i> — bater físicamente; bater na porta"
+            },
+            {
+              "lemma": "vocat, vocant",
+              "gloss": "chama (alguém pelo nome)",
+              "note": "[1] <i>vocāre</i>"
+            },
+            {
+              "lemma": "interrogat, interrogant",
+              "gloss": "pergunta, interroga",
+              "note": "[1] <i>interrogāre</i>"
+            },
+            {
+              "lemma": "verberat, verberant",
+              "gloss": "açoita, bate (para castigar)",
+              "note": "[1] <i>verberāre</i> — castigo físico"
+            },
+            {
+              "lemma": "rīdet, rīdent",
+              "gloss": "ri",
+              "note": "[2] <i>rīdēre</i>"
+            },
+            {
+              "lemma": "videt, vident",
+              "gloss": "vê",
+              "note": "[2] <i>vidēre</i>"
+            },
+            {
+              "lemma": "respondet, respondent",
+              "gloss": "responde",
+              "note": "[2] <i>respondēre</i>"
+            },
+            {
+              "lemma": "venit, veniunt",
+              "gloss": "vem, chega",
+              "note": "[4] <i>venīre</i>"
+            },
+            {
+              "lemma": "audit, audiunt",
+              "gloss": "ouve, escuta",
+              "note": "[4] <i>audīre</i>"
+            },
+            {
+              "lemma": "dormit, dormiunt",
+              "gloss": "dorme",
+              "note": "[4] <i>dormīre</i>"
+            }
+          ]
+        },
+        {
+          "label": "Prōnōmina persōnālia",
+          "tag": "acusativo (1ª, 2ª, 3ª p.)",
+          "entries": [
+            {
+              "lemma": "mē",
+              "gloss": "me, a mim",
+              "note": "acus. de <i>ego</i>"
+            },
+            {
+              "lemma": "tē",
+              "gloss": "te, a ti",
+              "note": "acus. de <i>tū</i>"
+            },
+            {
+              "lemma": "eum",
+              "gloss": "o, a ele",
+              "note": "acus. m. sg. de <i>is</i>"
+            },
+            {
+              "lemma": "eam",
+              "gloss": "a, a ela",
+              "note": "acus. f. sg. de <i>ea</i>"
+            }
+          ]
+        },
+        {
+          "label": "Prōnōmina relātīva / interrogātīva",
+          "tag": "casos oblíquos",
+          "entries": [
+            {
+              "lemma": "quem",
+              "gloss": "(a)quele que; quem? (acus. m. sg.)",
+              "note": "acus. de <i>quī / quis</i>"
+            },
+            {
+              "lemma": "quam",
+              "gloss": "(a)quela que; quem? (acus. f. sg.)",
+              "note": "acus. de <i>quae</i>"
+            },
+            {
+              "lemma": "quī",
+              "gloss": "(a)quele que (nōm. m. sg.)",
+              "note": "= <i>quis</i> em uso relativo"
+            },
+            {
+              "lemma": "quae",
+              "gloss": "(a)quela que (nōm. f. sg.)"
+            }
+          ]
+        },
+        {
+          "label": "Adverbia · interrogātīvum",
+          "entries": [
+            {
+              "lemma": "iam",
+              "gloss": "já, agora"
+            },
+            {
+              "lemma": "hīc",
+              "gloss": "aqui",
+              "note": "advérbio de lugar — não confundir com pronome <i>hic</i> (este)"
+            },
+            {
+              "lemma": "cūr?",
+              "gloss": "por quê?",
+              "note": "responde-se com <i>quia</i>"
+            }
+          ]
+        },
+        {
+          "label": "Coniūnctiōnēs",
+          "entries": [
+            {
+              "lemma": "quia",
+              "gloss": "porque",
+              "note": "introduz oração causal — resposta a <i>cūr?</i>"
+            },
+            {
+              "lemma": "neque",
+              "gloss": "e não; nem",
+              "note": "= <i>et nōn</i>"
+            }
+          ]
+        },
+        {
+          "label": "Interiectiō",
+          "entries": [
+            {
+              "lemma": "ō!",
+              "gloss": "ó! (vocativo expressivo)",
+              "note": "marca emoção — espanto, dor, alegria"
+            }
+          ]
+        },
+        {
+          "label": "Verba grammatica",
+          "tag": "metalinguagem",
+          "entries": [
+            {
+              "lemma": "verbum, -ī",
+              "gloss": "verbo; palavra",
+              "note": "n., 2ª decl."
+            },
+            {
+              "lemma": "nōminātīvus, -ī",
+              "gloss": "nominativo (caso do sujeito)"
+            },
+            {
+              "lemma": "accūsātīvus, -ī",
+              "gloss": "acusativo (caso do objeto direto)"
+            }
+          ]
+        }
+      ]
     }
   }
 };

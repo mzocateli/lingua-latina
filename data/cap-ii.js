@@ -739,7 +739,7 @@ window.LL.chapters['ii'] = {
         {
           "heading": "Genetīvus singulāris",
           "bookRef": "Cap. II, ll. 35–58; gramm. ll. 105–121",
-          "body": "\n                    <p>O <strong>genitīvus</strong> é o caso que indica\n                    <em>posse</em>, <em>pertencimento</em>, <em>parte de algo</em>.\n                    Em português corresponde frequentemente a \"<em>de</em>...\":</p>\n                    <table class=\"paradigm\">\n                      <tr><th></th><th>nōm. sg.</th><th>gen. sg.</th></tr>\n                      <tr><td class=\"label\">m. (-us)</td><td>serv<strong>us</strong></td><td>serv<strong>ī</strong></td></tr>\n                      <tr><td class=\"label\">m. (-er)</td><td>liber</td><td>libr<strong>ī</strong></td></tr>\n                      <tr><td class=\"label\">f. (-a)</td><td>ancill<strong>a</strong></td><td>ancill<strong>ae</strong></td></tr>\n                      <tr><td class=\"label\">n. (-um)</td><td>vocābul<strong>um</strong></td><td>vocābul<strong>ī</strong></td></tr>\n                    </table>\n                    <p>Note que <strong>m. e n. compartilham</strong> o genitivo\n                    sg. em <em>-ī</em>; só o feminino é diferente (<em>-ae</em>).\n                    Aprenda os pares: <em>fīlius → fīliī</em>, <em>fīlia → fīliae</em>,\n                    <em>oppidum → oppidī</em>.</p>\n                    <div class=\"ex-block\">\n                      Iūlius est pater <strong>Mārcī</strong>. (m. sg.)<br>\n                      Aemilia est māter <strong>Iūliae</strong>. (f. sg.)<br>\n                      <em>familia</em> est titulus <strong>capitulī</strong> secundī. (n. sg.)\n                    </div>\n                    <p>Pergunta correspondente: <em>cuius?</em> (= de quem?, sg.).\n                    No interrogativo, <em>cuius</em> serve para todos os três\n                    gêneros, sg.</p>\n                    "
+          "body": "\n                    <p>O <strong>genitīvus</strong> é o caso que indica\n                    <em>posse</em>, <em>pertencimento</em>, <em>parte de algo</em>.\n                    Em português corresponde frequentemente a \"<em>de</em>...\":</p>\n                    <table class=\"paradigm\">\n                      <tr><th></th><th>nōm. sg.</th><th>gen. sg.</th></tr>\n                      <tr><td class=\"label\">m. (-us)</td><td>serv<strong>us</strong></td><td>serv<strong>ī</strong></td></tr>\n                      <tr><td class=\"label\">m. (-er)</td><td>liber</td><td>liber<strong>ī</strong></td></tr>\n                      <tr><td class=\"label\">f. (-a)</td><td>ancill<strong>a</strong></td><td>ancill<strong>ae</strong></td></tr>\n                      <tr><td class=\"label\">n. (-um)</td><td>vocābul<strong>um</strong></td><td>vocābul<strong>ī</strong></td></tr>\n                    </table>\n                    <p>Note que <strong>m. e n. compartilham</strong> o genitivo\n                    sg. em <em>-ī</em>; só o feminino é diferente (<em>-ae</em>).\n                    Aprenda os pares: <em>fīlius → fīliī</em>, <em>fīlia → fīliae</em>,\n                    <em>oppidum → oppidī</em>.</p>\n                    <div class=\"ex-block\">\n                      Iūlius est pater <strong>Mārcī</strong>. (m. sg.)<br>\n                      Aemilia est māter <strong>Iūliae</strong>. (f. sg.)<br>\n                      <em>familia</em> est titulus <strong>capitulī</strong> secundī. (n. sg.)\n                    </div>\n                    <p>Pergunta correspondente: <em>cuius?</em> (= de quem?, sg.).\n                    No interrogativo, <em>cuius</em> serve para todos os três\n                    gêneros, sg.</p>\n                    "
         },
         {
           "heading": "Genetīvus plūrālis",
@@ -788,6 +788,226 @@ window.LL.chapters['ii'] = {
         "bookRef": "Cap. II (transversal)",
         "body": "\n                <p>Os adjetivos da 1ª/2ª classe (<em>magnus -a -um, parvus -a -um,\n                multus -a -um, Rōmānus -a -um, Graecus -a -um</em>) e os\n                possessivos (<em>meus -a -um, tuus -a -um</em>) concordam com o\n                substantivo em <em>caso, número e gênero</em> — exatamente como em\n                Cap I, mas agora com mais flexões:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>magnus</td><td>magna</td><td>magnum</td></tr>\n                  <tr><td>gen. sg.</td><td>magnī</td><td>magnae</td><td>magnī</td></tr>\n                  <tr><td>nōm. pl.</td><td>magnī</td><td>magnae</td><td>magna</td></tr>\n                  <tr><td>gen. pl.</td><td>magnōrum</td><td>magnārum</td><td>magnōrum</td></tr>\n                </table>\n                <p>Atenção: <em>meus</em> e <em>tuus</em> concordam com o\n                <em>objeto possuído</em>, não com quem possui. Em \"<em>familia\n                tua magna est</em>\", <em>tua</em> é feminino porque\n                <em>familia</em> é feminino.</p>\n                "
       }
-    ]
+    ],
+    "vocabulary": {
+      "intro": "As palavras novas introduzidas em <em>Cap. II</em>. Aqui aparecem os termos básicos da família romana e as primeiras marcas gramaticais — gênero (masculino, feminino, neutro) e genitivo (caso de posse). Atenção ao par <em>liber</em> (livro) × <em>līberī</em> (filhos): duas palavras distintas que diferem só pelo macron no <em>ī</em>.",
+      "groups": [
+        {
+          "label": "Nōmina · 1ª (-a)",
+          "tag": "f.",
+          "entries": [
+            {
+              "lemma": "ancilla, -ae",
+              "gloss": "escrava (doméstica)"
+            },
+            {
+              "lemma": "domina, -ae",
+              "gloss": "senhora, dona da casa"
+            },
+            {
+              "lemma": "familia, -ae",
+              "gloss": "família (toda a casa, incl. escravos)",
+              "note": "abrange <i>līberī</i> + <i>servī</i> + <i>ancillae</i>"
+            },
+            {
+              "lemma": "fēmina, -ae",
+              "gloss": "mulher"
+            },
+            {
+              "lemma": "fīlia, -ae",
+              "gloss": "filha"
+            },
+            {
+              "lemma": "pāgina, -ae",
+              "gloss": "página"
+            },
+            {
+              "lemma": "puella, -ae",
+              "gloss": "menina"
+            }
+          ]
+        },
+        {
+          "label": "Nōmina · 2ª (-us, -er, -um)",
+          "tag": "m. / n.",
+          "entries": [
+            {
+              "lemma": "dominus, -ī",
+              "gloss": "senhor, dono da casa",
+              "note": "m."
+            },
+            {
+              "lemma": "fīlius, -ī",
+              "gloss": "filho",
+              "note": "m."
+            },
+            {
+              "lemma": "servus, -ī",
+              "gloss": "escravo",
+              "note": "m."
+            },
+            {
+              "lemma": "titulus, -ī",
+              "gloss": "título",
+              "note": "m."
+            },
+            {
+              "lemma": "puer, puerī",
+              "gloss": "menino",
+              "note": "m., 2ª em <i>-er</i> — mantém o <i>e</i> em todos os casos"
+            },
+            {
+              "lemma": "vir, virī",
+              "gloss": "homem (adulto, marido)",
+              "note": "m., decl. sem <i>-us</i>"
+            },
+            {
+              "lemma": "liber, librī",
+              "gloss": "livro (em forma de rolo)",
+              "note": "m., 2ª em <i>-er</i> — <em>perde</em> o <i>e</i> fora do nōm. sg."
+            },
+            {
+              "lemma": "līberī, -ōrum",
+              "gloss": "filhos, crianças (livres)",
+              "note": "m. <em>plūrāle tantum</em> — só existe no plural; não confundir com <i>liber</i>"
+            }
+          ]
+        },
+        {
+          "label": "Nōmina · parentesco (3ª decl.)",
+          "tag": "m. / f.",
+          "entries": [
+            {
+              "lemma": "pater, patris",
+              "gloss": "pai",
+              "note": "m., 3ª decl."
+            },
+            {
+              "lemma": "māter, mātris",
+              "gloss": "mãe",
+              "note": "f., 3ª decl."
+            }
+          ]
+        },
+        {
+          "label": "Adiectīva",
+          "tag": "-us, -a, -um",
+          "entries": [
+            {
+              "lemma": "antīquus, -a, -um",
+              "gloss": "antigo",
+              "note": "≠ <i>novus</i>"
+            },
+            {
+              "lemma": "novus, -a, -um",
+              "gloss": "novo"
+            },
+            {
+              "lemma": "cēterī, -ae, -a",
+              "gloss": "os demais, os outros",
+              "note": "usado quase sempre no pl. — origem do nosso <i>et cētera</i>"
+            }
+          ]
+        },
+        {
+          "label": "Possessīva (1ª/2ª pessoa)",
+          "tag": "-us, -a, -um",
+          "entries": [
+            {
+              "lemma": "meus, -a, -um",
+              "gloss": "meu, minha"
+            },
+            {
+              "lemma": "tuus, -a, -um",
+              "gloss": "teu, tua"
+            }
+          ]
+        },
+        {
+          "label": "Numerī",
+          "tag": "novos do capítulo",
+          "entries": [
+            {
+              "lemma": "duae",
+              "gloss": "duas (f.)",
+              "note": "fem. de <i>duo</i>"
+            },
+            {
+              "lemma": "tria",
+              "gloss": "três (n.)",
+              "note": "n. de <i>trēs</i>"
+            },
+            {
+              "lemma": "centum",
+              "gloss": "cem (100)",
+              "note": "indecl."
+            }
+          ]
+        },
+        {
+          "label": "Coniūnctiō enclītica",
+          "entries": [
+            {
+              "lemma": "-que",
+              "gloss": "e (= <i>et</i>)",
+              "note": "enclítica — gruda no fim do último elemento da série"
+            }
+          ]
+        },
+        {
+          "label": "Vocābula interrogātīva",
+          "tag": "pronomes de pergunta",
+          "entries": [
+            {
+              "lemma": "quis?",
+              "gloss": "quem? (m. sg.)"
+            },
+            {
+              "lemma": "quae?",
+              "gloss": "quem? (f. sg.) / quais? (f. pl. / n. pl.)"
+            },
+            {
+              "lemma": "quī?",
+              "gloss": "quem? quais? (m. pl.)"
+            },
+            {
+              "lemma": "cuius?",
+              "gloss": "de quem?",
+              "note": "invariável no sg. (m./f./n.)"
+            },
+            {
+              "lemma": "quot?",
+              "gloss": "quantos? quantas?",
+              "note": "invariável"
+            }
+          ]
+        },
+        {
+          "label": "Verba grammatica",
+          "tag": "metalinguagem",
+          "entries": [
+            {
+              "lemma": "masculīnum, -ī",
+              "gloss": "masculino (gênero)",
+              "note": "< <i>masculus</i>"
+            },
+            {
+              "lemma": "fēminīnum, -ī",
+              "gloss": "feminino (gênero)",
+              "note": "< <i>fēmina</i>"
+            },
+            {
+              "lemma": "neutrum, -ī",
+              "gloss": "neutro (gênero)",
+              "note": "= <em>nem</em> m. <em>nem</em> f."
+            },
+            {
+              "lemma": "genetīvus, -ī",
+              "gloss": "genitivo (caso de posse)"
+            }
+          ]
+        }
+      ]
+    }
   }
 };
