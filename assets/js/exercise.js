@@ -197,7 +197,7 @@
     // Head
     const head = el('div', { className: 'exercise-head' });
     head.appendChild(el('div', { className: 'ex-num', html: data.title || ('Exercitium ' + data.number) }));
-    if (data.tag) head.appendChild(el('div', { className: 'ex-tag', text: data.tag }));
+    if (data.tag) head.appendChild(el('div', { className: 'ex-tag', html: data.tag }));
     art.appendChild(head);
 
     // Tip (full-width, above the body grid)
