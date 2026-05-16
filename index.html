@@ -118,6 +118,7 @@
   // Build the chapter cards from the index
   (function () {
     const focus = {
+      'ii':   'Gênero (m/f/n); genitivo; interrogativos.',
       'iii':  'Nominativo/acusativo; pronomes <i>mē/tē</i>; relativo.',
       'iv':   'Numerais; vocativo; imperativo; <i>suus / eius</i>.',
       'v':    'Acusativo, ablativo, imperativo.',
@@ -127,7 +128,7 @@
     };
     // We can't show exercise count here without loading each data file,
     // so we'll use precomputed counts.
-    const counts = { 'iii': 9, 'iv': 9, 'v': 11, 'vi': 10, 'vii': 11, 'viii': 11 };
+    const counts = { 'ii': 10, 'iii': 9, 'iv': 9, 'v': 11, 'vi': 10, 'vii': 11, 'viii': 11 };
 
     const grid = document.querySelector('[data-chapter-grid]');
     (LL.chapterIndex || []).forEach(function (ch) {

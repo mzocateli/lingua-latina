@@ -2,6 +2,11 @@
 window.LL = window.LL || {};
 window.LL.chapterIndex = [
   {
+    "slug": "ii",
+    "numeral": "II",
+    "title": "Familia Romana"
+  },
+  {
     "slug": "iii",
     "numeral": "III",
     "title": "Puer improbus"
