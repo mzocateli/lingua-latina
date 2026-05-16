@@ -782,6 +782,246 @@ window.LL.chapters['vi'] = {
           "body": "\n            <p>São a mesma preposição em ambientes fonéticos diferentes:</p>\n            <ul>\n              <li><strong>ab</strong> antes de vogal ou <em>h-</em>: <em>ab oppidō, ab Aemiliā, ab hortō</em></li>\n              <li><strong>ā</strong> antes das demais consoantes: <em>ā Rōmā, ā Iūliō, ā mātre</em></li>\n            </ul>\n            <p>A mesma alternância acontece com <strong>ex / ē</strong> (não vista neste\n            capítulo, mas começa em VII).</p>\n            "
         }
       ]
+    },
+    "vocabulary": {
+      "intro": "As palavras novas introduzidas em <em>Cap. VI</em>. As entradas seguem a forma do nominativo singular + genitivo singular (ou só o gen. para temas em consoante). As classes de declinação são marcadas para orientar o estudo.",
+      "groups": [
+        {
+          "label": "Nōmina · 1ª (-a)",
+          "tag": "f.",
+          "entries": [
+            {
+              "lemma": "amīca, -ae",
+              "gloss": "amiga, namorada"
+            },
+            {
+              "lemma": "lectīca, -ae",
+              "gloss": "liteira (cadeira portátil)"
+            },
+            {
+              "lemma": "porta, -ae",
+              "gloss": "portão, porta de cidade"
+            },
+            {
+              "lemma": "via, -ae",
+              "gloss": "via, estrada, caminho"
+            }
+          ]
+        },
+        {
+          "label": "Nōmina · 2ª (-us, -um)",
+          "tag": "m. / n.",
+          "entries": [
+            {
+              "lemma": "amīcus, -ī",
+              "gloss": "amigo",
+              "note": "m."
+            },
+            {
+              "lemma": "equus, -ī",
+              "gloss": "cavalo",
+              "note": "m."
+            },
+            {
+              "lemma": "inimīcus, -ī",
+              "gloss": "inimigo pessoal",
+              "note": "m. (<i>in-</i> + <i>amīcus</i>)"
+            },
+            {
+              "lemma": "mūrus, -ī",
+              "gloss": "muro, muralha",
+              "note": "m."
+            },
+            {
+              "lemma": "saccus, -ī",
+              "gloss": "saco, saca",
+              "note": "m."
+            },
+            {
+              "lemma": "umerus, -ī",
+              "gloss": "ombro",
+              "note": "m."
+            }
+          ]
+        },
+        {
+          "label": "Adiectīva",
+          "tag": "-us, -a, -um",
+          "entries": [
+            {
+              "lemma": "fessus, -a, -um",
+              "gloss": "cansado"
+            },
+            {
+              "lemma": "longus, -a, -um",
+              "gloss": "longo, comprido"
+            },
+            {
+              "lemma": "malus, -a, -um",
+              "gloss": "mau, ruim",
+              "note": "≠ <i>bonus</i>"
+            },
+            {
+              "lemma": "duodecim",
+              "gloss": "doze (12)",
+              "note": "indecl."
+            }
+          ]
+        },
+        {
+          "label": "Verba",
+          "tag": "1ª, 2ª, 3ª, irreg.",
+          "entries": [
+            {
+              "lemma": "ambulat, ambulant",
+              "gloss": "anda, caminha",
+              "note": "[1] <i>ambulāre</i>"
+            },
+            {
+              "lemma": "intrat, intrant",
+              "gloss": "entra",
+              "note": "[1] <i>intrāre</i>"
+            },
+            {
+              "lemma": "portat, portant",
+              "gloss": "leva, carrega",
+              "note": "[1] <i>portāre</i>"
+            },
+            {
+              "lemma": "timet, timent",
+              "gloss": "teme, tem medo de",
+              "note": "[2] <i>timēre</i>"
+            },
+            {
+              "lemma": "vehit, vehunt",
+              "gloss": "transporta, carrega (em veículo)",
+              "note": "[3] <i>vehere</i>"
+            },
+            {
+              "lemma": "it / eunt",
+              "gloss": "vai / vão",
+              "note": "irreg. <i>īre</i>"
+            }
+          ]
+        },
+        {
+          "label": "Praepositiōnēs",
+          "tag": "+ acus. / + abl.",
+          "entries": [
+            {
+              "lemma": "ā / ab",
+              "gloss": "de, a partir de; por (agente)",
+              "note": "+ abl. — <i>ab</i> antes de vogal/<i>h</i>"
+            },
+            {
+              "lemma": "ad",
+              "gloss": "a, para, até",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "ante",
+              "gloss": "antes de, diante de",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "apud",
+              "gloss": "junto a, em casa de",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "circum",
+              "gloss": "ao redor de",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "inter",
+              "gloss": "entre",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "per",
+              "gloss": "através de, por",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "post",
+              "gloss": "depois de, atrás de",
+              "note": "+ acus."
+            },
+            {
+              "lemma": "procul ab",
+              "gloss": "longe de",
+              "note": "+ abl."
+            },
+            {
+              "lemma": "prope",
+              "gloss": "perto de",
+              "note": "+ acus."
+            }
+          ]
+        },
+        {
+          "label": "Adverbia · coniūnctiōnēs",
+          "entries": [
+            {
+              "lemma": "ante",
+              "gloss": "antes (adv.)"
+            },
+            {
+              "lemma": "autem",
+              "gloss": "porém, ao passo que",
+              "note": "pospositivo"
+            },
+            {
+              "lemma": "itaque",
+              "gloss": "portanto, assim"
+            },
+            {
+              "lemma": "nam",
+              "gloss": "pois, com efeito"
+            },
+            {
+              "lemma": "quam",
+              "gloss": "quão, do que (na comparação)"
+            },
+            {
+              "lemma": "tam",
+              "gloss": "tão, tanto"
+            },
+            {
+              "lemma": "unde?",
+              "gloss": "de onde?"
+            },
+            {
+              "lemma": "quō?",
+              "gloss": "para onde?"
+            }
+          ]
+        },
+        {
+          "label": "Verba grammatica",
+          "tag": "metalinguagem",
+          "entries": [
+            {
+              "lemma": "āctīvum, -ī",
+              "gloss": "ativo (voz)"
+            },
+            {
+              "lemma": "passīvum, -ī",
+              "gloss": "passivo (voz)"
+            },
+            {
+              "lemma": "locātīvus, -ī",
+              "gloss": "locativo (caso de cidade/ilha)"
+            },
+            {
+              "lemma": "praepositiō, -ōnis",
+              "gloss": "preposição",
+              "note": "f., 3ª decl."
+            }
+          ]
+        }
+      ]
     }
   }
 };

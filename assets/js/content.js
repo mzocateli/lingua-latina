@@ -133,12 +133,17 @@
   // ----- Section jump bar (sticky at top of the chapter wrap) -----
   // Adds quick anchors so the reader doesn't have to scroll past one
   // section to reach another.
-  function renderSectionBar(hasGrammar, hasTopics) {
+  function renderSectionBar(hasGrammar, hasVocab, hasTopics) {
     const bar = el('nav', { className: 'section-bar', 'aria-label': 'Saltar para seção' });
     const ul = el('ul', { className: 'section-bar-list' });
     if (hasGrammar) {
       ul.appendChild(el('li', null, [
         el('a', { href: '#grammatica', className: 'section-bar-link', html: '§ Grammatica' })
+      ]));
+    }
+    if (hasVocab) {
+      ul.appendChild(el('li', null, [
+        el('a', { href: '#vocabula', className: 'section-bar-link', html: '☙ Vocābula' })
       ]));
     }
     if (hasTopics) {
@@ -169,6 +174,90 @@
   }
   NS.renderSectionBar = renderSectionBar;
 
+  // ----- Vocabulary section -----
+  // Renders the chapter's "Vocābula nova" — the new words introduced.
+  // Schema:
+  //   vocabulary: {
+  //     intro?: string,
+  //     groups: [
+  //       { label: string,             // e.g. "nōmina · 1ª (-a)"
+  //         tag?: string,               // e.g. "f.", "m." — small tag
+  //         entries: [
+  //           { lemma: string,          // e.g. "lectīca, -ae"
+  //             gloss: string,          // e.g. "liteira"
+  //             note?: string }         // optional usage note
+  //         ]
+  //       },
+  //       ...
+  //     ]
+  //   }
+  function renderVocabulary(vocab, numeral) {
+    if (!vocab || !vocab.groups || !vocab.groups.length) return null;
+    const wrap = el('details', {
+      className: 'vocab-section',
+      id: 'vocabula'
+    });
+    const sum = el('summary', { className: 'vocab-summary' });
+    sum.appendChild(el('span', {
+      className: 'section-marker',
+      text: '☙'
+    }));
+    sum.appendChild(el('span', {
+      className: 'section-title-inline',
+      html: 'Vocābula nova <span class="roman">· cap. ' +
+            String(numeral || '').toLowerCase() + '</span>'
+    }));
+    // Count total entries for the summary
+    const totalEntries = vocab.groups.reduce(function (n, g) {
+      return n + (g.entries ? g.entries.length : 0);
+    }, 0);
+    const groupLabels = vocab.groups.map(function (g) {
+      // Strip HTML tags
+      const tmp = document.createElement('div');
+      tmp.innerHTML = g.label;
+      return tmp.textContent;
+    });
+    sum.appendChild(el('span', {
+      className: 'section-summary-list',
+      html: totalEntries + ' palavras · ' + groupLabels.join(' · ')
+    }));
+    wrap.appendChild(sum);
+
+    if (vocab.intro) {
+      wrap.appendChild(el('p', { className: 'vocab-intro', html: vocab.intro }));
+    }
+
+    vocab.groups.forEach(function (g) {
+      const block = el('div', { className: 'vocab-group' });
+      const head = el('div', { className: 'vocab-group-head' });
+      head.appendChild(el('span', { className: 'vocab-group-label', html: g.label }));
+      if (g.tag) {
+        head.appendChild(el('span', { className: 'vocab-group-tag', html: g.tag }));
+      }
+      block.appendChild(head);
+      const list = el('dl', { className: 'vocab-list' });
+      (g.entries || []).forEach(function (entry) {
+        list.appendChild(el('dt', {
+          className: 'vocab-lemma',
+          html: entry.lemma
+        }));
+        const dd = el('dd', { className: 'vocab-gloss' });
+        dd.innerHTML = entry.gloss;
+        if (entry.note) {
+          dd.appendChild(el('span', {
+            className: 'vocab-note',
+            html: ' — ' + entry.note
+          }));
+        }
+        list.appendChild(dd);
+      });
+      block.appendChild(list);
+      wrap.appendChild(block);
+    });
+    return wrap;
+  }
+  NS.renderVocabulary = renderVocabulary;
+
   // ----- Whole chapter content section -----
   function mountChapterContent(slug, selector) {
     const chapter = NS.chapters && NS.chapters[slug];
@@ -179,7 +268,7 @@
       return;
     }
     const content = chapter.content;
-    if (!content.grammar && !(content.topics && content.topics.length)) {
+    if (!content.grammar && !content.vocabulary && !(content.topics && content.topics.length)) {
       target.hidden = true;
       return;
     }
@@ -190,6 +279,10 @@
     // Grammatica first (no preamble — it's the formal grammar block)
     const grammar = renderGrammar(content.grammar, chapter.numeral);
     if (grammar) target.appendChild(grammar);
+
+    // Vocabulary section (new vocabulary introduced in this chapter)
+    const vocab = renderVocabulary(content.vocabulary, chapter.numeral);
+    if (vocab) target.appendChild(vocab);
 
     // Explicātiōnēs as a single collapsible <details> (closed by default).
     // Inside, the individual topics are themselves collapsible.
@@ -240,9 +333,11 @@
     if (!target) return;
     const content = (chapter && chapter.content) || {};
     const hasGrammar = !!content.grammar;
+    const hasVocab = !!(content.vocabulary && content.vocabulary.groups
+                        && content.vocabulary.groups.length);
     const hasTopics = !!(content.topics && content.topics.length);
     target.innerHTML = '';
-    const bar = renderSectionBar(hasGrammar, hasTopics);
+    const bar = renderSectionBar(hasGrammar, hasVocab, hasTopics);
     target.appendChild(bar);
 
     // Sync the bar's `top` with the site-nav's height so it sits flush

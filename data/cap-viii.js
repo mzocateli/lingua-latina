@@ -986,6 +986,234 @@ window.LL.chapters['viii'] = {
           "body": "\n            <p>Para indicar <em>preço</em> com verbos como <em>cōnstāre</em> (custar),\n            <em>emere</em> (comprar), <em>vēndere</em> (vender), o latim usa o\n            <strong>ablativo sem preposição</strong>:</p>\n            <div class=\"ex-block\">\n              Hic ānulus <strong>centum sēstertiīs</strong> cōnstat.<br>\n              Albīnus ānulum <strong>nōnāgintā sēstertiīs</strong> Mēdō vēndit.<br>\n              <em>Quantō pretiō?</em> — <em>Magnō pretiō. / Parvō pretiō.</em>\n            </div>\n            <p>É o mesmo padrão do ablativo de instrumento/meio:\n            <em>lectīcā portātur</em>, <em>baculō verberat</em>, <em>sēstertiīs cōnstat</em>.</p>\n            "
         }
       ]
+    },
+    "vocabulary": {
+      "intro": "As palavras novas introduzidas em <em>Cap. VIII</em>. O capítulo é centrado no comércio em Roma, então o vocabulário traz objetos (anel, gema, pérola), termos de transação (preço, vender, comprar), e adjetivos quantificadores.",
+      "groups": [
+        {
+          "label": "Nōmina · 1ª (-a)",
+          "tag": "f.",
+          "entries": [
+            {
+              "lemma": "gemma, -ae",
+              "gloss": "gema, pedra preciosa"
+            },
+            {
+              "lemma": "līnea, -ae",
+              "gloss": "fio, linha, cordão"
+            },
+            {
+              "lemma": "margarīta, -ae",
+              "gloss": "pérola"
+            },
+            {
+              "lemma": "taberna, -ae",
+              "gloss": "loja, taverna"
+            }
+          ]
+        },
+        {
+          "label": "Nōmina · 2ª (-us, -um)",
+          "tag": "m. / n.",
+          "entries": [
+            {
+              "lemma": "ānulus, -ī",
+              "gloss": "anel",
+              "note": "m."
+            },
+            {
+              "lemma": "collum, -ī",
+              "gloss": "pescoço",
+              "note": "n."
+            },
+            {
+              "lemma": "digitus, -ī",
+              "gloss": "dedo",
+              "note": "m."
+            },
+            {
+              "lemma": "ōrnāmentum, -ī",
+              "gloss": "ornamento, enfeite",
+              "note": "n."
+            },
+            {
+              "lemma": "pretium, -ī",
+              "gloss": "preço",
+              "note": "n."
+            },
+            {
+              "lemma": "sēstertius, -ī",
+              "gloss": "sestércio (moeda romana)",
+              "note": "m."
+            },
+            {
+              "lemma": "tabernārius, -ī",
+              "gloss": "lojista, taverneiro",
+              "note": "m."
+            }
+          ]
+        },
+        {
+          "label": "Adiectīva",
+          "tag": "-us, -a, -um",
+          "entries": [
+            {
+              "lemma": "alius, -a, -ud",
+              "gloss": "outro",
+              "note": "gen. <i>alīus</i>, dat. <i>aliī</i>"
+            },
+            {
+              "lemma": "gemmātus, -a, -um",
+              "gloss": "com gema, gemado",
+              "note": "< <i>gemma</i>"
+            },
+            {
+              "lemma": "medius, -a, -um",
+              "gloss": "do meio, médio"
+            },
+            {
+              "lemma": "pecūniōsus, -a, -um",
+              "gloss": "rico (em dinheiro)",
+              "note": "< <i>pecūnia</i>"
+            },
+            {
+              "lemma": "quantus, -a, -um",
+              "gloss": "quão grande, do tamanho que"
+            },
+            {
+              "lemma": "quārtus, -a, -um",
+              "gloss": "quarto (4º)"
+            },
+            {
+              "lemma": "tantus, -a, -um",
+              "gloss": "tão grande, do tamanho de"
+            }
+          ]
+        },
+        {
+          "label": "Numerī",
+          "tag": "indeclināveis",
+          "entries": [
+            {
+              "lemma": "vīgintī",
+              "gloss": "vinte (20)"
+            },
+            {
+              "lemma": "octōgintā",
+              "gloss": "oitenta (80)"
+            },
+            {
+              "lemma": "nōnāgintā",
+              "gloss": "noventa (90)"
+            }
+          ]
+        },
+        {
+          "label": "Verba",
+          "tag": "1ª – 3ª (e 3ª-iō)",
+          "entries": [
+            {
+              "lemma": "clāmat, clāmant",
+              "gloss": "grita, clama",
+              "note": "[1] <i>clāmāre</i>"
+            },
+            {
+              "lemma": "cōnstat, cōnstant",
+              "gloss": "custa (+ abl. de preço)",
+              "note": "[1] <i>cōnstāre</i>"
+            },
+            {
+              "lemma": "mōnstrat, mōnstrant",
+              "gloss": "mostra, aponta",
+              "note": "[1] <i>mōnstrāre</i>"
+            },
+            {
+              "lemma": "ōrnat, ōrnant",
+              "gloss": "enfeita, adorna",
+              "note": "[1] <i>ōrnāre</i>"
+            },
+            {
+              "lemma": "ostendit, ostendunt",
+              "gloss": "exibe, mostra (para alguém)",
+              "note": "[3] <i>ostendere</i>"
+            },
+            {
+              "lemma": "cōnsistit, cōnsistunt",
+              "gloss": "para, detém-se",
+              "note": "[3] <i>cōnsistere</i>"
+            },
+            {
+              "lemma": "convenit, conveniunt",
+              "gloss": "encaixa, convém",
+              "note": "[4] <i>convenīre</i>"
+            },
+            {
+              "lemma": "vēndit, vēndunt",
+              "gloss": "vende",
+              "note": "[3] <i>vēndere</i>"
+            },
+            {
+              "lemma": "emit, emunt",
+              "gloss": "compra",
+              "note": "[3] <i>emere</i>"
+            },
+            {
+              "lemma": "accipit, accipiunt",
+              "gloss": "recebe, aceita",
+              "note": "[3-iō] <i>accipere</i>"
+            },
+            {
+              "lemma": "aspicit, aspiciunt",
+              "gloss": "olha para, observa",
+              "note": "[3-iō] <i>aspicere</i>"
+            },
+            {
+              "lemma": "abit, abeunt",
+              "gloss": "vai embora",
+              "note": "<i>ab-</i> + <i>īre</i>"
+            }
+          ]
+        },
+        {
+          "label": "Prōnōmen",
+          "tag": "demonstrativo distante",
+          "entries": [
+            {
+              "lemma": "ille, illa, illud",
+              "gloss": "aquele, aquela, aquilo",
+              "note": "gen. <i>illīus</i>, dat. <i>illī</i>"
+            }
+          ]
+        },
+        {
+          "label": "Adverbia · coniūnctiō",
+          "entries": [
+            {
+              "lemma": "nimis",
+              "gloss": "demais, em demasia"
+            },
+            {
+              "lemma": "satis",
+              "gloss": "bastante, o suficiente"
+            },
+            {
+              "lemma": "aut",
+              "gloss": "ou (exclusivo)",
+              "note": "≠ <i>vel</i> (inclusivo)"
+            }
+          ]
+        },
+        {
+          "label": "Verba grammatica",
+          "entries": [
+            {
+              "lemma": "prōnōmen, -inis",
+              "gloss": "pronome",
+              "note": "n., 3ª decl."
+            }
+          ]
+        }
+      ]
     }
   }
 };

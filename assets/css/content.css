@@ -642,10 +642,190 @@ details.topics-section > .content-intro{
 }
 :target,
 #grammatica,
+#vocabula,
 #explicationes,
 #exercitia,
 #exercitia-title,
 [id^="content-"],
 [id^="ex-"]{
   scroll-margin-top: var(--section-bar-offset);
+}
+
+/* ============================================================
+   Vocābula nova section
+   ============================================================ */
+details.vocab-section{
+  margin: 0 0 1.4rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  position: relative;
+}
+details.vocab-section > summary.vocab-summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 0.85rem 1.1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.7) 0%,
+    rgba(248,242,228,0.6) 100%
+  );
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem 0.9rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+details.vocab-section > summary::-webkit-details-marker{ display: none; }
+details.vocab-section[open] > summary.vocab-summary{
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid rgba(155, 28, 28, 0.18);
+}
+details.vocab-section > summary:hover{
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.85) 0%,
+    rgba(248,242,228,0.75) 100%
+  );
+}
+details.vocab-section > summary::after{
+  content: '▸';
+  margin-left: auto;
+  font-family: 'IM Fell English', serif;
+  color: var(--accent);
+  font-size: 1.05rem;
+  transition: transform 0.18s ease;
+  flex: 0 0 auto;
+}
+details.vocab-section[open] > summary::after{
+  transform: rotate(90deg);
+}
+details.vocab-section[open]{
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.65) 0%,
+    rgba(248,242,228,0.55) 100%
+  );
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 0 1.1rem 1.4rem;
+}
+details.vocab-section[open]::before{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(155, 28, 28, 0.18);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 0;
+}
+details.vocab-section[open] > *{
+  position: relative;
+  z-index: 1;
+}
+details.vocab-section[open] > summary{
+  margin: 0 -1.1rem;
+  border: 1px solid var(--rule);
+}
+
+.vocab-intro{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.8rem 0 1.1rem;
+}
+
+.vocab-group{
+  margin: 0 0 1.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(155, 28, 28, 0.18);
+}
+.vocab-group:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.vocab-group-head{
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0 0 0.65rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(155, 28, 28, 0.12);
+}
+.vocab-group-label{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+.vocab-group-tag{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+.vocab-list{
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(180px, max-content) 1fr;
+  column-gap: 1.2rem;
+  row-gap: 0.32rem;
+}
+.vocab-lemma{
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 1.02rem;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+.vocab-lemma i,
+.vocab-lemma em{
+  font-style: italic;
+}
+.vocab-gloss{
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.45;
+}
+.vocab-note{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px){
+  details.vocab-section > summary{ padding: 0.7rem 0.85rem; }
+  details.vocab-section[open]{ padding: 0 0.85rem 1rem; }
+  .vocab-list{
+    grid-template-columns: 1fr;
+    row-gap: 0.55rem;
+  }
+  .vocab-lemma{
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    white-space: normal;
+  }
+  .vocab-gloss{
+    padding-left: 0.8rem;
+    border-left: 2px solid rgba(155, 28, 28, 0.15);
+    font-size: 0.95rem;
+  }
 }
