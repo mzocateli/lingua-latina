@@ -1,28 +1,17 @@
 # Lingua Latīna — Quaestiōnēs Selectae
 
-Exercícios interativos com gabarito baseados em **Lingua Latina per se Illustrata · Familia Romana** (Hans H. Ørberg). Cada capítulo tem sua própria página com:
-
-- lacunas editáveis e correção tolerante (macrons opcionais, `ā ≡ ab`, etc.);
-- painel lateral (*auxilia*) com paradigmas e vocabulário;
-- seção **Explicātiōnēs** com explicações curtas e referências ao livro;
-- botão *Vide explicātiōnem* em cada exercício, que abre o tópico correspondente.
-
-Site estático puro — HTML, CSS, JS, sem build step. Pronto para GitHub Pages.
-
-🔗 [https://mzocateli.github.io/lingua-latina/](https://mzocateli.github.io/lingua-latina/)
-
----
-
 ## Conteúdo atual
 
-| Capitulum | Tópico                                   | Exercícios |
-|-----------|------------------------------------------|------------|
-| V         | Acusativo, ablativo, imperativo          | 11 (todos do livro) |
-| VI        | Movimento, locativo, voz passiva         | 10 (todos os não-dissertativos) |
-| VII       | Dativo, demonstrativo, relativo          | 11 (8 do livro + 3 drills originais) |
-| VIII      | Genitivo, preço, *quī/is*                | 11 (todos os não-dissertativos) |
+| Capitulum | Tópico                                              | Exercícios |
+|-----------|-----------------------------------------------------|------------|
+| III       | Nominativo/acusativo; pronomes <i>mē/tē</i>; relativo | 9          |
+| IV        | Numerais I–X; vocativo; imperativo; <i>suus / eius</i> | 9          |
+| V         | Acusativo, ablativo, imperativo                     | 11         |
+| VI        | Movimento, locativo, voz passiva                    | 10         |
+| VII       | Dativo, demonstrativo, relativo                     | 11 (8 do livro + 3 drills originais) |
+| VIII      | Genitivo, preço, *quī/is*                           | 11         |
 
-Todos os *Exercitia* não-dissertativos dos capítulos V–VIII do livro estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre (Cap. VI Ex. 2 e 11; Cap. VII Ex. 2, 5, 10; Cap. VIII Ex. 2, 7, 11, 15) foram excluídos por não terem gabarito determinístico.
+Todos os *Exercitia* não-dissertativos dos capítulos III–VIII do livro estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
 
 Cap. VII inclui três *drills* extras (A, B, C) compostos especialmente para o site, marcados como `drill original — não está no livro`. Usam o mesmo léxico e personagens de Ørberg mas com sentenças próprias.
 
@@ -123,23 +112,6 @@ As explicações estão em pt-BR. Citações ao livro usam o formato `Cap. X, ll
 - **Frases (phraseMode)**: a ordem das palavras é livre e `ab ≡ ā` (mesma preposição em ambientes diferentes). Usado nos exercícios de transformação (Cap. VI Ex. 8; Cap. VIII Ex. 3).
 - **Enter**: salta para a próxima lacuna; o último Enter corrige.
 - **Aperī responsa**: corrige; **Occulta responsa**: remove a correção sem apagar o input; **Mundā**: limpa tudo.
-
----
-
-## Adicionando um capítulo
-
-1. Crie `data/cap-ix.js` no formato acima.
-2. Adicione `{slug:'ix', numeral:'IX', title:'…'}` em `data/chapters.js`.
-3. Crie `cap-ix.html` (69 linhas, idêntico aos outros mudando 2 strings).
-4. Atualize a contagem em `index.html`.
-
----
-
-## Publicação no GitHub Pages
-
-1. Commit & push para `main`.
-2. **Settings → Pages → Source**: `Deploy from branch` → `main` → `/ (root)`.
-3. O site sobe em `https://mzocateli.github.io/lingua-latina/` em poucos minutos.
 
 ---
 
