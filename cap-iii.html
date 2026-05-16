@@ -15,6 +15,9 @@
 
 <div data-site-nav></div>
 
+<!-- Sticky jump bar -->
+<div data-section-bar></div>
+
 <div class="wrap">
 
   <header class="chapter-header">
@@ -23,14 +26,18 @@
     <p class="blurb" data-chapter-blurb></p>
   </header>
 
-  <div class="usage-hint">
+  <section data-chapter-content></section>
+
+  <h2 class="section-title" id="exercitia-title">
+    ✎ Exercitia <span class="roman">· cap. iii</span>
+  </h2>
+
+  <div class="usage-hint-inline">
     <strong>Ūsus.</strong> Escreva nas lacunas (os macrons são opcionais).
     Pressione <kbd>Enter</kbd> para ir ao próximo campo. Clique em
     <em>Aperī responsa</em> para corrigir; <em>Mundā</em> para limpar.
     Em exercício que custa, clica <em>Vide explicātionem</em> para revisar a regra.
   </div>
-
-  <section data-chapter-content></section>
 
   <div data-chapter-toc></div>
 
@@ -56,6 +63,7 @@
   const SLUG = 'iii';
   document.addEventListener('DOMContentLoaded', function () {
     LL.mountSiteNav(SLUG);
+    LL.mountSectionBar(SLUG);
     LL.mountChapterHeader(SLUG);
     LL.mountChapterContent(SLUG);
     LL.mountChapterTOC(SLUG);

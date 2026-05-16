@@ -67,31 +67,61 @@
   }
 
   // ----- Grammatica section (paradigms, formal grammar) -----
+  // Now wrapped in a <details> that's collapsed by default. The summary
+  // shows the section title and a small index of subsection headings,
+  // so the reader can decide whether to expand. Each subsection inside
+  // is also a <details> (open by default once parent is open) — letting
+  // someone collapse just the parts they don't need.
   function renderGrammar(grammar, numeral) {
     if (!grammar) return null;
-    const wrap = el('section', { className: 'grammar-section' });
-    wrap.appendChild(el('h2', {
-      className: 'section-title grammar-title',
+    const wrap = el('details', {
+      className: 'grammar-section',
+      id: 'grammatica'
+    });
+    const sum = el('summary', { className: 'grammar-summary' });
+    sum.appendChild(el('span', {
+      className: 'section-marker',
+      text: '§'
+    }));
+    sum.appendChild(el('span', {
+      className: 'section-title-inline',
       html: 'Grammatica Latīna <span class="roman">· cap. ' +
             String(numeral || '').toLowerCase() + '</span>'
     }));
+    // Compact list of headings inside the summary, comma-separated.
+    const headingNames = (grammar.sections || [])
+      .map(function (s) { return s.heading; })
+      .filter(Boolean);
+    if (headingNames.length) {
+      sum.appendChild(el('span', {
+        className: 'section-summary-list',
+        html: headingNames.join(' · ')
+      }));
+    }
+    wrap.appendChild(sum);
+
     if (grammar.intro) {
       wrap.appendChild(el('p', { className: 'grammar-intro', html: grammar.intro }));
     }
-    (grammar.sections || []).forEach(function (s) {
-      const block = el('article', { className: 'grammar-block' });
+    (grammar.sections || []).forEach(function (s, idx) {
+      const block = el('details', {
+        className: 'grammar-block',
+        open: ''   // each subsection open by default once parent is open
+      });
+      const blockSum = el('summary', { className: 'grammar-block-summary' });
       if (s.heading) {
-        block.appendChild(el('h3', {
+        blockSum.appendChild(el('span', {
           className: 'grammar-heading',
           html: s.heading
         }));
       }
       if (s.bookRef) {
-        block.appendChild(el('div', {
+        blockSum.appendChild(el('span', {
           className: 'grammar-bookref',
           html: s.bookRef
         }));
       }
+      block.appendChild(blockSum);
       if (s.body) {
         block.appendChild(el('div', { className: 'grammar-body', html: s.body }));
       }
@@ -99,6 +129,45 @@
     });
     return wrap;
   }
+
+  // ----- Section jump bar (sticky at top of the chapter wrap) -----
+  // Adds quick anchors so the reader doesn't have to scroll past one
+  // section to reach another.
+  function renderSectionBar(hasGrammar, hasTopics) {
+    const bar = el('nav', { className: 'section-bar', 'aria-label': 'Saltar para seção' });
+    const ul = el('ul', { className: 'section-bar-list' });
+    if (hasGrammar) {
+      ul.appendChild(el('li', null, [
+        el('a', { href: '#grammatica', className: 'section-bar-link', html: '§ Grammatica' })
+      ]));
+    }
+    if (hasTopics) {
+      ul.appendChild(el('li', null, [
+        el('a', { href: '#explicationes', className: 'section-bar-link', html: '❦ Explicātiōnēs' })
+      ]));
+    }
+    ul.appendChild(el('li', null, [
+      el('a', { href: '#exercitia-title', className: 'section-bar-link', html: '✎ Exercitia' })
+    ]));
+    bar.appendChild(ul);
+
+    // Smooth-jump + force-open behaviour
+    bar.addEventListener('click', function (e) {
+      const a = e.target.closest('a.section-bar-link');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (href.startsWith('#')) {
+        const id = href.slice(1);
+        // For collapsible sections, open them before scrolling.
+        const target = document.getElementById(id);
+        if (target && target.tagName === 'DETAILS' && !target.open) {
+          target.open = true;
+        }
+      }
+    });
+    return bar;
+  }
+  NS.renderSectionBar = renderSectionBar;
 
   // ----- Whole chapter content section -----
   function mountChapterContent(slug, selector) {
@@ -122,14 +191,35 @@
     const grammar = renderGrammar(content.grammar, chapter.numeral);
     if (grammar) target.appendChild(grammar);
 
-    // Explicātiōnēs second (collapsible topics)
+    // Explicātiōnēs as a single collapsible <details> (closed by default).
+    // Inside, the individual topics are themselves collapsible.
     if (content.topics && content.topics.length) {
-      const exp = el('section', { className: 'topics-section' });
-      exp.appendChild(el('h2', {
-        className: 'section-title',
+      const exp = el('details', {
+        className: 'topics-section',
+        id: 'explicationes'
+      });
+      const expSum = el('summary', { className: 'topics-summary' });
+      expSum.appendChild(el('span', {
+        className: 'section-marker',
+        text: '❦'
+      }));
+      expSum.appendChild(el('span', {
+        className: 'section-title-inline',
         html: 'Explicātiōnēs <span class="roman">· referentiae · cap. ' +
               String(chapter.numeral || '').toLowerCase() + '</span>'
       }));
+      const topicNames = content.topics.map(function (t) {
+        // Strip HTML tags from the title for the summary list
+        const tmp = document.createElement('div');
+        tmp.innerHTML = t.title;
+        return tmp.textContent;
+      });
+      expSum.appendChild(el('span', {
+        className: 'section-summary-list',
+        text: topicNames.join(' · ')
+      }));
+      exp.appendChild(expSum);
+
       exp.appendChild(el('p', {
         className: 'content-intro',
         html: 'Resumo breve para acompanhar o livro. Para a explicação completa, ' +
@@ -142,6 +232,37 @@
     }
   }
   NS.mountChapterContent = mountChapterContent;
+
+  // ----- Mount the sticky section jump bar -----
+  function mountSectionBar(slug, selector) {
+    const chapter = NS.chapters && NS.chapters[slug];
+    const target = document.querySelector(selector || '[data-section-bar]');
+    if (!target) return;
+    const content = (chapter && chapter.content) || {};
+    const hasGrammar = !!content.grammar;
+    const hasTopics = !!(content.topics && content.topics.length);
+    target.innerHTML = '';
+    const bar = renderSectionBar(hasGrammar, hasTopics);
+    target.appendChild(bar);
+
+    // Sync the bar's `top` with the site-nav's height so it sits flush
+    // beneath it. Re-check on resize because the nav wraps on narrow
+    // viewports and gains height.
+    function syncTop() {
+      const nav = document.querySelector('.site-nav');
+      const h = nav ? nav.getBoundingClientRect().height : 0;
+      target.style.top = h + 'px';
+      // Also export to a CSS var so anchors with scroll-margin can use it.
+      document.documentElement.style.setProperty(
+        '--section-bar-offset', (h + bar.getBoundingClientRect().height + 8) + 'px'
+      );
+    }
+    syncTop();
+    window.addEventListener('resize', syncTop);
+    // Also sync once after fonts settle, since the nav height depends on it
+    setTimeout(syncTop, 100);
+  }
+  NS.mountSectionBar = mountSectionBar;
 
   // ----- Reference button for an exercise -----
   // Receives the array of topic ids and the chapter data.
@@ -163,8 +284,11 @@
         title: 'Vide: ' + topic.title.replace(/<[^>]+>/g, '')
       });
       a.innerHTML = label;
-      // On click, force <details> open before the browser scrolls.
+      // On click, force the parent Explicātiōnēs <details> and the topic
+      // <details> open before the browser scrolls.
       a.addEventListener('click', function () {
+        const parent = document.getElementById('explicationes');
+        if (parent && !parent.open) parent.open = true;
         const det = document.getElementById('content-' + topic.id);
         if (det && !det.open) det.open = true;
       });

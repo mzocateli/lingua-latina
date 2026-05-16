@@ -343,3 +343,309 @@ html{
   .grammar-body table.paradigm th,
   .grammar-body table.paradigm td{ padding: 0.25rem 0.5rem; }
 }
+
+/* ============================================================
+   Collapsed-by-default Grammar & Explicātiōnēs
+   The whole grammar/topics blocks live inside a <details>; the
+   summary shows a compact list of subsections so the reader can
+   scan and decide whether to expand.
+   ============================================================ */
+
+/* The grammar-section was previously a <section>; it is now a <details>.
+   Keep the visual look (paper card, double border) but on the summary. */
+details.grammar-section,
+details.topics-section{
+  margin: 0 0 1.4rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  box-shadow: none;
+  position: relative;
+}
+details.grammar-section::before,
+details.topics-section::before{
+  content: none;
+}
+details.grammar-section > summary.grammar-summary,
+details.topics-section > summary.topics-summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 0.85rem 1.1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.7) 0%,
+    rgba(248,242,228,0.6) 100%
+  );
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem 0.9rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+details.grammar-section > summary.grammar-summary::-webkit-details-marker,
+details.topics-section > summary.topics-summary::-webkit-details-marker{
+  display: none;
+}
+details.grammar-section[open] > summary.grammar-summary,
+details.topics-section[open] > summary.topics-summary{
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid rgba(155, 28, 28, 0.18);
+}
+details.grammar-section > summary:hover,
+details.topics-section > summary:hover{
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.85) 0%,
+    rgba(248,242,228,0.75) 100%
+  );
+}
+
+/* Chevron indicator */
+details.grammar-section > summary::after,
+details.topics-section > summary::after{
+  content: '▸';
+  margin-left: auto;
+  font-family: 'IM Fell English', serif;
+  color: var(--accent);
+  font-size: 1.05rem;
+  transition: transform 0.18s ease;
+  flex: 0 0 auto;
+}
+details.grammar-section[open] > summary::after,
+details.topics-section[open] > summary::after{
+  transform: rotate(90deg);
+}
+
+.section-marker{
+  font-family: 'IM Fell English', serif;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-style: italic;
+}
+.section-title-inline{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+}
+.section-title-inline .roman{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-left: 0.3rem;
+}
+.section-summary-list{
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  flex: 1 1 100%;
+  padding-left: 1.85rem;
+  margin-top: -0.15rem;
+}
+
+/* The inner box that holds the actual content. We continue to use
+   the paper card look here, but as the open state of <details>. */
+details.grammar-section[open]{
+  background: linear-gradient(
+    180deg,
+    rgba(255,253,247,0.65) 0%,
+    rgba(248,242,228,0.55) 100%
+  );
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 0 1.1rem 1.4rem;
+  margin-top: 0;
+}
+details.grammar-section[open] > summary{
+  margin: 0 -1.1rem;
+  border: 1px solid var(--rule);
+}
+details.grammar-section[open]::before{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(155, 28, 28, 0.18);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 0;
+}
+details.grammar-section[open] > *{
+  position: relative;
+  z-index: 1;
+}
+
+details.topics-section[open]{
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 0.8rem 1rem 1.1rem;
+  background: rgba(255,253,247,0.45);
+}
+details.topics-section[open] > summary{
+  margin: -0.8rem -1rem 0;
+}
+
+/* Each grammar subsection inside is now also a <details>, with the
+   block summary always visible. */
+details.grammar-block{
+  margin: 0 0 0.9rem;
+  padding: 0;
+  border: none;
+  border-bottom: 1px dashed rgba(155, 28, 28, 0.2);
+  padding-bottom: 0.9rem;
+}
+details.grammar-block:last-of-type{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+details.grammar-block > summary.grammar-block-summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 0.45rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.9rem;
+}
+details.grammar-block > summary::-webkit-details-marker{
+  display: none;
+}
+details.grammar-block > summary::before{
+  content: '▾';
+  font-family: 'IM Fell English', serif;
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+details.grammar-block:not([open]) > summary::before{
+  content: '▸';
+}
+details.grammar-block > summary > .grammar-heading{
+  margin: 0;
+}
+details.grammar-block > summary > .grammar-bookref{
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+/* Intro paragraph after the grammar summary */
+.grammar-intro{
+  padding-top: 0.7rem;
+}
+
+/* Content intro inside topics-section */
+details.topics-section > .content-intro{
+  margin-top: 0.6rem;
+}
+
+/* ============================================================
+   Section jump bar (sticky)
+   ============================================================ */
+[data-section-bar]{
+  position: sticky;
+  top: 0;     /* JS will adjust this to match the site-nav height */
+  z-index: 9;
+}
+.section-bar{
+  background: rgba(245, 235, 215, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  margin: 0;
+  padding: 0.35rem 0;
+}
+.section-bar-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.4rem;
+  margin: 0;
+  padding: 0 0.8rem;
+  justify-content: center;
+}
+.section-bar-list li{ margin: 0; }
+.section-bar-link{
+  display: inline-block;
+  padding: 0.32rem 0.85rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--accent);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  letter-spacing: 0.02em;
+}
+.section-bar-link:hover{
+  background: rgba(155, 28, 28, 0.07);
+  border-color: rgba(155, 28, 28, 0.2);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Move the usage hint down near the exercises (smaller, inline)
+   ============================================================ */
+.usage-hint-inline{
+  margin: 1.4rem 0 1rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(255,253,247,0.55);
+  border-left: 3px solid var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  border-radius: 0 4px 4px 0;
+}
+.usage-hint-inline strong{
+  font-style: normal;
+  color: var(--accent);
+}
+.usage-hint-inline kbd{
+  font-family: 'IM Fell English', serif;
+  font-style: normal;
+  background: rgba(0,0,0,0.06);
+  padding: 0 0.25rem;
+  border-radius: 2px;
+  font-size: 0.88em;
+}
+
+@media (max-width: 640px){
+  details.grammar-section > summary,
+  details.topics-section > summary{ padding: 0.7rem 0.85rem; }
+  details.grammar-section[open]{ padding: 0 0.85rem 1rem; }
+  .section-title-inline{ font-size: 1.2rem; }
+  .section-summary-list{ font-size: 0.88rem; padding-left: 1.6rem; }
+  .section-bar-list{ padding: 0 0.5rem; }
+  .section-bar-link{ font-size: 0.88rem; padding: 0.28rem 0.65rem; }
+}
+
+/* Compensate for the sticky bar + nav height when jumping to anchors */
+:root{
+  --section-bar-offset: 116px;
+}
+:target,
+#grammatica,
+#explicationes,
+#exercitia,
+#exercitia-title,
+[id^="content-"],
+[id^="ex-"]{
+  scroll-margin-top: var(--section-bar-offset);
+}

@@ -256,6 +256,7 @@
       return;
     }
     container.innerHTML = '';
+    if (!container.id) container.id = 'exercitia';
     (chapter.exercises || []).forEach(function (ex) {
       container.appendChild(renderExercise(ex, chapter));
     });
