@@ -81,8 +81,12 @@ export interface ExerciseTip {
 
 export interface StandardExercise extends ExerciseBase {
   kind?: undefined;
+  /** Question templates with inline-answer placeholders: `{ō}`, `{ō:md}`, `{eīs|iīs}`.
+   *  See [parse-question.ts](../lib/parse-question.ts) for the grammar. */
   questions: string[];
-  answers: string[];
+  /** Legacy positional answer array. Removed by the inline-answer migration
+   *  (PR 2). Field retained for type compatibility only. */
+  answers?: string[];
 }
 
 export interface ParadigmExercise extends ExerciseBase {

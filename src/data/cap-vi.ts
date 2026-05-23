@@ -17,37 +17,18 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "{} Flāminia est {} Rōmam et Arīminum.",
-        "Vīlla Iūliī {} Tūsculum est, neque {} ā Rōmā.",
-        "Ab oppidō {} vīllam nōn longa via est.",
-        "Iūlius ab oppidō ad vīllam {}.",
-        "Vīlla est {} eum, oppidum {} eum est.",
-        "Dominus et quattuor servī ad vīllam {}.",
-        "Servī in viā {}; dominus in {} est neque ambulat.",
-        "Duo servī lectīcam cum dominō {}.",
-        "Syrus et Lēander duōs {} in {} portant.",
-        "{} venit Iūlius? Ad oppidō venit.",
-        "{} it Iūlius? Ad vīllam it.",
-        "Duo servī dominum ab oppidō ad vīllam {} [= portant]."
-      ],
-      "answers": [
-        "Via",
-        "inter",
-        "prope",
-        "procul",
-        "ad",
-        "ambulat|vehitur",
-        "post",
-        "ante",
-        "ambulant|eunt",
-        "ambulant",
-        "lectīcā",
-        "portant",
-        "saccōs",
-        "umerīs",
-        "Unde",
-        "Quō",
-        "vehunt"
+        "{Via} Flāminia est {inter} Rōmam et Arīminum.",
+        "Vīlla Iūliī {prope} Tūsculum est, neque {procul} ā Rōmā.",
+        "Ab oppidō {ad} vīllam nōn longa via est.",
+        "Iūlius ab oppidō ad vīllam {ambulat|vehitur}.",
+        "Vīlla est {post} eum, oppidum {ante} eum est.",
+        "Dominus et quattuor servī ad vīllam {ambulant|eunt}.",
+        "Servī in viā {ambulant}; dominus in {lectīcā} est neque ambulat.",
+        "Duo servī lectīcam cum dominō {portant}.",
+        "Syrus et Lēander duōs {saccōs} in {umerīs} portant.",
+        "{Unde} venit Iūlius? Ad oppidō venit.",
+        "{Quō} it Iūlius? Ad vīllam it.",
+        "Duo servī dominum ab oppidō ad vīllam {vehunt} [= portant]."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -103,26 +84,12 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlius nōn {md} Rōmā, sed {md} oppidō Tūsculō venit.",
-        "Iūlia {md} hortō venit cum rosīs; {md} mātre nōn discēdit.",
-        "Servī {md} oppidō ad vīllam ambulant; {md} Iūliō vocantur.",
-        "Mēdus {md} Rōmā nōn discēdit; {md} amīcā suā exspectātur.",
-        "Aemilia {md} virō suō salūtātur; {md} eō amātur.",
-        "Iūlius {md} servīs portātur; {md} ancillā salūtātur."
-      ],
-      "answers": [
-        "ā",
-        "ab",
-        "ab",
-        "ā",
-        "ab",
-        "ā",
-        "ā",
-        "ab",
-        "ab",
-        "ā",
-        "ab",
-        "ā"
+        "Iūlius nōn {ā:md} Rōmā, sed {ab:md} oppidō Tūsculō venit.",
+        "Iūlia {ab:md} hortō venit cum rosīs; {ā:md} mātre nōn discēdit.",
+        "Servī {ab:md} oppidō ad vīllam ambulant; {ā:md} Iūliō vocantur.",
+        "Mēdus {ā:md} Rōmā nōn discēdit; {ab:md} amīcā suā exspectātur.",
+        "Aemilia {ab:md} virō suō salūtātur; {ā:md} eō amātur.",
+        "Iūlius {ab:md} servīs portātur; {ā:md} ancillā salūtātur."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -163,43 +130,18 @@ const chapter: Chapter = {
       },
       "exemplum": "Via Appia est inter {Rōmam} et {Brundisium}.",
       "questions": [
-        "Via Appia est inter {md} et {md}. <em>(Roma, Brundisium)</em>",
-        "Brundisium, Capua, Ostia magna {md} sunt; Tūsculum et Tibur quoque {md} sunt.",
-        "Cornelius habitat in {md} Tūsculō.",
-        "Iūlius nōn ad {md}, sed ad {md} suam it.",
-        "Iūlius ab {md} ad {md} venit.",
-        "Iūlius {md} vehitur, nōn ambulat: portātur {md}.",
-        "Aemilia {md} suum (= Iūlium) videt et salūtat; {md} ōsculum dat.",
-        "Servī {md} salūtant; ancilla quoque {md} salūtat.",
-        "Iūlius in {md} habitat cum {md} suā Iūliō et cum līberīs.",
-        "Iūlius {md} videt et cum {md} colloquitur.",
-        "Iūlia in {md} est cum {md} suā et cum {md}.",
-        "Aemilia {md} ā servīs portātur."
-      ],
-      "answers": [
-        "Rōmam",
-        "Brundisium",
-        "oppida",
-        "oppida",
-        "oppidum",
-        "oppidum",
-        "vīllam",
-        "oppidō",
-        "vīllam",
-        "lectīcā",
-        "duōs servōs",
-        "dominum",
-        "eum",
-        "dominum",
-        "dominō",
-        "vīllā",
-        "uxōre|viro",
-        "Aemiliam",
-        "eā",
-        "hortō",
-        "Aemiliam",
-        "rosīs",
-        "litterās"
+        "Via Appia est inter {Rōmam:md} et {Brundisium:md}. <em>(Roma, Brundisium)</em>",
+        "Brundisium, Capua, Ostia magna {oppida:md} sunt; Tūsculum et Tibur quoque {oppida:md} sunt.",
+        "Cornelius habitat in {oppidum:md} Tūsculō.",
+        "Iūlius nōn ad {oppidum:md}, sed ad {vīllam:md} suam it.",
+        "Iūlius ab {oppidō:md} ad {vīllam:md} venit.",
+        "Iūlius {lectīcā:md} vehitur, nōn ambulat: portātur {duōs servōs:md}.",
+        "Aemilia {dominum:md} suum (= Iūlium) videt et salūtat; {eum:md} ōsculum dat.",
+        "Servī {dominum:md} salūtant; ancilla quoque {dominō:md} salūtat.",
+        "Iūlius in {vīllā:md} habitat cum {uxōre|viro:md} suā Iūliō et cum līberīs.",
+        "Iūlius {Aemiliam:md} videt et cum {eā:md} colloquitur.",
+        "Iūlia in {hortō:md} est cum {Aemiliam:md} suā et cum {rosīs:md}.",
+        "Aemilia {litterās:md} ā servīs portātur."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -232,28 +174,16 @@ const chapter: Chapter = {
       },
       "exemplum": "Servus {quī} saccum portat est Syrus.",
       "questions": [
-        "Servus {} saccum portat est Syrus.",
-        "Servī {} dominum portant sunt Dāvus et Ursus.",
-        "Servus {} dominus vocat est Mēdus.",
-        "Servī {} ambulant ante lectīcam sunt servī Iūliī.",
-        "Servus {} Iūlius vocat nōn audit eum.",
-        "Mēdus, {} sacculum domini habet, ad Rōmam it.",
-        "Iūlius servōs {} saccōs portant nōn videt.",
-        "Servī {} dominum amant fidēlēs sunt.",
-        "Dominus servōs {} ad vīllam portant vocat.",
-        "Dominus servōs {} ā vīllā revocat."
-      ],
-      "answers": [
-        "quī",
-        "quōs",
-        "quem",
-        "quī",
-        "quem",
-        "quī",
-        "quōs",
-        "quī",
-        "quōs",
-        "quōs"
+        "Servus {quī} saccum portat est Syrus.",
+        "Servī {quōs} dominum portant sunt Dāvus et Ursus.",
+        "Servus {quem} dominus vocat est Mēdus.",
+        "Servī {quī} ambulant ante lectīcam sunt servī Iūliī.",
+        "Servus {quem} Iūlius vocat nōn audit eum.",
+        "Mēdus, {quī} sacculum domini habet, ad Rōmam it.",
+        "Iūlius servōs {quōs} saccōs portant nōn videt.",
+        "Servī {quī} dominum amant fidēlēs sunt.",
+        "Dominus servōs {quōs} ad vīllam portant vocat.",
+        "Dominus servōs {quōs} ā vīllā revocat."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -302,28 +232,14 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Quō it Mēdus? Mēdus Rōm{} it, nam amīca eius Rōm{} habitat.",
-        "Unde venit Cornēlius? Cornēlius Rōm{} venit.",
-        "Quō it Cornēlius? Cornēlius Tūscul{} it, nam is Tūscul{} habitat.",
-        "Unde venit Mēdus? Mēdus Tūscul{} venit.",
-        "Mēdus Tūscul{} Rōm{} it.",
-        "Cornēlius Rōm{} Tūscul{} it.",
-        "Iam Mēdus Rōm{} apud amīcam suam est.",
-        "Ubi est Cornēlius? Tūscul{} est apud familiam suam."
-      ],
-      "answers": [
-        "am",
-        "ae",
-        "ā",
-        "um",
-        "ī",
-        "ō",
-        "ō",
-        "am",
-        "ā",
-        "um",
-        "ae",
-        "ī"
+        "Quō it Mēdus? Mēdus Rōm{am} it, nam amīca eius Rōm{ae} habitat.",
+        "Unde venit Cornēlius? Cornēlius Rōm{ā} venit.",
+        "Quō it Cornēlius? Cornēlius Tūscul{um} it, nam is Tūscul{ī} habitat.",
+        "Unde venit Mēdus? Mēdus Tūscul{ō} venit.",
+        "Mēdus Tūscul{ō} Rōm{am} it.",
+        "Cornēlius Rōm{ā} Tūscul{um} it.",
+        "Iam Mēdus Rōm{ae} apud amīcam suam est.",
+        "Ubi est Cornēlius? Tūscul{ī} est apud familiam suam."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -377,46 +293,19 @@ const chapter: Chapter = {
       },
       "exemplum": "<em>ambulat / portātur</em> — Iūlius ambulat, sed lectīcā portātur.",
       "questions": [
-        "Iūlius {md}, sed lectīcā {md}. <em>(ambulāre / portāre)</em>",
-        "Aemilia Iūlium {md}; Iūlius quoque ab Aemiliā {md}. <em>(amāre)</em>",
-        "Puerī rosās pulchrās {md}; rosae pulchrae ā puerīs {md}. <em>(amāre)</em>",
-        "Servī dominum {md}; dominus ā servīs {md}. <em>(timēre)</em>",
-        "Quīntus Mārcum {md}; Mārcus ā Quīntō {md}. <em>(vidēre)</em>",
-        "Mārcus Iūliam {md}; Iūlia ā Mārcō {md}. <em>(pulsāre)</em>",
-        "Aemilia puerōs {md}; puerī ā mātre {md}. <em>(vocāre — auditur na chave!)</em>",
-        "Mātrēs fīliōs {md}; fīliī ā mātribus {md}.",
-        "Servus dominum {md}; dominus ā servō {md}. <em>(vehere)</em>",
-        "Servī dominum {md}; dominus {md}. <em>(vehere; ambulat)</em>",
-        "Rosae puellam {md}. <em>(dēlectāre passiva pl.: puellae ā rosīs dēlectantur)</em>",
-        "Iūlius pecūniam {md}; pecūnia {md} ā Iūliō. <em>(pōnere/numerāre)</em>",
-        "Nummī in mēnsā {md} et {md}. <em>(pōnere/numerāre pass.)</em>"
-      ],
-      "answers": [
-        "ambulat",
-        "portātur",
-        "amat",
-        "amātur",
-        "amant",
-        "amantur",
-        "timent",
-        "timentur",
-        "videt",
-        "vidētur",
-        "pulsat",
-        "pulsātur",
-        "vocat",
-        "audītur",
-        "vocant",
-        "audiuntur",
-        "vehit",
-        "vehitur",
-        "vehunt",
-        "ambulant",
-        "dēlectantur",
-        "pōnit",
-        "numerat",
-        "pōnuntur",
-        "numerantur"
+        "Iūlius {ambulat:md}, sed lectīcā {portātur:md}. <em>(ambulāre / portāre)</em>",
+        "Aemilia Iūlium {amat:md}; Iūlius quoque ab Aemiliā {amātur:md}. <em>(amāre)</em>",
+        "Puerī rosās pulchrās {amant:md}; rosae pulchrae ā puerīs {amantur:md}. <em>(amāre)</em>",
+        "Servī dominum {timent:md}; dominus ā servīs {timentur:md}. <em>(timēre)</em>",
+        "Quīntus Mārcum {videt:md}; Mārcus ā Quīntō {vidētur:md}. <em>(vidēre)</em>",
+        "Mārcus Iūliam {pulsat:md}; Iūlia ā Mārcō {pulsātur:md}. <em>(pulsāre)</em>",
+        "Aemilia puerōs {vocat:md}; puerī ā mātre {audītur:md}. <em>(vocāre — auditur na chave!)</em>",
+        "Mātrēs fīliōs {vocant:md}; fīliī ā mātribus {audiuntur:md}.",
+        "Servus dominum {vehit:md}; dominus ā servō {vehitur:md}. <em>(vehere)</em>",
+        "Servī dominum {vehunt:md}; dominus {ambulant:md}. <em>(vehere; ambulat)</em>",
+        "Rosae puellam {dēlectantur:md}. <em>(dēlectāre passiva pl.: puellae ā rosīs dēlectantur)</em>",
+        "Iūlius pecūniam {pōnit:md}; pecūnia {numerat:md} ā Iūliō. <em>(pōnere/numerāre)</em>",
+        "Nummī in mēnsā {pōnuntur:md} et {numerantur:md}. <em>(pōnere/numerāre pass.)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -457,32 +346,18 @@ const chapter: Chapter = {
       },
       "exemplum": "Dominus servum vocat = Servus ā dominō vocātur.",
       "questions": [
-        "Ancilla dominum salūtat = Dominus … {xl}",
-        "Dominus ā servīs salūtātur = Servī … {xl}",
-        "Dominus servōs interrogat = … {xl}",
-        "Dāvus accūsātur ā Mēdō = Mēdus … {xl}",
-        "Dāvus sacculum in mēnsā pōnit = Sacculus … {xl}",
-        "Iūlius ā Mēdō timētur = Mēdus … {xl}",
-        "Iūlius Mēdum vocat = Mēdus … {xl}",
-        "Iūlia ā puerīs vocātur = Puerī … {xl}",
-        "Iūlia puerōs nōn audit = … {xl}",
-        "Puerī vocantur ā Iūliā = Iūlia … {xl}",
-        "Servī improbī dominum īrātum timent = … {xxl}",
-        "Servī improbī ā dominō īrātō verberantur = … {xxl}"
-      ],
-      "answers": [
-        "ab ancillā salūtātur",
-        "dominum salūtant",
-        "Servī ā dominō interrogantur",
-        "Dāvum accūsat",
-        "ā Dāvō in mēnsā pōnitur",
-        "Iūlium timet",
-        "ā Iūliō vocātur",
-        "Iūliam vocant",
-        "Puerī ā Iūliā nōn audiuntur",
-        "puerōs vocat",
-        "Dominus īrātus ā servīs improbīs timētur",
-        "Dominus īrātus servōs improbōs verberat"
+        "Ancilla dominum salūtat = Dominus … {ab ancillā salūtātur:xl}",
+        "Dominus ā servīs salūtātur = Servī … {dominum salūtant:xl}",
+        "Dominus servōs interrogat = … {Servī ā dominō interrogantur:xl}",
+        "Dāvus accūsātur ā Mēdō = Mēdus … {Dāvum accūsat:xl}",
+        "Dāvus sacculum in mēnsā pōnit = Sacculus … {ā Dāvō in mēnsā pōnitur:xl}",
+        "Iūlius ā Mēdō timētur = Mēdus … {Iūlium timet:xl}",
+        "Iūlius Mēdum vocat = Mēdus … {ā Iūliō vocātur:xl}",
+        "Iūlia ā puerīs vocātur = Puerī … {Iūliam vocant:xl}",
+        "Iūlia puerōs nōn audit = … {Puerī ā Iūliā nōn audiuntur:xl}",
+        "Puerī vocantur ā Iūliā = Iūlia … {puerōs vocat:xl}",
+        "Servī improbī dominum īrātum timent = … {Dominus īrātus ā servīs improbīs timētur:xxl}",
+        "Servī improbī ā dominō īrātō verberantur = … {Dominus īrātus servōs improbōs verberat:xxl}"
       ],
       "phraseMode": true,
       "auxilia": [
@@ -520,22 +395,13 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlius {lectīcā} portātur. Mēdus {equō} vehitur.",
       "questions": [
-        "Mēdus {md} vehitur. <em>(equus)</em>",
-        "Iūlius {md} portātur. <em>(lectīca)</em>",
-        "Aemilia {md} fīliōs vocat. <em>(verba)</em>",
-        "Dominus servum {md} verberat. <em>(baculum)</em>",
-        "Servī saccōs {md} portant. <em>(umerī, pl.)</em>",
-        "Iūlius {md} ab oppidō ad vīllam venit. <em>(lectīca)</em>",
-        "Mēdus per {lg} Rōmam ambulat. <em>(via Latīna — abl. com prep!)</em>"
-      ],
-      "answers": [
-        "equō",
-        "lectīcā",
-        "verbīs",
-        "baculō",
-        "umerīs",
-        "lectīcā",
-        "viā Latīnā"
+        "Mēdus {equō:md} vehitur. <em>(equus)</em>",
+        "Iūlius {lectīcā:md} portātur. <em>(lectīca)</em>",
+        "Aemilia {verbīs:md} fīliōs vocat. <em>(verba)</em>",
+        "Dominus servum {baculō:md} verberat. <em>(baculum)</em>",
+        "Servī saccōs {umerīs:md} portant. <em>(umerī, pl.)</em>",
+        "Iūlius {lectīcā:md} ab oppidō ad vīllam venit. <em>(lectīca)</em>",
+        "Mēdus per {viā Latīnā:lg} Rōmam ambulat. <em>(via Latīna — abl. com prep!)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -576,21 +442,12 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Cornēlius nōn ambulat, sed {md} vehitur. <em>(no cavalo)</em>",
-        "{md} habitat Mēdus? Rōmae habitat. <em>(onde?)</em>",
-        "Servī, quī saccōs portant, {md} sunt. <em>(cansados)</em>",
-        "Lydia est {md} Mēdī, Rōmae habitat. <em>(namorada)</em>",
-        "Mēdus ad ōstium adit et ōstium {md}: 'Lydia! {md}!' <em>(bate; entra!)</em>",
-        "Mēdus {md} viam Latīnam ad Rōmam ambulat. <em>(através de)</em>"
-      ],
-      "answers": [
-        "equō",
-        "ubi",
-        "fessī",
-        "amīca",
-        "pulsat",
-        "intrā",
-        "per"
+        "Cornēlius nōn ambulat, sed {equō:md} vehitur. <em>(no cavalo)</em>",
+        "{ubi:md} habitat Mēdus? Rōmae habitat. <em>(onde?)</em>",
+        "Servī, quī saccōs portant, {fessī:md} sunt. <em>(cansados)</em>",
+        "Lydia est {amīca:md} Mēdī, Rōmae habitat. <em>(namorada)</em>",
+        "Mēdus ad ōstium adit et ōstium {pulsat:md}: 'Lydia! {intrā:md}!' <em>(bate; entra!)</em>",
+        "Mēdus {per:md} viam Latīnam ad Rōmam ambulat. <em>(através de)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -621,38 +478,13 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "<em>Amātur, amantur</em> nōn verbum āctīvum, sed {lg} est.",
-        "<em>Amat, amant</em> nōn verbum passīvum, sed {lg} est.",
-        "<em>Videt, vident</em> quoque verbum {md} est; <em>vidētur, videntur</em> est verbum {md}.",
-        "<em>Pōnit, pōnunt</em> āctīvum est; <em>pōnitur, pōnuntur</em> {lg} est.",
-        "<em>Audit, audiunt</em> {md} est; <em>audītur, audiuntur</em> est {lg}.",
-        "Āctīvum: sg <em>voc{}, tim{}, veh{}, aud{}</em>; pl <em>voc{}, tim{}, veh{}, aud{}</em>.",
-        "Passīvum: sg <em>voc{}, tim{}, veh{}, aud{}</em>; pl <em>voc{}, tim{}, veh{}, aud{}</em>."
-      ],
-      "answers": [
-        "passīvum",
-        "āctīvum",
-        "āctīvum",
-        "passīvum",
-        "passīvum",
-        "āctīvum",
-        "passīvum",
-        "at",
-        "et",
-        "it",
-        "it",
-        "ant",
-        "ent",
-        "unt",
-        "iunt",
-        "ātur",
-        "ētur",
-        "itur",
-        "ītur",
-        "antur",
-        "entur",
-        "untur",
-        "iuntur"
+        "<em>Amātur, amantur</em> nōn verbum āctīvum, sed {passīvum:lg} est.",
+        "<em>Amat, amant</em> nōn verbum passīvum, sed {āctīvum:lg} est.",
+        "<em>Videt, vident</em> quoque verbum {āctīvum:md} est; <em>vidētur, videntur</em> est verbum {passīvum:md}.",
+        "<em>Pōnit, pōnunt</em> āctīvum est; <em>pōnitur, pōnuntur</em> {passīvum:lg} est.",
+        "<em>Audit, audiunt</em> {āctīvum:md} est; <em>audītur, audiuntur</em> est {passīvum:lg}.",
+        "Āctīvum: sg <em>voc{at}, tim{et}, veh{it}, aud{it}</em>; pl <em>voc{ant}, tim{ent}, veh{unt}, aud{iunt}</em>.",
+        "Passīvum: sg <em>voc{ātur}, tim{ētur}, veh{itur}, aud{ītur}</em>; pl <em>voc{antur}, tim{entur}, veh{untur}, aud{iuntur}</em>."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -746,35 +578,62 @@ const chapter: Chapter = {
               "label": "nōminātīvus",
               "cells": [
                 "servus",
-                null
+                {
+                  "answer": "servī",
+                  "given": false
+                }
               ]
             },
             {
               "label": "accūsātīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "servum",
+                  "given": false
+                },
+                {
+                  "answer": "servōs",
+                  "given": false
+                }
               ]
             },
             {
               "label": "genetīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "servī",
+                  "given": false
+                },
+                {
+                  "answer": "servōrum",
+                  "given": false
+                }
               ]
             },
             {
               "label": "datīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "servō",
+                  "given": false
+                },
+                {
+                  "answer": "servīs",
+                  "given": false
+                }
               ]
             },
             {
               "label": "ablātīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "servō",
+                  "given": false
+                },
+                {
+                  "answer": "servīs",
+                  "given": false
+                }
               ]
             }
           ]
@@ -791,59 +650,66 @@ const chapter: Chapter = {
               "label": "nōminātīvus",
               "cells": [
                 "via",
-                null
+                {
+                  "answer": "viae",
+                  "given": false
+                }
               ]
             },
             {
               "label": "accūsātīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "viam",
+                  "given": false
+                },
+                {
+                  "answer": "viās",
+                  "given": false
+                }
               ]
             },
             {
               "label": "genetīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "viae",
+                  "given": false
+                },
+                {
+                  "answer": "viārum",
+                  "given": false
+                }
               ]
             },
             {
               "label": "datīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "viae",
+                  "given": false
+                },
+                {
+                  "answer": "viīs",
+                  "given": false
+                }
               ]
             },
             {
               "label": "ablātīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "viā",
+                  "given": false
+                },
+                {
+                  "answer": "viīs",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "servī",
-        "servum",
-        "servōs",
-        "servī",
-        "servōrum",
-        "servō",
-        "servīs",
-        "servō",
-        "servīs",
-        "viae",
-        "viam",
-        "viās",
-        "viae",
-        "viārum",
-        "viae",
-        "viīs",
-        "viā",
-        "viīs"
       ],
       "references": [
         "acusativo-plural",
@@ -874,14 +740,23 @@ const chapter: Chapter = {
               "label": "singulāris",
               "cells": [
                 "vocat",
-                null
+                {
+                  "answer": "vocātur",
+                  "given": false
+                }
               ]
             },
             {
               "label": "plūrālis",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "vocant",
+                  "given": false
+                },
+                {
+                  "answer": "vocantur",
+                  "given": false
+                }
               ]
             }
           ]
@@ -898,14 +773,23 @@ const chapter: Chapter = {
               "label": "singulāris",
               "cells": [
                 "videt",
-                null
+                {
+                  "answer": "vidētur",
+                  "given": false
+                }
               ]
             },
             {
               "label": "plūrālis",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "vident",
+                  "given": false
+                },
+                {
+                  "answer": "videntur",
+                  "given": false
+                }
               ]
             }
           ]
@@ -922,14 +806,23 @@ const chapter: Chapter = {
               "label": "singulāris",
               "cells": [
                 "pōnit",
-                null
+                {
+                  "answer": "pōnitur",
+                  "given": false
+                }
               ]
             },
             {
               "label": "plūrālis",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "pōnunt",
+                  "given": false
+                },
+                {
+                  "answer": "pōnuntur",
+                  "given": false
+                }
               ]
             }
           ]
@@ -946,32 +839,27 @@ const chapter: Chapter = {
               "label": "singulāris",
               "cells": [
                 "audit",
-                null
+                {
+                  "answer": "audītur",
+                  "given": false
+                }
               ]
             },
             {
               "label": "plūrālis",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "audiunt",
+                  "given": false
+                },
+                {
+                  "answer": "audiuntur",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "vocātur",
-        "vocant",
-        "vocantur",
-        "vidētur",
-        "vident",
-        "videntur",
-        "pōnitur",
-        "pōnunt",
-        "pōnuntur",
-        "audītur",
-        "audiunt",
-        "audiuntur"
       ],
       "references": [
         "voz-passiva"
@@ -1001,23 +889,27 @@ const chapter: Chapter = {
               "label": "nōminātīvus",
               "cells": [
                 "quī",
-                null
+                {
+                  "answer": "quī",
+                  "given": false
+                }
               ]
             },
             {
               "label": "accūsātīvus",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "quem",
+                  "given": false
+                },
+                {
+                  "answer": "quōs",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "quī",
-        "quem",
-        "quōs"
       ],
       "references": [
         "relativo-intro"
