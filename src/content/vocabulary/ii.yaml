@@ -1,0 +1,119 @@
+groups:
+  - label: Nōmina · 1ª (-a)
+    tag: f.
+    entries:
+      - lemma: ancilla, -ae
+        gloss: escrava (doméstica)
+      - lemma: domina, -ae
+        gloss: senhora, dona da casa
+      - lemma: familia, -ae
+        gloss: família (toda a casa, incl. escravos)
+        note: abrange <i>līberī</i> + <i>servī</i> + <i>ancillae</i>
+      - lemma: fēmina, -ae
+        gloss: mulher
+      - lemma: fīlia, -ae
+        gloss: filha
+      - lemma: pāgina, -ae
+        gloss: página
+      - lemma: puella, -ae
+        gloss: menina
+  - label: Nōmina · 2ª (-us, -er, -um)
+    tag: m. / n.
+    entries:
+      - lemma: dominus, -ī
+        gloss: senhor, dono da casa
+        note: m.
+      - lemma: fīlius, -ī
+        gloss: filho
+        note: m.
+      - lemma: servus, -ī
+        gloss: escravo
+        note: m.
+      - lemma: titulus, -ī
+        gloss: título
+        note: m.
+      - lemma: puer, puerī
+        gloss: menino
+        note: m., 2ª em <i>-er</i> — mantém o <i>e</i> em todos os casos
+      - lemma: vir, virī
+        gloss: homem (adulto, marido)
+        note: m., decl. sem <i>-us</i>
+      - lemma: liber, librī
+        gloss: livro (em forma de rolo)
+        note: m., 2ª em <i>-er</i> — <em>perde</em> o <i>e</i> fora do nōm. sg.
+      - lemma: līberī, -ōrum
+        gloss: filhos, crianças (livres)
+        note: m. <em>plūrāle tantum</em> — só existe no plural; não confundir com <i>liber</i>
+  - label: Nōmina · parentesco (3ª decl.)
+    tag: m. / f.
+    entries:
+      - lemma: pater, patris
+        gloss: pai
+        note: m., 3ª decl.
+      - lemma: māter, mātris
+        gloss: mãe
+        note: f., 3ª decl.
+  - label: Adiectīva
+    tag: "-us, -a, -um"
+    entries:
+      - lemma: antīquus, -a, -um
+        gloss: antigo
+        note: ≠ <i>novus</i>
+      - lemma: novus, -a, -um
+        gloss: novo
+      - lemma: cēterī, -ae, -a
+        gloss: os demais, os outros
+        note: usado quase sempre no pl. — origem do nosso <i>et cētera</i>
+  - label: Possessīva (1ª/2ª pessoa)
+    tag: "-us, -a, -um"
+    entries:
+      - lemma: meus, -a, -um
+        gloss: meu, minha
+      - lemma: tuus, -a, -um
+        gloss: teu, tua
+  - label: Numerī
+    tag: novos do capítulo
+    entries:
+      - lemma: duae
+        gloss: duas (f.)
+        note: fem. de <i>duo</i>
+      - lemma: tria
+        gloss: três (n.)
+        note: n. de <i>trēs</i>
+      - lemma: centum
+        gloss: cem (100)
+        note: indecl.
+  - label: Coniūnctiō enclītica
+    entries:
+      - lemma: "-que"
+        gloss: e (= <i>et</i>)
+        note: enclítica — gruda no fim do último elemento da série
+  - label: Vocābula interrogātīva
+    tag: pronomes de pergunta
+    entries:
+      - lemma: quis?
+        gloss: quem? (m. sg.)
+      - lemma: quae?
+        gloss: quem? (f. sg.) / quais? (f. pl. / n. pl.)
+      - lemma: quī?
+        gloss: quem? quais? (m. pl.)
+      - lemma: cuius?
+        gloss: de quem?
+        note: invariável no sg. (m./f./n.)
+      - lemma: quot?
+        gloss: quantos? quantas?
+        note: invariável
+  - label: Verba grammatica
+    tag: metalinguagem
+    entries:
+      - lemma: masculīnum, -ī
+        gloss: masculino (gênero)
+        note: < <i>masculus</i>
+      - lemma: fēminīnum, -ī
+        gloss: feminino (gênero)
+        note: < <i>fēmina</i>
+      - lemma: neutrum, -ī
+        gloss: neutro (gênero)
+        note: "= <em>nem</em> m. <em>nem</em> f."
+      - lemma: genetīvus, -ī
+        gloss: genitivo (caso de posse)

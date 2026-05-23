@@ -5,6 +5,8 @@ const chapter: Chapter = {
   "numeral": "VI",
   "title": "Via Latīna in Italiā",
   "blurb": "Foco: lugar onde / para onde / de onde; voz passiva; relativo <em>quī, quae, quod</em>.",
+  "grammarIntro": "Os pontos formais introduzidos no capítulo: <em>acusativo plural</em>, construções de movimento e localização com nomes de cidades, <em>voz passiva</em> com agente, e o paradigma do pronome relativo no masculino.",
+  "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VI</em>. As entradas seguem a forma do nominativo singular + genitivo singular (ou só o gen. para temas em consoante). As classes de declinação são marcadas para orientar o estudo.",
   "exercises": [
     {
       "index": 4,
@@ -130,7 +132,7 @@ const chapter: Chapter = {
       },
       "exemplum": "Via Appia est inter {Rōmam} et {Brundisium}.",
       "questions": [
-        "Via Appia est inter {Rōmam:md} et {Brundisium:md}. <em>(Roma, Brundisium)</em>",
+        "Via Appia est inter {Rōmam:md} et {Brundisium:md}. // Roma, Brundisium",
         "Brundisium, Capua, Ostia magna {oppida:md} sunt; Tūsculum et Tibur quoque {oppida:md} sunt.",
         "Cornelius habitat in {oppidum:md} Tūsculō.",
         "Iūlius nōn ad {oppidum:md}, sed ad {vīllam:md} suam it.",
@@ -293,19 +295,19 @@ const chapter: Chapter = {
       },
       "exemplum": "<em>ambulat / portātur</em> — Iūlius ambulat, sed lectīcā portātur.",
       "questions": [
-        "Iūlius {ambulat:md}, sed lectīcā {portātur:md}. <em>(ambulāre / portāre)</em>",
-        "Aemilia Iūlium {amat:md}; Iūlius quoque ab Aemiliā {amātur:md}. <em>(amāre)</em>",
-        "Puerī rosās pulchrās {amant:md}; rosae pulchrae ā puerīs {amantur:md}. <em>(amāre)</em>",
-        "Servī dominum {timent:md}; dominus ā servīs {timentur:md}. <em>(timēre)</em>",
-        "Quīntus Mārcum {videt:md}; Mārcus ā Quīntō {vidētur:md}. <em>(vidēre)</em>",
-        "Mārcus Iūliam {pulsat:md}; Iūlia ā Mārcō {pulsātur:md}. <em>(pulsāre)</em>",
-        "Aemilia puerōs {vocat:md}; puerī ā mātre {audītur:md}. <em>(vocāre — auditur na chave!)</em>",
+        "Iūlius {ambulat:md}, sed lectīcā {portātur:md}. // ambulāre / portāre",
+        "Aemilia Iūlium {amat:md}; Iūlius quoque ab Aemiliā {amātur:md}. // amāre",
+        "Puerī rosās pulchrās {amant:md}; rosae pulchrae ā puerīs {amantur:md}. // amāre",
+        "Servī dominum {timent:md}; dominus ā servīs {timentur:md}. // timēre",
+        "Quīntus Mārcum {videt:md}; Mārcus ā Quīntō {vidētur:md}. // vidēre",
+        "Mārcus Iūliam {pulsat:md}; Iūlia ā Mārcō {pulsātur:md}. // pulsāre",
+        "Aemilia puerōs {vocat:md}; puerī ā mātre {audītur:md}. // vocāre — auditur na chave!",
         "Mātrēs fīliōs {vocant:md}; fīliī ā mātribus {audiuntur:md}.",
-        "Servus dominum {vehit:md}; dominus ā servō {vehitur:md}. <em>(vehere)</em>",
-        "Servī dominum {vehunt:md}; dominus {ambulant:md}. <em>(vehere; ambulat)</em>",
-        "Rosae puellam {dēlectantur:md}. <em>(dēlectāre passiva pl.: puellae ā rosīs dēlectantur)</em>",
-        "Iūlius pecūniam {pōnit:md}; pecūnia {numerat:md} ā Iūliō. <em>(pōnere/numerāre)</em>",
-        "Nummī in mēnsā {pōnuntur:md} et {numerantur:md}. <em>(pōnere/numerāre pass.)</em>"
+        "Servus dominum {vehit:md}; dominus ā servō {vehitur:md}. // vehere",
+        "Servī dominum {vehunt:md}; dominus {ambulant:md}. // vehere; ambulat",
+        "Rosae puellam {dēlectantur:md}. // dēlectāre passiva pl.: puellae ā rosīs dēlectantur",
+        "Iūlius pecūniam {pōnit:md}; pecūnia {numerat:md} ā Iūliō. // pōnere/numerāre",
+        "Nummī in mēnsā {pōnuntur:md} et {numerantur:md}. // pōnere/numerāre pass."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -395,13 +397,13 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlius {lectīcā} portātur. Mēdus {equō} vehitur.",
       "questions": [
-        "Mēdus {equō:md} vehitur. <em>(equus)</em>",
-        "Iūlius {lectīcā:md} portātur. <em>(lectīca)</em>",
-        "Aemilia {verbīs:md} fīliōs vocat. <em>(verba)</em>",
-        "Dominus servum {baculō:md} verberat. <em>(baculum)</em>",
-        "Servī saccōs {umerīs:md} portant. <em>(umerī, pl.)</em>",
-        "Iūlius {lectīcā:md} ab oppidō ad vīllam venit. <em>(lectīca)</em>",
-        "Mēdus per {viā Latīnā:lg} Rōmam ambulat. <em>(via Latīna — abl. com prep!)</em>"
+        "Mēdus {equō:md} vehitur. // equus",
+        "Iūlius {lectīcā:md} portātur. // lectīca",
+        "Aemilia {verbīs:md} fīliōs vocat. // verba",
+        "Dominus servum {baculō:md} verberat. // baculum",
+        "Servī saccōs {umerīs:md} portant. // umerī, pl.",
+        "Iūlius {lectīcā:md} ab oppidō ad vīllam venit. // lectīca",
+        "Mēdus per {viā Latīnā:lg} Rōmam ambulat. // via Latīna — abl. com prep!"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -442,12 +444,12 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Cornēlius nōn ambulat, sed {equō:md} vehitur. <em>(no cavalo)</em>",
-        "{ubi:md} habitat Mēdus? Rōmae habitat. <em>(onde?)</em>",
-        "Servī, quī saccōs portant, {fessī:md} sunt. <em>(cansados)</em>",
-        "Lydia est {amīca:md} Mēdī, Rōmae habitat. <em>(namorada)</em>",
-        "Mēdus ad ōstium adit et ōstium {pulsat:md}: 'Lydia! {intrā:md}!' <em>(bate; entra!)</em>",
-        "Mēdus {per:md} viam Latīnam ad Rōmam ambulat. <em>(através de)</em>"
+        "Cornēlius nōn ambulat, sed {equō:md} vehitur. // no cavalo",
+        "{ubi:md} habitat Mēdus? Rōmae habitat. // onde?",
+        "Servī, quī saccōs portant, {fessī:md} sunt. // cansados",
+        "Lydia est {amīca:md} Mēdī, Rōmae habitat. // namorada",
+        "Mēdus ad ōstium adit et ōstium {pulsat:md}: 'Lydia! {intrā:md}!' // bate; entra!",
+        "Mēdus {per:md} viam Latīnam ad Rōmam ambulat. // através de"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -916,305 +918,7 @@ const chapter: Chapter = {
       ],
       "index": 308
     }
-  ],
-  "content": {
-    "topics": [
-      {
-        "id": "lugar",
-        "title": "Lugar: <em>quō? unde? ubi?</em>",
-        "bookRef": "Cap. VI, ll. 1–45",
-        "body": "\n                <p>Três perguntas, três construções:</p>\n                <ul>\n                  <li><strong>quō?</strong> (para onde) → <em>ad / in</em> + <em>acusativo</em></li>\n                  <li><strong>unde?</strong> (de onde) → <em>ā / ab / ex</em> + <em>ablativo</em></li>\n                  <li><strong>ubi?</strong> (onde) → <em>in</em> + <em>ablativo</em></li>\n                </ul>\n                <p>Note que <em>in</em> aceita os dois casos, e a diferença de sentido\n                é decidida pelo caso: <em>in vīllam</em> (para dentro da vila) vs.\n                <em>in vīllā</em> (dentro da vila).</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>ad vīllam</strong> it (quō?), servī <strong>ab oppidō</strong>\n                  veniunt (unde?), Aemilia <strong>in vīllā</strong> est (ubi?).\n                </div>\n                <p><em>ā</em> e <em>ab</em> são a mesma palavra: <em>ab</em> aparece\n                antes de vogal ou <em>h</em>; <em>ā</em>, antes de consoante.</p>\n            "
-      },
-      {
-        "id": "nomes-cidades",
-        "title": "Nomes de cidade: sem preposição",
-        "bookRef": "Cap. VI, ll. 46–95",
-        "body": "\n                <p>Nomes de cidade (e de pequenas ilhas) fogem da regra geral —\n                <em>não levam preposição</em> e usam casos próprios:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>1ª decl. (Rōma)</th><th>2ª decl. (Tūsculum)</th></tr>\n                  <tr><td>quō? (para)</td><td>Rōmam</td><td>Tūsculum</td></tr>\n                  <tr><td>unde? (de)</td><td>Rōmā</td><td>Tūsculō</td></tr>\n                  <tr><td>ubi? (em)</td><td>Rōmae</td><td>Tūsculī</td></tr>\n                </table>\n                <p>A forma <em>Rōmae</em> / <em>Tūsculī</em> é o <strong>locativo</strong>,\n                um caso vestigial que sobrevive sobretudo em nomes de cidade. Para\n                cidades de plural ou da 3ª declinação as terminações são outras\n                (<em>Athēnīs</em>, <em>Carthāgine</em>), mas em Cap. VI você só\n                encontra 1ª e 2ª.</p>\n                <div class=\"ex-block\">\n                  Mēdus <strong>Rōmā</strong> venit et <strong>Tūsculum</strong> it;\n                  Cornēlius <strong>Tūsculī</strong> habitat.\n                </div>\n            "
-      },
-      {
-        "id": "voz-passiva",
-        "title": "Voz passiva: <em>-tur, -ntur</em>",
-        "bookRef": "Cap. VI, ll. 46–95; gramm. ll. 96–139",
-        "body": "\n                <p>A voz passiva inverte o ponto de vista da frase. Em latim,\n                a marca passiva é a terminação verbal:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>ativa</th><th>passiva</th></tr>\n                  <tr><td>3ª pers. sg.</td><td>-t</td><td>-tur</td></tr>\n                  <tr><td>3ª pers. pl.</td><td>-nt</td><td>-ntur</td></tr>\n                </table>\n                <p>O <strong>agente</strong> (quem faz a ação) é introduzido por\n                <em>ā / ab</em> + ablativo. O que era objeto direto (acusativo) passa\n                a sujeito (nominativo).</p>\n                <div class=\"ex-block\">\n                  <strong>Ativa:</strong> Dominus servum vocat.<br>\n                  <strong>Passiva:</strong> Servus <em>ā dominō</em> vocātur.\n                </div>\n                <p>Verifica sempre as três peças: <em>quem é agora o sujeito? quem é\n                o agente (ā/ab + abl.)? a terminação do verbo é -tur/-ntur?</em></p>\n            "
-      },
-      {
-        "id": "relativo-intro",
-        "title": "Pronome relativo <em>quī, quae, quod</em>",
-        "bookRef": "Cap. VI, ll. 46–95",
-        "body": "\n                <p>O relativo <strong>concorda em gênero e número</strong> com seu\n                antecedente — mas o <em>caso</em> depende da função que ele exerce\n                <em>dentro da oração relativa</em>:</p>\n                <ul>\n                  <li><em>Servus <strong>quī</strong> Rōmam it…</em> — quī (m. nōm. sg.)\n                  porque é sujeito da relativa</li>\n                  <li><em>Servus <strong>quem</strong> Iūlius vocat…</em> — quem\n                  (m. acus. sg.) porque é objeto direto da relativa</li>\n                </ul>\n                <p>O paradigma completo aparece em Cap. VIII; aqui em Cap. VI você\n                vê só as formas mais frequentes: <em>quī, quae, quod</em> (nōm.).</p>\n            "
-      }
-    ],
-    "grammar": {
-      "intro": "Os pontos formais introduzidos no capítulo: <em>acusativo plural</em>, construções de movimento e localização com nomes de cidades, <em>voz passiva</em> com agente, e o paradigma do pronome relativo no masculino.",
-      "sections": [
-        {
-          "heading": "Acusātīvus plūrālis",
-          "bookRef": "Cap. VI, gramm. ll. 110–136",
-          "body": "\n            <p>O capítulo apresenta o <em>plural</em> do acusativo, completando o\n            paradigma que começou em V:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>nōm. sg.</th><th>acus. sg.</th><th>nōm. pl.</th><th>acus. pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>servus</td><td>servum</td><td>servī</td><td>serv<strong>ōs</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>via</td><td>viam</td><td>viae</td><td>vi<strong>ās</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>oppidum</td><td>oppidum</td><td>oppida</td><td>oppida</td></tr>\n            </table>\n            <p>O neutro, lembre-se, tem sempre <em>nōm. = acus.</em>: pl. <em>-a</em>.</p>\n            <div class=\"ex-block\">\n              Iūlius mult<strong>ōs</strong> serv<strong>ōs</strong> habet, et Aemilia mult<strong>ās</strong>\n              ancill<strong>ās</strong>. — Inter Rōm<strong>am</strong> et Brundisi<strong>um</strong> est via Appia.\n            </div>\n            "
-        },
-        {
-          "heading": "Cidades: <em>Rōmam, Rōmā, Rōmae</em>",
-          "bookRef": "Cap. VI, ll. 1–58; gramm. ll. 137–162",
-          "body": "\n            <p>Os nomes de <em>cidades</em> (e de algumas ilhas pequenas) seguem\n            uma sintaxe especial — sem preposição:</p>\n            <table class=\"paradigm\">\n              <tr><th>função</th><th>caso</th><th>exemplo</th></tr>\n              <tr><td class=\"label\">para onde (<em>quō?</em>)</td><td>acusativo puro</td><td>Rōm<strong>am</strong>, Tūscul<strong>um</strong></td></tr>\n              <tr><td class=\"label\">de onde (<em>unde?</em>)</td><td>ablativo puro</td><td>Rōm<strong>ā</strong>, Tūscul<strong>ō</strong></td></tr>\n              <tr><td class=\"label\">onde (<em>ubi?</em>)</td><td>locātīvus</td><td>Rōm<strong>ae</strong>, Tūscul<strong>ī</strong></td></tr>\n            </table>\n            <p>O <strong>locativo</strong> aparece pela primeira vez aqui — é um caso\n            arcaico que sobrevive só com nomes de cidade/ilha/<em>domus</em>/<em>rūs</em>.\n            Sua forma é igual ao genitivo singular (1ª/2ª decl.).</p>\n            <p>Para outros lugares, continua a regra geral: <em>ad/in</em> + acus.;\n            <em>ex/ab</em> + abl.; <em>in</em> + abl. (estado).</p>\n            <div class=\"ex-block\">\n              Iūlius Tūscul<strong>ō</strong> Rōm<strong>am</strong> nōn it.<br>\n              Cornēlius Tūscul<strong>ī</strong> habitat. — Lȳdia Rōm<strong>ae</strong> habitat.\n            </div>\n            "
-        },
-        {
-          "heading": "Vox passīva: <em>-tur, -ntur</em>",
-          "bookRef": "Cap. VI, ll. 60–95; gramm. ll. 163–200",
-          "body": "\n            <p>A voz <em>passiva</em> se forma trocando as terminações da ativa:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>ātīva</th><th>passīva</th></tr>\n              <tr><td class=\"label\">3ª p. sg.</td><td>-t (<em>vocat, videt, pōnit, audit</em>)</td><td>-tur (<em>vocātur, vidētur, pōnitur, audītur</em>)</td></tr>\n              <tr><td class=\"label\">3ª p. pl.</td><td>-nt (<em>vocant, vident, pōnunt, audiunt</em>)</td><td>-ntur (<em>vocantur, videntur, pōnuntur, audiuntur</em>)</td></tr>\n            </table>\n            <p>O <em>agente</em> (quem faz a ação) entra com <strong>ā/ab + ablativo</strong>\n            (pessoa) ou <strong>ablativo sem preposição</strong> (coisa, instrumento):</p>\n            <div class=\"ex-block\">\n              Mēdus <strong>ā Iūliō</strong> vocātur. (agente pessoal)<br>\n              Iūlius <strong>lectīcā</strong> portātur. (instrumento)<br>\n              Saccī <strong>ā servīs</strong> portantur. — Servī <strong>ā dominō</strong> timentur.\n            </div>\n            <p>Note como o <em>sujeito ativo</em> vira <em>agente em ablativo</em>, e o\n            <em>objeto ativo</em> sobe a <em>sujeito passivo</em>.</p>\n            "
-        },
-        {
-          "heading": "Prōnōmen relātīvum (m.): <em>quī, quem, quōs</em>",
-          "bookRef": "Cap. VI, ll. 41–58",
-          "body": "\n            <p>O capítulo introduz o relativo masculino plural — completando o que\n            havia começado em III (apenas singular):</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>quī</td><td>quī</td></tr>\n              <tr><td class=\"label\">acus.</td><td>quem</td><td>qu<strong>ōs</strong></td></tr>\n            </table>\n            <p>O gênero e número vêm do <em>antecedente</em>; o caso, da\n            <em>função na subordinada</em>.</p>\n            <div class=\"ex-block\">\n              Servus <em>quī</em> saccum portat est Syrus. — Servī <em>quōs</em> Iūlius vocat sunt Dāvus et Mēdus.\n            </div>\n            "
-        },
-        {
-          "heading": "Praepositiōnēs <em>ā / ab</em>",
-          "bookRef": "Cap. VI (transversal)",
-          "body": "\n            <p>São a mesma preposição em ambientes fonéticos diferentes:</p>\n            <ul>\n              <li><strong>ab</strong> antes de vogal ou <em>h-</em>: <em>ab oppidō, ab Aemiliā, ab hortō</em></li>\n              <li><strong>ā</strong> antes das demais consoantes: <em>ā Rōmā, ā Iūliō, ā mātre</em></li>\n            </ul>\n            <p>A mesma alternância acontece com <strong>ex / ē</strong> (não vista neste\n            capítulo, mas começa em VII).</p>\n            "
-        }
-      ]
-    },
-    "vocabulary": {
-      "intro": "As palavras novas introduzidas em <em>Cap. VI</em>. As entradas seguem a forma do nominativo singular + genitivo singular (ou só o gen. para temas em consoante). As classes de declinação são marcadas para orientar o estudo.",
-      "groups": [
-        {
-          "label": "Nōmina · 1ª (-a)",
-          "tag": "f.",
-          "entries": [
-            {
-              "lemma": "amīca, -ae",
-              "gloss": "amiga, namorada"
-            },
-            {
-              "lemma": "lectīca, -ae",
-              "gloss": "liteira (cadeira portátil)"
-            },
-            {
-              "lemma": "porta, -ae",
-              "gloss": "portão, porta de cidade"
-            },
-            {
-              "lemma": "via, -ae",
-              "gloss": "via, estrada, caminho"
-            }
-          ]
-        },
-        {
-          "label": "Nōmina · 2ª (-us, -um)",
-          "tag": "m. / n.",
-          "entries": [
-            {
-              "lemma": "amīcus, -ī",
-              "gloss": "amigo",
-              "note": "m."
-            },
-            {
-              "lemma": "equus, -ī",
-              "gloss": "cavalo",
-              "note": "m."
-            },
-            {
-              "lemma": "inimīcus, -ī",
-              "gloss": "inimigo pessoal",
-              "note": "m. (<i>in-</i> + <i>amīcus</i>)"
-            },
-            {
-              "lemma": "mūrus, -ī",
-              "gloss": "muro, muralha",
-              "note": "m."
-            },
-            {
-              "lemma": "saccus, -ī",
-              "gloss": "saco, saca",
-              "note": "m."
-            },
-            {
-              "lemma": "umerus, -ī",
-              "gloss": "ombro",
-              "note": "m."
-            }
-          ]
-        },
-        {
-          "label": "Adiectīva",
-          "tag": "-us, -a, -um",
-          "entries": [
-            {
-              "lemma": "fessus, -a, -um",
-              "gloss": "cansado"
-            },
-            {
-              "lemma": "longus, -a, -um",
-              "gloss": "longo, comprido"
-            },
-            {
-              "lemma": "malus, -a, -um",
-              "gloss": "mau, ruim",
-              "note": "≠ <i>bonus</i>"
-            },
-            {
-              "lemma": "duodecim",
-              "gloss": "doze (12)",
-              "note": "indecl."
-            }
-          ]
-        },
-        {
-          "label": "Verba",
-          "tag": "1ª, 2ª, 3ª, irreg.",
-          "entries": [
-            {
-              "lemma": "ambulat, ambulant",
-              "gloss": "anda, caminha",
-              "note": "[1] <i>ambulāre</i>"
-            },
-            {
-              "lemma": "intrat, intrant",
-              "gloss": "entra",
-              "note": "[1] <i>intrāre</i>"
-            },
-            {
-              "lemma": "portat, portant",
-              "gloss": "leva, carrega",
-              "note": "[1] <i>portāre</i>"
-            },
-            {
-              "lemma": "timet, timent",
-              "gloss": "teme, tem medo de",
-              "note": "[2] <i>timēre</i>"
-            },
-            {
-              "lemma": "vehit, vehunt",
-              "gloss": "transporta, carrega (em veículo)",
-              "note": "[3] <i>vehere</i>"
-            },
-            {
-              "lemma": "it / eunt",
-              "gloss": "vai / vão",
-              "note": "irreg. <i>īre</i>"
-            }
-          ]
-        },
-        {
-          "label": "Praepositiōnēs",
-          "tag": "+ acus. / + abl.",
-          "entries": [
-            {
-              "lemma": "ā / ab",
-              "gloss": "de, a partir de; por (agente)",
-              "note": "+ abl. — <i>ab</i> antes de vogal/<i>h</i>"
-            },
-            {
-              "lemma": "ad",
-              "gloss": "a, para, até",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "ante",
-              "gloss": "antes de, diante de",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "apud",
-              "gloss": "junto a, em casa de",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "circum",
-              "gloss": "ao redor de",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "inter",
-              "gloss": "entre",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "per",
-              "gloss": "através de, por",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "post",
-              "gloss": "depois de, atrás de",
-              "note": "+ acus."
-            },
-            {
-              "lemma": "procul ab",
-              "gloss": "longe de",
-              "note": "+ abl."
-            },
-            {
-              "lemma": "prope",
-              "gloss": "perto de",
-              "note": "+ acus."
-            }
-          ]
-        },
-        {
-          "label": "Adverbia · coniūnctiōnēs",
-          "entries": [
-            {
-              "lemma": "ante",
-              "gloss": "antes (adv.)"
-            },
-            {
-              "lemma": "autem",
-              "gloss": "porém, ao passo que",
-              "note": "pospositivo"
-            },
-            {
-              "lemma": "itaque",
-              "gloss": "portanto, assim"
-            },
-            {
-              "lemma": "nam",
-              "gloss": "pois, com efeito"
-            },
-            {
-              "lemma": "quam",
-              "gloss": "quão, do que (na comparação)"
-            },
-            {
-              "lemma": "tam",
-              "gloss": "tão, tanto"
-            },
-            {
-              "lemma": "unde?",
-              "gloss": "de onde?"
-            },
-            {
-              "lemma": "quō?",
-              "gloss": "para onde?"
-            }
-          ]
-        },
-        {
-          "label": "Verba grammatica",
-          "tag": "metalinguagem",
-          "entries": [
-            {
-              "lemma": "āctīvum, -ī",
-              "gloss": "ativo (voz)"
-            },
-            {
-              "lemma": "passīvum, -ī",
-              "gloss": "passivo (voz)"
-            },
-            {
-              "lemma": "locātīvus, -ī",
-              "gloss": "locativo (caso de cidade/ilha)"
-            },
-            {
-              "lemma": "praepositiō, -ōnis",
-              "gloss": "preposição",
-              "note": "f., 3ª decl."
-            }
-          ]
-        }
-      ]
-    }
-  }
+  ]
 };
 
 export default chapter;

@@ -1,4 +1,5 @@
 ---
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type { Chapter } from '~/lib/types';
 
 interface Props {
@@ -6,25 +7,49 @@ interface Props {
 }
 
 const { chapter } = Astro.props;
-const content = chapter.content;
+const slug = chapter.slug;
 const numeralLower = String(chapter.numeral || '').toLowerCase();
 
 function stripHtml(s: string): string {
   return s.replace(/<[^>]+>/g, '');
 }
 
-const hasGrammar = !!content?.grammar;
-const hasVocab = !!(content?.vocabulary?.groups && content.vocabulary.groups.length);
-const hasTopics = !!(content?.topics && content.topics.length);
+// ----- Grammar sections (file-per-section, sort by filename) -----
+const grammarSections = (await getCollection('grammar', (e: CollectionEntry<'grammar'>) => e.id.startsWith(`${slug}/`)))
+  .sort((a, b) => a.id.localeCompare(b.id));
+const grammarRendered = await Promise.all(
+  grammarSections.map(async (s) => {
+    const { Content } = await s.render();
+    return { meta: s.data, Content };
+  })
+);
+
+// ----- Topics (file-per-topic, sort by order frontmatter) -----
+const topicEntries = (await getCollection('topics', (e: CollectionEntry<'topics'>) => e.id.startsWith(`${slug}/`)))
+  .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+const topicsRendered = await Promise.all(
+  topicEntries.map(async (t) => {
+    const { Content } = await t.render();
+    // Strip the `{slug}/` prefix from the collection id to get the bare topic id.
+    const id = t.id.replace(/^[^/]+\//, '').replace(/\.md$/, '');
+    return { id, meta: t.data, Content };
+  })
+);
+
+// ----- Vocabulary (single YAML file per chapter) -----
+const vocabEntry = await getEntry('vocabulary', slug);
+const vocabGroups = vocabEntry?.data.groups ?? [];
+
+// ----- Flags -----
+const hasGrammar = grammarRendered.length > 0 || !!chapter.grammarIntro;
+const hasVocab = vocabGroups.length > 0;
+const hasTopics = topicsRendered.length > 0;
 const hasAny = hasGrammar || hasVocab || hasTopics;
 
-const grammarHeadings = content?.grammar?.sections?.map(s => s.heading).filter(Boolean) ?? [];
-
-const vocabGroups = content?.vocabulary?.groups ?? [];
-const totalVocabEntries = vocabGroups.reduce((n, g) => n + (g.entries ? g.entries.length : 0), 0);
+const grammarHeadings = grammarRendered.map(({ meta }) => meta.heading).filter(Boolean);
+const totalVocabEntries = vocabGroups.reduce((n, g) => n + g.entries.length, 0);
 const vocabLabels = vocabGroups.map(g => stripHtml(g.label));
-
-const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
+const topicNames = topicsRendered.map(({ meta }) => stripHtml(meta.title));
 ---
 
 {hasAny && (
@@ -38,16 +63,16 @@ const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
             <span class="section-summary-list" set:html={grammarHeadings.join(' · ')} />
           )}
         </summary>
-        {content!.grammar!.intro && (
-          <p class="grammar-intro" set:html={content!.grammar!.intro} />
+        {chapter.grammarIntro && (
+          <p class="grammar-intro" set:html={chapter.grammarIntro} />
         )}
-        {(content!.grammar!.sections || []).map(s => (
+        {grammarRendered.map(({ meta, Content }) => (
           <details class="grammar-block" open>
             <summary class="grammar-block-summary">
-              {s.heading && <span class="grammar-heading" set:html={s.heading} />}
-              {s.bookRef && <span class="grammar-bookref" set:html={s.bookRef} />}
+              {meta.heading && <span class="grammar-heading" set:html={meta.heading} />}
+              {meta.bookRef && <span class="grammar-bookref" set:html={meta.bookRef} />}
             </summary>
-            {s.body && <div class="grammar-body" set:html={s.body} />}
+            <div class="grammar-body"><Content /></div>
           </details>
         ))}
       </details>
@@ -60,8 +85,8 @@ const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
           <span class="section-title-inline" set:html={`Vocābula nova <span class="roman">· cap. ${numeralLower}</span>`} />
           <span class="section-summary-list">{totalVocabEntries} palavras · {vocabLabels.join(' · ')}</span>
         </summary>
-        {content!.vocabulary!.intro && (
-          <p class="vocab-intro" set:html={content!.vocabulary!.intro} />
+        {chapter.vocabularyIntro && (
+          <p class="vocab-intro" set:html={chapter.vocabularyIntro} />
         )}
         {vocabGroups.map(g => (
           <div class="vocab-group">
@@ -70,7 +95,7 @@ const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
               {g.tag && <span class="vocab-group-tag" set:html={g.tag} />}
             </div>
             <dl class="vocab-list">
-              {(g.entries || []).map(entry => (
+              {g.entries.map(entry => (
                 <>
                   <dt class="vocab-lemma" set:html={entry.lemma} />
                   <dd class="vocab-gloss">
@@ -98,14 +123,14 @@ const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
           Resumo breve para acompanhar o livro. Para a explicação completa, consulta as linhas
           indicadas em <em>Familia Romana</em>. Clica num tópico para expandir.
         </p>
-        {(content!.topics ?? []).map(t => (
-          <details class="content-topic" id={`content-${t.id}`}>
+        {topicsRendered.map(({ id, meta, Content }) => (
+          <details class="content-topic" id={`content-${id}`}>
             <summary class="content-topic-summary">
               <span class="content-topic-marker">❦</span>
-              <span class="content-topic-title" set:html={t.title} />
-              {t.bookRef && <span class="content-topic-ref" set:html={t.bookRef} />}
+              <span class="content-topic-title" set:html={meta.title} />
+              {meta.bookRef && <span class="content-topic-ref" set:html={meta.bookRef} />}
             </summary>
-            <div class="content-topic-body" set:html={t.body} />
+            <div class="content-topic-body"><Content /></div>
           </details>
         ))}
       </details>

@@ -1,0 +1,125 @@
+groups:
+  - label: Nōmina · 1ª (-a)
+    tag: f.
+    entries:
+      - lemma: lacrima, -ae
+        gloss: lágrima
+  - label: Nōmina · 2ª (-us, -um)
+    tag: m. / n.
+    entries:
+      - lemma: oculus, -ī
+        gloss: olho
+        note: m.
+      - lemma: ōstiārius, -ī
+        gloss: porteiro, ostiário
+        note: m. (< <i>ōstium</i>)
+      - lemma: mālum, -ī
+        gloss: maçã
+        note: n.
+      - lemma: ōsculum, -ī
+        gloss: beijo
+        note: n.
+      - lemma: pirum, -ī
+        gloss: pera
+        note: n.
+      - lemma: speculum, -ī
+        gloss: espelho
+        note: n.
+  - label: Adiectīva
+    tag: "-us, -a, -um"
+    entries:
+      - lemma: fōrmōsus, -a, -um
+        gloss: belo, formoso
+        note: ≈ <i>pulcher</i>
+      - lemma: plēnus, -a, -um
+        gloss: cheio
+        note: ≠ <i>vacuus</i>
+  - label: Verba
+    tag: 1ª – 4ª
+    entries:
+      - lemma: exspectat, exspectant
+        gloss: espera, aguarda
+        note: "[1] <i>exspectāre</i>"
+      - lemma: lacrimat, lacrimant
+        gloss: chora, derrama lágrimas
+        note: "[1] <i>lacrimāre</i>"
+      - lemma: dat, dant
+        gloss: dá
+        note: "[1] <i>dare</i> (irreg.)"
+      - lemma: tenet, tenent
+        gloss: segura, tem em mãos
+        note: "[2] <i>tenēre</i>"
+      - lemma: terget, tergent
+        gloss: limpa, enxuga
+        note: "[2] <i>tergēre</i>"
+      - lemma: vertit, vertunt
+        gloss: vira, gira
+        note: "[3] <i>vertere</i>"
+      - lemma: currit, currunt
+        gloss: corre
+        note: "[3] <i>currere</i>"
+      - lemma: aperit, aperiunt
+        gloss: abre
+        note: "[4] <i>aperīre</i>"
+      - lemma: claudit, claudunt
+        gloss: fecha
+        note: "[3] <i>claudere</i>"
+  - label: Verba composita
+    tag: compostos de <i>īre</i> e <i>esse</i>
+    entries:
+      - lemma: adit, adeunt
+        gloss: vai a, dirige-se a
+        note: <i>ad-</i> + <i>īre</i>
+      - lemma: advenit, adveniunt
+        gloss: chega
+        note: <i>ad-</i> + <i>venīre</i>
+      - lemma: exit, exeunt
+        gloss: sai
+        note: <i>ex-</i> + <i>īre</i>
+      - lemma: inest, īnsunt
+        gloss: está dentro
+        note: <i>in-</i> + <i>esse</i>
+      - lemma: es! este!
+        gloss: sê! sede!
+        note: imp. de <i>esse</i>
+  - label: Prōnōmina
+    tag: demonstr. <i>hic, haec, hoc</i>; dat. de <i>is</i>
+    entries:
+      - lemma: hic, haec, hoc
+        gloss: este, esta, isto
+        note: demonstrativo de proximidade
+      - lemma: cui
+        gloss: a quem? / ao qual
+        note: dat. sg. de <i>quis / quī</i>
+      - lemma: eī
+        gloss: a ele, a ela
+        note: dat. sg. de <i>is, ea, id</i>
+      - lemma: iīs
+        gloss: a eles, a elas
+        note: dat./abl. pl. de <i>is, ea, id</i>
+      - lemma: sē
+        gloss: si mesmo (reflexivo)
+        note: acus./abl. invariável
+  - label: Adverbia · coniūnctiōnēs
+    entries:
+      - lemma: illīc
+        gloss: lá, ali
+      - lemma: immō
+        gloss: pelo contrário, ao contrário
+      - lemma: nōn sōlum … sed etiam
+        gloss: não só … mas também
+      - lemma: et … et
+        gloss: tanto … quanto
+      - lemma: neque … neque
+        gloss: nem … nem
+      - lemma: nōnne?
+        gloss: porventura não? (espera 'sim')
+  - label: Praepositiō
+    entries:
+      - lemma: ē
+        gloss: de dentro de
+        note: + abl. (= <i>ex</i> antes de consoante)
+  - label: Verba grammatica
+    entries:
+      - lemma: datīvus, -ī
+        gloss: dativo (caso do destinatário)

@@ -5,6 +5,7 @@ const chapter: Chapter = {
   "numeral": "V",
   "title": "Villa et hortus",
   "blurb": "Foco: acusativo e ablativo singular/plural; imperativos; concordância dos adjetivos.",
+  "grammarIntro": "Os pontos formais do capítulo: o <em>ablativo</em> (sg. e pl.), o <em>acusativo plural</em>, a tabela completa da concordância dos adjetivos da 1ª/2ª classe, o pronome <em>is, ea, id</em> em todos os gêneros, e o <em>imperativo plural</em>.",
   "exercises": [
     {
       "index": 0,
@@ -544,14 +545,14 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Aemilia est in {peristȳlō:lg} cum {līberīs:md} sine {virō suō:lg}. <em>(peristȳlum, līberī, vir suus)</em>",
-        "Iūlia in {hortō:lg} est; ab {Aemiliā:md} discēdit. <em>(hortus, Aemilia)</em>",
-        "Iūlia cum {Aemiliā:md} discēdit; ab {eā:md} videtur. <em>(Aemilia, ea)</em>",
-        "Iūlia ex {hortō:lg} venit cum {rosīs:md}. <em>(hortus, rosa)</em>",
-        "Iūlia cum {ūnā rosā:md} ab {iīs|eīs:md} discēdit. <em>(ūna rosa, iī = puerī)</em>",
-        "Iūlius habitat in {vīllā:lg} cum {impluviō:lg}. <em>(vīlla, impluvium ← n!)</em>",
-        "Aqua est in {ātriō:md}; ex {impluviō:md} sūmitur et in {aquā:md} pōnitur. <em>(ātrium, impluvium, aqua)</em>",
-        "Iūlius est in {oppidō:md} cum {servīs:md} sine {Aemiliā:md}. <em>(oppidum, servī, Aemilia)</em>"
+        "Aemilia est in {peristȳlō:lg} cum {līberīs:md} sine {virō suō:lg}. // peristȳlum, līberī, vir suus",
+        "Iūlia in {hortō:lg} est; ab {Aemiliā:md} discēdit. // hortus, Aemilia",
+        "Iūlia cum {Aemiliā:md} discēdit; ab {eā:md} videtur. // Aemilia, ea",
+        "Iūlia ex {hortō:lg} venit cum {rosīs:md}. // hortus, rosa",
+        "Iūlia cum {ūnā rosā:md} ab {iīs|eīs:md} discēdit. // ūna rosa, iī = puerī",
+        "Iūlius habitat in {vīllā:lg} cum {impluviō:lg}. // vīlla, impluvium ← n!",
+        "Aqua est in {ātriō:md}; ex {impluviō:md} sūmitur et in {aquā:md} pōnitur. // ātrium, impluvium, aqua",
+        "Iūlius est in {oppidō:md} cum {servīs:md} sine {Aemiliā:md}. // oppidum, servī, Aemilia"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -807,65 +808,7 @@ const chapter: Chapter = {
         "imperativo"
       ]
     }
-  ],
-  "content": {
-    "topics": [
-      {
-        "id": "acusativo",
-        "title": "Acusativo: o caso do objeto direto",
-        "bookRef": "Cap. V, ll. 1–46",
-        "body": "\n                <p>Quando um substantivo é <strong>sujeito</strong> de uma oração, está\n                no <em>nominativo</em>; quando é <strong>objeto direto</strong> (o que recebe a ação\n                do verbo), passa ao <em>acusativo</em>. Em latim, isso muda a terminação:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>nōm. sg.</th><th>acus. sg.</th><th>nōm. pl.</th><th>acus. pl.</th></tr>\n                  <tr><td>m. (servus)</td><td>servus</td><td>servum</td><td>servī</td><td>servōs</td></tr>\n                  <tr><td>f. (ancilla)</td><td>ancilla</td><td>ancillam</td><td>ancillae</td><td>ancillās</td></tr>\n                  <tr><td>n. (cubiculum)</td><td>cubiculum</td><td>cubiculum</td><td>cubicula</td><td>cubicula</td></tr>\n                </table>\n                <p>Nota a peculiaridade dos <em>neutros</em>: nominativo e acusativo\n                têm sempre a mesma forma (sg. <em>-um</em>, pl. <em>-a</em>).</p>\n                <div class=\"ex-block\">\n                  <strong>Iūlius</strong> (nōm.) <strong>servum</strong> (acus.) vocat —\n                  <em>Júlio chama o escravo</em>.\n                </div>\n                <p>Para identificar caso e número, pergunte-se: <em>quem faz?</em>\n                (sujeito → nom.) <em>quem/o quê recebe a ação?</em> (objeto → acus.).</p>\n            "
-      },
-      {
-        "id": "ablativo",
-        "title": "Ablativo: depois de preposições",
-        "bookRef": "Cap. V, ll. 47–105",
-        "body": "\n                <p>O <strong>ablativo</strong> é o caso obrigatório depois de várias\n                preposições — <em>cum, in, ex, ab, sine, dē, prō</em>. Em Cap. V você\n                encontra principalmente <em>cum</em> (com) e <em>in</em> (em).</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>sg.</th><th>pl.</th></tr>\n                  <tr><td>m. / n.</td><td>servō / cubiculō</td><td>servīs / cubiculīs</td></tr>\n                  <tr><td>f.</td><td>ancillā</td><td>ancillīs</td></tr>\n                </table>\n                <p>O macron sobre o <em>-ā</em> do feminino singular é a única\n                marca visual que distingue <em>ancilla</em> (nōm.) de <em>ancillā</em> (abl.).\n                Adjetivos concordam em caso, número e gênero: <em>cum magnō hortō</em>,\n                <em>in magnā vīllā</em>.</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>in vīllā</strong> habitat <strong>cum Aemiliā</strong>\n                  et <strong>cum līberīs</strong>.\n                </div>\n            "
-      },
-      {
-        "id": "imperativo",
-        "title": "Imperativo: ordens e pedidos",
-        "bookRef": "Cap. V, ll. 47–105; gramm. ll. 106–156",
-        "body": "\n                <p>O <strong>imperativo</strong> singular é o tema verbal puro\n                (<em>vocā!, vidē!, discēde!, audī!</em>). O plural acrescenta <em>-te</em>\n                — com vogal ligante <em>-i-</em> na 3ª conjugação:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th>conj.</th><th>sg.</th><th>pl.</th></tr>\n                  <tr><td>1ª (vocāre)</td><td>vocā!</td><td>vocāte!</td></tr>\n                  <tr><td>2ª (vidēre)</td><td>vidē!</td><td>vidēte!</td></tr>\n                  <tr><td>3ª (discēdere)</td><td>discēde!</td><td>discēdite!</td></tr>\n                  <tr><td>4ª (audīre)</td><td>audī!</td><td>audīte!</td></tr>\n                </table>\n                <p>Use o singular quando se fala a <em>uma</em> pessoa, o plural quando\n                se fala a <em>várias</em>. O nome da pessoa interpelada vai no\n                <em>vocativo</em>, que para a maioria dos nomes coincide com o nominativo\n                (<em>Mārce!</em> é exceção — vocativo de <em>Mārcus</em>).</p>\n            "
-      },
-      {
-        "id": "concordancia",
-        "title": "Concordância nome–adjetivo",
-        "bookRef": "Cap. V (transversal)",
-        "body": "\n                <p>Em latim, o adjetivo <strong>concorda</strong> com o substantivo a que\n                se refere em <em>caso</em>, <em>número</em> e <em>gênero</em>. Ele não\n                precisa estar contíguo: <em>multās rosās pulchrās videt</em> e\n                <em>rosās pulchrās multās videt</em> querem dizer a mesma coisa.</p>\n                <p>Os adjetivos da 1ª–2ª classe seguem as mesmas terminações dos substantivos\n                em <em>-us, -a, -um</em>: <em>magnus, magna, magnum; magnī, magnae, magna…</em></p>\n                <div class=\"ex-block\">\n                  <strong>Multī servī</strong> in <strong>magnā vīllā</strong> habitant.\n                </div>\n                <p>Se a terminação não combinar, é sinal de que há erro em algum lugar —\n                ou de que o adjetivo está concordando com outro substantivo na frase.</p>\n            "
-      }
-    ],
-    "grammar": {
-      "intro": "Os pontos formais do capítulo: o <em>ablativo</em> (sg. e pl.), o <em>acusativo plural</em>, a tabela completa da concordância dos adjetivos da 1ª/2ª classe, o pronome <em>is, ea, id</em> em todos os gêneros, e o <em>imperativo plural</em>.",
-      "sections": [
-        {
-          "heading": "Ablātīvus",
-          "bookRef": "Cap. V, ll. 47–105; gramm. ll. 123–138",
-          "body": "\n            <p>O <strong>ablātīvus</strong> é o caso obrigatório depois de várias\n            preposições — neste capítulo, principalmente <em>in, cum, ex, ab, sine</em>:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">m./n. (-us / -um)</td><td>-ō</td><td>-īs</td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>-ā</td><td>-īs</td></tr>\n            </table>\n            <p>O macron sobre <em>-ā</em> do feminino singular é a <em>única</em>\n            marca que distingue visualmente <em>ancilla</em> (nōm.) de\n            <em>ancillā</em> (abl.) — por isso o macron, mesmo opcional na escrita\n            moderna, é didaticamente importante.</p>\n            <table class=\"paradigm\">\n              <tr><th>preposição</th><th>sentido</th><th>exemplo</th></tr>\n              <tr><td><em>in</em> + abl.</td><td>onde, em (sem movimento)</td><td><em>in vīllā, in hortō</em></td></tr>\n              <tr><td><em>cum</em> + abl.</td><td>com (companhia)</td><td><em>cum Aemiliā, cum līberīs</em></td></tr>\n              <tr><td><em>ex</em> + abl.</td><td>de dentro de</td><td><em>ex hortō, ex impluviō</em></td></tr>\n              <tr><td><em>ab</em> + abl.</td><td>de (afastamento)</td><td><em>ab Aemiliā, ab oppidō</em></td></tr>\n              <tr><td><em>sine</em> + abl.</td><td>sem</td><td><em>sine virō, sine rosīs</em></td></tr>\n            </table>\n            <div class=\"ex-block\">\n              Iūlius <strong>in vīllā</strong> habitat <strong>cum Aemiliā</strong>,\n              <strong>cum līberīs</strong> et <strong>cum servīs</strong>.<br>\n              Iūlia rosās <strong>ex hortō</strong> portat <strong>sine pueris</strong>.\n            </div>\n            "
-        },
-        {
-          "heading": "Acusātīvus plūrālis et nōminātīvus plūrālis",
-          "bookRef": "Cap. V, gramm. ll. 110–125",
-          "body": "\n            <p>Cap. V completa o paradigma da 1ª/2ª declinação no plural:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>nōm. sg.</th><th>acus. sg.</th><th>nōm. pl.</th><th>acus. pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>servus</td><td>servum</td><td>serv<strong>ī</strong></td><td>serv<strong>ōs</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>ancilla</td><td>ancillam</td><td>ancill<strong>ae</strong></td><td>ancill<strong>ās</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>cubiculum</td><td>cubiculum</td><td>cubicul<strong>a</strong></td><td>cubicul<strong>a</strong></td></tr>\n            </table>\n            <p>Note duas peculiaridades:</p>\n            <ul>\n              <li>O <strong>neutro</strong> tem sempre <em>nōm. = acus.</em>: sg.\n              <em>-um</em>, pl. <em>-a</em>.</li>\n              <li>O <strong>feminino</strong> tem ambiguidade entre <em>ancilla</em>\n              (nōm. sg.) e <em>ancilla</em> (nōm./acus. pl. neutro) — distingue-se\n              pelo contexto e pelo macron de <em>ancillā</em> (abl. sg.).</li>\n            </ul>\n            <div class=\"ex-block\">\n              Iūlius mult<strong>ōs</strong> serv<strong>ōs</strong> habet; Aemilia\n              mult<strong>ās</strong> ancill<strong>ās</strong>.<br>\n              In hortō sunt mult<strong>ae</strong> ros<strong>ae</strong> et\n              mult<strong>a</strong> līli<strong>a</strong>.\n            </div>\n            "
-        },
-        {
-          "heading": "Concordantia adiectīvī",
-          "bookRef": "Cap. V (transversal)",
-          "body": "\n            <p>Os adjetivos da 1ª/2ª classe (<em>magnus -a -um, parvus -a -um,\n            pulcher -chra -chrum, foedus -a -um, multus -a -um</em>) seguem\n            <em>exatamente</em> as mesmas terminações dos substantivos correspondentes.\n            Eles concordam em <em>caso</em>, <em>número</em> e <em>gênero</em>:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n              <tr><td class=\"label\">nōm. sg.</td><td>magnus</td><td>magna</td><td>magnum</td></tr>\n              <tr><td class=\"label\">acus. sg.</td><td>magnum</td><td>magnam</td><td>magnum</td></tr>\n              <tr><td class=\"label\">abl. sg.</td><td>magnō</td><td>magnā</td><td>magnō</td></tr>\n              <tr><td class=\"label\">nōm. pl.</td><td>magnī</td><td>magnae</td><td>magna</td></tr>\n              <tr><td class=\"label\">acus. pl.</td><td>magnōs</td><td>magnās</td><td>magna</td></tr>\n              <tr><td class=\"label\">abl. pl.</td><td>magnīs</td><td>magnīs</td><td>magnīs</td></tr>\n            </table>\n            <p>O adjetivo não precisa estar contíguo ao substantivo:</p>\n            <div class=\"ex-block\">\n              Iūlius <strong>multās</strong> rosās <strong>pulchrās</strong> in hortō habet.<br>\n              <strong>Pulchra</strong> rosa Iūliam dēlectat.<br>\n              In <strong>magnā</strong> vīllā habitant.\n            </div>\n            <p>Se a terminação não combinar, ou há erro ou o adjetivo está\n            concordando com outro substantivo na mesma frase. Padrão de adjetivos\n            em <em>-er</em>: <em>pulcher (m) / pulchra (f) / pulchrum (n)</em> —\n            o <em>-e-</em> cai fora do nominativo masculino.</p>\n            "
-        },
-        {
-          "heading": "Prōnōmen <em>is, ea, id</em> — paradigma estendido",
-          "bookRef": "Cap. V, ll. 1–46",
-          "body": "\n            <p>Cap. V apresenta mais formas do pronome anafórico. As novas:\n            acus. m./f., abl. todos, e o plural:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m. sg.</th><th>f. sg.</th><th>n. sg.</th><th>m. pl.</th><th>f. pl.</th><th>n. pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>is</td><td>ea</td><td>id</td><td>iī</td><td>eae</td><td>ea</td></tr>\n              <tr><td class=\"label\">acus.</td><td>eum</td><td>eam</td><td>id</td><td>eōs</td><td>eās</td><td>ea</td></tr>\n              <tr><td class=\"label\">gen.</td><td>eius</td><td>eius</td><td>eius</td><td>eōrum</td><td>eārum</td><td>eōrum</td></tr>\n              <tr><td class=\"label\">abl.</td><td>eō</td><td>eā</td><td>eō</td><td>iīs</td><td>iīs</td><td>iīs</td></tr>\n            </table>\n            <p>O dativo (<em>eī, iīs</em>) virá em VII. Note como o gen. <em>eius</em>\n            é <em>invariável</em> em gênero — você lembrará dele do par\n            <em>suus/eius</em> de Cap. IV.</p>\n            <div class=\"ex-block\">\n              Iūlia rosās carpit et cum <strong>iīs</strong> ex hortō venit.<br>\n              Aemilia: \"Marce et Quīnte, vocāte Iūliam!\" — Puerī <strong>eam</strong>\n              vocant.<br>\n              Servī in cubiculīs dormiunt — <strong>eōrum</strong> cubicula nōn magna sunt.\n            </div>\n            "
-        },
-        {
-          "heading": "Imperātīvus plūrālis",
-          "bookRef": "Cap. V, ll. 47–95; gramm. ll. 140–156",
-          "body": "\n            <p>O imperativo plural se forma acrescentando <em>-te</em> ao tema\n            (com vogal ligante <em>-i-</em> na 3ª conjugação):</p>\n            <table class=\"paradigm\">\n              <tr><th>conj.</th><th>imp. sg.</th><th>imp. pl.</th></tr>\n              <tr><td class=\"label\">[1] vocā-</td><td>vocā!</td><td>vocā<strong>te</strong>!</td></tr>\n              <tr><td class=\"label\">[2] vidē-</td><td>vidē!</td><td>vidē<strong>te</strong>!</td></tr>\n              <tr><td class=\"label\">[3] pōn-</td><td>pōn<strong>e</strong>!</td><td>pōn<strong>ite</strong>!</td></tr>\n              <tr><td class=\"label\">[4] audī-</td><td>audī!</td><td>audī<strong>te</strong>!</td></tr>\n            </table>\n            <p>Use o singular para uma pessoa, o plural para várias. O paralelo no\n            indicativo é a 3ª pessoa plural em <em>-nt / -unt / -iunt</em>:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>ind. 3 sg.</th><th>ind. 3 pl.</th></tr>\n              <tr><td class=\"label\">[1]</td><td>vocat</td><td>vocant</td></tr>\n              <tr><td class=\"label\">[2]</td><td>videt</td><td>vident</td></tr>\n              <tr><td class=\"label\">[3]</td><td>pōnit</td><td>pōnunt</td></tr>\n              <tr><td class=\"label\">[4]</td><td>audit</td><td>audiunt</td></tr>\n            </table>\n            <div class=\"ex-block\">\n              Aemilia: \"Mārce et Quīnte, <strong>vocāte</strong> Iūliam!\"<br>\n              Iūlia ad puerōs: \"<strong>Venīte</strong>, puerī!\"<br>\n              Aemilia: \"<strong>Tacēte</strong>, puerī improbī! <strong>Discēdite</strong>!\"\n            </div>\n            "
-        }
-      ]
-    }
-  }
+  ]
 };
 
 export default chapter;

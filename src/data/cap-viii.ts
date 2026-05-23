@@ -5,6 +5,8 @@ const chapter: Chapter = {
   "numeral": "VIII",
   "title": "Taberna Rōmāna",
   "blurb": "Foco: verbos em <em>-iō</em> (3ª mista); genitivo e ablativo de preço; paradigma completo de <em>quī</em> e <em>is/ea/id</em>.",
+  "grammarIntro": "Os pontos formais do capítulo: o <em>genitivo</em> singular e plural; o paradigma completo de <em>hic / ille</em>; o paradigma completo de <em>quī / is</em>; verbos <em>-iō</em> da 3ª conjugação; e o <em>ablativo de preço</em>.",
+  "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VIII</em>. O capítulo é centrado no comércio em Roma, então o vocabulário traz objetos (anel, gema, pérola), termos de transação (preço, vender, comprar), e adjetivos quantificadores.",
   "exercises": [
     {
       "index": 500,
@@ -17,18 +19,18 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Albīnus habet {tabernam:md}, in quā sunt {gemmae:md} et {margarītae:md} et alia {ōrnāmenta:md}. <em>(loja; pedras; pérolas; enfeites)</em>",
-        "Albīnus gemmās et margarītās {vēndit:md}. <em>(vende)</em>",
-        "{aliī:md} tabernāriī libros vēndunt, alii māla et pira. <em>(outros)</em>",
-        "{quī:md} tabernam habet est {tabernārius:md}. <em>(quem; lojista)</em>",
-        "Fēminae ante tabernam {cōnsistunt:md}. <em>(param)</em>",
-        "Fēminae pecūniōsae multa ōrnāmenta {emunt:md}. <em>(compram)</em>",
-        "Aliae fēminae, {quae:md} pauca habent, ōrnāmenta {aspiciunt:md} et {abeunt:md}. <em>(que; olham; vão embora)</em>",
-        "Aemilia ōrnāmenta ā virō suō {accipit:md}. <em>(recebe)</em>",
-        "Aemilia {ānulum:md} in digitō et margarītās in {collō:md} habet. <em>(anel; pescoço)</em>",
-        "Ānulī et margarītae fēminās {ōrnant:md}. <em>(adornam)</em>",
-        "Anulus in {digitō:md} pōnitur. <em>(dedo — abl.)</em>",
-        "Mēdus nōn est {pecūniōsus:md}: in sacculō eius pauca nummī sunt. <em>(rico)</em>"
+        "Albīnus habet {tabernam:md}, in quā sunt {gemmae:md} et {margarītae:md} et alia {ōrnāmenta:md}. // loja; pedras; pérolas; enfeites",
+        "Albīnus gemmās et margarītās {vēndit:md}. // vende",
+        "{aliī:md} tabernāriī libros vēndunt, alii māla et pira. // outros",
+        "{quī:md} tabernam habet est {tabernārius:md}. // quem; lojista",
+        "Fēminae ante tabernam {cōnsistunt:md}. // param",
+        "Fēminae pecūniōsae multa ōrnāmenta {emunt:md}. // compram",
+        "Aliae fēminae, {quae:md} pauca habent, ōrnāmenta {aspiciunt:md} et {abeunt:md}. // que; olham; vão embora",
+        "Aemilia ōrnāmenta ā virō suō {accipit:md}. // recebe",
+        "Aemilia {ānulum:md} in digitō et margarītās in {collō:md} habet. // anel; pescoço",
+        "Ānulī et margarītae fēminās {ōrnant:md}. // adornam",
+        "Anulus in {digitō:md} pōnitur. // dedo — abl.",
+        "Mēdus nōn est {pecūniōsus:md}: in sacculō eius pauca nummī sunt. // rico"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -122,10 +124,10 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlius ad vīllam {advenit:md}; multī viri ad tabernam {adveniunt:md}. <em>(advenit, adveniunt)</em>",
-        "Mēdus ē tabernā {exit:md}. <em>(sai)</em>",
-        "Lydia ad tabernam {adit:md}. <em>(vai a)</em>",
-        "Mēdus {abit:md}; aliī virī quoque {abeunt:md}. <em>(vai embora; vão embora)</em>",
+        "Iūlius ad vīllam {advenit:md}; multī viri ad tabernam {adveniunt:md}. // advenit, adveniunt",
+        "Mēdus ē tabernā {exit:md}. // sai",
+        "Lydia ad tabernam {adit:md}. // vai a",
+        "Mēdus {abit:md}; aliī virī quoque {abeunt:md}. // vai embora; vão embora",
         "Lydia et Mēdus ex tabernā {exeunt:md}.",
         "Multī virī ad tabernam {adeunt:md} et {abeunt:md}.",
         "In sacculō Mēdī pecūnia {inest:md}; in sacculīs aliōrum nummī {īnsunt:md}.",
@@ -201,14 +203,14 @@ const chapter: Chapter = {
       "exemplum": null,
       "questions": [
         "Iūlia: “{Num:md} nāsus meus foedus est?”",
-        "Syra: “Quid? {Quālis:md} est nāsus meus?” <em>(qualidade)</em>",
+        "Syra: “Quid? {Quālis:md} est nāsus meus?” // qualidade",
         "Iūlius: “Ubi est Iūlia? {Cūr:md} mē exspectat?”",
-        "Iūlia: “{Nōnne:md} haec rosa pulchra est?” <em>(qualidade)</em>",
-        "Aemilia: “{Num:md} hīc centum nummī sunt?” <em>(verdade?)</em>",
-        "Albīnus: “{Quot:md} pulchrī sunt hī ānulī?” <em>(quantos)</em>",
-        "Mēdus: “{Quī:md} ānulus sine gemmā vīgintī sēstertiīs cōnstat?” <em>(qual)</em>",
-        "{Num:md} Hispānia īnsula est? <em>(verdade?)</em>",
-        "{Quam:md} magnum est imperium Rōmānum? <em>(quão)</em>"
+        "Iūlia: “{Nōnne:md} haec rosa pulchra est?” // qualidade",
+        "Aemilia: “{Num:md} hīc centum nummī sunt?” // verdade?",
+        "Albīnus: “{Quot:md} pulchrī sunt hī ānulī?” // quantos",
+        "Mēdus: “{Quī:md} ānulus sine gemmā vīgintī sēstertiīs cōnstat?” // qual",
+        "{Num:md} Hispānia īnsula est? // verdade?",
+        "{Quam:md} magnum est imperium Rōmānum? // quão"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -243,14 +245,14 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Albīnus {clāmat:md}: 'Ōrnāmenta! Ōrnāmenta fēminārum!' <em>(grita)</em>",
-        "Lydia: 'Aspice {illam:md} tabernam!' — {illa:md} taberna est Albīnī. <em>(aquela)</em>",
-        "Lydia tabernam digitō {mōnstrat:md}. <em>(aponta)</em>",
-        "Albīnus margarītās Lydiae {ostendit:md}, {et:md} ānulōs ostendit. <em>(mostra; ostende)</em>",
+        "Albīnus {clāmat:md}: 'Ōrnāmenta! Ōrnāmenta fēminārum!' // grita",
+        "Lydia: 'Aspice {illam:md} tabernam!' — {illa:md} taberna est Albīnī. // aquela",
+        "Lydia tabernam digitō {mōnstrat:md}. // aponta",
+        "Albīnus margarītās Lydiae {ostendit:md}, {et:md} ānulōs ostendit. // mostra; ostende",
         "Mēdus: 'Quot sēstertiīs {cōnstat:md} ānulus?'",
-        "Albīnus: 'Hic ānulus {gemmātus:md} centum sēstertiīs cōnstat.' <em>(gemmatus — concorda com ānulus)</em>",
-        "{pretium:md} ānulī est centum sēstertiī; alius ānulus {octōgintā:md} sēstertiīs cōnstat. <em>(pretium; octōgintā)</em>",
-        "Mēdus: '{tanta:md} gemma nōn ad {tantum:md} ānulum convenit.' <em>(tão grande; tão pequeno → tantus quantus)</em>"
+        "Albīnus: 'Hic ānulus {gemmātus:md} centum sēstertiīs cōnstat.' // gemmatus — concorda com ānulus",
+        "{pretium:md} ānulī est centum sēstertiī; alius ānulus {octōgintā:md} sēstertiīs cōnstat. // pretium; octōgintā",
+        "Mēdus: '{tanta:md} gemma nōn ad {tantum:md} ānulum convenit.' // tão grande; tão pequeno → tantus quantus"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -351,11 +353,11 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "{Quanta:md} pecūnia est in sacculō Mēdī? {Centum} sēstertiī. <em>(quantos?)</em>",
-        "Albīnus: “Id nōn {magnum|satis:md} est. Pretium ānulī est sēstertiī centum.” <em>(de muito valor)</em>",
-        "Mēdus: “Id est {nimis:md} magnum pretium. Accipe nōnāgintā sēstertiōs {aut:md} nūllōs!” <em>(demais; ou)</em>",
-        "Ānulus nōn in digitō {quārtō:md}, sed in digitō {mediō:md} pōnitur. <em>(quarto / médio)</em>",
-        "Digitus quārtus nōn {tantus:md} [= tam magnus] est {quantus:md} digitus medius. <em>(quão / quanto)</em>",
+        "{Quanta:md} pecūnia est in sacculō Mēdī? {Centum} sēstertiī. // quantos?",
+        "Albīnus: “Id nōn {magnum|satis:md} est. Pretium ānulī est sēstertiī centum.” // de muito valor",
+        "Mēdus: “Id est {nimis:md} magnum pretium. Accipe nōnāgintā sēstertiōs {aut:md} nūllōs!” // demais; ou",
+        "Ānulus nōn in digitō {quārtō:md}, sed in digitō {mediō:md} pōnitur. // quarto / médio",
+        "Digitus quārtus nōn {tantus:md} [= tam magnus] est {quantus:md} digitus medius. // quão / quanto",
         "Decem et decem sunt {vīgintī:md} [xx]."
       ],
       "phraseMode": false,
@@ -728,305 +730,7 @@ const chapter: Chapter = {
         "paradigma-is"
       ]
     }
-  ],
-  "content": {
-    "topics": [
-      {
-        "id": "genitivo",
-        "title": "Genitivo: posse e relação",
-        "bookRef": "Cap. VIII, ll. 1–35; gramm. ll. 134–223",
-        "body": "\n                <p>O <strong>genitivo</strong> exprime posse, relação ou origem —\n                \"de\" em português, mas com terminação própria:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m./n.</th><th>f.</th></tr>\n                  <tr><td>sg.</td><td>-ī (<em>servī, cubiculī</em>)</td><td>-ae (<em>ancillae</em>)</td></tr>\n                  <tr><td>pl.</td><td>-ōrum (<em>servōrum</em>)</td><td>-ārum (<em>ancillārum</em>)</td></tr>\n                </table>\n                <p>Em latim o genitivo precede ou segue o nome a que se refere, e a\n                ordem é flexível: <em>filius Iūliī</em> = <em>Iūliī filius</em>\n                (\"filho de Júlio\").</p>\n                <div class=\"ex-block\">\n                  Mēdus <strong>servus Iūliī</strong> est. — Pretium\n                  <strong>rosārum</strong>. — Ānulus <strong>magnī pretiī</strong>.\n                </div>\n            "
-      },
-      {
-        "id": "preco",
-        "title": "Preço: genitivo <em>vs.</em> ablativo",
-        "bookRef": "Cap. VIII, ll. 83–133",
-        "body": "\n                <p>Latim tem duas construções para indicar preço/valor:</p>\n                <ul>\n                  <li><strong>Genitivo de preço</strong> — com verbo <em>esse</em>:\n                  <em>magnī, parvī, tantī, quantī, plūris, minōris</em>\n                  (valor \"abstrato\"). <br>\n                  <em>Ānulus magnī pretiī est.</em></li>\n                  <li><strong>Ablativo de preço</strong> — com verbos <em>cōnstat,\n                  emit, vēndit</em> (preço efetivo, em moedas). <br>\n                  <em>Ānulus centum sēstertiīs cōnstat.</em></li>\n                </ul>\n                <p>Os numerais <em>vīgintī, octōgintā, nōnāgintā, centum</em> são\n                <strong>indeclināveis</strong> — não mudam de forma — mas o substantivo\n                que segue declina: <em>centum sēstertiīs</em> (abl.).</p>\n            "
-      },
-      {
-        "id": "verbos-io",
-        "title": "Verbos em <em>-iō</em>: a 3ª conjugação mista",
-        "bookRef": "Cap. VIII, gramm. ll. 134–223",
-        "body": "\n                <p>Alguns verbos da 3ª conjugação têm um <em>-i-</em> antes da\n                desinência em algumas formas. São os chamados\n                <strong>verbos em <em>-iō</em></strong> (ou 3ª mista):\n                <em>capiō, accipiō, aspiciō, faciō, iaciō</em>.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>indicativo</th><th>imperativo</th></tr>\n                  <tr><td>sg. 3ª</td><td>capit, accipit</td><td>cape!, accipe!</td></tr>\n                  <tr><td>pl. 3ª</td><td>capiunt, accipiunt</td><td>capite!, accipite!</td></tr>\n                </table>\n                <p>Compare com a 3ª regular (<em>discēdere</em>: discēdit, discēdunt;\n                discēde!, discēdite!) — diferença está só na presença do\n                <em>-i-</em> nas formas de plural e algumas outras.</p>\n            "
-      },
-      {
-        "id": "paradigma-qui",
-        "title": "Paradigma completo de <em>quī, quae, quod</em>",
-        "bookRef": "Cap. VIII, gramm. ll. 134–223",
-        "body": "\n                <p>Em Cap. VI viu-se o relativo só no nominativo. Aqui completa-se\n                o paradigma — você precisa decorar essa tabela para entender bem\n                latim daqui para a frente.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>quī</td><td>quae</td><td>quod</td></tr>\n                  <tr><td>acus. sg.</td><td>quem</td><td>quam</td><td>quod</td></tr>\n                  <tr><td>gen. sg.</td><td>cuius</td><td>cuius</td><td>cuius</td></tr>\n                  <tr><td>dat. sg.</td><td>cui</td><td>cui</td><td>cui</td></tr>\n                  <tr><td>abl. sg.</td><td>quō</td><td>quā</td><td>quō</td></tr>\n                  <tr><td>nōm. pl.</td><td>quī</td><td>quae</td><td>quae</td></tr>\n                  <tr><td>acus. pl.</td><td>quōs</td><td>quās</td><td>quae</td></tr>\n                  <tr><td>gen. pl.</td><td>quōrum</td><td>quārum</td><td>quōrum</td></tr>\n                  <tr><td>dat. pl.</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n                  <tr><td>abl. pl.</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n                </table>\n                <p>O interrogativo <em>quis?, quae?, quid?</em> tem só algumas\n                formas distintas (nōm. sg. m. <em>quis</em>, n. <em>quid</em>); fora\n                isso, é igual ao relativo.</p>\n            "
-      },
-      {
-        "id": "paradigma-is",
-        "title": "Paradigma completo de <em>is, ea, id</em>",
-        "bookRef": "Cap. VIII, gramm. ll. 134–223",
-        "body": "\n                <p>O pronome anafórico <em>is, ea, id</em> (\"ele, ela, isso\") aparece\n                em todos os casos — útil para retomar pessoas e coisas já mencionadas\n                sem repetir o nome.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>is</td><td>ea</td><td>id</td></tr>\n                  <tr><td>acus. sg.</td><td>eum</td><td>eam</td><td>id</td></tr>\n                  <tr><td>gen. sg.</td><td>eius</td><td>eius</td><td>eius</td></tr>\n                  <tr><td>dat. sg.</td><td>eī</td><td>eī</td><td>eī</td></tr>\n                  <tr><td>abl. sg.</td><td>eō</td><td>eā</td><td>eō</td></tr>\n                  <tr><td>nōm. pl.</td><td>iī</td><td>eae</td><td>ea</td></tr>\n                  <tr><td>acus. pl.</td><td>eōs</td><td>eās</td><td>ea</td></tr>\n                  <tr><td>gen. pl.</td><td>eōrum</td><td>eārum</td><td>eōrum</td></tr>\n                  <tr><td>dat. pl.</td><td>eīs / iīs</td><td>eīs / iīs</td><td>eīs / iīs</td></tr>\n                  <tr><td>abl. pl.</td><td>eīs / iīs</td><td>eīs / iīs</td><td>eīs / iīs</td></tr>\n                </table>\n                <p>As formas <em>eīs</em> e <em>iīs</em> são equivalentes; ambas\n                aparecem nos textos clássicos.</p>\n            "
-      },
-      {
-        "id": "interrogativos",
-        "title": "Partículas interrogativas",
-        "bookRef": "Cap. VIII, ll. 36–82",
-        "body": "\n                <p>Latim distingue várias maneiras de fazer pergunta — cada partícula\n                sugere a resposta que se espera:</p>\n                <ul>\n                  <li><strong>-ne?</strong> — pergunta neutra\n                  (<em>Estne Iūlius dominus?</em>)</li>\n                  <li><strong>num?</strong> — espera resposta <em>negativa</em>\n                  (<em>\"é mesmo verdade que…?\"</em>, <em>\"será que?\"</em>)</li>\n                  <li><strong>nōnne?</strong> — espera resposta <em>afirmativa</em>\n                  (<em>\"não é verdade que…?\"</em>, <em>\"porventura não?\"</em>)</li>\n                </ul>\n                <p>Outras partículas que iniciam pergunta:\n                <em>cūr?</em> (por quê), <em>ubi?</em> (onde), <em>quō?</em>\n                (para onde), <em>unde?</em> (de onde), <em>quālis?</em> (de que\n                qualidade), <em>quantus?</em> (de que tamanho), <em>quot?</em>\n                (quantos, indeclināb.), <em>quam</em> + adj. (quão).</p>\n            "
-      }
-    ],
-    "grammar": {
-      "intro": "Os pontos formais do capítulo: o <em>genitivo</em> singular e plural; o paradigma completo de <em>hic / ille</em>; o paradigma completo de <em>quī / is</em>; verbos <em>-iō</em> da 3ª conjugação; e o <em>ablativo de preço</em>.",
-      "sections": [
-        {
-          "heading": "Genitīvus",
-          "bookRef": "Cap. VIII, ll. 1–35; gramm. ll. 135–170",
-          "body": "\n            <p>O <strong>genitivo</strong> é o caso de <em>posse</em> e <em>pertinência</em>.\n            Responde a <em>cuius?</em> (de quem?, sg.) ou <em>quōrum/quārum?</em>\n            (de quem?, pl.). Em português equivale a “de + algo”.</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>serv<strong>ī</strong></td><td>serv<strong>ōrum</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>ancill<strong>ae</strong></td><td>ancill<strong>ārum</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>oppid<strong>ī</strong></td><td>oppid<strong>ōrum</strong></td></tr>\n            </table>\n            <p>Cuidado: o genitivo singular feminino (<em>-ae</em>) e o nominativo plural\n            (<em>-ae</em>) são <em>idênticos</em>; também coincidem o dativo singular\n            f. (<em>-ae</em>) e os dois. É o contexto que distingue.</p>\n            <p>Para pronomes/relativos, o genitivo é:</p>\n            <ul>\n              <li><em>is, ea, id</em> → gen. sg. <strong>eius</strong> (m./f./n.), pl. <strong>eōrum/eārum/eōrum</strong></li>\n              <li><em>quī, quae, quod</em> → gen. sg. <strong>cuius</strong>, pl. <strong>quōrum/quārum/quōrum</strong></li>\n              <li><em>hic, haec, hoc</em> → gen. sg. <strong>huius</strong>, pl. <strong>hōrum/hārum/hōrum</strong></li>\n              <li><em>ille, illa, illud</em> → gen. sg. <strong>illīus</strong>, pl. <strong>illōrum/illārum/illōrum</strong></li>\n            </ul>\n            <div class=\"ex-block\">\n              Taberna <strong>Albīnī</strong> est. — Cuius est haec taberna? — Sacculus\n              <strong>Mēdī</strong> nōn est vacuus. — Fēminae <strong>quārum virī</strong>\n              pecūniōsī sunt multa ōrnāmenta accipiunt.\n            </div>\n            "
-        },
-        {
-          "heading": "Hic, haec, hoc / ille, illa, illud — paradigma",
-          "bookRef": "Cap. VIII, ll. 40–115; gramm. ll. 171–200",
-          "body": "\n            <p>Cap. VIII apresenta o paradigma <em>completo</em> dos dois\n            demonstrativos:</p>\n            <p><strong>hic, haec, hoc</strong> — “este (perto do falante)”:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m. sg.</th><th>f. sg.</th><th>n. sg.</th><th>m. pl.</th><th>f. pl.</th><th>n. pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>hic</td><td>haec</td><td>hoc</td><td>hī</td><td>hae</td><td>haec</td></tr>\n              <tr><td class=\"label\">acus.</td><td>hunc</td><td>hanc</td><td>hoc</td><td>hōs</td><td>hās</td><td>haec</td></tr>\n              <tr><td class=\"label\">gen.</td><td>huius</td><td>huius</td><td>huius</td><td>hōrum</td><td>hārum</td><td>hōrum</td></tr>\n              <tr><td class=\"label\">dat.</td><td>huic</td><td>huic</td><td>huic</td><td>hīs</td><td>hīs</td><td>hīs</td></tr>\n              <tr><td class=\"label\">abl.</td><td>hōc</td><td>hāc</td><td>hōc</td><td>hīs</td><td>hīs</td><td>hīs</td></tr>\n            </table>\n            <p><strong>ille, illa, illud</strong> — “aquele (distante)”:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m. sg.</th><th>f. sg.</th><th>n. sg.</th><th>m. pl.</th><th>f. pl.</th><th>n. pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>ille</td><td>illa</td><td>illud</td><td>illī</td><td>illae</td><td>illa</td></tr>\n              <tr><td class=\"label\">acus.</td><td>illum</td><td>illam</td><td>illud</td><td>illōs</td><td>illās</td><td>illa</td></tr>\n              <tr><td class=\"label\">gen.</td><td>illīus</td><td>illīus</td><td>illīus</td><td>illōrum</td><td>illārum</td><td>illōrum</td></tr>\n              <tr><td class=\"label\">dat.</td><td>illī</td><td>illī</td><td>illī</td><td>illīs</td><td>illīs</td><td>illīs</td></tr>\n              <tr><td class=\"label\">abl.</td><td>illō</td><td>illā</td><td>illō</td><td>illīs</td><td>illīs</td><td>illīs</td></tr>\n            </table>\n            <p>Note o singular peculiar: gen. <em>-īus</em>, dat. <em>-ī</em>\n            (invariáveis em gênero) — comum a vários pronomes (<em>ūnus, sōlus, tōtus,\n            ūllus, nūllus, alius, alter, neuter</em>).</p>\n            <div class=\"ex-block\">\n              <strong>Hic</strong> ānulus centum sēstertiīs cōnstat; <strong>illius</strong> ānulī\n              pretium octōgintā tantum.<br>\n              <strong>Hae</strong> margarītae pulchrae sunt; <strong>illae</strong> nōn tam pulchrae.\n            </div>\n            "
-        },
-        {
-          "heading": "Quis, quī — paradigma",
-          "bookRef": "Cap. VIII, gramm. ll. 135–162",
-          "body": "\n            <p>O <strong>interrogativo</strong> <em>quis? quid?</em> e o\n            <strong>relativo</strong> <em>quī, quae, quod</em> compartilham as formas\n            oblíquas. A diferença está no nominativo:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m. sg.</th><th>f. sg.</th><th>n. sg.</th><th>m. pl.</th><th>f. pl.</th><th>n. pl.</th></tr>\n              <tr><td class=\"label\">nōm. (interrog.)</td><td>quis</td><td>quis</td><td>quid</td><td>—</td><td>—</td><td>—</td></tr>\n              <tr><td class=\"label\">nōm. (relat.)</td><td>quī</td><td>quae</td><td>quod</td><td>quī</td><td>quae</td><td>quae</td></tr>\n              <tr><td class=\"label\">acus.</td><td>quem</td><td>quam</td><td>quod (quid)</td><td>quōs</td><td>quās</td><td>quae</td></tr>\n              <tr><td class=\"label\">gen.</td><td>cuius</td><td>cuius</td><td>cuius</td><td>quōrum</td><td>quārum</td><td>quōrum</td></tr>\n              <tr><td class=\"label\">dat.</td><td>cui</td><td>cui</td><td>cui</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n              <tr><td class=\"label\">abl.</td><td>quō</td><td>quā</td><td>quō</td><td>quibus</td><td>quibus</td><td>quibus</td></tr>\n            </table>\n            <p>E o pronome anafórico <em>is, ea, id</em> (a forma \"ele/ela/aquilo\"\n            que retoma um nome):</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m. sg.</th><th>f. sg.</th><th>n. sg.</th><th>m. pl.</th><th>f. pl.</th><th>n. pl.</th></tr>\n              <tr><td class=\"label\">nōm.</td><td>is</td><td>ea</td><td>id</td><td>iī (eī)</td><td>eae</td><td>ea</td></tr>\n              <tr><td class=\"label\">acus.</td><td>eum</td><td>eam</td><td>id</td><td>eōs</td><td>eās</td><td>ea</td></tr>\n              <tr><td class=\"label\">gen.</td><td>eius</td><td>eius</td><td>eius</td><td>eōrum</td><td>eārum</td><td>eōrum</td></tr>\n              <tr><td class=\"label\">dat.</td><td>eī</td><td>eī</td><td>eī</td><td>iīs (eīs)</td><td>iīs</td><td>iīs</td></tr>\n              <tr><td class=\"label\">abl.</td><td>eō</td><td>eā</td><td>eō</td><td>iīs</td><td>iīs</td><td>iīs</td></tr>\n            </table>\n            "
-        },
-        {
-          "heading": "Verbos <em>-iō</em> da 3ª conjugação",
-          "bookRef": "Cap. VIII, ll. 80–95; gramm. ll. 200–215",
-          "body": "\n            <p>Alguns verbos com infinitivo em <em>-ere</em> têm 1ª pessoa em\n            <em>-iō</em> e seguem um padrão híbrido entre 3ª e 4ª conjugação. São\n            chamados <em>3ª-iō</em> (ou “mistos”).</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>inf.</th><th>imp. sg.</th><th>ind. 3 sg.</th><th>ind. 3 pl.</th></tr>\n              <tr><td class=\"label\">3ª regular</td><td>pōnere</td><td>pōne!</td><td>pōnit</td><td>pōnunt</td></tr>\n              <tr><td class=\"label\">3ª-iō</td><td>aspicere</td><td>aspice!</td><td>aspicit</td><td>aspici<strong>unt</strong></td></tr>\n              <tr><td class=\"label\">3ª-iō</td><td>accipere</td><td>accipe!</td><td>accipit</td><td>accipi<strong>unt</strong></td></tr>\n              <tr><td class=\"label\">4ª regular</td><td>audīre</td><td>audī!</td><td>audit</td><td>audi<strong>unt</strong></td></tr>\n            </table>\n            <p>A pista: 3ª pessoa plural em <em>-iunt</em> apesar do infinitivo em\n            <em>-ere</em>. Outros do grupo: <em>cupere, facere, capere, iacere, fugere</em>\n            e seus compostos.</p>\n            <div class=\"ex-block\">\n              Lȳdia tabernam aspici<strong>t</strong>; Mēdus et Lȳdia eam aspici<strong>unt</strong>.<br>\n              Aemilia ōrnāmenta accipi<strong>t</strong>; fēminae ōrnāmenta accipi<strong>unt</strong>.\n            </div>\n            "
-        },
-        {
-          "heading": "Ablātīvus pretiī",
-          "bookRef": "Cap. VIII, ll. 55–115",
-          "body": "\n            <p>Para indicar <em>preço</em> com verbos como <em>cōnstāre</em> (custar),\n            <em>emere</em> (comprar), <em>vēndere</em> (vender), o latim usa o\n            <strong>ablativo sem preposição</strong>:</p>\n            <div class=\"ex-block\">\n              Hic ānulus <strong>centum sēstertiīs</strong> cōnstat.<br>\n              Albīnus ānulum <strong>nōnāgintā sēstertiīs</strong> Mēdō vēndit.<br>\n              <em>Quantō pretiō?</em> — <em>Magnō pretiō. / Parvō pretiō.</em>\n            </div>\n            <p>É o mesmo padrão do ablativo de instrumento/meio:\n            <em>lectīcā portātur</em>, <em>baculō verberat</em>, <em>sēstertiīs cōnstat</em>.</p>\n            "
-        }
-      ]
-    },
-    "vocabulary": {
-      "intro": "As palavras novas introduzidas em <em>Cap. VIII</em>. O capítulo é centrado no comércio em Roma, então o vocabulário traz objetos (anel, gema, pérola), termos de transação (preço, vender, comprar), e adjetivos quantificadores.",
-      "groups": [
-        {
-          "label": "Nōmina · 1ª (-a)",
-          "tag": "f.",
-          "entries": [
-            {
-              "lemma": "gemma, -ae",
-              "gloss": "gema, pedra preciosa"
-            },
-            {
-              "lemma": "līnea, -ae",
-              "gloss": "fio, linha, cordão"
-            },
-            {
-              "lemma": "margarīta, -ae",
-              "gloss": "pérola"
-            },
-            {
-              "lemma": "taberna, -ae",
-              "gloss": "loja, taverna"
-            }
-          ]
-        },
-        {
-          "label": "Nōmina · 2ª (-us, -um)",
-          "tag": "m. / n.",
-          "entries": [
-            {
-              "lemma": "ānulus, -ī",
-              "gloss": "anel",
-              "note": "m."
-            },
-            {
-              "lemma": "collum, -ī",
-              "gloss": "pescoço",
-              "note": "n."
-            },
-            {
-              "lemma": "digitus, -ī",
-              "gloss": "dedo",
-              "note": "m."
-            },
-            {
-              "lemma": "ōrnāmentum, -ī",
-              "gloss": "ornamento, enfeite",
-              "note": "n."
-            },
-            {
-              "lemma": "pretium, -ī",
-              "gloss": "preço",
-              "note": "n."
-            },
-            {
-              "lemma": "sēstertius, -ī",
-              "gloss": "sestércio (moeda romana)",
-              "note": "m."
-            },
-            {
-              "lemma": "tabernārius, -ī",
-              "gloss": "lojista, taverneiro",
-              "note": "m."
-            }
-          ]
-        },
-        {
-          "label": "Adiectīva",
-          "tag": "-us, -a, -um",
-          "entries": [
-            {
-              "lemma": "alius, -a, -ud",
-              "gloss": "outro",
-              "note": "gen. <i>alīus</i>, dat. <i>aliī</i>"
-            },
-            {
-              "lemma": "gemmātus, -a, -um",
-              "gloss": "com gema, gemado",
-              "note": "< <i>gemma</i>"
-            },
-            {
-              "lemma": "medius, -a, -um",
-              "gloss": "do meio, médio"
-            },
-            {
-              "lemma": "pecūniōsus, -a, -um",
-              "gloss": "rico (em dinheiro)",
-              "note": "< <i>pecūnia</i>"
-            },
-            {
-              "lemma": "quantus, -a, -um",
-              "gloss": "quão grande, do tamanho que"
-            },
-            {
-              "lemma": "quārtus, -a, -um",
-              "gloss": "quarto (4º)"
-            },
-            {
-              "lemma": "tantus, -a, -um",
-              "gloss": "tão grande, do tamanho de"
-            }
-          ]
-        },
-        {
-          "label": "Numerī",
-          "tag": "indeclināveis",
-          "entries": [
-            {
-              "lemma": "vīgintī",
-              "gloss": "vinte (20)"
-            },
-            {
-              "lemma": "octōgintā",
-              "gloss": "oitenta (80)"
-            },
-            {
-              "lemma": "nōnāgintā",
-              "gloss": "noventa (90)"
-            }
-          ]
-        },
-        {
-          "label": "Verba",
-          "tag": "1ª – 3ª (e 3ª-iō)",
-          "entries": [
-            {
-              "lemma": "clāmat, clāmant",
-              "gloss": "grita, clama",
-              "note": "[1] <i>clāmāre</i>"
-            },
-            {
-              "lemma": "cōnstat, cōnstant",
-              "gloss": "custa (+ abl. de preço)",
-              "note": "[1] <i>cōnstāre</i>"
-            },
-            {
-              "lemma": "mōnstrat, mōnstrant",
-              "gloss": "mostra, aponta",
-              "note": "[1] <i>mōnstrāre</i>"
-            },
-            {
-              "lemma": "ōrnat, ōrnant",
-              "gloss": "enfeita, adorna",
-              "note": "[1] <i>ōrnāre</i>"
-            },
-            {
-              "lemma": "ostendit, ostendunt",
-              "gloss": "exibe, mostra (para alguém)",
-              "note": "[3] <i>ostendere</i>"
-            },
-            {
-              "lemma": "cōnsistit, cōnsistunt",
-              "gloss": "para, detém-se",
-              "note": "[3] <i>cōnsistere</i>"
-            },
-            {
-              "lemma": "convenit, conveniunt",
-              "gloss": "encaixa, convém",
-              "note": "[4] <i>convenīre</i>"
-            },
-            {
-              "lemma": "vēndit, vēndunt",
-              "gloss": "vende",
-              "note": "[3] <i>vēndere</i>"
-            },
-            {
-              "lemma": "emit, emunt",
-              "gloss": "compra",
-              "note": "[3] <i>emere</i>"
-            },
-            {
-              "lemma": "accipit, accipiunt",
-              "gloss": "recebe, aceita",
-              "note": "[3-iō] <i>accipere</i>"
-            },
-            {
-              "lemma": "aspicit, aspiciunt",
-              "gloss": "olha para, observa",
-              "note": "[3-iō] <i>aspicere</i>"
-            },
-            {
-              "lemma": "abit, abeunt",
-              "gloss": "vai embora",
-              "note": "<i>ab-</i> + <i>īre</i>"
-            }
-          ]
-        },
-        {
-          "label": "Prōnōmen",
-          "tag": "demonstrativo distante",
-          "entries": [
-            {
-              "lemma": "ille, illa, illud",
-              "gloss": "aquele, aquela, aquilo",
-              "note": "gen. <i>illīus</i>, dat. <i>illī</i>"
-            }
-          ]
-        },
-        {
-          "label": "Adverbia · coniūnctiō",
-          "entries": [
-            {
-              "lemma": "nimis",
-              "gloss": "demais, em demasia"
-            },
-            {
-              "lemma": "satis",
-              "gloss": "bastante, o suficiente"
-            },
-            {
-              "lemma": "aut",
-              "gloss": "ou (exclusivo)",
-              "note": "≠ <i>vel</i> (inclusivo)"
-            }
-          ]
-        },
-        {
-          "label": "Verba grammatica",
-          "entries": [
-            {
-              "lemma": "prōnōmen, -inis",
-              "gloss": "pronome",
-              "note": "n., 3ª decl."
-            }
-          ]
-        }
-      ]
-    }
-  }
+  ]
 };
 
 export default chapter;

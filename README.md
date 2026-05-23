@@ -1,5 +1,7 @@
 # Lingua Latīna — Quaestiōnēs Selectae
 
+Exercícios interativos baseados em *Lingua Latina per se Illustrata · Pars I: Familia Romana* (Hans H. Ørberg).
+
 ## Conteúdo atual
 
 | Capitulum | Tópico                                              | Exercícios |
@@ -8,18 +10,31 @@
 | III       | Nominativo/acusativo; pronomes <i>mē/tē</i>; relativo | 9          |
 | IV        | Numerais I–X; vocativo; imperativo; <i>suus / eius</i> | 9          |
 | V         | Acusativo, ablativo, imperativo                     | 11         |
-| VI        | Movimento, locativo, voz passiva                    | 10         |
-| VII       | Dativo, demonstrativo, relativo                     | 11 (8 do livro + 3 drills originais) |
+| VI        | Movimento, locativo, voz passiva                    | 13         |
+| VII       | Dativo, demonstrativo, relativo                     | 15 (12 do livro + 3 drills originais) |
 | VIII      | Genitivo, preço, *quī/is*                           | 11         |
 
-Todos os *Exercitia* não-dissertativos dos capítulos II–VIII do livro estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
+Todos os *Exercitia* não-dissertativos dos capítulos II–VIII estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
 
 Cada capítulo tem três seções:
-1. **Grammatica Latīna** — apresentação formal sistemática, espelhando a seção GRAMMATICA LATINA do final de cada capítulo no livro de Ørberg, com paradigmas e exemplos.
+1. **Grammatica Latīna** — apresentação formal sistemática, espelhando a seção GRAMMATICA LATINA do final de cada capítulo no livro de Ørberg.
 2. **Explicātiōnēs** — tópicos colapsáveis com explicações curtas e ponteiros para as linhas do livro.
 3. **Exercitia** — exercícios interativos com correção tolerante (macrons opcionais, alternativas com `|`, modo *phrase* para ordem livre).
 
-Cap. VII inclui três *drills* extras (A, B, C) compostos especialmente para o site, marcados como `drill original — não está no livro`. Usam o mesmo léxico e personagens de Ørberg mas com sentenças próprias.
+Cap. VII inclui três *drills* extras (A, B, C) compostos especialmente para o site, marcados com `qualifier: "drill original — não está no livro"`. Usam o mesmo léxico e personagens de Ørberg mas com sentenças próprias.
+
+---
+
+## Desenvolvimento
+
+```bash
+npm install
+npm run dev        # → http://localhost:4321/lingua-latina/
+npm run build      # → dist/
+npm run preview    # serve dist/ localmente
+```
+
+Deploy é automático via `.github/workflows/deploy.yml` em todo push para `main`.
 
 ---
 
@@ -27,87 +42,83 @@ Cap. VII inclui três *drills* extras (A, B, C) compostos especialmente para o s
 
 ```
 .
-├── index.html               # Cartões de capítulos + compêndio
-├── cap-v.html               # Páginas dos capítulos (template comum,
-├── cap-vi.html              # muda apenas o slug e o arquivo de dados)
-├── cap-vii.html
-├── cap-viii.html
-├── assets/
-│   ├── css/
-│   │   ├── theme.css        # Variáveis, fontes, textura de pergaminho
-│   │   ├── layout.css       # Nav, header, pager, footer
-│   │   ├── exercise.css     # Componente de exercício
-│   │   ├── components.css   # Cartões, TOC, summary cards
-│   │   └── content.css      # Explicātiōnēs e botão "Vide explicātiōnem"
-│   └── js/
-│       ├── nav.js           # Menu superior + pager prev/next
-│       ├── grader.js        # Normalização e correção
-│       ├── auxilia.js       # Painel lateral
-│       ├── exercise.js      # Renderiza exercício e monta capítulo
-│       └── content.js       # Explicātiōnēs + botão de referência
-├── data/
-│   ├── chapters.js          # Índice de capítulos
-│   ├── cap-v.js             # Dados do Capítulo V (exercícios + content)
-│   ├── cap-vi.js
-│   ├── cap-vii.js
-│   └── cap-viii.js
-└── .nojekyll                # Desabilita Jekyll no GitHub Pages
+├── src/
+│   ├── pages/
+│   │   ├── index.astro             # Cartões de capítulos + compêndio
+│   │   └── cap/[slug].astro        # Rota dinâmica → 7 páginas em build
+│   ├── layouts/
+│   │   └── Layout.astro            # <head> + <SiteNav>
+│   ├── components/
+│   │   ├── SiteNav.astro           # Barra superior
+│   │   ├── Pager.astro             # Prev/next no fim do capítulo
+│   │   ├── SectionBar.astro        # Sticky jump-bar com âncoras
+│   │   ├── ChapterTOC.astro        # Lista de exercícios no topo
+│   │   ├── ChapterContent.astro    # Grammar + Vocab + Topics
+│   │   ├── Exercise.astro          # Um exercício (questions ou paradigm)
+│   │   ├── ParadigmTables.astro    # Tabelas para kind:'paradigm'
+│   │   ├── ExerciseTip.astro       # Bloco "Auxilium"
+│   │   ├── Auxilia.astro           # Painel lateral
+│   │   └── ReferenceButton.astro   # Botão "Vide explicātionem"
+│   ├── scripts/
+│   │   ├── grader.ts               # Correção (browser)
+│   │   └── exercise-runtime.ts     # Wiring de inputs + reveal/clear
+│   ├── lib/
+│   │   ├── types.ts                # Chapter, Exercise, AuxiliaGroup, …
+│   │   ├── chapters.ts             # Importa todos os src/data/cap-*.ts
+│   │   ├── parse-question.ts       # DSL dos placeholders inline
+│   │   └── paths.ts                # chapterHref/indexHref (base path)
+│   ├── data/
+│   │   ├── chapters.ts             # Índice de capítulos
+│   │   └── cap-{slug}.ts           # Slug, numeral, title, exercises[]
+│   ├── content/                    # Astro Content Collections
+│   │   ├── config.ts               # Schemas Zod
+│   │   ├── README.md               # → DOCUMENTAÇÃO de schemas e DSL
+│   │   ├── topics/{slug}/{id}.md   # Explicātiōnēs (body = HTML)
+│   │   ├── grammar/{slug}/*.md     # Grammatica (ordem por filename)
+│   │   └── vocabulary/{slug}.yaml  # Vocābula (estruturado)
+│   ├── styles/                     # CSS (importado por Layout)
+│   └── pages/cap/[slug].astro
+├── scripts/                        # Migrações one-shot (Node)
+│   ├── migrate-data-to-ts.mjs
+│   ├── migrate-inline-answers.mjs
+│   ├── migrate-hints.mjs
+│   └── extract-content-to-collections.mjs
+├── astro.config.mjs                # base: '/lingua-latina'
+├── tsconfig.json
+└── .github/workflows/deploy.yml    # GitHub Pages via withastro/action
 ```
 
-### Componentes/serviços (todos em `window.LL`)
+### Como funciona
 
-- **`renderSiteNav(activeSlug)` / `mountSiteNav(activeSlug)`** — barra superior com capítulo ativo destacado.
-- **`renderPager(activeSlug)` / `mountPager(activeSlug)`** — botões prev/next no fim de cada página.
-- **`mountChapter(slug)`** / **`mountChapterHeader(slug)`** / **`mountChapterTOC(slug)`** — montagem do capítulo.
-- **`mountChapterContent(slug)`** — seção *Explicātiōnēs* (tópicos colapsáveis).
-- **`renderReferenceButton(refs, chapter)`** — botão *Vide explicātiōnem* num exercício.
-- **`renderExercise(data, chapter)`** — exercício completo.
-- **`renderAuxilia(groups)`** — painel lateral.
-- **`gradeExercise(article)`** / **`ungradeExercise(article)`** / **`clearExercise(article)`** — correção, des-correção, limpar.
-- **`isCorrect(user, expected, opts)`** / **`normalize(s)`** / **`stripMacrons(s)`** — utilidades.
+- **Tudo é estático**: `npm run build` gera `dist/` com 8 HTMLs (1 index + 7 capítulos). Cada `<input>`, `<details>`, e `data-answers` é renderizado em build pelo Astro — o cliente recebe ~5KB de JS só para grading.
+- **Adicionar exercício**: edite `src/data/cap-{slug}.ts`. Apenas isso.
+- **Adicionar capítulo**: registre em `src/data/chapters.ts`, importe em `src/lib/chapters.ts`, e crie `src/data/cap-{slug}.ts`. Opcionalmente popule `src/content/{topics,grammar,vocabulary}/{slug}/`.
 
-### Forma dos dados de um exercício
+### Schemas e DSL
 
-```js
+Toda a sintaxe (placeholders inline `{ō:md}`, hints `// menina`, schemas Zod das collections, tipos de `auxilia`) está documentada em **[src/content/README.md](src/content/README.md)**.
+
+Mini-cheatsheet:
+
+```ts
+// src/data/cap-vii.ts (resumido)
 {
-  number: 1,                               // número (ou "A"/"B"/… para drills)
-  title:  "Exercitium 1",
-  tag:    "terminações nominais e verbais",
-  tip: {
-    text:      "Pergunte sempre…",         // HTML permitido
-    qualifier: null                        // ou "o mais importante deste capítulo"
-  },
-  exemplum: null,                          // opcional, HTML
-  questions: [                             // {} marca lacuna; {md}/{lg}/{xl}/{xxl} para campos maiores
-    "Serv{} abest; dominus serv{} vocat.",
-    …
+  number: 1,
+  title: "Exercitium 1",
+  tag: "léxico do capítulo VII",
+  tip: { text: "Vocabulário central…", qualifier: null },
+  questions: [
+    "Aemilia in peristȳlō Iūlium {exspectat:md}. // espera",
+    "Iūlia rosam ante nāsum {tenet:md}. // segura",
   ],
-  answers: ["us", "um", …],                // ordem segue as {} das questions
-  phraseMode: false,                       // true: matching tolera ordem livre e ab≡ā
-  auxilia: [ … ],                          // grupos do painel lateral
-  references: ['acusativo']                // ids de tópicos da seção Explicātiōnēs
+  // sem `answers` — vem dos placeholders inline
+  phraseMode: false,
+  auxilia: [
+    { label: "verba", type: "words", words: ["<i>exspectāre</i>", "<i>tenēre</i>"] }
+  ],
+  references: ["dativo"]   // → src/content/topics/vii/dativo.md
 }
 ```
-
-Alternativas equivalentes usam `|`: `"eīs|iīs"` aceita ambas.
-
-### Forma do conteúdo/explicações
-
-```js
-chapter.content = {
-  topics: [
-    {
-      id:      'acusativo',
-      title:   'Acusativo: o caso do objeto direto',
-      bookRef: 'Cap. V, ll. 1–46',         // citação ao livro Familia Romana
-      body:    `<p>HTML completo da explicação…</p>`
-    },
-    …
-  ]
-}
-```
-
-As explicações estão em pt-BR. Citações ao livro usam o formato `Cap. X, ll. M–N` (versūs dentro do capítulo) ou `Cap. X, gramm. ll. M–N` (seção *Grammatica Latīna*). O texto da explicação é original.
 
 ---
 

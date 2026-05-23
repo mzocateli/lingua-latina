@@ -5,6 +5,8 @@ const chapter: Chapter = {
   "numeral": "VII",
   "title": "Puella et rosa",
   "blurb": "Foco: dativo singular/plural; pronome <em>is, ea, id</em>; demonstrativo <em>hic, haec, hoc</em>; relativo.",
+  "grammarIntro": "Os pontos formais do capítulo: o <em>dativo</em> (caso do destinatário), o reflexivo <em>sē</em>, o demonstrativo <em>hic, haec, hoc</em>, e a distinção entre acusativo de direção e ablativo de localização.",
+  "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VII</em>. Aqui aparecem objetos concretos (espelho, lágrima, maçã) e verbos de ação cotidiana (abrir, fechar, esperar) — todos úteis para o resto do livro.",
   "exercises": [
     {
       "index": 400,
@@ -17,15 +19,15 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Aemilia in peristȳlō Iūlium {exspectat:md}. <em>(espera)</em>",
-        "Iūlia rosam ante nāsum {tenet:md}. <em>(segura)</em>",
-        "Iūlia {lacrimat:md}; in {oculīs:md} eius {lacrimae:md} sunt. <em>(chora; olhos; lágrimas)</em>",
-        "Iūlia {speculum:md} sūmit et sē in eō videt. <em>(espelho — acus. n.)</em>",
-        "Syra ōstium {aperit:md} et intrat. <em>(abre)</em>",
-        "Iūlia: 'Syra, {claude:md} ōstium!' Syra ōstium {claudit:md}. <em>(fechar — imp. + ind.)</em>",
-        "Syra: 'Foedus? {immō:md} formōsus est nāsus tuus!' <em>(pelo contrário)</em>",
-        "Iūlia sē {vertit:md} et Syram post sē videt. <em>(verte se)</em>",
-        "Syra: '{terge:md} oculōs, Iūlia! {es:md} laeta!' <em>(enxuga; sê)</em>"
+        "Aemilia in peristȳlō Iūlium {exspectat:md}. // espera",
+        "Iūlia rosam ante nāsum {tenet:md}. // segura",
+        "Iūlia {lacrimat:md}; in {oculīs:md} eius {lacrimae:md} sunt. // chora; olhos; lágrimas",
+        "Iūlia {speculum:md} sūmit et sē in eō videt. // espelho — acus. n.",
+        "Syra ōstium {aperit:md} et intrat. // abre",
+        "Iūlia: 'Syra, {claude:md} ōstium!' Syra ōstium {claudit:md}. // fechar — imp. + ind.",
+        "Syra: 'Foedus? {immō:md} formōsus est nāsus tuus!' // pelo contrário",
+        "Iūlia sē {vertit:md} et Syram post sē videt. // verte se",
+        "Syra: '{terge:md} oculōs, Iūlia! {es:md} laeta!' // enxuga; sê"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -67,14 +69,14 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlia <u>sē</u> in speculō videt (= Iūlia vê Iūlia). Iūlia <u>eam</u> videt (= Iūlia vê outra fêmea).",
       "questions": [
-        "Aemilia Iūliam vocat: Aemilia {eam:md} vocat. <em>(outra pessoa)</em>",
-        "Iūlia in speculō {sē:md} videt et {sē:md} interrogat. <em>(reflexivo, 2×)</em>",
-        "Iūlia ōstium post {sē:md} claudit. <em>(reflexivo)</em>",
-        "Syra Iūliam videt: Syra {eam:md} videt; Iūlia autem nōn {sē:md} videt — vertit sē. <em>(eam; sē)</em>",
-        "Iūlia speculum ante Syram tenet; Syra nāsum suum in eō videt: Syra {sē:md} videt et {eam:md} (= Syra) oculōs claudit. <em>(sē; eam — Syra fecha os olhos)</em>",
-        "Aemilia ad Iūlium adit; {sē:md} (= sē) ad eum vertit et {eam:md} (= eum) salūtat. <em>(sē, eum)</em>",
+        "Aemilia Iūliam vocat: Aemilia {eam:md} vocat. // outra pessoa",
+        "Iūlia in speculō {sē:md} videt et {sē:md} interrogat. // reflexivo, 2×",
+        "Iūlia ōstium post {sē:md} claudit. // reflexivo",
+        "Syra Iūliam videt: Syra {eam:md} videt; Iūlia autem nōn {sē:md} videt — vertit sē. // eam; sē",
+        "Iūlia speculum ante Syram tenet; Syra nāsum suum in eō videt: Syra {sē:md} videt et {eam:md} (= Syra) oculōs claudit. // sē; eam — Syra fecha os olhos",
+        "Aemilia ad Iūlium adit; {sē:md} (= sē) ad eum vertit et {eam:md} (= eum) salūtat. // sē, eum",
         "Iūlius fīliam suam videt; Iūlia ad eum currit et {sē:md} (= sē) ad patrem vertit.",
-        "Quīntus Mārcum nōn {eum:md} videt — frāter eius abest. <em>(eum)</em>",
+        "Quīntus Mārcum nōn {eum:md} videt — frāter eius abest. // eum",
         "Mārcus rīdet: {sē:md} (= sē) rīdentem in speculō videt et {eum:md} (= eum, Quīntum) quoque rīdentem aspicit."
       ],
       "phraseMode": false,
@@ -153,16 +155,16 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Mārcus nōn {sōlum:md} Iūliam pulsat, {sed etiam:md} eam rīdet. <em>(não só … mas também)</em>",
-        "{et:md} māla {et:md} pira in saccīs sunt. <em>(tanto … quanto)</em>",
-        "Iūlius nōn sōlum mala dat fīliīs, {sed etiam:md} pira. <em>(mas também)</em>",
-        "Iūlius {et:md} fīliōs {et:md} fīliam habet; {et:md} servōs {et:md} ancillās. <em>(tanto…quanto, 2 pares)</em>",
-        "Iūlia in cubiculō suō {neque:md} ridet {neque:md} cantat — plōrat tantum. <em>(nem … nem)</em>",
-        "{nōn sōlum:md} Iūlius puerīs mala dat, sed etiam ancillīs. <em>(não só)</em>",
-        "{et:md} pater {et:md} māter fīliōs amant. <em>(tanto…quanto)</em>",
+        "Mārcus nōn {sōlum:md} Iūliam pulsat, {sed etiam:md} eam rīdet. // não só … mas também",
+        "{et:md} māla {et:md} pira in saccīs sunt. // tanto … quanto",
+        "Iūlius nōn sōlum mala dat fīliīs, {sed etiam:md} pira. // mas também",
+        "Iūlius {et:md} fīliōs {et:md} fīliam habet; {et:md} servōs {et:md} ancillās. // tanto…quanto, 2 pares",
+        "Iūlia in cubiculō suō {neque:md} ridet {neque:md} cantat — plōrat tantum. // nem … nem",
+        "{nōn sōlum:md} Iūlius puerīs mala dat, sed etiam ancillīs. // não só",
+        "{et:md} pater {et:md} māter fīliōs amant. // tanto…quanto",
         "Iūlius nōn sōlum fīliīs mala dat, {sed etiam:md} ancillīs.",
-        "Iūlia sōla est: {neque:md} ridet {neque:md} cantat, {neque:md} clāmat {neque:md} verbera dat. <em>(nem … nem, 2 pares)</em>",
-        "Mēdus {neque:md} dominum vidēre {neque:md} eī servīre vult. <em>(nem … nem)</em>"
+        "Iūlia sōla est: {neque:md} ridet {neque:md} cantat, {neque:md} clāmat {neque:md} verbera dat. // nem … nem, 2 pares",
+        "Mēdus {neque:md} dominum vidēre {neque:md} eī servīre vult. // nem … nem"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -319,17 +321,17 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlius ad vīllam {advenit:md}; puerī: '{salvēte:md}, pater!' <em>(chega; saudação plural)</em>",
-        "Ōstium ab {ostiāriō:md} aperitur. <em>(servo da porta — abl. sg.)</em>",
-        "In saccīs sunt {māla:md} et {pira:md}. <em>(maçãs e peras)</em>",
-        "Saccī nōn vacuī, sed {plēnī:md} sunt. <em>(cheios)</em>",
-        "In ūnō sacco {inest:md} mālum, in altero {insunt:md} multa pira. <em>(está dentro; estão dentro)</em>",
+        "Iūlius ad vīllam {advenit:md}; puerī: '{salvēte:md}, pater!' // chega; saudação plural",
+        "Ōstium ab {ostiāriō:md} aperitur. // servo da porta — abl. sg.",
+        "In saccīs sunt {māla:md} et {pira:md}. // maçãs e peras",
+        "Saccī nōn vacuī, sed {plēnī:md} sunt. // cheios",
+        "In ūnō sacco {inest:md} mālum, in altero {insunt:md} multa pira. // está dentro; estão dentro",
         "Iūlius mālum Mārcō {dat:md}: pater fīliō mālum {dat:md}.",
-        "Iūlia ad patrem currit eīque {adit:md} {osculum:md}. <em>(adit; osculum)</em>",
+        "Iūlia ad patrem currit eīque {adit:md} {osculum:md}. // adit; osculum",
         "Iūlia nōn in ātriō, sed {illīc:md} (em outro lugar) in cubiculō est.",
-        "Iūlia {ē:md} cubiculō {exit:md} et ad ātrium {exeunt:md}. <em>(ē; exit; eunt?)</em>",
-        "Iūlia ad patrem {currit:md}. <em>(corre)</em>",
-        "Iūlia: '{nōnne:md} pulchra haec rosa est?' <em>(nōnne? — espera sim)</em>"
+        "Iūlia {ē:md} cubiculō {exit:md} et ad ātrium {exeunt:md}. // ē; exit; eunt?",
+        "Iūlia ad patrem {currit:md}. // corre",
+        "Iūlia: '{nōnne:md} pulchra haec rosa est?' // nōnne? — espera sim"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -450,7 +452,7 @@ const chapter: Chapter = {
         "Mārcus mālum tenet et {id} ad ōs portat.",
         "Iūlia rosās videt et {eās} olfacit.",
         "Quīntus pirum capit; Iūlius {id} videt.",
-        "Iūlia in speculō {sē} videt. <em>(reflexivo)</em>",
+        "Iūlia in speculō {sē} videt. // reflexivo",
         "Mēdus Lȳdiam amat: Mēdus {eam} amat.",
         "Aemilia fīliōs amat: Aemilia {eōs} amat."
       ],
@@ -507,9 +509,9 @@ const chapter: Chapter = {
         "Iūlius Mārc{ō} mālum dat.",
         "Iūlius Iūli{ae} rosam dat.",
         "Aemilia Syr{ae} imperat.",
-        "Iūlius servōs vocat et {eīs|iīs} imperat. <em>(pronome)</em>",
+        "Iūlius servōs vocat et {eīs|iīs} imperat. // pronome",
         "Pater fīli{īs} (Mārcō et Quīntō) māla dat.",
-        "Iūlia mātrī {suae} ōsculum dat. <em>(possessivo, dat. f. sg.)</em>",
+        "Iūlia mātrī {suae} ōsculum dat. // possessivo, dat. f. sg.",
         "Iūlius epistulam scrībit fēmin{ae}."
       ],
       "phraseMode": false,
@@ -569,14 +571,14 @@ const chapter: Chapter = {
       },
       "exemplum": "Hic vir Iūlius est. — Aemilia hunc virum amat.",
       "questions": [
-        "{haec:md} ancilla Syra est. <em>(nōm.)</em>",
-        "{hoc:md} cubiculum Iūliae est. <em>(nōm.)</em>",
-        "{hic:md} servus Mēdus est. <em>(nōm.)</em>",
-        "Aemilia {hanc:md} ancillam vocat. <em>(acus.)</em>",
-        "Iūlius {hunc:md} servum vocat. <em>(acus.)</em>",
-        "Iūlia {hoc:md} mālum capit. <em>(acus.)</em>",
-        "{hī:md} sunt fīliī Iūliī. <em>(nōm. pl. m.)</em>",
-        "{hae:md} sunt fīliae Iūliī. <em>(nōm. pl. f.)</em>"
+        "{haec:md} ancilla Syra est. // nōm.",
+        "{hoc:md} cubiculum Iūliae est. // nōm.",
+        "{hic:md} servus Mēdus est. // nōm.",
+        "Aemilia {hanc:md} ancillam vocat. // acus.",
+        "Iūlius {hunc:md} servum vocat. // acus.",
+        "Iūlia {hoc:md} mālum capit. // acus.",
+        "{hī:md} sunt fīliī Iūliī. // nōm. pl. m.",
+        "{hae:md} sunt fīliae Iūliī. // nōm. pl. f."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -1176,299 +1178,7 @@ const chapter: Chapter = {
       "references": [],
       "index": 407
     }
-  ],
-  "content": {
-    "topics": [
-      {
-        "id": "dativo",
-        "title": "Dativo: o caso do destinatário",
-        "bookRef": "Cap. VII, ll. 30–60; gramm. ll. 105–121",
-        "body": "\n                <p>O <strong>dativo</strong> marca a pessoa <em>a quem</em> algo é\n                dado, dito, mostrado — o destinatário/beneficiário da ação. Em\n                português usamos preposição (<em>a, para</em>); em latim, basta o caso.</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>sg.</th><th>pl.</th></tr>\n                  <tr><td>m. / n.</td><td>-ō (<em>servō, cubiculō</em>)</td><td>-īs (<em>servīs, cubiculīs</em>)</td></tr>\n                  <tr><td>f.</td><td>-ae (<em>ancillae</em>)</td><td>-īs (<em>ancillīs</em>)</td></tr>\n                </table>\n                <p>Pergunte sempre <em>cui? / quibus?</em> (a quem? / a que coisas?).\n                Verbos típicos: <em>dat, ostendit, dīcit, mittit</em>.</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>fīliō</strong> mālum dat. — Aemilia\n                  <strong>Iūliae</strong> ōsculum dat. — Dominus\n                  <strong>servīs</strong> nummōs dat.\n                </div>\n            "
-      },
-      {
-        "id": "pronome-is",
-        "title": "Pronome <em>is, ea, id</em> e reflexivo <em>sē</em>",
-        "bookRef": "Cap. VII, ll. 1–60",
-        "body": "\n                <p><strong>Is, ea, id</strong> é o pronome anafórico — substitui um\n                nome já mencionado (<em>ele, ela, isso</em>). É declinável e\n                aparece em todos os casos:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm.</td><td>is</td><td>ea</td><td>id</td></tr>\n                  <tr><td>acus.</td><td>eum</td><td>eam</td><td>id</td></tr>\n                  <tr><td>dat.</td><td>eī</td><td>eī</td><td>eī</td></tr>\n                  <tr><td>abl.</td><td>eō</td><td>eā</td><td>eō</td></tr>\n                </table>\n                <p><strong>Sē</strong> (acus./abl.) é o <em>reflexivo</em> — usa-se\n                quando o pronome se refere ao próprio sujeito da oração. Compare:</p>\n                <div class=\"ex-block\">\n                  Iūlia <strong>sē</strong> in speculō videt — <em>Júlia vê a si mesma.</em><br>\n                  Iūlia <strong>eam</strong> in speculō videt — <em>Júlia vê <u>ela</u>\n                  (outra pessoa).</em>\n                </div>\n                <p>O paradigma completo de <em>is/ea/id</em> aparece em Cap. VIII; em\n                Cap. VII basta o que está acima.</p>\n            "
-      },
-      {
-        "id": "demonstrativo-hic",
-        "title": "Demonstrativo <em>hic, haec, hoc</em>",
-        "bookRef": "Cap. VII, ll. 61–104",
-        "body": "\n                <p><strong>Hic, haec, hoc</strong> é o demonstrativo de proximidade\n                — \"este, esta, isto\" (próximo ao falante). Concorda em\n                <em>gênero</em>, <em>número</em> e <em>caso</em> com o substantivo:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n                  <tr><td>nōm. sg.</td><td>hic</td><td>haec</td><td>hoc</td></tr>\n                  <tr><td>acus. sg.</td><td>hunc</td><td>hanc</td><td>hoc</td></tr>\n                  <tr><td>nōm. pl.</td><td>hī</td><td>hae</td><td>haec</td></tr>\n                </table>\n                <p>Identifica o gênero pelo final do substantivo:\n                <em>-us, -er</em> → m, <em>-a</em> → f, <em>-um</em> → n.\n                A regra é a mesma do relativo <em>quī, quae, quod</em>.</p>\n                <div class=\"ex-block\">\n                  <strong>Hic</strong> vir, <strong>haec</strong> rosa,\n                  <strong>hoc</strong> mālum.\n                </div>\n            "
-      },
-      {
-        "id": "relativo-concordancia",
-        "title": "Relativo: concordância em gênero e número",
-        "bookRef": "Cap. VII, ll. 61–104",
-        "body": "\n                <p>O pronome relativo <em>quī, quae, quod</em> retoma o\n                <strong>antecedente</strong>: a palavra na oração principal a que ele\n                se refere. A regra essencial é simples:</p>\n                <ul>\n                  <li>O <strong>gênero</strong> e o <strong>número</strong> vêm do\n                  antecedente.</li>\n                  <li>O <strong>caso</strong> vem da função do relativo\n                  <em>dentro da oração relativa</em>.</li>\n                </ul>\n                <div class=\"ex-block\">\n                  <em>Rosa <strong>quae</strong> hīc est pulchra est.</em><br>\n                  <strong>quae</strong> = feminino singular (concorda com <em>rosa</em>);\n                  nominativo (é sujeito de <em>est</em> na relativa).\n                </div>\n                <p>Verifica sempre <em>quem</em> o relativo está retomando\n                <em>antes</em> de decidir gênero/número, e <em>qual papel</em> ele\n                exerce na oração subordinada antes de decidir o caso.</p>\n            "
-      },
-      {
-        "id": "possessivo-suus",
-        "title": "Possessivo <em>suus, -a, -um</em>",
-        "bookRef": "Cap. VII, ll. 30–104",
-        "body": "\n                <p><strong>Suus, sua, suum</strong> é o possessivo de 3ª pessoa\n                <em>reflexivo</em> — refere-se ao próprio sujeito da oração.\n                Concorda com aquilo que é <em>possuído</em>, não com o dono:</p>\n                <div class=\"ex-block\">\n                  Iūlius <strong>suam</strong> uxōrem amat. —\n                  <em>Júlio ama a sua (própria) esposa.</em><br>\n                  Iūlius <strong>eius</strong> uxōrem amat. —\n                  <em>Júlio ama a esposa <u>dele</u> (de outra pessoa).</em>\n                </div>\n                <p>Compare com <em>meus, tuus, noster, vester</em> (1ª/2ª pessoas) e\n                com <em>eius</em> (genitivo de <em>is/ea/id</em>, usado quando o\n                possuidor <strong>não</strong> é o sujeito).</p>\n            "
-      }
-    ],
-    "grammar": {
-      "intro": "Os pontos formais do capítulo: o <em>dativo</em> (caso do destinatário), o reflexivo <em>sē</em>, o demonstrativo <em>hic, haec, hoc</em>, e a distinção entre acusativo de direção e ablativo de localização.",
-      "sections": [
-        {
-          "heading": "Datīvus",
-          "bookRef": "Cap. VII, ll. 95–120; gramm. ll. 121–152",
-          "body": "\n            <p>O <strong>dativo</strong> é o caso do <em>destinatário</em> da ação —\n            a quem se dá, a quem se diz, para quem se faz. Responde a\n            <em>cui?</em> (a quem?, sg.) ou <em>quibus?</em> (a quem?, pl.).</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>sg.</th><th>pl.</th></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>serv<strong>ō</strong></td><td>serv<strong>īs</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>ancill<strong>ae</strong></td><td>ancill<strong>īs</strong></td></tr>\n              <tr><td class=\"label\">n. (-um)</td><td>oppid<strong>ō</strong></td><td>oppid<strong>īs</strong></td></tr>\n            </table>\n            <p>Note que o dativo singular m./n. (<em>-ō</em>) é <em>idêntico ao ablativo</em>;\n            só o contexto e a preposição (ou sua ausência) distinguem:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>dat.</th><th>abl.</th></tr>\n              <tr><td class=\"label\">m./n. sg.</td><td>-ō (sem prep.)</td><td>-ō (com prep. <em>cum, in, ex, ab</em>)</td></tr>\n              <tr><td class=\"label\">f. sg.</td><td>-ae (igual ao gen.!)</td><td>-ā</td></tr>\n              <tr><td class=\"label\">pl.</td><td>-īs</td><td>-īs</td></tr>\n            </table>\n            <p>O pronome <em>is, ea, id</em> tem dat. sg. <em>eī</em> (m./f./n., invariável)\n            e dat. pl. <em>iīs / eīs</em>; o relativo, dat. sg. <em>cui</em>, dat. pl. <em>quibus</em>.</p>\n            <div class=\"ex-block\">\n              Iūlius Mārc<strong>ō</strong> mālum dat. — Iūlius fīli<strong>īs</strong> māla dat.<br>\n              Iūlius ancill<strong>ae</strong> mālum dat. — Iūlius ancill<strong>īs</strong> māla dat.<br>\n              Iūlius <strong>eī</strong> (= Iūliae) mālum dat. — Iūlia mal<strong>ō</strong> suō ōsculum dat.\n            </div>\n            "
-        },
-        {
-          "heading": "Reflexīvum: <em>sē</em>",
-          "bookRef": "Cap. VII, ll. 6–30",
-          "body": "\n            <p>Quando o objeto da ação é o <em>próprio sujeito</em>, usa-se o\n            reflexivo <strong>sē</strong> (= ele(s)/ela(s) mesmo(s)). É invariável,\n            só para 3ª pessoa, e só aparece em casos oblíquos.</p>\n            <table class=\"paradigm\">\n              <tr><th>função</th><th>refere-se a</th><th>forma</th></tr>\n              <tr><td class=\"label\">objeto ≠ sujeito</td><td>outra pessoa</td><td><em>eum / eam / eōs / eās</em></td></tr>\n              <tr><td class=\"label\">objeto = sujeito</td><td>o próprio sujeito</td><td><em>sē</em></td></tr>\n            </table>\n            <div class=\"ex-block\">\n              Iūlia <strong>sē</strong> in speculō videt. (Iūlia vê <em>Iūlia</em>)<br>\n              Iūlia <strong>eam</strong> videt. (Iūlia vê <em>outra fêmea</em>)<br>\n              Iūlia ōstium post <strong>sē</strong> claudit. (atrás de si mesma)\n            </div>\n            "
-        },
-        {
-          "heading": "Acus. de direção × abl. de localização",
-          "bookRef": "Cap. VII, ll. 5–25; cf. cap. VI",
-          "body": "\n            <p>Com <em>in</em>, a diferença entre <strong>movimento para dentro</strong>\n            e <strong>permanência</strong> aparece pela escolha do caso, não pela\n            preposição:</p>\n            <table class=\"paradigm\">\n              <tr><th>sentido</th><th>caso</th><th>exemplo</th></tr>\n              <tr><td class=\"label\">movimento (quō?)</td><td>in + <strong>acus.</strong></td><td><em>in cubicul<strong>um</strong> intrat</em></td></tr>\n              <tr><td class=\"label\">localização (ubi?)</td><td>in + <strong>abl.</strong></td><td><em>in cubicul<strong>ō</strong> est</em></td></tr>\n            </table>\n            <p>O mesmo vale para <em>sub, super</em>: <em>+acus.</em> para movimento,\n            <em>+abl.</em> para repouso.</p>\n            "
-        },
-        {
-          "heading": "Demonstrātīvum: <em>hic, haec, hoc</em>",
-          "bookRef": "Cap. VII, ll. 85–95",
-          "body": "\n            <p>O demonstrativo <strong>hic, haec, hoc</strong> aponta para algo\n            <em>próximo ao falante</em> (= isto/este aqui). Cap. VII introduz só o\n            nominativo sg.:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>m.</th><th>f.</th><th>n.</th></tr>\n              <tr><td class=\"label\">nōm. sg.</td><td>hic</td><td>haec</td><td>hoc</td></tr>\n            </table>\n            <p>O paradigma completo (com gen. <em>huius</em>, dat. <em>huic</em>, acus.\n            <em>hunc/hanc/hoc</em>) virá em VIII. Compare com:</p>\n            <ul>\n              <li><strong>is, ea, id</strong> — anafórico, neutro de distância\n              (= ele/aquilo já mencionado).</li>\n              <li><strong>hic, haec, hoc</strong> — perto do falante (= este).</li>\n              <li><strong>ille, illa, illud</strong> (cap. VIII) — distante (= aquele).</li>\n            </ul>\n            <div class=\"ex-block\">\n              <strong>Haec</strong> rosa pulchra est. — <strong>Hoc</strong> mālum tuum est, Iūlia.\n            </div>\n            "
-        },
-        {
-          "heading": "Possessīvum <em>suus</em> (revisão)",
-          "bookRef": "Cap. VII (transversal); cf. cap. IV",
-          "body": "\n            <p>O reflexivo <em>sē</em> tem como adjetivo possessivo correspondente\n            <strong>suus, -a, -um</strong> (= seu próprio): usa-se quando o possuidor\n            é o <em>sujeito</em>. Para outro possuidor, <em>eius / eōrum / eārum</em>.</p>\n            <div class=\"ex-block\">\n              Iūlia mal<strong>ō suō</strong> ōsculum dat. (o próprio mālum de Iūlia)<br>\n              Iūlia mālum <strong>eius</strong> (= patris) videt. (o de outro)\n            </div>\n            "
-        }
-      ]
-    },
-    "vocabulary": {
-      "intro": "As palavras novas introduzidas em <em>Cap. VII</em>. Aqui aparecem objetos concretos (espelho, lágrima, maçã) e verbos de ação cotidiana (abrir, fechar, esperar) — todos úteis para o resto do livro.",
-      "groups": [
-        {
-          "label": "Nōmina · 1ª (-a)",
-          "tag": "f.",
-          "entries": [
-            {
-              "lemma": "lacrima, -ae",
-              "gloss": "lágrima"
-            }
-          ]
-        },
-        {
-          "label": "Nōmina · 2ª (-us, -um)",
-          "tag": "m. / n.",
-          "entries": [
-            {
-              "lemma": "oculus, -ī",
-              "gloss": "olho",
-              "note": "m."
-            },
-            {
-              "lemma": "ōstiārius, -ī",
-              "gloss": "porteiro, ostiário",
-              "note": "m. (< <i>ōstium</i>)"
-            },
-            {
-              "lemma": "mālum, -ī",
-              "gloss": "maçã",
-              "note": "n."
-            },
-            {
-              "lemma": "ōsculum, -ī",
-              "gloss": "beijo",
-              "note": "n."
-            },
-            {
-              "lemma": "pirum, -ī",
-              "gloss": "pera",
-              "note": "n."
-            },
-            {
-              "lemma": "speculum, -ī",
-              "gloss": "espelho",
-              "note": "n."
-            }
-          ]
-        },
-        {
-          "label": "Adiectīva",
-          "tag": "-us, -a, -um",
-          "entries": [
-            {
-              "lemma": "fōrmōsus, -a, -um",
-              "gloss": "belo, formoso",
-              "note": "≈ <i>pulcher</i>"
-            },
-            {
-              "lemma": "plēnus, -a, -um",
-              "gloss": "cheio",
-              "note": "≠ <i>vacuus</i>"
-            }
-          ]
-        },
-        {
-          "label": "Verba",
-          "tag": "1ª – 4ª",
-          "entries": [
-            {
-              "lemma": "exspectat, exspectant",
-              "gloss": "espera, aguarda",
-              "note": "[1] <i>exspectāre</i>"
-            },
-            {
-              "lemma": "lacrimat, lacrimant",
-              "gloss": "chora, derrama lágrimas",
-              "note": "[1] <i>lacrimāre</i>"
-            },
-            {
-              "lemma": "dat, dant",
-              "gloss": "dá",
-              "note": "[1] <i>dare</i> (irreg.)"
-            },
-            {
-              "lemma": "tenet, tenent",
-              "gloss": "segura, tem em mãos",
-              "note": "[2] <i>tenēre</i>"
-            },
-            {
-              "lemma": "terget, tergent",
-              "gloss": "limpa, enxuga",
-              "note": "[2] <i>tergēre</i>"
-            },
-            {
-              "lemma": "vertit, vertunt",
-              "gloss": "vira, gira",
-              "note": "[3] <i>vertere</i>"
-            },
-            {
-              "lemma": "currit, currunt",
-              "gloss": "corre",
-              "note": "[3] <i>currere</i>"
-            },
-            {
-              "lemma": "aperit, aperiunt",
-              "gloss": "abre",
-              "note": "[4] <i>aperīre</i>"
-            },
-            {
-              "lemma": "claudit, claudunt",
-              "gloss": "fecha",
-              "note": "[3] <i>claudere</i>"
-            }
-          ]
-        },
-        {
-          "label": "Verba composita",
-          "tag": "compostos de <i>īre</i> e <i>esse</i>",
-          "entries": [
-            {
-              "lemma": "adit, adeunt",
-              "gloss": "vai a, dirige-se a",
-              "note": "<i>ad-</i> + <i>īre</i>"
-            },
-            {
-              "lemma": "advenit, adveniunt",
-              "gloss": "chega",
-              "note": "<i>ad-</i> + <i>venīre</i>"
-            },
-            {
-              "lemma": "exit, exeunt",
-              "gloss": "sai",
-              "note": "<i>ex-</i> + <i>īre</i>"
-            },
-            {
-              "lemma": "inest, īnsunt",
-              "gloss": "está dentro",
-              "note": "<i>in-</i> + <i>esse</i>"
-            },
-            {
-              "lemma": "es! este!",
-              "gloss": "sê! sede!",
-              "note": "imp. de <i>esse</i>"
-            }
-          ]
-        },
-        {
-          "label": "Prōnōmina",
-          "tag": "demonstr. <i>hic, haec, hoc</i>; dat. de <i>is</i>",
-          "entries": [
-            {
-              "lemma": "hic, haec, hoc",
-              "gloss": "este, esta, isto",
-              "note": "demonstrativo de proximidade"
-            },
-            {
-              "lemma": "cui",
-              "gloss": "a quem? / ao qual",
-              "note": "dat. sg. de <i>quis / quī</i>"
-            },
-            {
-              "lemma": "eī",
-              "gloss": "a ele, a ela",
-              "note": "dat. sg. de <i>is, ea, id</i>"
-            },
-            {
-              "lemma": "iīs",
-              "gloss": "a eles, a elas",
-              "note": "dat./abl. pl. de <i>is, ea, id</i>"
-            },
-            {
-              "lemma": "sē",
-              "gloss": "si mesmo (reflexivo)",
-              "note": "acus./abl. invariável"
-            }
-          ]
-        },
-        {
-          "label": "Adverbia · coniūnctiōnēs",
-          "entries": [
-            {
-              "lemma": "illīc",
-              "gloss": "lá, ali"
-            },
-            {
-              "lemma": "immō",
-              "gloss": "pelo contrário, ao contrário"
-            },
-            {
-              "lemma": "nōn sōlum … sed etiam",
-              "gloss": "não só … mas também"
-            },
-            {
-              "lemma": "et … et",
-              "gloss": "tanto … quanto"
-            },
-            {
-              "lemma": "neque … neque",
-              "gloss": "nem … nem"
-            },
-            {
-              "lemma": "nōnne?",
-              "gloss": "porventura não? (espera 'sim')"
-            }
-          ]
-        },
-        {
-          "label": "Praepositiō",
-          "entries": [
-            {
-              "lemma": "ē",
-              "gloss": "de dentro de",
-              "note": "+ abl. (= <i>ex</i> antes de consoante)"
-            }
-          ]
-        },
-        {
-          "label": "Verba grammatica",
-          "entries": [
-            {
-              "lemma": "datīvus, -ī",
-              "gloss": "dativo (caso do destinatário)"
-            }
-          ]
-        }
-      ]
-    }
-  }
+  ]
 };
 
 export default chapter;

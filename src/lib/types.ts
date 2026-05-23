@@ -15,49 +15,13 @@ export interface Chapter {
   numeral: string;
   title: string;
   blurb?: string;
+  /** Lead paragraph for the Grammatica Latīna section.
+   *  Individual sections live in the `grammar` Content Collection. */
+  grammarIntro?: string;
+  /** Lead paragraph for the Vocābula section.
+   *  The vocabulary itself is in the `vocabulary` Content Collection. */
+  vocabularyIntro?: string;
   exercises: Exercise[];
-  content?: ChapterContent;
-}
-
-export interface ChapterContent {
-  grammar?: Grammar;
-  vocabulary?: Vocabulary;
-  topics?: Topic[];
-}
-
-export interface Grammar {
-  intro?: string;
-  sections: GrammarSection[];
-}
-
-export interface GrammarSection {
-  heading?: string;
-  bookRef?: string;
-  body?: string;
-}
-
-export interface Vocabulary {
-  intro?: string;
-  groups: VocabGroup[];
-}
-
-export interface VocabGroup {
-  label: string;
-  tag?: string;
-  entries: VocabEntry[];
-}
-
-export interface VocabEntry {
-  lemma: string;
-  gloss: string;
-  note?: string;
-}
-
-export interface Topic {
-  id: string;
-  title: string;
-  bookRef?: string;
-  body: string;
 }
 
 export type Exercise = StandardExercise | ParadigmExercise;
