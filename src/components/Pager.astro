@@ -1,0 +1,34 @@
+---
+import { chapterIndex } from '~/lib/chapters';
+import { chapterHref } from '~/lib/paths';
+
+interface Props {
+  activeSlug: string;
+}
+
+const { activeSlug } = Astro.props;
+const here = chapterIndex.findIndex(c => c.slug === activeSlug);
+const prev = here > 0 ? chapterIndex[here - 1] : null;
+const next = here < chapterIndex.length - 1 ? chapterIndex[here + 1] : null;
+---
+
+{here !== -1 && (
+  <nav class="pager" aria-label="Navigatio capitulorum">
+    {prev ? (
+      <a class="pager-prev" href={chapterHref(prev.slug)}>
+        <span class="pager-direction">Capitulum anterius</span>
+        <span class="pager-title">Cap. {prev.numeral} — {prev.title}</span>
+      </a>
+    ) : (
+      <span class="pager-prev pager-empty">⸻ (initium) ⸻</span>
+    )}
+    {next ? (
+      <a class="pager-next" href={chapterHref(next.slug)}>
+        <span class="pager-direction">Capitulum sequēns</span>
+        <span class="pager-title">Cap. {next.numeral} — {next.title}</span>
+      </a>
+    ) : (
+      <span class="pager-next pager-empty">⸻ (fīnis) ⸻</span>
+    )}
+  </nav>
+)}

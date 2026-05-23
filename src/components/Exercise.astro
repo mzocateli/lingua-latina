@@ -1,0 +1,84 @@
+---
+import type { Chapter, Exercise } from '~/lib/types';
+import { isParadigm } from '~/lib/types';
+import { expandQuestion, resolveParadigmAnswers, fillAnswers } from '~/lib/expand-question';
+import ExerciseTip from './ExerciseTip.astro';
+import Auxilia from './Auxilia.astro';
+import ReferenceButton from './ReferenceButton.astro';
+import ParadigmTables from './ParadigmTables.astro';
+
+interface Props {
+  exercise: Exercise;
+  chapter: Chapter;
+}
+
+const { exercise, chapter } = Astro.props;
+const paradigm = isParadigm(exercise);
+
+const resolvedAnswers = paradigm
+  ? resolveParadigmAnswers(exercise.tables, exercise.answers)
+  : ((exercise as { answers: string[] }).answers || []);
+
+const articleClass = 'exercise' + (paradigm ? ' exercise-paradigm' : '');
+const dataAnswers = JSON.stringify(resolvedAnswers);
+const dataPhrase = exercise.phraseMode ? '1' : '0';
+const title = exercise.title || `Exercitium ${exercise.number}`;
+---
+
+<article
+  class={articleClass}
+  id={`ex-${exercise.number}`}
+  data-ex-number={String(exercise.number)}
+  data-answers={dataAnswers}
+  data-phrase={dataPhrase}
+>
+  <div class="exercise-head">
+    <div class="ex-num" set:html={title} />
+    {exercise.tag && <div class="ex-tag" set:html={exercise.tag} />}
+  </div>
+
+  <ExerciseTip tip={exercise.tip} />
+
+  <div class="exercise-body">
+    <div class="exercise-main">
+      {exercise.exemplum && (
+        <p class="exemplum" set:html={exercise.exemplum} />
+      )}
+
+      {paradigm ? (
+        <ParadigmTables tables={exercise.tables} />
+      ) : (
+        <ol class="questions">
+          {((exercise as { questions: string[] }).questions || []).map(q => (
+            <li set:html={expandQuestion(q)} />
+          ))}
+        </ol>
+      )}
+
+      <div class="controls">
+        <button class="reveal-btn" type="button">Aperī responsa</button>
+        <button class="clear-btn" type="button" title="Limpar respostas deste exercício">Mundā</button>
+        {exercise.references && exercise.references.length > 0 && (
+          <ReferenceButton refs={exercise.references} chapter={chapter} />
+        )}
+      </div>
+
+      <div class="answer">
+        <span class="answer-header">Responsa</span>
+        {paradigm ? (
+          <ParadigmTables tables={exercise.tables} answers={resolvedAnswers} reveal />
+        ) : (
+          <ol>
+            {((exercise as { questions: string[] }).questions || []).map(q => (
+              <li set:html={fillAnswers(q, (exercise as { answers: string[] }).answers || [])} />
+            ))}
+          </ol>
+        )}
+      </div>
+    </div>
+
+    {exercise.auxilia && exercise.auxilia.length > 0 && (
+      <Auxilia groups={exercise.auxilia} />
+    )}
+  </div>
+</article>

@@ -1,0 +1,28 @@
+---
+import type { Chapter } from '~/lib/types';
+
+interface Props {
+  chapter: Chapter;
+}
+
+const { chapter } = Astro.props;
+const content = chapter.content || {};
+const hasGrammar = !!content.grammar;
+const hasVocab = !!(content.vocabulary?.groups && content.vocabulary.groups.length);
+const hasTopics = !!(content.topics && content.topics.length);
+---
+
+<nav class="section-bar" aria-label="Saltar para seção">
+  <ul class="section-bar-list">
+    {hasGrammar && (
+      <li><a href="#grammatica" class="section-bar-link">§ Grammatica</a></li>
+    )}
+    {hasVocab && (
+      <li><a href="#vocabula" class="section-bar-link">☙ Vocābula</a></li>
+    )}
+    {hasTopics && (
+      <li><a href="#explicationes" class="section-bar-link">❦ Explicātiōnēs</a></li>
+    )}
+    <li><a href="#exercitia-title" class="section-bar-link">✎ Exercitia</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,22 @@
+---
+import type { ExerciseTip } from '~/lib/types';
+
+interface Props {
+  tip: ExerciseTip | null | undefined;
+}
+
+const { tip } = Astro.props;
+---
+
+{tip && tip.text && (
+  <div class="tip">
+    <div class="tip-marker">
+      <span class="tip-ornament">❦</span>
+      <span class="tip-label">Auxilium</span>
+      {tip.qualifier && (
+        <span class="tip-sub" set:html={`— ${tip.qualifier}`} />
+      )}
+    </div>
+    <div class="tip-text" set:html={tip.text} />
+  </div>
+)}

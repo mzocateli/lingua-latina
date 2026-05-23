@@ -1,0 +1,114 @@
+---
+import type { Chapter } from '~/lib/types';
+
+interface Props {
+  chapter: Chapter;
+}
+
+const { chapter } = Astro.props;
+const content = chapter.content;
+const numeralLower = String(chapter.numeral || '').toLowerCase();
+
+function stripHtml(s: string): string {
+  return s.replace(/<[^>]+>/g, '');
+}
+
+const hasGrammar = !!content?.grammar;
+const hasVocab = !!(content?.vocabulary?.groups && content.vocabulary.groups.length);
+const hasTopics = !!(content?.topics && content.topics.length);
+const hasAny = hasGrammar || hasVocab || hasTopics;
+
+const grammarHeadings = content?.grammar?.sections?.map(s => s.heading).filter(Boolean) ?? [];
+
+const vocabGroups = content?.vocabulary?.groups ?? [];
+const totalVocabEntries = vocabGroups.reduce((n, g) => n + (g.entries ? g.entries.length : 0), 0);
+const vocabLabels = vocabGroups.map(g => stripHtml(g.label));
+
+const topicNames = (content?.topics ?? []).map(t => stripHtml(t.title));
+---
+
+{hasAny && (
+  <section class="content-section">
+    {hasGrammar && (
+      <details class="grammar-section" id="grammatica">
+        <summary class="grammar-summary">
+          <span class="section-marker">§</span>
+          <span class="section-title-inline" set:html={`Grammatica Latīna <span class="roman">· cap. ${numeralLower}</span>`} />
+          {grammarHeadings.length > 0 && (
+            <span class="section-summary-list" set:html={grammarHeadings.join(' · ')} />
+          )}
+        </summary>
+        {content!.grammar!.intro && (
+          <p class="grammar-intro" set:html={content!.grammar!.intro} />
+        )}
+        {(content!.grammar!.sections || []).map(s => (
+          <details class="grammar-block" open>
+            <summary class="grammar-block-summary">
+              {s.heading && <span class="grammar-heading" set:html={s.heading} />}
+              {s.bookRef && <span class="grammar-bookref" set:html={s.bookRef} />}
+            </summary>
+            {s.body && <div class="grammar-body" set:html={s.body} />}
+          </details>
+        ))}
+      </details>
+    )}
+
+    {hasVocab && (
+      <details class="vocab-section" id="vocabula">
+        <summary class="vocab-summary">
+          <span class="section-marker">☙</span>
+          <span class="section-title-inline" set:html={`Vocābula nova <span class="roman">· cap. ${numeralLower}</span>`} />
+          <span class="section-summary-list">{totalVocabEntries} palavras · {vocabLabels.join(' · ')}</span>
+        </summary>
+        {content!.vocabulary!.intro && (
+          <p class="vocab-intro" set:html={content!.vocabulary!.intro} />
+        )}
+        {vocabGroups.map(g => (
+          <div class="vocab-group">
+            <div class="vocab-group-head">
+              <span class="vocab-group-label" set:html={g.label} />
+              {g.tag && <span class="vocab-group-tag" set:html={g.tag} />}
+            </div>
+            <dl class="vocab-list">
+              {(g.entries || []).map(entry => (
+                <>
+                  <dt class="vocab-lemma" set:html={entry.lemma} />
+                  <dd class="vocab-gloss">
+                    <Fragment set:html={entry.gloss} />
+                    {entry.note && (
+                      <span class="vocab-note" set:html={` — ${entry.note}`} />
+                    )}
+                  </dd>
+                </>
+              ))}
+            </dl>
+          </div>
+        ))}
+      </details>
+    )}
+
+    {hasTopics && (
+      <details class="topics-section" id="explicationes">
+        <summary class="topics-summary">
+          <span class="section-marker">❦</span>
+          <span class="section-title-inline" set:html={`Explicātiōnēs <span class="roman">· referentiae · cap. ${numeralLower}</span>`} />
+          <span class="section-summary-list">{topicNames.join(' · ')}</span>
+        </summary>
+        <p class="content-intro">
+          Resumo breve para acompanhar o livro. Para a explicação completa, consulta as linhas
+          indicadas em <em>Familia Romana</em>. Clica num tópico para expandir.
+        </p>
+        {(content!.topics ?? []).map(t => (
+          <details class="content-topic" id={`content-${t.id}`}>
+            <summary class="content-topic-summary">
+              <span class="content-topic-marker">❦</span>
+              <span class="content-topic-title" set:html={t.title} />
+              {t.bookRef && <span class="content-topic-ref" set:html={t.bookRef} />}
+            </summary>
+            <div class="content-topic-body" set:html={t.body} />
+          </details>
+        ))}
+      </details>
+    )}
+  </section>
+)}
