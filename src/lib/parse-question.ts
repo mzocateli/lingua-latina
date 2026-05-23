@@ -25,6 +25,14 @@ const SIZE_RE = /^(md|lg|xl|xxl)$/;
 const INPUT_ATTRS =
   'autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"';
 
+/** Split `"…text… // hint"` into (text, hint?). The `//` separator never
+ *  appears in our HTML content, so this is unambiguous. */
+function splitHint(template: string): { main: string; hint: string | null } {
+  const m = template.match(/^([\s\S]*?)\s*\/\/\s*(.+)$/);
+  if (!m) return { main: template, hint: null };
+  return { main: m[1], hint: m[2].trim() };
+}
+
 /** Split a placeholder body into (answer, size). */
 function splitAnswerAndSize(body: string): { answer: string; size: string } {
   // Bare-size legacy form: {md}, {lg}, {xl}, {xxl}
@@ -47,25 +55,31 @@ export interface ParsedQuestion {
   answers: string[];
 }
 
-/** Convert a question template into HTML (with <input>s) + answer list. */
+/** Convert a question template into HTML (with <input>s) + answer list.
+ *  A trailing `// hint` is rendered as `<em>(hint)</em>` after the main text. */
 export function parseQuestion(template: string): ParsedQuestion {
+  const { main, hint } = splitHint(template);
   const answers: string[] = [];
-  const html = template.replace(PLACEHOLDER_RE, (_m, body: string) => {
+  let html = main.replace(PLACEHOLDER_RE, (_m, body: string) => {
     const { answer, size } = splitAnswerAndSize(body);
     answers.push(answer);
     const cls = 'blank' + (size ? ' blank-' + size : '');
     return `<input type="text" class="${cls}" ${INPUT_ATTRS} />`;
   });
+  if (hint) html += ` <em>(${hint})</em>`;
   return { html, answers };
 }
 
 /** Reveal-mode rendering: replace each placeholder with its canonical answer. */
 export function renderQuestionReveal(template: string): string {
-  return template.replace(PLACEHOLDER_RE, (_m, body: string) => {
+  const { main, hint } = splitHint(template);
+  let html = main.replace(PLACEHOLDER_RE, (_m, body: string) => {
     const { answer } = splitAnswerAndSize(body);
     const canonical = String(answer).split('|')[0];
     return `<span class="key">${canonical}</span>`;
   });
+  if (hint) html += ` <em>(${hint})</em>`;
+  return html;
 }
 
 /** Parse a whole exercise's questions, concatenating answers in order. */

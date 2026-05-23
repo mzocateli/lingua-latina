@@ -1,5 +1,6 @@
 ---
-import type { Chapter, Topic } from '~/lib/types';
+import { getEntry } from 'astro:content';
+import type { Chapter } from '~/lib/types';
 
 interface Props {
   refs: string[] | undefined;
@@ -7,10 +8,17 @@ interface Props {
 }
 
 const { refs, chapter } = Astro.props;
-const topics: Topic[] = chapter.content?.topics || [];
-const matched: Topic[] = (refs || [])
-  .map(id => topics.find(t => t.id === id))
-  .filter((t): t is Topic => !!t);
+const slug = chapter.slug;
+
+const entries = await Promise.all(
+  (refs || []).map(id => getEntry('topics', `${slug}/${id}`))
+);
+const matched = entries
+  .filter((e): e is NonNullable<typeof e> => !!e)
+  .map(e => ({
+    id: e.id.replace(/^[^/]+\//, '').replace(/\.md$/, ''),
+    title: e.data.title,
+  }));
 
 function stripHtml(s: string): string {
   return s.replace(/<[^>]+>/g, '');

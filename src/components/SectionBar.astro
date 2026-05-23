@@ -1,4 +1,5 @@
 ---
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type { Chapter } from '~/lib/types';
 
 interface Props {
@@ -6,10 +7,15 @@ interface Props {
 }
 
 const { chapter } = Astro.props;
-const content = chapter.content || {};
-const hasGrammar = !!content.grammar;
-const hasVocab = !!(content.vocabulary?.groups && content.vocabulary.groups.length);
-const hasTopics = !!(content.topics && content.topics.length);
+const slug = chapter.slug;
+
+const grammarCount = (await getCollection('grammar', (e: CollectionEntry<'grammar'>) => e.id.startsWith(`${slug}/`))).length;
+const topicsCount = (await getCollection('topics', (e: CollectionEntry<'topics'>) => e.id.startsWith(`${slug}/`))).length;
+const vocabEntry = await getEntry('vocabulary', slug);
+
+const hasGrammar = grammarCount > 0 || !!chapter.grammarIntro;
+const hasVocab = !!(vocabEntry?.data.groups && vocabEntry.data.groups.length);
+const hasTopics = topicsCount > 0;
 ---
 
 <nav class="section-bar" aria-label="Saltar para seção">

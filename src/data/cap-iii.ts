@@ -5,6 +5,8 @@ const chapter: Chapter = {
   "numeral": "III",
   "title": "Puer improbus",
   "blurb": "Foco: distinção entre nominativo e acusativo; verbos em -t/-nt; pronomes pessoais <em>mē / tē / eum / eam</em>; relativo <em>quī, quae, quem, quam</em>; conjunções <em>quia</em> e <em>neque</em>.",
+  "grammarIntro": "Este é o primeiro capítulo com gramática formal em <em>Familia Romana</em>. Os conceitos: o que é um <em>verbo</em>, a distinção entre <em>nominativo</em> (sujeito) e <em>accusativo</em> (objeto), e a introdução dos pronomes pessoais.",
+  "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. III</em>. Quase todas são <em>verbos</em> — pela primeira vez no livro aparecem ações concretas (cantar, chorar, bater, perguntar). Junto, vêm os primeiros pronomes pessoais no acusativo (<em>mē, tē, eum, eam</em>) e os pronomes relativos/interrogativos no caso oblíquo.",
   "exercises": [
     {
       "index": 0,
@@ -74,7 +76,7 @@ const chapter: Chapter = {
         "Aemilia {Aemiliam:md} interrogat: 'Cur Iūlia plōrat?'",
         "Iūlius {Aemiliam:md} interrogat: 'Cur Mārcus plōrat?'",
         "Iūlius {Iūliam:md} videt: 'Ecce fīlia mea probba!'",
-        "Iūlia: 'Mārcus {mē:md} pulsat!' <em>(pronome 1ª p.)</em>"
+        "Iūlia: 'Mārcus {mē:md} pulsat!' // pronome 1ª p."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -170,7 +172,7 @@ const chapter: Chapter = {
         "Aemilia: 'Ubi est Iūlius? Cur nōn venit?' — Mārcus: 'Pater nōn {hīc:md} est, sed Mārcus {hīc:md} est.'",
         "Quīntus Iūlium vocat. Cur Iūlius {eum:md} nōn audit? — Iūlius {audit:md} nōn audit, quia dormit.",
         "Iūlius nōn audit, quia {dormit:md}.",
-        "Mārcus rīdet, {neque:md} pater dormit. <em>(e-não)</em>",
+        "Mārcus rīdet, {neque:md} pater dormit. // e-não",
         "Aemilia īrāta est. Māter fīlium {verberat:md}: tuxtax, tuxtax.",
         "Iūlius eum {audit:md}; iam nōn {dormit:md} pater.",
         "Iūlia nōn rīdet; Iūlia puella {proba:md} est."
@@ -248,10 +250,10 @@ const chapter: Chapter = {
         "{Mārcus:md} rīdet, et {Aemilia:md} {eum:md} verberat.",
         "{Iūlius:md} {Mārcum:md} verberat (= o pai açoita o filho).",
         "Iūlius {Aemiliam:md}, {Mārcum:md}, {Quīntum:md} et {Iūliam:md} videt.",
-        "{Mārcus:md} puer {improbus:md} est. <em>(Mārcus → improbus)</em>",
-        "{Mārcus:md} {parvam puellam:md} pulsat. <em>(Mārcus → parvam puellam)</em>",
-        "{Iūlius:md} {īrātus:md} {puerum improbum:md} verberat. <em>(Iūlius → puerum improbum, nom. íratus)</em>",
-        "{Iūlia:md} est puella {proba:md}. <em>(Iūlia → proba)</em>"
+        "{Mārcus:md} puer {improbus:md} est. // Mārcus → improbus",
+        "{Mārcus:md} {parvam puellam:md} pulsat. // Mārcus → parvam puellam",
+        "{Iūlius:md} {īrātus:md} {puerum improbum:md} verberat. // Iūlius → puerum improbum, nom. íratus",
+        "{Iūlia:md} est puella {proba:md}. // Iūlia → proba"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -460,293 +462,7 @@ const chapter: Chapter = {
         "nominativo-acusativo"
       ]
     }
-  ],
-  "content": {
-    "topics": [
-      {
-        "id": "nominativo-acusativo",
-        "title": "Nominativo e acusativo: o caso do sujeito e do objeto",
-        "bookRef": "Cap. III, ll. 1–95; gramm. ll. 96–120",
-        "body": "\n                <p>Em latim, a função de uma palavra na frase não depende da\n                <em>ordem</em>, mas da <em>terminação</em>. As duas funções fundamentais\n                introduzidas aqui são:</p>\n                <ul>\n                  <li><strong>nōminātīvus</strong> — caso do <em>sujeito</em>,\n                  responde a <em>quis?</em> (quem? para masc./fem.) ou\n                  <em>quid?</em> (que? para coisas).</li>\n                  <li><strong>accūsātīvus</strong> — caso do <em>objeto direto</em>,\n                  responde a <em>quem?</em> (acus.) ou <em>quid?</em>.</li>\n                </ul>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>nōm.</th><th>acus.</th></tr>\n                  <tr><td>fem. (-a)</td><td>Iūlia</td><td>Iūliam</td></tr>\n                  <tr><td>masc. (-us)</td><td>Mārcus</td><td>Mārcum</td></tr>\n                  <tr><td>masc. (-er)</td><td>puer</td><td>puerum</td></tr>\n                </table>\n                <p>Como a ordem é flexível, <em>Mārcus Iūliam pulsat</em>,\n                <em>Iūliam Mārcus pulsat</em> e <em>pulsat Mārcus Iūliam</em>\n                significam exatamente a mesma coisa: é a terminação <em>-am</em>\n                que mostra que Iūlia é objeto.</p>\n                <div class=\"ex-block\">\n                  Mārcus (nōm.) Iūliam (acus.) pulsat — <em>Marco bate na Júlia</em>.<br>\n                  Iūlia (nōm.) plōrat — <em>Júlia chora</em>.<br>\n                  Puer quī parvam puellam pulsat improbus est. — <em>O menino que\n                  bate na menininha é mau.</em>\n                </div>\n                "
-      },
-      {
-        "id": "pronomes-pessoais",
-        "title": "Pronomes pessoais: mē, tē, eum, eam",
-        "bookRef": "Cap. III, ll. 16–80",
-        "body": "\n                <p>O capítulo introduz quatro pronomes pessoais — todos no acusativo,\n                pois aparecem como <em>objeto</em>:</p>\n                <table class=\"mini-paradigm\">\n                  <tr><th>pessoa</th><th>nōm.</th><th>acus.</th><th>tradução</th></tr>\n                  <tr><td>1ª sg.</td><td>ego</td><td>mē</td><td>me</td></tr>\n                  <tr><td>2ª sg.</td><td>tū</td><td>tē</td><td>te</td></tr>\n                  <tr><td>3ª sg. m.</td><td>is</td><td>eum</td><td>o (ele)</td></tr>\n                  <tr><td>3ª sg. f.</td><td>ea</td><td>eam</td><td>a (ela)</td></tr>\n                </table>\n                <p>Os pronomes <em>nōminātīvī</em> (ego, tū, is, ea) só aparecem quando\n                há ênfase ou contraste; normalmente o sujeito vem só pelo verbo:\n                <em>cantat</em> = ela canta; <em>cantās</em> = tu cantas.</p>\n                <div class=\"ex-block\">\n                  Iūlia Aemiliam vocat: 'Mārcus <strong>mē</strong> pulsat!'\n                  Aemilia Quīntum interrogat: 'Quis <strong>mē</strong> vocat?'<br>\n                  Quīntus respondet: 'Iūlia <strong>tē</strong> vocat.'<br>\n                  Iūlius dormit: <strong>eum</strong> Quīntus vocat;\n                  Mārcus rīdet quia pater <strong>eum</strong> nōn audit.\n                </div>\n                "
-      },
-      {
-        "id": "relativo-intro-iii",
-        "title": "Pronome relativo: quī, quae, quem, quam",
-        "bookRef": "Cap. III, ll. 69–95",
-        "body": "\n                <p>O <em>relativo</em> introduz uma oração subordinada que descreve\n                um nome anterior (o <strong>antecedente</strong>). Sua forma depende\n                de duas coisas:</p>\n                <ol>\n                  <li><strong>gênero e número</strong> — herdados do antecedente;</li>\n                  <li><strong>caso</strong> — vem da função do relativo\n                  <em>dentro da subordinada</em>.</li>\n                </ol>\n                <table class=\"mini-paradigm\">\n                  <tr><th></th><th>m. sg.</th><th>f. sg.</th></tr>\n                  <tr><td>nōm.</td><td>quī</td><td>quae</td></tr>\n                  <tr><td>acus.</td><td>quem</td><td>quam</td></tr>\n                </table>\n                <div class=\"ex-block\">\n                  Puer <strong>quī</strong> rīdet est Mārcus. — <em>O menino que ri é\n                  Marco.</em> (<em>quī</em>: m. sg., sujeito de <em>rīdet</em>)<br>\n                  Puella <strong>quam</strong> Mārcus pulsat est Iūlia. —\n                  <em>A menina que Marco bate é Júlia.</em> (<em>quam</em>: f. sg.,\n                  objeto de <em>pulsat</em>)<br>\n                  Puer <strong>quem</strong> māter verberat est Mārcus. — <em>O menino\n                  que a mãe açoita é Marco.</em>\n                </div>\n                <p>O paradigma completo (com neutro e plural) virá nos próximos capítulos.</p>\n                "
-      },
-      {
-        "id": "conjuncoes-iii",
-        "title": "Conjunções e advérbios: cūr, quia, neque, iam, hīc",
-        "bookRef": "Cap. III (transversal)",
-        "body": "\n                <p>Cap. III introduz palavras de conexão importantes:</p>\n                <ul>\n                  <li><strong>cūr?</strong> — por quê? (interrogativo de causa)</li>\n                  <li><strong>quia</strong> — porque (conjunção causal, a resposta)</li>\n                  <li><strong>neque</strong> = <em>et nōn</em> — e não / nem</li>\n                  <li><strong>iam</strong> — já, agora</li>\n                  <li><strong>hīc</strong> — aqui (advérbio de lugar)</li>\n                </ul>\n                <div class=\"ex-block\">\n                  <strong>Cūr</strong> Iūlia plōrat? Iūlia plōrat <strong>quia</strong>\n                  Mārcus eam pulsat.<br>\n                  Iūlius <strong>nōn</strong> hīc est, <strong>neque</strong> venit.<br>\n                  <strong>Iam</strong> nōn rīdet Mārcus.\n                </div>\n                <p>O par <em>cūr? / quia</em> é fundamental: é a estrutura básica de\n                pergunta-resposta causal em latim, equivalente ao nosso “por\n                quê? — porque”.</p>\n                "
-      }
-    ],
-    "grammar": {
-      "intro": "Este é o primeiro capítulo com gramática formal em <em>Familia Romana</em>. Os conceitos: o que é um <em>verbo</em>, a distinção entre <em>nominativo</em> (sujeito) e <em>accusativo</em> (objeto), e a introdução dos pronomes pessoais.",
-      "sections": [
-        {
-          "heading": "Verbum",
-          "bookRef": "Cap. III, ll. 1–47; gramm. ll. 95–108",
-          "body": "\n            <p>Um <strong>verbo</strong> (lat. <em>verbum</em>) é a palavra que\n            descreve a ação ou o estado: <em>quem faz o quê</em>. Em latim, o\n            verbo geralmente termina a frase e leva sempre uma terminação que\n            indica <em>quem</em> realiza a ação.</p>\n            <p>Para a 3ª pessoa (ele/ela/eles), as duas terminações fundamentais são:</p>\n            <table class=\"paradigm\">\n              <tr><th>número</th><th>terminação</th><th>exemplo</th></tr>\n              <tr><td class=\"label\">singular (um)</td><td>-t</td><td><em>canta<strong>t</strong>, plōra<strong>t</strong>, rīde<strong>t</strong>, audi<strong>t</strong></em></td></tr>\n              <tr><td class=\"label\">plural (vários)</td><td>-nt</td><td><em>canta<strong>nt</strong>, vide<strong>nt</strong>, veni<strong>unt</strong></em></td></tr>\n            </table>\n            <p>Como o verbo já carrega a informação de quem faz, o sujeito pronominal\n            costuma ser omitido. <em>Cantat</em> sozinho já diz \"ela canta\" ou \"ele canta\".</p>\n            <div class=\"ex-block\">\n              Iūlia canta<strong>t</strong> — Mārcus rīde<strong>t</strong> —<br>\n              Marcus et Quīntus vide<strong>nt</strong> — Aemilia veni<strong>t</strong>.\n            </div>\n            "
-        },
-        {
-          "heading": "Nōminātīvus et Accūsātīvus",
-          "bookRef": "Cap. III, gramm. ll. 108–135",
-          "body": "\n            <p>O latim não usa, em geral, a <em>ordem das palavras</em> para mostrar\n            o papel de cada substantivo na frase. Em vez disso, muda a\n            <em>terminação</em>. Os dois primeiros casos são:</p>\n            <ul>\n              <li><strong>nōminātīvus</strong> — caso do <em>sujeito</em>, responde a\n              <em>quis?</em> (\"quem?\", para pessoas) ou <em>quid?</em> (\"o quê?\",\n              para coisas).</li>\n              <li><strong>accūsātīvus</strong> — caso do <em>objeto direto</em>,\n              responde a <em>quem?</em> ou <em>o quê?</em></li>\n            </ul>\n            <table class=\"paradigm\">\n              <tr><th></th><th>nōm.</th><th>acus.</th></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>Iūlia</td><td>Iūli<strong>am</strong></td></tr>\n              <tr><td class=\"label\">f. (-a)</td><td>puella</td><td>puell<strong>am</strong></td></tr>\n              <tr><td class=\"label\">m. (-us)</td><td>Mārcus</td><td>Mārc<strong>um</strong></td></tr>\n              <tr><td class=\"label\">m. (-er)</td><td>puer</td><td>puer<strong>um</strong></td></tr>\n            </table>\n            <p>Como a ordem é livre, todas estas frases significam a mesma coisa:</p>\n            <div class=\"ex-block\">\n              Mārcus Iūliam pulsat.<br>\n              Iūliam Mārcus pulsat.<br>\n              Pulsat Mārcus Iūliam.\n            </div>\n            <p>Em todas, é a terminação <em>-am</em> de <em>Iūliam</em> que diz que\n            Iūlia é o objeto, e <em>-us</em> em <em>Mārcus</em> que diz que ele é o\n            sujeito. Pergunte sempre: <em>quem faz?</em> (nōm.) e <em>quem/o que\n            recebe?</em> (acus.).</p>\n            "
-        },
-        {
-          "heading": "Adjectīvum cum substantīvō",
-          "bookRef": "Cap. III, ll. 60–95",
-          "body": "\n            <p>Os adjetivos (<em>improbus, probus, laetus, parvus</em>…) <em>concordam</em>\n            com o substantivo a que se referem em <em>caso</em>, <em>número</em> e\n            <em>gênero</em>. Quando o substantivo muda de caso, o adjetivo muda junto:</p>\n            <table class=\"paradigm\">\n              <tr><th></th><th>nōm.</th><th>acus.</th></tr>\n              <tr><td class=\"label\">m.</td><td>puer improb<strong>us</strong></td><td>puer<strong>um</strong> improb<strong>um</strong></td></tr>\n              <tr><td class=\"label\">f.</td><td>puell<strong>a</strong> parv<strong>a</strong></td><td>puell<strong>am</strong> parv<strong>am</strong></td></tr>\n            </table>\n            <p>O adjetivo não precisa estar contíguo ao substantivo. Em <em>puer quī\n            parvam puellam pulsat improbus est</em>, <em>improbus</em> concorda com\n            <em>puer</em> (nōm.), e <em>parvam puellam</em> formam o objeto.</p>\n            <div class=\"ex-block\">\n              Mārcus puer improbus est. — Iūlius puerum improbum verberat.<br>\n              Iūlia puella proba est. — Mārcus parvam puellam pulsat.\n            </div>\n            "
-        },
-        {
-          "heading": "Prōnōmina persōnālia: <em>mē, tē, eum, eam</em>",
-          "bookRef": "Cap. III, ll. 16–80",
-          "body": "\n            <p>Os pronomes pessoais aparecem aqui no acusativo (como objeto). O\n            sujeito (ego, tū, is, ea) só aparece em casos de ênfase.</p>\n            <table class=\"paradigm\">\n              <tr><th>pessoa</th><th>nōm.</th><th>acus.</th></tr>\n              <tr><td class=\"label\">1ª sg.</td><td>(ego)</td><td>mē</td></tr>\n              <tr><td class=\"label\">2ª sg.</td><td>(tū)</td><td>tē</td></tr>\n              <tr><td class=\"label\">3ª sg. m.</td><td>is</td><td>eum</td></tr>\n              <tr><td class=\"label\">3ª sg. f.</td><td>ea</td><td>eam</td></tr>\n            </table>\n            <div class=\"ex-block\">\n              Iūlia clāmat: \"Marcus <strong>mē</strong> pulsat!\"<br>\n              Aemilia: \"Quis <strong>mē</strong> vocat?\" — Quīntus: \"Iūlia <strong>tē</strong> vocat.\"<br>\n              Mārcus rīdet quia pater <strong>eum</strong> nōn audit.\n            </div>\n            "
-        },
-        {
-          "heading": "Coniūnctiōnēs: <em>quia, neque</em>",
-          "bookRef": "Cap. III (transversal)",
-          "body": "\n            <p>Duas conjunções essenciais aparecem aqui:</p>\n            <ul>\n              <li><strong>quia</strong> — \"porque\", causal. É a resposta a <em>cūr?</em></li>\n              <li><strong>neque</strong> = <em>et nōn</em> — \"e não\". Pode unir\n              frases inteiras (<em>Iūlius dormit neque Quīntum audit</em>) ou\n              elementos paralelos.</li>\n            </ul>\n            <div class=\"ex-block\">\n              <strong>Cūr</strong> Iūlia plōrat? — Iūlia plōrat <strong>quia</strong> Mārcus eam pulsat.<br>\n              Iūlius nōn venit, <strong>neque</strong> respondet, <strong>neque</strong> Quīntum audit.\n            </div>\n            "
-        }
-      ]
-    },
-    "vocabulary": {
-      "intro": "As palavras novas introduzidas em <em>Cap. III</em>. Quase todas são <em>verbos</em> — pela primeira vez no livro aparecem ações concretas (cantar, chorar, bater, perguntar). Junto, vêm os primeiros pronomes pessoais no acusativo (<em>mē, tē, eum, eam</em>) e os pronomes relativos/interrogativos no caso oblíquo.",
-      "groups": [
-        {
-          "label": "Nōmina · 1ª (-a)",
-          "tag": "f.",
-          "entries": [
-            {
-              "lemma": "mamma, -ae",
-              "gloss": "mamãe (forma infantil de <i>māter</i>)",
-              "note": "diminutivo afetivo"
-            },
-            {
-              "lemma": "persōna, -ae",
-              "gloss": "personagem, papel",
-              "note": "originalmente: máscara de teatro"
-            },
-            {
-              "lemma": "scaena, -ae",
-              "gloss": "cena (de uma peça ou narrativa)"
-            }
-          ]
-        },
-        {
-          "label": "Adiectīva",
-          "tag": "-us, -a, -um",
-          "entries": [
-            {
-              "lemma": "improbus, -a, -um",
-              "gloss": "malcomportado, ruim, desonesto",
-              "note": "≠ <i>probus</i> (< <i>in-</i> + <i>probus</i>)"
-            },
-            {
-              "lemma": "probus, -a, -um",
-              "gloss": "bom (de caráter), honesto"
-            },
-            {
-              "lemma": "īrātus, -a, -um",
-              "gloss": "irado, com raiva"
-            },
-            {
-              "lemma": "laetus, -a, -um",
-              "gloss": "alegre, contente"
-            }
-          ]
-        },
-        {
-          "label": "Verba",
-          "tag": "1ª, 2ª, 3ª, 4ª conjugações",
-          "entries": [
-            {
-              "lemma": "cantat, cantant",
-              "gloss": "canta",
-              "note": "[1] <i>cantāre</i>"
-            },
-            {
-              "lemma": "plōrat, plōrant",
-              "gloss": "chora",
-              "note": "[1] <i>plōrāre</i>"
-            },
-            {
-              "lemma": "pulsat, pulsant",
-              "gloss": "bate (em alguém ou em algo)",
-              "note": "[1] <i>pulsāre</i> — bater físicamente; bater na porta"
-            },
-            {
-              "lemma": "vocat, vocant",
-              "gloss": "chama (alguém pelo nome)",
-              "note": "[1] <i>vocāre</i>"
-            },
-            {
-              "lemma": "interrogat, interrogant",
-              "gloss": "pergunta, interroga",
-              "note": "[1] <i>interrogāre</i>"
-            },
-            {
-              "lemma": "verberat, verberant",
-              "gloss": "açoita, bate (para castigar)",
-              "note": "[1] <i>verberāre</i> — castigo físico"
-            },
-            {
-              "lemma": "rīdet, rīdent",
-              "gloss": "ri",
-              "note": "[2] <i>rīdēre</i>"
-            },
-            {
-              "lemma": "videt, vident",
-              "gloss": "vê",
-              "note": "[2] <i>vidēre</i>"
-            },
-            {
-              "lemma": "respondet, respondent",
-              "gloss": "responde",
-              "note": "[2] <i>respondēre</i>"
-            },
-            {
-              "lemma": "venit, veniunt",
-              "gloss": "vem, chega",
-              "note": "[4] <i>venīre</i>"
-            },
-            {
-              "lemma": "audit, audiunt",
-              "gloss": "ouve, escuta",
-              "note": "[4] <i>audīre</i>"
-            },
-            {
-              "lemma": "dormit, dormiunt",
-              "gloss": "dorme",
-              "note": "[4] <i>dormīre</i>"
-            }
-          ]
-        },
-        {
-          "label": "Prōnōmina persōnālia",
-          "tag": "acusativo (1ª, 2ª, 3ª p.)",
-          "entries": [
-            {
-              "lemma": "mē",
-              "gloss": "me, a mim",
-              "note": "acus. de <i>ego</i>"
-            },
-            {
-              "lemma": "tē",
-              "gloss": "te, a ti",
-              "note": "acus. de <i>tū</i>"
-            },
-            {
-              "lemma": "eum",
-              "gloss": "o, a ele",
-              "note": "acus. m. sg. de <i>is</i>"
-            },
-            {
-              "lemma": "eam",
-              "gloss": "a, a ela",
-              "note": "acus. f. sg. de <i>ea</i>"
-            }
-          ]
-        },
-        {
-          "label": "Prōnōmina relātīva / interrogātīva",
-          "tag": "casos oblíquos",
-          "entries": [
-            {
-              "lemma": "quem",
-              "gloss": "(a)quele que; quem? (acus. m. sg.)",
-              "note": "acus. de <i>quī / quis</i>"
-            },
-            {
-              "lemma": "quam",
-              "gloss": "(a)quela que; quem? (acus. f. sg.)",
-              "note": "acus. de <i>quae</i>"
-            },
-            {
-              "lemma": "quī",
-              "gloss": "(a)quele que (nōm. m. sg.)",
-              "note": "= <i>quis</i> em uso relativo"
-            },
-            {
-              "lemma": "quae",
-              "gloss": "(a)quela que (nōm. f. sg.)"
-            }
-          ]
-        },
-        {
-          "label": "Adverbia · interrogātīvum",
-          "entries": [
-            {
-              "lemma": "iam",
-              "gloss": "já, agora"
-            },
-            {
-              "lemma": "hīc",
-              "gloss": "aqui",
-              "note": "advérbio de lugar — não confundir com pronome <i>hic</i> (este)"
-            },
-            {
-              "lemma": "cūr?",
-              "gloss": "por quê?",
-              "note": "responde-se com <i>quia</i>"
-            }
-          ]
-        },
-        {
-          "label": "Coniūnctiōnēs",
-          "entries": [
-            {
-              "lemma": "quia",
-              "gloss": "porque",
-              "note": "introduz oração causal — resposta a <i>cūr?</i>"
-            },
-            {
-              "lemma": "neque",
-              "gloss": "e não; nem",
-              "note": "= <i>et nōn</i>"
-            }
-          ]
-        },
-        {
-          "label": "Interiectiō",
-          "entries": [
-            {
-              "lemma": "ō!",
-              "gloss": "ó! (vocativo expressivo)",
-              "note": "marca emoção — espanto, dor, alegria"
-            }
-          ]
-        },
-        {
-          "label": "Verba grammatica",
-          "tag": "metalinguagem",
-          "entries": [
-            {
-              "lemma": "verbum, -ī",
-              "gloss": "verbo; palavra",
-              "note": "n., 2ª decl."
-            },
-            {
-              "lemma": "nōminātīvus, -ī",
-              "gloss": "nominativo (caso do sujeito)"
-            },
-            {
-              "lemma": "accūsātīvus, -ī",
-              "gloss": "acusativo (caso do objeto direto)"
-            }
-          ]
-        }
-      ]
-    }
-  }
+  ]
 };
 
 export default chapter;
