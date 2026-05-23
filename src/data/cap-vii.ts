@@ -17,30 +17,15 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Aemilia in peristȳlō Iūlium {md}. <em>(espera)</em>",
-        "Iūlia rosam ante nāsum {md}. <em>(segura)</em>",
-        "Iūlia {md}; in {md} eius {md} sunt. <em>(chora; olhos; lágrimas)</em>",
-        "Iūlia {md} sūmit et sē in eō videt. <em>(espelho — acus. n.)</em>",
-        "Syra ōstium {md} et intrat. <em>(abre)</em>",
-        "Iūlia: 'Syra, {md} ōstium!' Syra ōstium {md}. <em>(fechar — imp. + ind.)</em>",
-        "Syra: 'Foedus? {md} formōsus est nāsus tuus!' <em>(pelo contrário)</em>",
-        "Iūlia sē {md} et Syram post sē videt. <em>(verte se)</em>",
-        "Syra: '{md} oculōs, Iūlia! {md} laeta!' <em>(enxuga; sê)</em>"
-      ],
-      "answers": [
-        "exspectat",
-        "tenet",
-        "lacrimat",
-        "oculīs",
-        "lacrimae",
-        "speculum",
-        "aperit",
-        "claude",
-        "claudit",
-        "immō",
-        "vertit",
-        "terge",
-        "es"
+        "Aemilia in peristȳlō Iūlium {exspectat:md}. <em>(espera)</em>",
+        "Iūlia rosam ante nāsum {tenet:md}. <em>(segura)</em>",
+        "Iūlia {lacrimat:md}; in {oculīs:md} eius {lacrimae:md} sunt. <em>(chora; olhos; lágrimas)</em>",
+        "Iūlia {speculum:md} sūmit et sē in eō videt. <em>(espelho — acus. n.)</em>",
+        "Syra ōstium {aperit:md} et intrat. <em>(abre)</em>",
+        "Iūlia: 'Syra, {claude:md} ōstium!' Syra ōstium {claudit:md}. <em>(fechar — imp. + ind.)</em>",
+        "Syra: 'Foedus? {immō:md} formōsus est nāsus tuus!' <em>(pelo contrário)</em>",
+        "Iūlia sē {vertit:md} et Syram post sē videt. <em>(verte se)</em>",
+        "Syra: '{terge:md} oculōs, Iūlia! {es:md} laeta!' <em>(enxuga; sê)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -82,31 +67,15 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlia <u>sē</u> in speculō videt (= Iūlia vê Iūlia). Iūlia <u>eam</u> videt (= Iūlia vê outra fêmea).",
       "questions": [
-        "Aemilia Iūliam vocat: Aemilia {md} vocat. <em>(outra pessoa)</em>",
-        "Iūlia in speculō {md} videt et {md} interrogat. <em>(reflexivo, 2×)</em>",
-        "Iūlia ōstium post {md} claudit. <em>(reflexivo)</em>",
-        "Syra Iūliam videt: Syra {md} videt; Iūlia autem nōn {md} videt — vertit sē. <em>(eam; sē)</em>",
-        "Iūlia speculum ante Syram tenet; Syra nāsum suum in eō videt: Syra {md} videt et {md} (= Syra) oculōs claudit. <em>(sē; eam — Syra fecha os olhos)</em>",
-        "Aemilia ad Iūlium adit; {md} (= sē) ad eum vertit et {md} (= eum) salūtat. <em>(sē, eum)</em>",
-        "Iūlius fīliam suam videt; Iūlia ad eum currit et {md} (= sē) ad patrem vertit.",
-        "Quīntus Mārcum nōn {md} videt — frāter eius abest. <em>(eum)</em>",
-        "Mārcus rīdet: {md} (= sē) rīdentem in speculō videt et {md} (= eum, Quīntum) quoque rīdentem aspicit."
-      ],
-      "answers": [
-        "eam",
-        "sē",
-        "sē",
-        "sē",
-        "eam",
-        "sē",
-        "sē",
-        "eam",
-        "sē",
-        "eam",
-        "sē",
-        "eum",
-        "sē",
-        "eum"
+        "Aemilia Iūliam vocat: Aemilia {eam:md} vocat. <em>(outra pessoa)</em>",
+        "Iūlia in speculō {sē:md} videt et {sē:md} interrogat. <em>(reflexivo, 2×)</em>",
+        "Iūlia ōstium post {sē:md} claudit. <em>(reflexivo)</em>",
+        "Syra Iūliam videt: Syra {eam:md} videt; Iūlia autem nōn {sē:md} videt — vertit sē. <em>(eam; sē)</em>",
+        "Iūlia speculum ante Syram tenet; Syra nāsum suum in eō videt: Syra {sē:md} videt et {eam:md} (= Syra) oculōs claudit. <em>(sē; eam — Syra fecha os olhos)</em>",
+        "Aemilia ad Iūlium adit; {sē:md} (= sē) ad eum vertit et {eam:md} (= eum) salūtat. <em>(sē, eum)</em>",
+        "Iūlius fīliam suam videt; Iūlia ad eum currit et {sē:md} (= sē) ad patrem vertit.",
+        "Quīntus Mārcum nōn {eum:md} videt — frāter eius abest. <em>(eum)</em>",
+        "Mārcus rīdet: {sē:md} (= sē) rīdentem in speculō videt et {eum:md} (= eum, Quīntum) quoque rīdentem aspicit."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -142,23 +111,12 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlia in cubicul{} su{} est.",
-        "Syra in cubicul{} Iūliae intrat.",
-        "Syra: “Venī in hort{}, Iūlia! In hort{} sunt rosae.”",
-        "In vīll{} Aemilia virum suum exspectat.",
-        "Iūlius in vīll{} intrat; iam Iūlius in ātri{} est.",
-        "Aemilia in ātri{} intrat."
-      ],
-      "answers": [
-        "ō",
-        "ō",
-        "um",
-        "um",
-        "ō",
-        "ā",
-        "am",
-        "ō",
-        "um"
+        "Iūlia in cubicul{ō} su{ō} est.",
+        "Syra in cubicul{um} Iūliae intrat.",
+        "Syra: “Venī in hort{um}, Iūlia! In hort{ō} sunt rosae.”",
+        "In vīll{ā} Aemilia virum suum exspectat.",
+        "Iūlius in vīll{am} intrat; iam Iūlius in ātri{ō} est.",
+        "Aemilia in ātri{um} intrat."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -195,39 +153,16 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Mārcus nōn {md} Iūliam pulsat, {md} eam rīdet. <em>(não só … mas também)</em>",
-        "{md} māla {md} pira in saccīs sunt. <em>(tanto … quanto)</em>",
-        "Iūlius nōn sōlum mala dat fīliīs, {md} pira. <em>(mas também)</em>",
-        "Iūlius {md} fīliōs {md} fīliam habet; {md} servōs {md} ancillās. <em>(tanto…quanto, 2 pares)</em>",
-        "Iūlia in cubiculō suō {md} ridet {md} cantat — plōrat tantum. <em>(nem … nem)</em>",
-        "{md} Iūlius puerīs mala dat, sed etiam ancillīs. <em>(não só)</em>",
-        "{md} pater {md} māter fīliōs amant. <em>(tanto…quanto)</em>",
-        "Iūlius nōn sōlum fīliīs mala dat, {md} ancillīs.",
-        "Iūlia sōla est: {md} ridet {md} cantat, {md} clāmat {md} verbera dat. <em>(nem … nem, 2 pares)</em>",
-        "Mēdus {md} dominum vidēre {md} eī servīre vult. <em>(nem … nem)</em>"
-      ],
-      "answers": [
-        "sōlum",
-        "sed etiam",
-        "et",
-        "et",
-        "sed etiam",
-        "et",
-        "et",
-        "et",
-        "et",
-        "neque",
-        "neque",
-        "nōn sōlum",
-        "et",
-        "et",
-        "sed etiam",
-        "neque",
-        "neque",
-        "neque",
-        "neque",
-        "neque",
-        "neque"
+        "Mārcus nōn {sōlum:md} Iūliam pulsat, {sed etiam:md} eam rīdet. <em>(não só … mas também)</em>",
+        "{et:md} māla {et:md} pira in saccīs sunt. <em>(tanto … quanto)</em>",
+        "Iūlius nōn sōlum mala dat fīliīs, {sed etiam:md} pira. <em>(mas também)</em>",
+        "Iūlius {et:md} fīliōs {et:md} fīliam habet; {et:md} servōs {et:md} ancillās. <em>(tanto…quanto, 2 pares)</em>",
+        "Iūlia in cubiculō suō {neque:md} ridet {neque:md} cantat — plōrat tantum. <em>(nem … nem)</em>",
+        "{nōn sōlum:md} Iūlius puerīs mala dat, sed etiam ancillīs. <em>(não só)</em>",
+        "{et:md} pater {et:md} māter fīliōs amant. <em>(tanto…quanto)</em>",
+        "Iūlius nōn sōlum fīliīs mala dat, {sed etiam:md} ancillīs.",
+        "Iūlia sōla est: {neque:md} ridet {neque:md} cantat, {neque:md} clāmat {neque:md} verbera dat. <em>(nem … nem, 2 pares)</em>",
+        "Mēdus {neque:md} dominum vidēre {neque:md} eī servīre vult. <em>(nem … nem)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -254,41 +189,16 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlius: “Ecce mālum tuum, Mārce.” Iūlius Mārc{} mālum dat: pater fīli{} mālum dat.",
-        "Iūlius Mārc{} et Quīntō māla dat: pater fīli{} māla dat.",
-        "Dominus servum vocat et {} mālum dat.",
-        "Iūlius Syr{} serv{} su{} mālum dat.",
-        "Dominus servōs vocat et {} māla dat.",
-        "Dominus Syr{} et Lēandr{} serv{} su{} māla dat.",
-        "Iūlius Aemiliam salūtat et {} ōsculum dat.",
-        "Aemilia Iūli{} vir{} su{} ōsculum dat.",
-        "Iūlia māl{} su{} ōsculum dat!",
-        "Aemilia Dēli{} et Syr{} ancill{} su{} māla dat."
-      ],
-      "answers": [
-        "ō",
-        "ō",
-        "ō",
-        "īs",
-        "eī",
-        "ō",
-        "ō",
-        "ō",
-        "eīs|iīs",
-        "ō",
-        "ō",
-        "īs",
-        "īs",
-        "eī",
-        "ō",
-        "ō",
-        "ō",
-        "ō",
-        "ō",
-        "ae",
-        "ae",
-        "īs",
-        "īs"
+        "Iūlius: “Ecce mālum tuum, Mārce.” Iūlius Mārc{ō} mālum dat: pater fīli{ō} mālum dat.",
+        "Iūlius Mārc{ō} et Quīntō māla dat: pater fīli{īs} māla dat.",
+        "Dominus servum vocat et {eī} mālum dat.",
+        "Iūlius Syr{ō} serv{ō} su{ō} mālum dat.",
+        "Dominus servōs vocat et {eīs|iīs} māla dat.",
+        "Dominus Syr{ō} et Lēandr{ō} serv{īs} su{īs} māla dat.",
+        "Iūlius Aemiliam salūtat et {eī} ōsculum dat.",
+        "Aemilia Iūli{ō} vir{ō} su{ō} ōsculum dat.",
+        "Iūlia māl{ō} su{ō} ōsculum dat!",
+        "Aemilia Dēli{ae} et Syr{ae} ancill{īs} su{īs} māla dat."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -348,23 +258,12 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Saccus quī hīc est = h{} saccus.",
-        "Rosa quae hīc est = h{} rosa.",
-        "Mālum quod hīc est = h{} mālum.",
-        "Puella qu{} hīc est = h{} puella.",
-        "Speculum qu{} hīc est = h{} speculum.",
-        "Equus qu{} hīc est = h{} equus."
-      ],
-      "answers": [
-        "ic",
-        "aec",
-        "oc",
-        "ae",
-        "aec",
-        "od",
-        "oc",
-        "ī",
-        "ic"
+        "Saccus quī hīc est = h{ic} saccus.",
+        "Rosa quae hīc est = h{aec} rosa.",
+        "Mālum quod hīc est = h{oc} mālum.",
+        "Puella qu{ae} hīc est = h{aec} puella.",
+        "Speculum qu{od} hīc est = h{oc} speculum.",
+        "Equus qu{ī} hīc est = h{ic} equus."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -420,37 +319,17 @@ const chapter: Chapter = {
       },
       "exemplum": null,
       "questions": [
-        "Iūlius ad vīllam {md}; puerī: '{md}, pater!' <em>(chega; saudação plural)</em>",
-        "Ōstium ab {md} aperitur. <em>(servo da porta — abl. sg.)</em>",
-        "In saccīs sunt {md} et {md}. <em>(maçãs e peras)</em>",
-        "Saccī nōn vacuī, sed {md} sunt. <em>(cheios)</em>",
-        "In ūnō sacco {md} mālum, in altero {md} multa pira. <em>(está dentro; estão dentro)</em>",
-        "Iūlius mālum Mārcō {md}: pater fīliō mālum {md}.",
-        "Iūlia ad patrem currit eīque {md} {md}. <em>(adit; osculum)</em>",
-        "Iūlia nōn in ātriō, sed {md} (em outro lugar) in cubiculō est.",
-        "Iūlia {md} cubiculō {md} et ad ātrium {md}. <em>(ē; exit; eunt?)</em>",
-        "Iūlia ad patrem {md}. <em>(corre)</em>",
-        "Iūlia: '{md} pulchra haec rosa est?' <em>(nōnne? — espera sim)</em>"
-      ],
-      "answers": [
-        "advenit",
-        "salvēte",
-        "ostiāriō",
-        "māla",
-        "pira",
-        "plēnī",
-        "inest",
-        "insunt",
-        "dat",
-        "dat",
-        "adit",
-        "osculum",
-        "illīc",
-        "ē",
-        "exit",
-        "exeunt",
-        "currit",
-        "nōnne"
+        "Iūlius ad vīllam {advenit:md}; puerī: '{salvēte:md}, pater!' <em>(chega; saudação plural)</em>",
+        "Ōstium ab {ostiāriō:md} aperitur. <em>(servo da porta — abl. sg.)</em>",
+        "In saccīs sunt {māla:md} et {pira:md}. <em>(maçãs e peras)</em>",
+        "Saccī nōn vacuī, sed {plēnī:md} sunt. <em>(cheios)</em>",
+        "In ūnō sacco {inest:md} mālum, in altero {insunt:md} multa pira. <em>(está dentro; estão dentro)</em>",
+        "Iūlius mālum Mārcō {dat:md}: pater fīliō mālum {dat:md}.",
+        "Iūlia ad patrem currit eīque {adit:md} {osculum:md}. <em>(adit; osculum)</em>",
+        "Iūlia nōn in ātriō, sed {illīc:md} (em outro lugar) in cubiculō est.",
+        "Iūlia {ē:md} cubiculō {exit:md} et ad ātrium {exeunt:md}. <em>(ē; exit; eunt?)</em>",
+        "Iūlia ad patrem {currit:md}. <em>(corre)</em>",
+        "Iūlia: '{nōnne:md} pulchra haec rosa est?' <em>(nōnne? — espera sim)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -484,32 +363,17 @@ const chapter: Chapter = {
       },
       "exemplum": "Dominus servō mālum dat: dominus eī mālum dat. — Dominus ancillae mālum dat: dominus eī mālum dat. — Fluvius oppidō aquam dat. — Dominus servīs et ancillīs māla dat: dominus iīs māla dat. — Fluviī oppidīs aquam dant.",
       "questions": [
-        "<em>Servō, ancillae, oppidō, eī</em> nōn nōminātīvus, sed {md} est. Etiam <em>servīs, ancillīs, oppidīs, iīs</em> {md} est.",
-        "<em>Servō, ancillae, oppidō, eī</em> est datīvus {lg}.",
-        "<em>Servīs, ancillīs, oppidīs, iīs</em> nōn {md} singulāris, sed {lg} est.",
-        "Singulāris: nōm. <em>servus</em>, dat. serv{}.",
-        "Plūrālis: nōm. <em>servī</em>, dat. serv{}.",
-        "Singulāris: nōm. <em>ancilla</em>, dat. ancill{}.",
-        "Plūrālis: nōm. <em>ancillae</em>, dat. ancill{}.",
-        "Singulāris: nōm. <em>oppidum</em>, dat. oppid{}.",
-        "Plūrālis: nōm. <em>oppida</em>, dat. oppid{}.",
-        "Singulāris: nōm. <em>is, ea</em>, dat. {}.",
-        "Plūrālis: nōm. <em>iī, eae</em>, dat. {}."
-      ],
-      "answers": [
-        "datīvus|datīvus singulāris",
-        "datīvus plūrālis|datīvus",
-        "singulāris",
-        "datīvus",
-        "datīvus plūrālis",
-        "ō",
-        "īs",
-        "ae",
-        "īs",
-        "ō",
-        "īs",
-        "eī",
-        "eīs|iīs"
+        "<em>Servō, ancillae, oppidō, eī</em> nōn nōminātīvus, sed {datīvus|datīvus singulāris:md} est. Etiam <em>servīs, ancillīs, oppidīs, iīs</em> {datīvus plūrālis|datīvus:md} est.",
+        "<em>Servō, ancillae, oppidō, eī</em> est datīvus {singulāris:lg}.",
+        "<em>Servīs, ancillīs, oppidīs, iīs</em> nōn {datīvus:md} singulāris, sed {datīvus plūrālis:lg} est.",
+        "Singulāris: nōm. <em>servus</em>, dat. serv{ō}.",
+        "Plūrālis: nōm. <em>servī</em>, dat. serv{īs}.",
+        "Singulāris: nōm. <em>ancilla</em>, dat. ancill{ae}.",
+        "Plūrālis: nōm. <em>ancillae</em>, dat. ancill{īs}.",
+        "Singulāris: nōm. <em>oppidum</em>, dat. oppid{ō}.",
+        "Plūrālis: nōm. <em>oppida</em>, dat. oppid{īs}.",
+        "Singulāris: nōm. <em>is, ea</em>, dat. {eī}.",
+        "Plūrālis: nōm. <em>iī, eae</em>, dat. {eīs|iīs}."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -581,24 +445,14 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlia speculum tenet et in <u>eō</u> sē videt.",
       "questions": [
-        "Aemilia ancillam vocat: Aemilia {} vocat.",
-        "Iūlius servōs vocat: Iūlius {} vocat.",
-        "Mārcus mālum tenet et {} ad ōs portat.",
-        "Iūlia rosās videt et {} olfacit.",
-        "Quīntus pirum capit; Iūlius {} videt.",
-        "Iūlia in speculō {} videt. <em>(reflexivo)</em>",
-        "Mēdus Lȳdiam amat: Mēdus {} amat.",
-        "Aemilia fīliōs amat: Aemilia {} amat."
-      ],
-      "answers": [
-        "eam",
-        "eōs",
-        "id",
-        "eās",
-        "id",
-        "sē",
-        "eam",
-        "eōs"
+        "Aemilia ancillam vocat: Aemilia {eam} vocat.",
+        "Iūlius servōs vocat: Iūlius {eōs} vocat.",
+        "Mārcus mālum tenet et {id} ad ōs portat.",
+        "Iūlia rosās videt et {eās} olfacit.",
+        "Quīntus pirum capit; Iūlius {id} videt.",
+        "Iūlia in speculō {sē} videt. <em>(reflexivo)</em>",
+        "Mēdus Lȳdiam amat: Mēdus {eam} amat.",
+        "Aemilia fīliōs amat: Aemilia {eōs} amat."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -650,22 +504,13 @@ const chapter: Chapter = {
       },
       "exemplum": "Iūlius fīliō suō mālum dat.",
       "questions": [
-        "Iūlius Mārc{} mālum dat.",
-        "Iūlius Iūli{} rosam dat.",
-        "Aemilia Syr{} imperat.",
-        "Iūlius servōs vocat et {} imperat. <em>(pronome)</em>",
-        "Pater fīli{} (Mārcō et Quīntō) māla dat.",
-        "Iūlia mātrī {} ōsculum dat. <em>(possessivo, dat. f. sg.)</em>",
-        "Iūlius epistulam scrībit fēmin{}."
-      ],
-      "answers": [
-        "ō",
-        "ae",
-        "ae",
-        "eīs|iīs",
-        "īs",
-        "suae",
-        "ae"
+        "Iūlius Mārc{ō} mālum dat.",
+        "Iūlius Iūli{ae} rosam dat.",
+        "Aemilia Syr{ae} imperat.",
+        "Iūlius servōs vocat et {eīs|iīs} imperat. <em>(pronome)</em>",
+        "Pater fīli{īs} (Mārcō et Quīntō) māla dat.",
+        "Iūlia mātrī {suae} ōsculum dat. <em>(possessivo, dat. f. sg.)</em>",
+        "Iūlius epistulam scrībit fēmin{ae}."
       ],
       "phraseMode": false,
       "auxilia": [
@@ -724,24 +569,14 @@ const chapter: Chapter = {
       },
       "exemplum": "Hic vir Iūlius est. — Aemilia hunc virum amat.",
       "questions": [
-        "{md} ancilla Syra est. <em>(nōm.)</em>",
-        "{md} cubiculum Iūliae est. <em>(nōm.)</em>",
-        "{md} servus Mēdus est. <em>(nōm.)</em>",
-        "Aemilia {md} ancillam vocat. <em>(acus.)</em>",
-        "Iūlius {md} servum vocat. <em>(acus.)</em>",
-        "Iūlia {md} mālum capit. <em>(acus.)</em>",
-        "{md} sunt fīliī Iūliī. <em>(nōm. pl. m.)</em>",
-        "{md} sunt fīliae Iūliī. <em>(nōm. pl. f.)</em>"
-      ],
-      "answers": [
-        "haec",
-        "hoc",
-        "hic",
-        "hanc",
-        "hunc",
-        "hoc",
-        "hī",
-        "hae"
+        "{haec:md} ancilla Syra est. <em>(nōm.)</em>",
+        "{hoc:md} cubiculum Iūliae est. <em>(nōm.)</em>",
+        "{hic:md} servus Mēdus est. <em>(nōm.)</em>",
+        "Aemilia {hanc:md} ancillam vocat. <em>(acus.)</em>",
+        "Iūlius {hunc:md} servum vocat. <em>(acus.)</em>",
+        "Iūlia {hoc:md} mālum capit. <em>(acus.)</em>",
+        "{hī:md} sunt fīliī Iūliī. <em>(nōm. pl. m.)</em>",
+        "{hae:md} sunt fīliae Iūliī. <em>(nōm. pl. f.)</em>"
       ],
       "phraseMode": false,
       "auxilia": [
@@ -832,8 +667,14 @@ const chapter: Chapter = {
             {
               "label": "dat.",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "servō",
+                  "given": false
+                },
+                {
+                  "answer": "servīs",
+                  "given": false
+                }
               ]
             },
             {
@@ -877,8 +718,14 @@ const chapter: Chapter = {
             {
               "label": "dat.",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "ancillae",
+                  "given": false
+                },
+                {
+                  "answer": "ancillīs",
+                  "given": false
+                }
               ]
             },
             {
@@ -922,8 +769,14 @@ const chapter: Chapter = {
             {
               "label": "dat.",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "oppidō",
+                  "given": false
+                },
+                {
+                  "answer": "oppidīs",
+                  "given": false
+                }
               ]
             },
             {
@@ -935,14 +788,6 @@ const chapter: Chapter = {
             }
           ]
         }
-      ],
-      "answers": [
-        "servō",
-        "servīs",
-        "ancillae",
-        "ancillīs",
-        "oppidō",
-        "oppidīs"
       ],
       "references": [
         "dativo"
@@ -980,33 +825,66 @@ const chapter: Chapter = {
             {
               "label": "acc.",
               "cells": [
-                null,
-                null,
+                {
+                  "answer": "eum",
+                  "given": false
+                },
+                {
+                  "answer": "eam",
+                  "given": false
+                },
                 "id"
               ]
             },
             {
               "label": "gen.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "eius",
+                  "given": false
+                },
+                {
+                  "answer": "eius",
+                  "given": false
+                },
+                {
+                  "answer": "eius",
+                  "given": false
+                }
               ]
             },
             {
               "label": "dat.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "eī",
+                  "given": false
+                },
+                {
+                  "answer": "eī",
+                  "given": false
+                },
+                {
+                  "answer": "eī",
+                  "given": false
+                }
               ]
             },
             {
               "label": "abl.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "eō",
+                  "given": false
+                },
+                {
+                  "answer": "eā",
+                  "given": false
+                },
+                {
+                  "answer": "eō",
+                  "given": false
+                }
               ]
             }
           ]
@@ -1023,7 +901,10 @@ const chapter: Chapter = {
             {
               "label": "nōm.",
               "cells": [
-                null,
+                {
+                  "answer": "iī|eī",
+                  "given": false
+                },
                 "eae",
                 "ea"
               ]
@@ -1031,51 +912,53 @@ const chapter: Chapter = {
             {
               "label": "acc.",
               "cells": [
-                null,
-                null,
+                {
+                  "answer": "eōs",
+                  "given": false
+                },
+                {
+                  "answer": "eās",
+                  "given": false
+                },
                 "ea"
               ]
             },
             {
               "label": "gen.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "eōrum",
+                  "given": false
+                },
+                {
+                  "answer": "eārum",
+                  "given": false
+                },
+                {
+                  "answer": "eōrum",
+                  "given": false
+                }
               ]
             },
             {
               "label": "dat.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "iīs|eīs",
+                  "given": false
+                },
+                {
+                  "answer": "iīs|eīs",
+                  "given": false
+                },
+                {
+                  "answer": "iīs|eīs",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "eum",
-        "eam",
-        "eius",
-        "eius",
-        "eius",
-        "eī",
-        "eī",
-        "eī",
-        "eō",
-        "eā",
-        "eō",
-        "iī|eī",
-        "eōs",
-        "eās",
-        "eōrum",
-        "eārum",
-        "eōrum",
-        "iīs|eīs",
-        "iīs|eīs",
-        "iīs|eīs"
       ],
       "references": [
         "pronome-is"
@@ -1106,16 +989,31 @@ const chapter: Chapter = {
               "label": "nōm.",
               "cells": [
                 "hic",
-                null,
-                null
+                {
+                  "answer": "haec",
+                  "given": false
+                },
+                {
+                  "answer": "hoc",
+                  "given": false
+                }
               ]
             },
             {
               "label": "acc.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "hunc",
+                  "given": false
+                },
+                {
+                  "answer": "hanc",
+                  "given": false
+                },
+                {
+                  "answer": "hoc",
+                  "given": false
+                }
               ]
             }
           ]
@@ -1132,34 +1030,39 @@ const chapter: Chapter = {
             {
               "label": "nōm.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "hī",
+                  "given": false
+                },
+                {
+                  "answer": "hae",
+                  "given": false
+                },
+                {
+                  "answer": "haec",
+                  "given": false
+                }
               ]
             },
             {
               "label": "acc.",
               "cells": [
-                null,
-                null,
-                null
+                {
+                  "answer": "hōs",
+                  "given": false
+                },
+                {
+                  "answer": "hās",
+                  "given": false
+                },
+                {
+                  "answer": "haec",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "haec",
-        "hoc",
-        "hunc",
-        "hanc",
-        "hoc",
-        "hī",
-        "hae",
-        "haec",
-        "hōs",
-        "hās",
-        "haec"
       ],
       "references": [
         "demonstrativo-hic"
@@ -1189,21 +1092,36 @@ const chapter: Chapter = {
               "label": "ad-īre",
               "cells": [
                 "adit",
-                null
+                {
+                  "answer": "adeunt",
+                  "given": false
+                }
               ]
             },
             {
               "label": "ex-īre",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "exit",
+                  "given": false
+                },
+                {
+                  "answer": "exeunt",
+                  "given": false
+                }
               ]
             },
             {
               "label": "ab-īre",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "abit",
+                  "given": false
+                },
+                {
+                  "answer": "abeunt",
+                  "given": false
+                }
               ]
             }
           ]
@@ -1220,37 +1138,40 @@ const chapter: Chapter = {
               "label": "ad-esse",
               "cells": [
                 "adest",
-                null
+                {
+                  "answer": "adsunt",
+                  "given": false
+                }
               ]
             },
             {
               "label": "in-esse",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "inest",
+                  "given": false
+                },
+                {
+                  "answer": "īnsunt",
+                  "given": false
+                }
               ]
             },
             {
               "label": "ab-esse",
               "cells": [
-                null,
-                null
+                {
+                  "answer": "abest",
+                  "given": false
+                },
+                {
+                  "answer": "absunt",
+                  "given": false
+                }
               ]
             }
           ]
         }
-      ],
-      "answers": [
-        "adeunt",
-        "exit",
-        "exeunt",
-        "abit",
-        "abeunt",
-        "adsunt",
-        "inest",
-        "īnsunt",
-        "abest",
-        "absunt"
       ],
       "references": [],
       "index": 407

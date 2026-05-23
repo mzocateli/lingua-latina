@@ -1,7 +1,7 @@
 ---
-import type { Chapter, Exercise } from '~/lib/types';
+import type { Chapter, Exercise, StandardExercise } from '~/lib/types';
 import { isParadigm } from '~/lib/types';
-import { expandQuestion, resolveParadigmAnswers, fillAnswers } from '~/lib/expand-question';
+import { parseQuestion, parseQuestions, renderQuestionReveal, resolveParadigmAnswers } from '~/lib/parse-question';
 import ExerciseTip from './ExerciseTip.astro';
 import Auxilia from './Auxilia.astro';
 import ReferenceButton from './ReferenceButton.astro';
@@ -17,12 +17,15 @@ const paradigm = isParadigm(exercise);
 
 const resolvedAnswers = paradigm
   ? resolveParadigmAnswers(exercise.tables, exercise.answers)
-  : ((exercise as { answers: string[] }).answers || []);
+  : parseQuestions((exercise as StandardExercise).questions || []).answers;
 
 const articleClass = 'exercise' + (paradigm ? ' exercise-paradigm' : '');
 const dataAnswers = JSON.stringify(resolvedAnswers);
 const dataPhrase = exercise.phraseMode ? '1' : '0';
 const title = exercise.title || `Exercitium ${exercise.number}`;
+const standardQuestions = paradigm
+  ? []
+  : ((exercise as StandardExercise).questions || []);
 ---
 
 <article
@@ -49,8 +52,8 @@ const title = exercise.title || `Exercitium ${exercise.number}`;
         <ParadigmTables tables={exercise.tables} />
       ) : (
         <ol class="questions">
-          {((exercise as { questions: string[] }).questions || []).map(q => (
-            <li set:html={expandQuestion(q)} />
+          {standardQuestions.map(q => (
+            <li set:html={parseQuestion(q).html} />
           ))}
         </ol>
       )}
@@ -69,8 +72,8 @@ const title = exercise.title || `Exercitium ${exercise.number}`;
           <ParadigmTables tables={exercise.tables} answers={resolvedAnswers} reveal />
         ) : (
           <ol>
-            {((exercise as { questions: string[] }).questions || []).map(q => (
-              <li set:html={fillAnswers(q, (exercise as { answers: string[] }).answers || [])} />
+            {standardQuestions.map(q => (
+              <li set:html={renderQuestionReveal(q)} />
             ))}
           </ol>
         )}
