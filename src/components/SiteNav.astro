@@ -1,0 +1,30 @@
+---
+import { chapterIndex } from '~/lib/chapters';
+import { chapterHref, indexHref } from '~/lib/paths';
+
+interface Props {
+  activeSlug?: string | null;
+}
+
+const { activeSlug = null } = Astro.props;
+---
+
+<nav class="site-nav" aria-label="Capitula">
+  <div class="site-nav-inner">
+    <a class="site-brand" href={indexHref()}>Lingua Latīna</a>
+    <div class="site-nav-spacer"></div>
+    <ul class="site-nav-list">
+      {chapterIndex.map(ch => (
+        <li>
+          <a
+            href={chapterHref(ch.slug)}
+            class={ch.slug === activeSlug ? 'active' : ''}
+            title={`Capitulum ${ch.numeral} — ${ch.title}`}
+          >
+            <span class="num">{ch.numeral}</span>Cap.
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

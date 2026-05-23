@@ -1,0 +1,114 @@
+---
+import type { ParadigmTable, ParadigmCell } from '~/lib/types';
+
+interface Props {
+  tables: ParadigmTable[] | undefined;
+  /** When in reveal mode, this is the resolved answer list (reading order). */
+  answers?: string[];
+  reveal?: boolean;
+}
+
+const { tables, answers = [], reveal = false } = Astro.props;
+
+let ansCursor = 0;
+
+function isBlank(cell: ParadigmCell): boolean {
+  return cell === null || cell === undefined;
+}
+
+function isInlineAnswerCell(cell: ParadigmCell): cell is { answer?: string; given?: false; text?: string } {
+  return typeof cell === 'object' && cell !== null &&
+         ((cell as any).given === false || (cell as any).answer !== undefined);
+}
+
+function blankIndexFor(): number {
+  return ansCursor++;
+}
+
+function canonical(s: string): string {
+  return String(s || '').split('|')[0];
+}
+---
+
+<div class={'paradigm-tables' + (reveal ? ' paradigm-tables-reveal' : '')}>
+  {(tables || []).map(tbl => (
+    <figure class={'paradigm-figure' + (reveal ? ' paradigm-answer' : '')}>
+      {tbl.caption && (
+        <figcaption class="paradigm-caption">
+          <span class="paradigm-caption-text" set:html={tbl.caption} />
+          {!reveal && tbl.note && (
+            <span class="paradigm-caption-note" set:html={tbl.note} />
+          )}
+        </figcaption>
+      )}
+      <table class="paradigm-grid">
+        <thead>
+          <tr>
+            <th class="paradigm-corner" set:html={tbl.cornerLabel || ''} />
+            {(tbl.columns || []).map(col => (
+              <th class="paradigm-colhead" set:html={col} />
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {(tbl.rows || []).map(row => (
+            <tr>
+              <th class="paradigm-rowhead" set:html={row.label || ''} />
+              {(row.cells || []).map(cell => {
+                if (isBlank(cell)) {
+                  if (reveal) {
+                    const exp = canonical(answers[ansCursor++]);
+                    return (
+                      <td class="paradigm-cell paradigm-was-blank">
+                        <span class="key">{exp}</span>
+                      </td>
+                    );
+                  }
+                  blankIndexFor();
+                  return (
+                    <td class="paradigm-cell">
+                      <input
+                        type="text"
+                        class="blank blank-md paradigm-input"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                      />
+                    </td>
+                  );
+                }
+                if (isInlineAnswerCell(cell)) {
+                  if (reveal) {
+                    const exp = canonical(answers[ansCursor++]);
+                    return (
+                      <td class="paradigm-cell paradigm-was-blank">
+                        <span class="key">{exp}</span>
+                      </td>
+                    );
+                  }
+                  blankIndexFor();
+                  return (
+                    <td class="paradigm-cell">
+                      <input
+                        type="text"
+                        class="blank blank-md paradigm-input"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                      />
+                    </td>
+                  );
+                }
+                // given (anchor) text
+                const text = typeof cell === 'object' ? (cell?.text || '') : String(cell);
+                return <td class="paradigm-cell paradigm-given" set:html={text} />;
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </figure>
+  ))}
+</div>

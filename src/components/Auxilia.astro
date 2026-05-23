@@ -1,0 +1,55 @@
+---
+/**
+ * Side panel ("Auxilia") of an exercise.
+ *
+ * Schema (group types):
+ *   { label, type: 'table', headers?: string[], rows: string[][] }
+ *   { label, type: 'list',  items: string[] (HTML), gloss?: string }
+ *   { label, type: 'words', words: string[] (HTML), inline?: bool, gloss?: string }
+ */
+import type { AuxiliaGroup } from '~/lib/types';
+
+interface Props {
+  groups: AuxiliaGroup[];
+}
+
+const { groups } = Astro.props;
+---
+
+<aside class="auxilia" aria-label="Auxilia">
+  <div class="auxilia-title">Auxilia</div>
+  {groups.map(g => (
+    <div class="aux-group">
+      <div class="aux-label" set:html={g.label} />
+      {g.type === 'table' && (
+        <table class="paradigm">
+          {g.headers && (
+            <tr>
+              {g.headers.map(h => <th set:html={h || '&nbsp;'} />)}
+            </tr>
+          )}
+          {(g.rows || []).map(row => (
+            <tr>
+              {row.map((cell, i) => (
+                i === 0
+                  ? <td set:html={cell} />
+                  : <td><i set:html={cell} /></td>
+              ))}
+            </tr>
+          ))}
+        </table>
+      )}
+      {g.type === 'list' && (
+        <ul>
+          {(g.items || []).map(item => <li set:html={item} />)}
+        </ul>
+      )}
+      {g.type === 'words' && (
+        <ul class={'aux-words' + (g.inline ? ' inline' : '')}>
+          {(g.words || []).map(w => <li set:html={w} />)}
+        </ul>
+      )}
+      {g.gloss && <div class="aux-gloss" set:html={g.gloss} />}
+    </div>
+  ))}
+</aside>

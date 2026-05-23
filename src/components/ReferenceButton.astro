@@ -1,0 +1,39 @@
+---
+import type { Chapter, Topic } from '~/lib/types';
+
+interface Props {
+  refs: string[] | undefined;
+  chapter: Chapter;
+}
+
+const { refs, chapter } = Astro.props;
+const topics: Topic[] = chapter.content?.topics || [];
+const matched: Topic[] = (refs || [])
+  .map(id => topics.find(t => t.id === id))
+  .filter((t): t is Topic => !!t);
+
+function stripHtml(s: string): string {
+  return s.replace(/<[^>]+>/g, '');
+}
+---
+
+{matched.length === 1 && (
+  <a
+    class="ref-btn"
+    href={`#content-${matched[0].id}`}
+    title={`Vide: ${stripHtml(matched[0].title)}`}
+  >❦ Vide explicātionem</a>
+)}
+
+{matched.length > 1 && (
+  <div class="ref-btn-group">
+    <span class="ref-btn-label">Vide:</span>
+    {matched.map(t => (
+      <a
+        class="ref-btn ref-btn-small"
+        href={`#content-${t.id}`}
+        title={`Vide: ${stripHtml(t.title)}`}
+      >{stripHtml(t.title)}</a>
+    ))}
+  </div>
+)}

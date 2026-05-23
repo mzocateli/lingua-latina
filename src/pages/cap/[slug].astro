@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import SectionBar from '~/components/SectionBar.astro';
+import ChapterContent from '~/components/ChapterContent.astro';
+import ChapterTOC from '~/components/ChapterTOC.astro';
+import Exercise from '~/components/Exercise.astro';
+import Pager from '~/components/Pager.astro';
+import { chapterIndex, getChapter } from '~/lib/chapters';
+import { indexHref } from '~/lib/paths';
+
+export function getStaticPaths() {
+  return chapterIndex.map(ch => ({ params: { slug: ch.slug } }));
+}
+
+const { slug } = Astro.params;
+const chapter = getChapter(slug!);
+if (!chapter) {
+  throw new Error(`Capitulum não encontrado: ${slug}`);
+}
+
+const numeralLower = chapter.numeral.toLowerCase();
+const pageTitle = `Cap. ${chapter.numeral} — ${chapter.title} · Lingua Latīna`;
+---
+
+<Layout title={pageTitle} activeSlug={slug}>
+  <SectionBar chapter={chapter} />
+
+  <div class="wrap">
+    <header class="chapter-header">
+      <div class="eyebrow">Lingua Latīna · Exercitia</div>
+      <h1>
+        <span class="roman">Capitulum {chapter.numeral}</span>
+        <span class="name">{chapter.title}</span>
+      </h1>
+      {chapter.blurb && <p class="blurb" set:html={chapter.blurb} />}
+    </header>
+
+    <ChapterContent chapter={chapter} />
+
+    <h2 class="section-title" id="exercitia-title">
+      ✎ Exercitia <span class="roman">· cap. {numeralLower}</span>
+    </h2>
+
+    <div class="usage-hint-inline">
+      <strong>Ūsus.</strong> Escreva nas lacunas (os macrons são opcionais).
+      Pressione <kbd>Enter</kbd> para ir ao próximo campo. Clique em
+      <em>Aperī responsa</em> para corrigir; <em>Mundā</em> para limpar.
+      Em exercício que custa, clica <em>Vide explicātionem</em> para revisar a regra.
+    </div>
+
+    <ChapterTOC chapter={chapter} />
+
+    <section>
+      {(chapter.exercises || []).map(ex => (
+        <Exercise exercise={ex} chapter={chapter} />
+      ))}
+    </section>
+
+    <Pager activeSlug={slug!} />
+
+    <div class="colophon">
+      Capitulum {chapter.numeral} — <em>{chapter.title}</em><br />
+      <a href={indexHref()}>Tornāre ad initium</a>
+    </div>
+  </div>
+
+  <script>
+    import '~/scripts/exercise-runtime';
+  </script>
+</Layout>

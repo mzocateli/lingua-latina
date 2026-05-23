@@ -1,0 +1,20 @@
+---
+import type { Chapter } from '~/lib/types';
+
+interface Props {
+  chapter: Chapter;
+}
+
+const { chapter } = Astro.props;
+---
+
+<div class="toc">
+  <div class="toc-title">Exercitia</div>
+  <ul class="toc-list">
+    {(chapter.exercises || []).map(ex => (
+      <li>
+        <a href={`#ex-${ex.number}`}>Ex. {ex.number}</a>
+      </li>
+    ))}
+  </ul>
+</div>
