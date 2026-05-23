@@ -724,6 +724,307 @@ window.LL.chapters['vi'] = {
       "references": [
         "voz-passiva"
       ]
+    },
+    {
+      "number": "P1",
+      "title": "Tabula P1 — dēclīnātiō nōminis",
+      "tag": "preencher: <em>servus</em> e <em>via</em> nas 1ª e 2ª declinações",
+      "kind": "paradigm",
+      "tip": {
+        "text": "Complete o paradigma das duas primeiras declinações. Use a linha do nominativo como âncora. Lembre: o ablativo singular tem vogal longa (<em>-ō, -ā</em>) e o plural dat./abl. é sempre <em>-īs</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "servus, -ī <span class='paradigm-gender'>(m., 2ª)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "singulāris",
+            "plūrālis"
+          ],
+          "rows": [
+            {
+              "label": "nōminātīvus",
+              "cells": [
+                "servus",
+                null
+              ]
+            },
+            {
+              "label": "accūsātīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "genetīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "datīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "ablātīvus",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "via, -ae <span class='paradigm-gender'>(f., 1ª)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "singulāris",
+            "plūrālis"
+          ],
+          "rows": [
+            {
+              "label": "nōminātīvus",
+              "cells": [
+                "via",
+                null
+              ]
+            },
+            {
+              "label": "accūsātīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "genetīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "datīvus",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "ablātīvus",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "servī",
+        "servum",
+        "servōs",
+        "servī",
+        "servōrum",
+        "servō",
+        "servīs",
+        "servō",
+        "servīs",
+        "viae",
+        "viam",
+        "viās",
+        "viae",
+        "viārum",
+        "viae",
+        "viīs",
+        "viā",
+        "viīs"
+      ],
+      "references": [
+        "acusativo-plural",
+        "lugar"
+      ],
+      "index": 306
+    },
+    {
+      "number": "P2",
+      "title": "Tabula P2 — vōx āctīva et passīva",
+      "tag": "preencher: <em>vocāre</em> [1] e <em>vidēre</em> [2], ativa ↔ passiva",
+      "kind": "paradigm",
+      "tip": {
+        "text": "Complete as terminações da 3ª pessoa. Ativa: <em>-t</em> (sg.), <em>-nt</em> (pl.). Passiva: <em>-tur</em> (sg.), <em>-ntur</em> (pl.). A passiva é a ativa + <em>-ur</em>.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "vocāre <span class='paradigm-gender'>[1ª conj.]</span>",
+          "cornerLabel": "3ª pers.",
+          "columns": [
+            "āctīvum",
+            "passīvum"
+          ],
+          "rows": [
+            {
+              "label": "singulāris",
+              "cells": [
+                "vocat",
+                null
+              ]
+            },
+            {
+              "label": "plūrālis",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "vidēre <span class='paradigm-gender'>[2ª conj.]</span>",
+          "cornerLabel": "3ª pers.",
+          "columns": [
+            "āctīvum",
+            "passīvum"
+          ],
+          "rows": [
+            {
+              "label": "singulāris",
+              "cells": [
+                "videt",
+                null
+              ]
+            },
+            {
+              "label": "plūrālis",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "pōnere <span class='paradigm-gender'>[3ª conj.]</span>",
+          "cornerLabel": "3ª pers.",
+          "columns": [
+            "āctīvum",
+            "passīvum"
+          ],
+          "rows": [
+            {
+              "label": "singulāris",
+              "cells": [
+                "pōnit",
+                null
+              ]
+            },
+            {
+              "label": "plūrālis",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "audīre <span class='paradigm-gender'>[4ª conj.]</span>",
+          "cornerLabel": "3ª pers.",
+          "columns": [
+            "āctīvum",
+            "passīvum"
+          ],
+          "rows": [
+            {
+              "label": "singulāris",
+              "cells": [
+                "audit",
+                null
+              ]
+            },
+            {
+              "label": "plūrālis",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "vocātur",
+        "vocant",
+        "vocantur",
+        "vidētur",
+        "vident",
+        "videntur",
+        "pōnitur",
+        "pōnunt",
+        "pōnuntur",
+        "audītur",
+        "audiunt",
+        "audiuntur"
+      ],
+      "references": [
+        "voz-passiva"
+      ],
+      "index": 307
+    },
+    {
+      "number": "P3",
+      "title": "Tabula P3 — prōnōmen relātīvum (m.)",
+      "tag": "preencher: <em>quī</em> masculino, nōm. e acus.",
+      "kind": "paradigm",
+      "tip": {
+        "text": "O relativo masculino: no nominativo <em>quī</em> (sg. e pl. são iguais!); no acusativo <em>quem</em> (sg.) e <em>quōs</em> (pl.).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "quī <span class='paradigm-gender'>(relātīvum, m.)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "singulāris",
+            "plūrālis"
+          ],
+          "rows": [
+            {
+              "label": "nōminātīvus",
+              "cells": [
+                "quī",
+                null
+              ]
+            },
+            {
+              "label": "accūsātīvus",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "quī",
+        "quem",
+        "quōs"
+      ],
+      "references": [
+        "relativo-intro"
+      ],
+      "index": 308
     }
   ],
   "content": {

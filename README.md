@@ -4,6 +4,7 @@
 
 | Capitulum | Tópico                                              | Exercícios |
 |-----------|-----------------------------------------------------|------------|
+| II        | Gênero (m/f/n); genitivo; interrogativos            | 10         |
 | III       | Nominativo/acusativo; pronomes <i>mē/tē</i>; relativo | 9          |
 | IV        | Numerais I–X; vocativo; imperativo; <i>suus / eius</i> | 9          |
 | V         | Acusativo, ablativo, imperativo                     | 11         |
@@ -11,7 +12,12 @@
 | VII       | Dativo, demonstrativo, relativo                     | 11 (8 do livro + 3 drills originais) |
 | VIII      | Genitivo, preço, *quī/is*                           | 11         |
 
-Todos os *Exercitia* não-dissertativos dos capítulos III–VIII do livro estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
+Todos os *Exercitia* não-dissertativos dos capítulos II–VIII do livro estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
+
+Cada capítulo tem três seções:
+1. **Grammatica Latīna** — apresentação formal sistemática, espelhando a seção GRAMMATICA LATINA do final de cada capítulo no livro de Ørberg, com paradigmas e exemplos.
+2. **Explicātiōnēs** — tópicos colapsáveis com explicações curtas e ponteiros para as linhas do livro.
+3. **Exercitia** — exercícios interativos com correção tolerante (macrons opcionais, alternativas com `|`, modo *phrase* para ordem livre).
 
 Cap. VII inclui três *drills* extras (A, B, C) compostos especialmente para o site, marcados como `drill original — não está no livro`. Usam o mesmo léxico e personagens de Ørberg mas com sentenças próprias.
 

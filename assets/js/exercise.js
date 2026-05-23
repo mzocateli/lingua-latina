@@ -182,15 +182,199 @@
     });
   }
 
+  // ----- Render paradigm tables (declension / conjugation drills) -----
+  // For a paradigm-kind exercise, `data.tables` is an array of:
+  //   {
+  //     caption: "servus, -ī (m.)",   // optional heading above the table
+  //     note?: "string",              // optional small note under caption
+  //     columns: ["sg.", "pl."],      // column headers
+  //     rows: [
+  //       { label: "nōm.", cells: ["servus", null] }   // null = blank to fill
+  //     ]
+  //   }
+  // Every `null` cell becomes an <input class="blank">. Filled cells render
+  // as given text (the anchor forms the learner reasons from).
+  //
+  // Returns { node, answers } — answers collected in reading order
+  // (table by table, row by row, left to right) so the existing
+  // grader (which reads data-answers positionally) works unchanged.
+  function renderParadigmTables(tables) {
+    const wrap = el('div', { className: 'paradigm-tables' });
+    const answers = [];
+
+    (tables || []).forEach(function (tbl) {
+      const fig = el('figure', { className: 'paradigm-figure' });
+
+      if (tbl.caption) {
+        const cap = el('figcaption', { className: 'paradigm-caption' });
+        cap.appendChild(el('span', { className: 'paradigm-caption-text', html: tbl.caption }));
+        if (tbl.note) {
+          cap.appendChild(el('span', { className: 'paradigm-caption-note', html: tbl.note }));
+        }
+        fig.appendChild(cap);
+      }
+
+      const table = el('table', { className: 'paradigm-grid' });
+
+      // Header row
+      const thead = el('thead');
+      const htr = el('tr');
+      htr.appendChild(el('th', { className: 'paradigm-corner', html: tbl.cornerLabel || '' }));
+      (tbl.columns || []).forEach(function (col) {
+        htr.appendChild(el('th', { className: 'paradigm-colhead', html: col }));
+      });
+      thead.appendChild(htr);
+      table.appendChild(thead);
+
+      // Body rows
+      const tbody = el('tbody');
+      (tbl.rows || []).forEach(function (row) {
+        const tr = el('tr');
+        tr.appendChild(el('th', { className: 'paradigm-rowhead', html: row.label || '' }));
+        (row.cells || []).forEach(function (cell) {
+          const td = el('td', { className: 'paradigm-cell' });
+          if (cell === null || cell === undefined) {
+            // A blank to fill. Use a medium input.
+            const inp = el('input', {
+              type: 'text',
+              className: 'blank blank-md paradigm-input',
+              autocomplete: 'off',
+              autocorrect: 'off',
+              autocapitalize: 'off',
+              spellcheck: 'false'
+            });
+            td.appendChild(inp);
+            answers.push('');  // placeholder, filled below by the caller
+            td.setAttribute('data-blank-index', String(answers.length - 1));
+          } else if (typeof cell === 'object') {
+            // { answer: "...", given: false } — explicit blank with answer,
+            // or { text: "..." } — explicit given cell.
+            if (cell.given === false || cell.answer !== undefined) {
+              const inp = el('input', {
+                type: 'text',
+                className: 'blank blank-md paradigm-input',
+                autocomplete: 'off',
+                autocorrect: 'off',
+                autocapitalize: 'off',
+                spellcheck: 'false'
+              });
+              td.appendChild(inp);
+              answers.push(cell.answer || '');
+              td.setAttribute('data-blank-index', String(answers.length - 1));
+            } else {
+              td.classList.add('paradigm-given');
+              td.innerHTML = cell.text || '';
+            }
+          } else {
+            // A given (anchor) cell — plain text.
+            td.classList.add('paradigm-given');
+            td.innerHTML = cell;
+          }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+
+      fig.appendChild(table);
+      wrap.appendChild(fig);
+    });
+
+    return { node: wrap, answers: answers };
+  }
+  NS.renderParadigmTables = renderParadigmTables;
+
+  // For a paradigm exercise the answer key comes from two places:
+  // - cells given as `null`  -> answer must be supplied in data.answers[]
+  // - cells given as object {answer:"..."} -> answer is inline
+  // This helper merges them into the final ordered answer array.
+  function resolveParadigmAnswers(tables, explicitAnswers) {
+    const merged = [];
+    let nullCursor = 0;
+    (tables || []).forEach(function (tbl) {
+      (tbl.rows || []).forEach(function (row) {
+        (row.cells || []).forEach(function (cell) {
+          if (cell === null || cell === undefined) {
+            merged.push((explicitAnswers && explicitAnswers[nullCursor]) || '');
+            nullCursor++;
+          } else if (typeof cell === 'object' &&
+                     (cell.given === false || cell.answer !== undefined)) {
+            merged.push(cell.answer || '');
+          }
+          // given text cells contribute no answer
+        });
+      });
+    });
+    return merged;
+  }
+
+  // Answer reveal for a paradigm exercise: re-renders each table fully
+  // filled in, marking which cells were blanks (the answers).
+  function renderParadigmAnswerReveal(tables, resolvedAnswers) {
+    const wrap = el('div');
+    wrap.appendChild(el('span', { className: 'answer-header', text: 'Responsa' }));
+    let ansCursor = 0;
+    (tables || []).forEach(function (tbl) {
+      const fig = el('figure', { className: 'paradigm-figure paradigm-answer' });
+      if (tbl.caption) {
+        const cap = el('figcaption', { className: 'paradigm-caption' });
+        cap.appendChild(el('span', { className: 'paradigm-caption-text', html: tbl.caption }));
+        fig.appendChild(cap);
+      }
+      const table = el('table', { className: 'paradigm-grid' });
+      const thead = el('thead');
+      const htr = el('tr');
+      htr.appendChild(el('th', { className: 'paradigm-corner', html: tbl.cornerLabel || '' }));
+      (tbl.columns || []).forEach(function (col) {
+        htr.appendChild(el('th', { className: 'paradigm-colhead', html: col }));
+      });
+      thead.appendChild(htr);
+      table.appendChild(thead);
+      const tbody = el('tbody');
+      (tbl.rows || []).forEach(function (row) {
+        const tr = el('tr');
+        tr.appendChild(el('th', { className: 'paradigm-rowhead', html: row.label || '' }));
+        (row.cells || []).forEach(function (cell) {
+          const td = el('td', { className: 'paradigm-cell' });
+          if (cell === null || cell === undefined) {
+            const exp = String(resolvedAnswers[ansCursor++] || '').split('|')[0];
+            td.classList.add('paradigm-was-blank');
+            td.innerHTML = '<span class="key">' + exp + '</span>';
+          } else if (typeof cell === 'object' &&
+                     (cell.given === false || cell.answer !== undefined)) {
+            const exp = String(resolvedAnswers[ansCursor++] || '').split('|')[0];
+            td.classList.add('paradigm-was-blank');
+            td.innerHTML = '<span class="key">' + exp + '</span>';
+          } else {
+            td.classList.add('paradigm-given');
+            td.innerHTML = (typeof cell === 'object') ? (cell.text || '') : cell;
+          }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      fig.appendChild(table);
+      wrap.appendChild(fig);
+    });
+    return wrap;
+  }
+
   // ----- Render full exercise -----
   // `chapter` is optional context, used to resolve reference topic ids
   // into a "Vide explicātionem" button.
   function renderExercise(data, chapter) {
+    // A paradigm-kind exercise resolves its answer key from the tables.
+    const isParadigm = data.kind === 'paradigm';
+    const resolvedAnswers = isParadigm
+      ? resolveParadigmAnswers(data.tables, data.answers)
+      : (data.answers || []);
+
     const art = el('article', {
-      className: 'exercise',
+      className: 'exercise' + (isParadigm ? ' exercise-paradigm' : ''),
       id: 'ex-' + data.number,
       'data-ex-number': String(data.number),
-      'data-answers': JSON.stringify(data.answers || []),
+      'data-answers': JSON.stringify(resolvedAnswers),
       'data-phrase': data.phraseMode ? '1' : '0'
     });
 
@@ -211,7 +395,12 @@
     const exemplum = renderExemplum(data.exemplum);
     if (exemplum) main.appendChild(exemplum);
 
-    main.appendChild(renderQuestions(data.questions));
+    if (isParadigm) {
+      const built = renderParadigmTables(data.tables);
+      main.appendChild(built.node);
+    } else {
+      main.appendChild(renderQuestions(data.questions));
+    }
 
     const ctl = renderControls(art);
     main.appendChild(ctl.controls);
@@ -223,7 +412,9 @@
     }
 
     // Build answer reveal contents
-    const ansContents = renderAnswerReveal(data.questions, data.answers);
+    const ansContents = isParadigm
+      ? renderParadigmAnswerReveal(data.tables, resolvedAnswers)
+      : renderAnswerReveal(data.questions, data.answers);
     while (ansContents.firstChild) ctl.answer.appendChild(ansContents.firstChild);
     main.appendChild(ctl.answer);
 

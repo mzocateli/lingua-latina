@@ -422,3 +422,121 @@ input.blank.wrong{
   table.paradigm{font-size:.78rem}
   .exercise{padding:1rem 1.1rem}
 }
+
+/* ============================================================
+   Paradigm-drill exercise (kind: "paradigm")
+   Fillable declension / conjugation tables.
+   ============================================================ */
+.paradigm-tables{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin: 0.4rem 0 0.6rem;
+}
+.paradigm-figure{
+  margin: 0;
+  flex: 0 1 auto;
+}
+.paradigm-caption{
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.paradigm-caption-text{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--accent);
+  font-style: italic;
+}
+.paradigm-caption-note{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+table.paradigm-grid{
+  border-collapse: collapse;
+  font-family: 'EB Garamond', serif;
+  background: rgba(255,253,247,0.5);
+}
+table.paradigm-grid th,
+table.paradigm-grid td{
+  border: 1px solid var(--rule);
+  padding: 0.3rem 0.55rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.paradigm-corner{
+  background: rgba(155, 28, 28, 0.04);
+}
+.paradigm-colhead{
+  background: rgba(155, 28, 28, 0.07);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+.paradigm-rowhead{
+  background: rgba(155, 28, 28, 0.07);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.95rem;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 0.7rem;
+}
+.paradigm-cell{
+  min-width: 4.5rem;
+}
+.paradigm-given{
+  color: var(--muted);
+  font-style: italic;
+  background: rgba(0,0,0,0.018);
+}
+.paradigm-input{
+  text-align: center;
+  min-width: 4rem;
+  width: 5.2rem;
+  margin: 0;
+}
+
+/* Answer reveal version */
+.paradigm-answer{
+  margin-top: 0.5rem;
+}
+.paradigm-was-blank{
+  background: rgba(58, 122, 71, 0.08);
+}
+.paradigm-was-blank .key{
+  font-weight: 600;
+  font-style: normal;
+  color: #2f6b3c;
+}
+.paradigm-given{
+  /* given cells in the answer table stay muted */
+}
+
+@media (max-width: 640px){
+  .paradigm-tables{ gap: 1rem; }
+  table.paradigm-grid th,
+  table.paradigm-grid td{ padding: 0.22rem 0.35rem; }
+  .paradigm-input{ width: 4rem; min-width: 3.2rem; }
+  .paradigm-cell{ min-width: 3.4rem; }
+  .paradigm-caption-text{ font-size: 1rem; }
+}
+
+.paradigm-gender{
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-left: 0.2rem;
+}

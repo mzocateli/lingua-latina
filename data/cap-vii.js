@@ -790,6 +790,472 @@ window.LL.chapters['vii'] = {
       "references": [
         "demonstrativo-hic"
       ]
+    },
+    {
+      "number": "P1",
+      "title": "Tabula P1 — dēclīnātiō cum datīvō",
+      "tag": "preencher: <em>servus, ancilla, oppidum</em> — destaque ao dativo",
+      "kind": "paradigm",
+      "tip": {
+        "text": "Agora com o <em>dativo</em>. Note: o dat. sg. masc./neutro (<em>-ō</em>) coincide com o ablativo; o dat. sg. feminino (<em>-ae</em>) coincide com o genitivo. O dat. pl. é <em>-īs</em> em toda parte.",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "servus, -ī <span class='paradigm-gender'>(m.)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                "servus",
+                "servī"
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                "servum",
+                "servōs"
+              ]
+            },
+            {
+              "label": "gen.",
+              "cells": [
+                "servī",
+                "servōrum"
+              ]
+            },
+            {
+              "label": "dat.",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "abl.",
+              "cells": [
+                "servō",
+                "servīs"
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "ancilla, -ae <span class='paradigm-gender'>(f.)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                "ancilla",
+                "ancillae"
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                "ancillam",
+                "ancillās"
+              ]
+            },
+            {
+              "label": "gen.",
+              "cells": [
+                "ancillae",
+                "ancillārum"
+              ]
+            },
+            {
+              "label": "dat.",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "abl.",
+              "cells": [
+                "ancillā",
+                "ancillīs"
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "oppidum, -ī <span class='paradigm-gender'>(n.)</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "sg.",
+            "pl."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                "oppidum",
+                "oppida"
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                "oppidum",
+                "oppida"
+              ]
+            },
+            {
+              "label": "gen.",
+              "cells": [
+                "oppidī",
+                "oppidōrum"
+              ]
+            },
+            {
+              "label": "dat.",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "abl.",
+              "cells": [
+                "oppidō",
+                "oppidīs"
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "servō",
+        "servīs",
+        "ancillae",
+        "ancillīs",
+        "oppidō",
+        "oppidīs"
+      ],
+      "references": [
+        "dativo"
+      ],
+      "index": 404
+    },
+    {
+      "number": "P2",
+      "title": "Tabula P2 — prōnōmen <em>is, ea, id</em>",
+      "tag": "preencher: o anafórico <em>is, ea, id</em> completo",
+      "kind": "paradigm",
+      "tip": {
+        "text": "O pronome <em>is, ea, id</em> retoma algo já mencionado. O genitivo <em>eius</em> e o dativo <em>eī</em> são invariáveis em gênero. No plural, dat./abl. é <em>iīs</em> (também escrito <em>eīs</em>).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "is, ea, id <span class='paradigm-gender'>— singulāris</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                "is",
+                "ea",
+                "id"
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                null,
+                null,
+                "id"
+              ]
+            },
+            {
+              "label": "gen.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "label": "dat.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "label": "abl.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "is, ea, id <span class='paradigm-gender'>— plūrālis</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                null,
+                "eae",
+                "ea"
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                null,
+                null,
+                "ea"
+              ]
+            },
+            {
+              "label": "gen.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "label": "dat.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "eum",
+        "eam",
+        "eius",
+        "eius",
+        "eius",
+        "eī",
+        "eī",
+        "eī",
+        "eō",
+        "eā",
+        "eō",
+        "iī|eī",
+        "eōs",
+        "eās",
+        "eōrum",
+        "eārum",
+        "eōrum",
+        "iīs|eīs",
+        "iīs|eīs",
+        "iīs|eīs"
+      ],
+      "references": [
+        "pronome-is"
+      ],
+      "index": 405
+    },
+    {
+      "number": "P3",
+      "title": "Tabula P3 — <em>hic, haec, hoc</em>",
+      "tag": "preencher: o demonstrativo de proximidade",
+      "kind": "paradigm",
+      "tip": {
+        "text": "<em>hic, haec, hoc</em> aponta para o que está perto do falante. Cap. VII trabalha o nominativo e o acusativo. Note o acusativo masc./fem. com <em>-n-</em>: <em>hunc, hanc</em>; o neutro repete o nominativo (<em>hoc</em>).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "hic, haec, hoc <span class='paradigm-gender'>— singulāris</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                "hic",
+                null,
+                null
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "hic, haec, hoc <span class='paradigm-gender'>— plūrālis</span>",
+          "cornerLabel": "cāsus",
+          "columns": [
+            "m.",
+            "f.",
+            "n."
+          ],
+          "rows": [
+            {
+              "label": "nōm.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "label": "acc.",
+              "cells": [
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "haec",
+        "hoc",
+        "hunc",
+        "hanc",
+        "hoc",
+        "hī",
+        "hae",
+        "haec",
+        "hōs",
+        "hās",
+        "haec"
+      ],
+      "references": [
+        "demonstrativo-hic"
+      ],
+      "index": 406
+    },
+    {
+      "number": "P4",
+      "title": "Tabula P4 — verba composita",
+      "tag": "preencher: compostos de <em>īre</em> e <em>esse</em>",
+      "kind": "paradigm",
+      "tip": {
+        "text": "Os compostos mantêm a irregularidade do verbo-base. <em>īre</em>: 3ª sg. <em>-it</em>, 3ª pl. <em>-eunt</em>. <em>esse</em>: 3ª sg. <em>est</em>, 3ª pl. <em>sunt</em> (com prefixo: <em>-est / -sunt</em>).",
+        "qualifier": null
+      },
+      "exemplum": null,
+      "tables": [
+        {
+          "caption": "composita <span class='paradigm-gender'>(< īre)</span>",
+          "cornerLabel": "verbum",
+          "columns": [
+            "3ª sg.",
+            "3ª pl."
+          ],
+          "rows": [
+            {
+              "label": "ad-īre",
+              "cells": [
+                "adit",
+                null
+              ]
+            },
+            {
+              "label": "ex-īre",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "ab-īre",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "composita <span class='paradigm-gender'>(< esse)</span>",
+          "cornerLabel": "verbum",
+          "columns": [
+            "3ª sg.",
+            "3ª pl."
+          ],
+          "rows": [
+            {
+              "label": "ad-esse",
+              "cells": [
+                "adest",
+                null
+              ]
+            },
+            {
+              "label": "in-esse",
+              "cells": [
+                null,
+                null
+              ]
+            },
+            {
+              "label": "ab-esse",
+              "cells": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ],
+      "answers": [
+        "adeunt",
+        "exit",
+        "exeunt",
+        "abit",
+        "abeunt",
+        "adsunt",
+        "inest",
+        "īnsunt",
+        "abest",
+        "absunt"
+      ],
+      "references": [],
+      "index": 407
     }
   ],
   "content": {
