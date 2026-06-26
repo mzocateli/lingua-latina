@@ -13,8 +13,9 @@ Exercícios interativos baseados em *Lingua Latina per se Illustrata · Pars I: 
 | VI        | Movimento, locativo, voz passiva                    | 13         |
 | VII       | Dativo, demonstrativo, relativo                     | 15 (12 do livro + 3 drills originais) |
 | VIII      | Genitivo, preço, *quī/is*                           | 11         |
+| IX        | 3ª declinação; *ipse*; *dum*; *edere*               | 9          |
 
-Todos os *Exercitia* não-dissertativos dos capítulos II–VIII estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
+Todos os *Exercitia* não-dissertativos dos capítulos II–IX estão presentes, com respostas verificadas contra o gabarito oficial (*Teacher's Materials*). Os PENSVM C e exercícios de redação livre foram excluídos por não terem gabarito determinístico.
 
 Cada capítulo tem três seções:
 1. **Grammatica Latīna** — apresentação formal sistemática, espelhando a seção GRAMMATICA LATINA do final de cada capítulo no livro de Ørberg.
