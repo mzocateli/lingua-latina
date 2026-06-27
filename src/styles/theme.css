@@ -13,6 +13,7 @@
   --vellum:#fbf6e8;
   --burgundy:#6b1f2a;
   --burgundy-deep:#4a141c;
+  --accent:#6b1f2a;          /* alias of --burgundy; used in grammar/exercise styles */
   --gilt:#a07a2a;
   --rule:#8b6f3a;
   --muted:#7a6447;

@@ -68,6 +68,7 @@
   font-weight:600;
   color:var(--burgundy-deep);
   font-size:1.15rem;
+  line-height:1.3;            /* room for macrons in topic titles */
   letter-spacing:.01em;
   flex:1 1 auto;
   min-width:0;
@@ -258,6 +259,7 @@ html{
   font-weight: 600;
   color: var(--accent);
   font-size: 1.25rem;
+  line-height: 1.3;          /* room for macrons in headings like "Dēclīnātiō" */
   margin: 0 0 0.2rem;
   letter-spacing: 0.01em;
 }
