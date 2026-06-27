@@ -26,9 +26,9 @@
 .site-brand{
   font-family:'Cormorant Garamond', serif;
   font-weight:600;
-  font-variant:small-caps;
-  letter-spacing:.1em;
-  font-size:1.15rem;
+  font-style:italic;
+  letter-spacing:.05em;
+  font-size:1.2rem;
   color:var(--vellum);
   border:none;
   flex:0 0 auto;
@@ -220,10 +220,10 @@ h2.section-title .roman{
   border-radius:2px;
 }
 .usage-hint strong{
-  font-variant:small-caps;
-  letter-spacing:.08em;
+  letter-spacing:.02em;
   color:var(--burgundy);
   font-weight:600;
+  font-style:italic;
 }
 .usage-hint kbd{
   display:inline-block;
@@ -265,11 +265,10 @@ h2.section-title .roman{
   color:var(--burgundy-deep);
 }
 .pager .pager-direction{
-  font-variant:small-caps;
-  letter-spacing:.1em;
-  font-size:.78rem;
+  letter-spacing:.05em;
+  font-size:.85rem;
   color:var(--gilt);
-  font-style:normal;
+  font-style:italic;
 }
 .pager .pager-title{
   font-family:'Cormorant Garamond', serif;
