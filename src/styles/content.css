@@ -308,7 +308,11 @@ html{
   font-family: 'Cormorant Garamond', serif;
   white-space: nowrap;
 }
-.grammar-body .ex-block{
+/* Latin example block — used inside both Grammatica and Explicātiōnēs.
+   Extra line-height keeps macrons (ā ē ī ō ū) from overlapping the line
+   below when multiple lines are stacked with <br>. */
+.grammar-body .ex-block,
+.content-topic-body .ex-block{
   margin: 0.6rem 0;
   padding: 0.55rem 0.95rem;
   border-left: 3px solid var(--accent);
@@ -316,6 +320,7 @@ html{
   font-family: 'EB Garamond', serif;
   font-style: italic;
   color: var(--ink);
+  line-height: 1.7;
 }
 .grammar-body .ex-block em{
   font-style: normal;
