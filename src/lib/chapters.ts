@@ -10,6 +10,7 @@ import capVII from '~/data/cap-vii';
 import capVIII from '~/data/cap-viii';
 import capIX from '~/data/cap-ix';
 import capX from '~/data/cap-x';
+import capXI from '~/data/cap-xi';
 
 const chapters: Record<string, Chapter> = {
   ii: capII,
@@ -21,6 +22,7 @@ const chapters: Record<string, Chapter> = {
   viii: capVIII,
   ix: capIX,
   x: capX,
+  xi: capXI,
 };
 
 export { chapterIndex };
