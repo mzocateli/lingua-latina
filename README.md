@@ -98,7 +98,8 @@ Deploy é automático via `.github/workflows/deploy.yml` em todo push para `main
 
 ### Schemas e DSL
 
-Toda a sintaxe (placeholders inline `{ō:md}`, hints `// menina`, schemas Zod das collections, tipos de `auxilia`) está documentada em **[src/content/README.md](src/content/README.md)**.
+Toda a sintaxe (placeholders inline `{ō:md}`, hints `// menina`, schemas Zod das collections, tipos de `auxilia`) está documentada em **[src/content/docs/README.md](src/content/docs/README.md)**.
+As convenções de arquitetura e as regras do projeto estão em **[CLAUDE.md](CLAUDE.md)**.
 
 Mini-cheatsheet:
 
