@@ -12,3 +12,7 @@ export function chapterHref(slug: string): string {
 export function indexHref(): string {
   return `${BASE}/`;
 }
+
+export function practiceHref(): string {
+  return `${BASE}/pratica/`;
+}

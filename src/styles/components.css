@@ -170,3 +170,67 @@
   color:var(--burgundy-deep);
   border-color:var(--burgundy);
 }
+
+/* ----- Practice config panel (/pratica/) ----- */
+.practice-config{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  background:var(--vellum);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--burgundy);
+  border-radius:2px;
+  padding:1.2rem 1.4rem;
+  margin:1.4rem 0;
+  box-shadow:var(--shadow);
+}
+.practice-config fieldset{
+  border:1px solid rgba(139,111,58,.35);
+  border-radius:2px;
+  padding:.6rem .9rem .8rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem 1.2rem;
+  align-items:center;
+}
+.practice-config legend{
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-style:italic;
+  color:var(--burgundy-deep);
+  padding:0 .4rem;
+}
+.practice-config label{
+  font-size:.92rem;
+  color:var(--ink-soft);
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  white-space:nowrap;
+}
+.practice-config label:has(input:disabled){
+  color:var(--muted);
+  opacity:.55;
+}
+.practice-config select{
+  font:inherit;
+  padding:.15rem .4rem;
+}
+.practice-config-hint{
+  font-size:.85rem;
+  color:var(--muted);
+  margin:0;
+}
+.practice-config-empty{
+  color:var(--wrong);
+}
+#paradigm-practice-root:empty::before{
+  content:"Configure as opções acima e clique em \201cGerā tabulam\201d.";
+  display:block;
+  color:var(--muted);
+  font-style:italic;
+  margin:1.4rem 0;
+}
+@media (max-width:640px){
+  .practice-config fieldset{gap:.4rem .8rem}
+}

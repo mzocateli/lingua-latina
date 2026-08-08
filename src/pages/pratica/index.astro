@@ -1,0 +1,105 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { chapterIndex } from '~/data/chapters';
+
+const pageTitle = 'Prāctica — Lingua Latīna';
+---
+
+<Layout
+  title={pageTitle}
+  description="Prática configurável de declinação e conjugação, gerada dinamicamente a partir do intervalo de capítulos já estudado."
+  activeSlug="pratica"
+>
+  <div class="wrap">
+    <header class="chapter-header">
+      <div class="eyebrow">Lingua Latīna · Prāctica</div>
+      <h1>
+        <span class="name">Dēclīnātiō et coniugātiō</span>
+      </h1>
+      <p class="blurb">
+        Escolha o intervalo de capítulos, as categorias gramaticais e gere uma
+        tabela de paradigma para preencher. As opções fora do alcance dos
+        capítulos escolhidos ficam desabilitadas.
+      </p>
+    </header>
+
+    <form id="practice-config" class="practice-config">
+      <fieldset>
+        <legend>Intervalo de capítulos</legend>
+        <label>
+          Até o capítulo
+          <select id="cfg-max" name="maxChapter">
+            {chapterIndex.map(ch => (
+              <option value={ch.slug} selected={ch.slug === chapterIndex[chapterIndex.length - 1].slug}>
+                {ch.numeral} — {ch.title}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Progresso mínimo assumido
+          <select id="cfg-min" name="minChapter">
+            {chapterIndex.map(ch => (
+              <option value={ch.slug} selected={ch.slug === chapterIndex[0].slug}>
+                {ch.numeral} — {ch.title}
+              </option>
+            ))}
+          </select>
+        </label>
+        <p class="practice-config-hint">
+          O mínimo trata como já dominado tudo que foi ensinado antes dele —
+          use para pular o óbvio e focar no que é novo entre os dois capítulos.
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Categoria</legend>
+        <label><input type="checkbox" name="pos" value="noun" checked /> Substantivos</label>
+        <label><input type="checkbox" name="pos" value="verb" checked /> Verbos</label>
+      </fieldset>
+
+      <fieldset id="cfg-declensions">
+        <legend>Declinações</legend>
+        <label><input type="checkbox" name="declension" value="1" checked /> 1ª</label>
+        <label><input type="checkbox" name="declension" value="2" checked /> 2ª</label>
+        <label><input type="checkbox" name="declension" value="3" checked /> 3ª</label>
+      </fieldset>
+
+      <fieldset id="cfg-cases">
+        <legend>Casos</legend>
+        <label><input type="checkbox" name="case" value="nom" checked /> nōminātīvus</label>
+        <label><input type="checkbox" name="case" value="gen" checked /> genetīvus</label>
+        <label><input type="checkbox" name="case" value="dat" checked /> datīvus</label>
+        <label><input type="checkbox" name="case" value="acc" checked /> accūsātīvus</label>
+        <label><input type="checkbox" name="case" value="abl" checked /> ablātīvus</label>
+        <label><input type="checkbox" name="case" value="voc" checked /> vocātīvus</label>
+      </fieldset>
+
+      <fieldset id="cfg-conjugations">
+        <legend>Conjugações</legend>
+        <label><input type="checkbox" name="conjugation" value="1" checked /> 1ª</label>
+        <label><input type="checkbox" name="conjugation" value="2" checked /> 2ª</label>
+        <label><input type="checkbox" name="conjugation" value="3" checked /> 3ª</label>
+        <label><input type="checkbox" name="conjugation" value="4" checked /> 4ª</label>
+      </fieldset>
+
+      <fieldset id="cfg-voices">
+        <legend>Voz verbal</legend>
+        <label><input type="checkbox" name="voice" value="active" checked /> āctīva</label>
+        <label><input type="checkbox" name="voice" value="passive" checked /> passīva</label>
+      </fieldset>
+
+      <button type="button" id="cfg-generate" class="reveal-btn">Gerā tabulam</button>
+      <p id="cfg-empty-msg" class="practice-config-hint practice-config-empty" hidden>
+        Nenhuma combinação disponível nesse intervalo — amplie o capítulo máximo
+        ou reduza o mínimo assumido.
+      </p>
+    </form>
+
+    <div id="paradigm-practice-root"></div>
+  </div>
+
+  <script>
+    import '~/scripts/paradigm-practice';
+  </script>
+</Layout>

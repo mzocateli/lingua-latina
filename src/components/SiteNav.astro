@@ -1,6 +1,6 @@
 ---
 import { chapterIndex } from '~/lib/chapters';
-import { chapterHref, indexHref } from '~/lib/paths';
+import { chapterHref, indexHref, practiceHref } from '~/lib/paths';
 
 interface Props {
   activeSlug?: string | null;
@@ -25,6 +25,15 @@ const { activeSlug = null } = Astro.props;
           </a>
         </li>
       ))}
+      <li>
+        <a
+          href={practiceHref()}
+          class={activeSlug === 'pratica' ? 'active' : ''}
+          title="Prática configurável de declinação e conjugação"
+        >
+          Prāctica
+        </a>
+      </li>
     </ul>
   </div>
 </nav>

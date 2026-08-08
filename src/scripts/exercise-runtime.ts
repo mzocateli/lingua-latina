@@ -104,11 +104,16 @@ function wireSectionBar(): void {
   setTimeout(syncTop, 100);
 }
 
+/** Wires a single exercise article: input behavior + reveal/clear controls.
+ *  Exported so scripts mounting exercises after page load (e.g. the dynamic
+ *  paradigm-practice page) can reuse the exact same wiring. */
+export function wireExercise(article: HTMLElement): void {
+  wireInputs(article);
+  wireControls(article);
+}
+
 function init(): void {
-  document.querySelectorAll<HTMLElement>('article.exercise').forEach(art => {
-    wireInputs(art);
-    wireControls(art);
-  });
+  document.querySelectorAll<HTMLElement>('article.exercise').forEach(wireExercise);
   wireReferenceButtons();
   wireSectionBar();
 }
