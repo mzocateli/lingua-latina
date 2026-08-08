@@ -9,8 +9,8 @@
 import { chapterIndex } from '~/data/chapters';
 
 export type CaseName = 'nom' | 'gen' | 'dat' | 'acc' | 'abl' | 'voc';
-/** Só 1ª–3ª: são as únicas declinações ensinadas nos capítulos II–XI. */
-export type Declension = 1 | 2 | 3;
+/** 1ª–4ª: as declinações ensinadas nos capítulos II–XII (a 5ª não entrou ainda). */
+export type Declension = 1 | 2 | 3 | 4;
 export type Conjugation = 1 | 2 | 3 | 4;
 export type Voice = 'active' | 'passive';
 
@@ -38,6 +38,7 @@ export const declensionUnlockedAt: Record<Declension, string> = {
   1: 'ii',
   2: 'ii',
   3: 'ix',
+  4: 'xii',
 };
 
 export const voiceUnlockedAt: Record<Voice, string> = {

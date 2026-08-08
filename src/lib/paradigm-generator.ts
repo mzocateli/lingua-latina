@@ -101,8 +101,9 @@ function buildVerbTable(entry: VerbEntry, voices: Voice[]): ParadigmTable {
         : { answer: flat(v)[i], given: false }
     ),
   }));
+  const classLabel = entry.irregular ? 'verbo irregular' : `${entry.conjugation}ª conj.`;
   return {
-    caption: `${entry.lemma} <span class="paradigm-gender">[${entry.conjugation}ª conj.]</span>`,
+    caption: `${entry.lemma} <span class="paradigm-gender">[${classLabel}]</span>`,
     cornerLabel: 'pessoa',
     columns: cols,
     rows,

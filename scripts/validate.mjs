@@ -206,6 +206,7 @@ for (const [slug, ch] of chapters) {
 /** Seletores comprovadamente sem macron — ver CLAUDE.md. */
 const SMALL_CAPS_ALLOWLIST = new Set([
   '.site-nav-list a',
+  '.site-nav-capitula summary',
   '.chapter-card .label',
   '.toc-title',
   '.tip-label',

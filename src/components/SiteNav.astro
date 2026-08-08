@@ -7,24 +7,32 @@ interface Props {
 }
 
 const { activeSlug = null } = Astro.props;
+const activeChapter = chapterIndex.find(ch => ch.slug === activeSlug);
 ---
 
-<nav class="site-nav" aria-label="Capitula">
+<nav class="site-nav" aria-label="Navegação principal">
   <div class="site-nav-inner">
     <a class="site-brand" href={indexHref()}>Lingua Latīna</a>
     <div class="site-nav-spacer"></div>
     <ul class="site-nav-list">
-      {chapterIndex.map(ch => (
-        <li>
-          <a
-            href={chapterHref(ch.slug)}
-            class={ch.slug === activeSlug ? 'active' : ''}
-            title={`Capitulum ${ch.numeral} — ${ch.title}`}
-          >
-            <span class="num">{ch.numeral}</span>Cap.
-          </a>
-        </li>
-      ))}
+      <li class="site-nav-capitula">
+        <details>
+          <summary aria-haspopup="true">
+            {activeChapter && <span class="num">{activeChapter.numeral}</span>}
+            {activeChapter ? 'Capitulum' : 'Capitula'}
+          </summary>
+          <ul class="site-nav-capitula-menu">
+            {chapterIndex.map(ch => (
+              <li>
+                <a href={chapterHref(ch.slug)} class={ch.slug === activeSlug ? 'active' : ''}>
+                  <span class="num">{ch.numeral}</span>
+                  <span class="title">{ch.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </li>
       <li>
         <a
           href={practiceHref()}

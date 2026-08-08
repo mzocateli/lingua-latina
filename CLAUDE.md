@@ -44,7 +44,7 @@ Ao terminar: `npm run validate && npm run check && npm run build`.
 **Macrons — a regra mais cara do projeto.** Vogais longas (ā ē ī ō ū ȳ) ficam acima da altura de caixa alta e colidem ou são cortadas:
 
 - **Nunca `font-variant: small-caps` em texto que possa conter macron.** O glifo versalete sintetizado desloca o macron. Substituto: `font-style: italic` + `font-weight: 600` + `color: var(--burgundy)` + `letter-spacing: .02–.04em`.
-  Small-caps segue válido em 12 rótulos de *chrome* comprovadamente sem macron: `.site-nav-list a`, `.chapter-card .label`, `.toc-title`, `.tip-label`, `.auxilia-title`, `.answer-header`, `.score`, `.exemplum::before`, `.frontis .epigraph cite`, `table.paradigm th`, `.content-topic-body th`, `.content-topic-body td:first-child`. `npm run validate` recusa qualquer seletor novo fora dessa lista.
+  Small-caps segue válido em 13 rótulos de *chrome* comprovadamente sem macron: `.site-nav-list a`, `.site-nav-capitula summary`, `.chapter-card .label`, `.toc-title`, `.tip-label`, `.auxilia-title`, `.answer-header`, `.score`, `.exemplum::before`, `.frontis .epigraph cite`, `table.paradigm th`, `.content-topic-body th`, `.content-topic-body td:first-child`. `npm run validate` recusa qualquer seletor novo fora dessa lista.
 - Headings que podem conter macron: `line-height` ≥ 1.2.
 - `.ex-block` (linhas latinas empilhadas com `<br>`): `line-height: 1.7`.
 

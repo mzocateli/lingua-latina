@@ -50,5 +50,10 @@ export const chapterIndex: ChapterIndexEntry[] = [
     "slug": "xi",
     "numeral": "XI",
     "title": "Corpus Hūmānum"
+  },
+  {
+    "slug": "xii",
+    "numeral": "XII",
+    "title": "Mīles Rōmānus"
   }
 ];

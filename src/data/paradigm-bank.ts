@@ -6,7 +6,7 @@
  * cap-vii.ts, src/content/grammar/ix,x/*.md) — nunca contra os PDFs OCR.
  *
  * `chapterIntroduced` usa o slug do livro tal como aparece em
- * src/data/chapters.ts ('ii'…'xi'). Lemas do Companion introduzidos antes do
+ * src/data/chapters.ts ('ii'…'xii'). Lemas do Companion introduzidos antes do
  * Cap. II (ex. oppidum, Cap. I) são grafados como 'ii' aqui — o site não
  * cobre o Cap. I, então esse vocabulário já está disponível desde o início.
  */
@@ -39,6 +39,9 @@ export interface VerbEntry {
   pos: 'verb';
   lemma: string;
   conjugation: Conjugation;
+  /** Verbo com paradigma irregular (ex. ferre) — o gerador troca a legenda
+   *  "Nª conj." por "verbo irregular" para não sugerir que segue o padrão. */
+  irregular?: boolean;
   chapterIntroduced: string;
   forms: {
     active: PersonForms;
@@ -187,6 +190,31 @@ export const paradigmBank: ParadigmBankEntry[] = [
     },
   },
 
+  // --- 4ª declinação (m./f.) ---
+  // Formas conferidas em src/content/grammar/xii/02-declinatio-quarta.md.
+  {
+    pos: 'noun', lemma: 'manus', declension: 4, gender: 'f', chapterIntroduced: 'xii',
+    forms: {
+      nom: { sg: 'manus', pl: 'manūs' },
+      gen: { sg: 'manūs', pl: 'manuum' },
+      dat: { sg: 'manuī', pl: 'manibus' },
+      acc: { sg: 'manum', pl: 'manūs' },
+      abl: { sg: 'manū', pl: 'manibus' },
+      voc: { sg: 'manus', pl: 'manūs' },
+    },
+  },
+  {
+    pos: 'noun', lemma: 'exercitus', declension: 4, gender: 'm', chapterIntroduced: 'xii',
+    forms: {
+      nom: { sg: 'exercitus', pl: 'exercitūs' },
+      gen: { sg: 'exercitūs', pl: 'exercituum' },
+      dat: { sg: 'exercituī', pl: 'exercitibus' },
+      acc: { sg: 'exercitum', pl: 'exercitūs' },
+      abl: { sg: 'exercitū', pl: 'exercitibus' },
+      voc: { sg: 'exercitus', pl: 'exercitūs' },
+    },
+  },
+
   // --- verbos, presente do indicativo (ativo/passivo) ---
   // 3ª pessoa verificada em cap-vi.ts (Tabula P2); 1ª/2ª pessoa e plural
   // seguem as desinências regulares de cada conjugação sobre o mesmo radical.
@@ -216,6 +244,18 @@ export const paradigmBank: ParadigmBankEntry[] = [
     forms: {
       active: { sg: ['audiō', 'audīs', 'audit'], pl: ['audīmus', 'audītis', 'audiunt'] },
       passive: { sg: ['audior', 'audīris', 'audītur'], pl: ['audīmur', 'audīminī', 'audiuntur'] },
+    },
+  },
+
+  // --- verbo irregular ---
+  // 3ª pessoa (fert/ferunt/fertur/feruntur) e o imperativo fer!/ferte! estão
+  // em src/content/grammar/xii/05-ferre-et-imperativi.md; 1ª/2ª pessoa seguem
+  // o mesmo radical consonantal fer- sem vogal de ligação (gramática padrão).
+  {
+    pos: 'verb', lemma: 'ferre', conjugation: 3, irregular: true, chapterIntroduced: 'xii',
+    forms: {
+      active: { sg: ['ferō', 'fers', 'fert'], pl: ['ferimus', 'fertis', 'ferunt'] },
+      passive: { sg: ['feror', 'ferris', 'fertur'], pl: ['ferimur', 'feriminī', 'feruntur'] },
     },
   },
 ];

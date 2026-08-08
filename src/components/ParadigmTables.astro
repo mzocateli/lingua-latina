@@ -102,7 +102,7 @@ function canonical(s: string): string {
                   );
                 }
                 // given (anchor) text
-                const text = typeof cell === 'object' ? (cell?.text || '') : String(cell);
+                const text = typeof cell === 'object' ? ((cell as any)?.text || '') : String(cell);
                 return <td class="paradigm-cell paradigm-given" set:html={text} />;
               })}
             </tr>
