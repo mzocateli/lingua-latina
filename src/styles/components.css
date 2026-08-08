@@ -25,7 +25,7 @@
   font-weight:600;
 }
 .summary-card .cap{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.85rem;
   color:var(--gilt);
@@ -42,7 +42,7 @@
 }
 .summary-card .ex{
   display:inline-block;
-  font-family:'EB Garamond', serif;
+  font-family:'Source Serif 4', serif;
   font-style:italic;
   color:var(--ink);
   background:rgba(160,122,42,.12);
@@ -86,7 +86,7 @@
   border-bottom-color:var(--rule);
 }
 .chapter-card .roman{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:3.6rem;
   color:var(--gilt);
@@ -121,7 +121,7 @@
 .chapter-card .count{
   margin-top:auto;
   padding-top:.8rem;
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.85rem;
   color:var(--muted);
@@ -155,7 +155,7 @@
   margin:0;
 }
 .toc-list a{
-  font-family:'EB Garamond', serif;
+  font-family:'Source Serif 4', serif;
   font-style:italic;
   font-size:.95rem;
   color:var(--ink-soft);

@@ -34,7 +34,7 @@ Ponha a regra na folha que já é dona daquele componente. Cada folha abre com u
 
 Cor nova só sai daqui. Os `rgba(155, 28, 28, …)` espalhados por `content.css`/`exercise.css` (~25 ocorrências) são um vermelho **diferente** de `--burgundy`, legado — não propague; se estiver editando a regra por outro motivo, migre para o token. Idem `#2f6b3c` em `.paradigm-was-blank .key`, que devia ser `--correct`.
 
-Fontes, via `@import` no topo de `theme.css`: *Cormorant Garamond* (títulos, botões, rótulos), *EB Garamond* (corpo, latim, inputs), *IM Fell English* (numerais romanos, `bookRef`, tags, `<kbd>`). Ornamentos (`❦ ❧ ☙ § ✎ ▸ ▾ ⸻ ⟵ ⟶`) entram por `content:` em `::before`/`::after`, nunca como ícone.
+Fontes, via `@import` no topo de `theme.css`: *Cormorant Garamond* (títulos, botões, rótulos), *Source Serif 4* (corpo, latim, inputs — trocou o lugar de *EB Garamond* por legibilidade em texto corrido, mantendo compatibilidade com macrons), *Lora* (numerais romanos, `bookRef`, tags, `<kbd>` — trocou o lugar de *IM Fell English* por legibilidade em itálico/uppercase pequeno, mantendo compatibilidade com macrons). Ornamentos (`❦ ❧ ☙ § ✎ ▸ ▾ ⸻ ⟵ ⟶`) entram por `content:` em `::before`/`::after`, nunca como ícone.
 
 Breakpoints em uso: **640px** (geral), **560px** (pager), **760px** (colapso da sidebar de auxilia). Não invente um quarto sem motivo.
 

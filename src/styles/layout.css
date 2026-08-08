@@ -71,7 +71,7 @@
   border-color:var(--gilt);
 }
 .site-nav-list a .num{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.85em;
   color:var(--gilt);
@@ -111,7 +111,7 @@
   border-color:rgba(160,122,42,.4);
 }
 .site-nav-capitula summary .num{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.85em;
   color:var(--gilt);
@@ -156,7 +156,7 @@
   border-left-color:var(--burgundy);
 }
 .site-nav-capitula-menu .num{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:1rem;
   color:var(--gilt);
@@ -196,7 +196,7 @@
   margin:.2rem 0;
 }
 .frontis .kicker{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   letter-spacing:.3em;
   text-transform:uppercase;
@@ -218,7 +218,7 @@
   font-weight:400;
 }
 .frontis .subtitle{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   color:var(--ink-soft);
   font-size:1.15rem;
@@ -244,7 +244,7 @@
   border-bottom:1px solid var(--rule);
 }
 .chapter-header .eyebrow{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   letter-spacing:.25em;
   text-transform:uppercase;
@@ -267,7 +267,7 @@
   color:var(--burgundy);
 }
 .chapter-header h1 .name{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.65em;
   color:var(--muted);
@@ -295,7 +295,7 @@ h2.section-title{
   flex-wrap:wrap;
 }
 h2.section-title .roman{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   color:var(--gilt);
   font-size:1.1rem;
@@ -320,7 +320,7 @@ h2.section-title .roman{
 }
 .usage-hint kbd{
   display:inline-block;
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-size:.85em;
   padding:.05em .4em;
   background:var(--vellum);

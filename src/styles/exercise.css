@@ -34,7 +34,7 @@
   color:var(--burgundy-deep);
 }
 .ex-tag{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.82rem;
   color:var(--muted);
@@ -69,7 +69,7 @@
   font-size:.92rem;
 }
 .tip-sub{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.88rem;
   color:var(--muted);
@@ -161,7 +161,7 @@ ol.questions li{
 .aux-group{margin-bottom:.7rem}
 .aux-group:last-child{margin-bottom:0}
 .aux-label{
-  font-family:'IM Fell English', serif;
+  font-family:'Lora', serif;
   font-style:italic;
   font-size:.78rem;
   color:var(--gilt);
@@ -235,7 +235,7 @@ table.paradigm td i{
   white-space:nowrap;
 }
 table.paradigm td:not(:first-child){
-  font-family:'EB Garamond', serif;
+  font-family:'Source Serif 4', serif;
   font-style:italic;
   color:var(--ink);
 }
@@ -448,7 +448,7 @@ input.blank.wrong{
   font-style: italic;
 }
 .paradigm-caption-note{
-  font-family: 'IM Fell English', serif;
+  font-family: 'Lora', serif;
   font-style: italic;
   color: var(--muted);
   font-size: 0.82rem;
@@ -456,7 +456,7 @@ input.blank.wrong{
 
 table.paradigm-grid{
   border-collapse: collapse;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Source Serif 4', serif;
   background: rgba(255,253,247,0.5);
 }
 table.paradigm-grid th,
@@ -530,7 +530,7 @@ table.paradigm-grid td{
 }
 
 .paradigm-gender{
-  font-family: 'IM Fell English', serif;
+  font-family: 'Lora', serif;
   font-style: italic;
   font-weight: 400;
   color: var(--muted);
