@@ -8,7 +8,6 @@ const chapter: Chapter = {
   "grammarIntro": "Os pontos formais do capítulo: o <em>ablativo</em> (sg. e pl.), o <em>acusativo plural</em>, a tabela completa da concordância dos adjetivos da 1ª/2ª classe, o pronome <em>is, ea, id</em> em todos os gêneros, e o <em>imperativo plural</em>.",
   "exercises": [
     {
-      "index": 0,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "terminações nominais e verbais",
@@ -80,7 +79,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 200,
       "number": 2,
       "title": "Exercitium 2",
       "tag": "concordância de adjetivos: multus, unus, ūllus, nūllus",
@@ -158,7 +156,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 201,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "verbo: 3ª pessoa singular vs. plural",
@@ -235,7 +232,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 1,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "ablativo singular e plural",
@@ -291,7 +287,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 202,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "ablativo: m/n -ō, f -ā, pl -īs",
@@ -353,7 +348,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 203,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "pronome <em>is, ea, id</em>",
@@ -446,7 +440,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 2,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "imperativo singular e plural",
@@ -535,7 +528,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 204,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "preposições com ablativo: <em>in, cum, ex, ab, sine</em>",
@@ -595,7 +587,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 3,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "análise gramatical — acusativo sg./pl.",
@@ -654,7 +645,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 205,
       "number": 10,
       "title": "Exercitium 10 — léctiō grammatica",
       "tag": "ablativo: nomes/análise",
@@ -720,7 +710,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 206,
       "number": 11,
       "title": "Exercitium 11 — léctiō grammatica",
       "tag": "imperativo plural; indicativo sg./pl.",

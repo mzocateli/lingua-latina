@@ -9,7 +9,6 @@ const chapter: Chapter = {
   "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. II</em>. Aqui aparecem os termos básicos da família romana e as primeiras marcas gramaticais — gênero (masculino, feminino, neutro) e genitivo (caso de posse). Atenção ao par <em>liber</em> (livro) × <em>līberī</em> (filhos): duas palavras distintas que diferem só pelo macron no <em>ī</em>.",
   "exercises": [
     {
-      "index": 0,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "léxico: <em>vir, fēmina, puer, puella</em>",
@@ -73,7 +72,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 1,
       "number": 2,
       "title": "Exercitium 2",
       "tag": "família e genitivo: <em>pater, māter, fīlius, fīlia; -ī, -ae</em>",
@@ -150,7 +148,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 2,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "interrogativos: <em>quis? quae? quī? quid?</em>",
@@ -202,7 +199,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 3,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "conjunções: <em>et</em> vs enclítico <em>-que</em>",
@@ -234,7 +230,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 4,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "<em>servus / ancilla, dominus / domina</em> + genitivo",
@@ -294,7 +289,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 5,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "genitivo plural: <em>multōrum, multārum</em> + substantivo",
@@ -356,7 +350,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 6,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "<em>magnus numerus</em> + gen. = <em>multī</em>",
@@ -390,7 +383,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 7,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "<em>quot?</em> e <em>ūnus / duo / trēs</em> com gênero",
@@ -459,7 +451,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 8,
       "number": 10,
       "title": "Exercitium 10",
       "tag": "possessivos: <em>meus, tuus</em> (1ª/2ª pessoa)",
@@ -533,7 +524,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 9,
       "number": 11,
       "title": "Exercitium 11",
       "tag": "léxico final: livros e capítulos",

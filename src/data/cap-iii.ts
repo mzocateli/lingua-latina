@@ -9,7 +9,6 @@ const chapter: Chapter = {
   "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. III</em>. Quase todas são <em>verbos</em> — pela primeira vez no livro aparecem ações concretas (cantar, chorar, bater, perguntar). Junto, vêm os primeiros pronomes pessoais no acusativo (<em>mē, tē, eum, eam</em>) e os pronomes relativos/interrogativos no caso oblíquo.",
   "exercises": [
     {
-      "index": 0,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "léxico: cenas, personagens, ações",
@@ -59,7 +58,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 1,
       "number": 2,
       "title": "Exercitium 2",
       "tag": "acusativo de nomes próprios e <em>mē</em>",
@@ -117,7 +115,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 2,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "verbos no contexto: <em>cantat, pulsat, plōrat, rīdet, videt, vocat, venit</em>",
@@ -154,7 +151,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 3,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "diálogo: pergunta/resposta",
@@ -194,7 +190,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 4,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "completar oração causal: <em>… quia …</em>",
@@ -228,7 +223,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 5,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "analisar sujeito, objeto e atributo",
@@ -295,7 +289,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 6,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "relativo <em>quī / quae / quem / quam</em>",
@@ -358,7 +351,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 7,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "interrogativo <em>quis?</em> (nōm.) vs <em>quem?</em> (acus.)",
@@ -403,7 +395,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 8,
       "number": 10,
       "title": "Exercitium 10 — léctiō grammatica",
       "tag": "análise: nominativo e acusativo",

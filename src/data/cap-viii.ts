@@ -9,7 +9,6 @@ const chapter: Chapter = {
   "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VIII</em>. O capítulo é centrado no comércio em Roma, então o vocabulário traz objetos (anel, gema, pérola), termos de transação (preço, vender, comprar), e adjetivos quantificadores.",
   "exercises": [
     {
-      "index": 500,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "léxico de Cap. VIII",
@@ -55,7 +54,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 12,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "dare ↔ accipere (verbo recíproco)",
@@ -114,7 +112,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 501,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "verbos compostos com <em>ad-, ab-, ex-, in-</em>",
@@ -192,7 +189,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 13,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "pronomes interrogativos",
@@ -235,7 +231,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 502,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "léxico: comércio na taberna",
@@ -286,7 +281,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 14,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "",
@@ -343,7 +337,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 15,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "preço: genitivo vs. ablativo",
@@ -391,7 +384,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 16,
       "number": 10,
       "title": "Exercitium 10",
       "tag": "",
@@ -439,7 +431,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 17,
       "number": 12,
       "title": "Exercitium 12",
       "tag": "",
@@ -541,7 +532,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 18,
       "number": 13,
       "title": "Exercitium 13",
       "tag": "o mesmo, agora no feminino",
@@ -639,7 +629,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 503,
       "number": 14,
       "title": "Exercitium 14",
       "tag": "interrogativo/relativo neutro <em>quid, quod, id</em>",

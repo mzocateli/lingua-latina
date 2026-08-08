@@ -9,7 +9,6 @@ const chapter: Chapter = {
   "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VI</em>. As entradas seguem a forma do nominativo singular + genitivo singular (ou só o gen. para temas em consoante). As classes de declinação são marcadas para orientar o estudo.",
   "exercises": [
     {
-      "index": 4,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "preposições e ablativo/acusativo de lugar",
@@ -76,7 +75,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 300,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "<em>ā</em> vs. <em>ab</em>",
@@ -122,7 +120,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 301,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "léxico: vias, oppida, viagem",
@@ -166,7 +163,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 302,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "relativo masculino: <em>quī, quem, quōs</em>",
@@ -224,7 +220,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 5,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "",
@@ -285,7 +280,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 303,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "ativa ↔ passiva: <em>-t/-nt</em> vs <em>-tur/-ntur</em>",
@@ -338,7 +332,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 6,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "transformação ativa → passiva",
@@ -387,7 +380,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 304,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "ablativo de meio / instrumento",
@@ -434,7 +426,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 305,
       "number": 10,
       "title": "Exercitium 10",
       "tag": "léxico do capítulo VI",
@@ -470,7 +461,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 7,
       "number": 12,
       "title": "Exercitium 12",
       "tag": "identificar ativa vs. passiva",
@@ -716,8 +706,7 @@ const chapter: Chapter = {
       "references": [
         "acusativo-plural",
         "lugar"
-      ],
-      "index": 306
+      ]
     },
     {
       "number": "P2",
@@ -865,8 +854,7 @@ const chapter: Chapter = {
       ],
       "references": [
         "voz-passiva"
-      ],
-      "index": 307
+      ]
     },
     {
       "number": "P3",
@@ -915,8 +903,7 @@ const chapter: Chapter = {
       ],
       "references": [
         "relativo-intro"
-      ],
-      "index": 308
+      ]
     }
   ]
 };

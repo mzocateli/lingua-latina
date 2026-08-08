@@ -9,7 +9,6 @@ const chapter: Chapter = {
   "vocabularyIntro": "As palavras novas introduzidas em <em>Cap. VII</em>. Aqui aparecem objetos concretos (espelho, lágrima, maçã) e verbos de ação cotidiana (abrir, fechar, esperar) — todos úteis para o resto do livro.",
   "exercises": [
     {
-      "index": 400,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "léxico do capítulo VII",
@@ -59,7 +58,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 401,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "<em>sē</em> reflexivo vs. <em>eum, eam</em>",
@@ -103,7 +101,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 8,
       "number": 4,
       "title": "Exercitium 4",
       "tag": "in + abl. (lugar onde)",
@@ -145,7 +142,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 402,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "conjunções correlativas",
@@ -181,7 +177,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 9,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "dativo: pronome e nomes",
@@ -250,7 +245,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 10,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "",
@@ -311,7 +305,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 403,
       "number": 9,
       "title": "Exercitium 9",
       "tag": "léxico: chegada de Iūlius, frutas, abraço",
@@ -355,7 +348,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 11,
       "number": 11,
       "title": "Exercitium 11 — léctiō grammatica",
       "tag": "paradigma de dativo",
@@ -437,7 +429,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 100,
       "number": "A",
       "title": "Exercitium A — drill original",
       "tag": "pronomes is, ea, id em acusativo",
@@ -496,7 +487,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 101,
       "number": "B",
       "title": "Exercitium B — drill original",
       "tag": "dativo: a quem se dá / mostra / diz",
@@ -561,7 +551,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 102,
       "number": "C",
       "title": "Exercitium C — drill original",
       "tag": "demonstrativo hic, haec, hoc",
@@ -793,8 +782,7 @@ const chapter: Chapter = {
       ],
       "references": [
         "dativo"
-      ],
-      "index": 404
+      ]
     },
     {
       "number": "P2",
@@ -964,8 +952,7 @@ const chapter: Chapter = {
       ],
       "references": [
         "pronome-is"
-      ],
-      "index": 405
+      ]
     },
     {
       "number": "P3",
@@ -1068,8 +1055,7 @@ const chapter: Chapter = {
       ],
       "references": [
         "demonstrativo-hic"
-      ],
-      "index": 406
+      ]
     },
     {
       "number": "P4",
@@ -1175,8 +1161,7 @@ const chapter: Chapter = {
           ]
         }
       ],
-      "references": [],
-      "index": 407
+      "references": []
     }
   ]
 };

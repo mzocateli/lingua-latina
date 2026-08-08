@@ -74,7 +74,7 @@ const chapter: Chapter = {
         "Rōmae habitat magnus numerus homō{num|hominum:md}.",
         "Leō nōn est amīcus homō{nis|hominis:md}, neque homō amīcus leō{nis:md}.",
         "Homō leō{nem:md} timet, et homō{nem|hominem:md} timet leō.",
-        "Leō ab homō{ne|homine:md} timētur, et homō{:md} timētur ā leō{ne:md}.",
+        "Leō ab homō{ne|homine:md} timētur, et homō timētur ā leō{ne:md}.",
         "Leō{nēs:md} ab homō{nibus|hominibus:md} timentur, et homō{nēs|hominēs:md} timentur ā leō{nibus:md}."
       ],
       "phraseMode": false,

@@ -8,7 +8,6 @@ const chapter: Chapter = {
   "grammarIntro": "Os pontos formais do capítulo: o <em>vocativo</em> (a forma de chamar), o <em>imperativo</em> singular (a forma de ordenar), os primeiros <em>numerais</em>, e a primeira aparição do par <em>suus</em> (reflexivo) vs. <em>eius</em> (anafórico).",
   "exercises": [
     {
-      "index": 0,
       "number": 1,
       "title": "Exercitium 1",
       "tag": "numerais cardinais <em>I–X</em>",
@@ -98,7 +97,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 1,
       "number": 2,
       "title": "Exercitium 2",
       "tag": "operações aritméticas em latim",
@@ -141,7 +139,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 2,
       "number": 3,
       "title": "Exercitium 3",
       "tag": "léxico: dinheiro, contagem, presença/ausência",
@@ -183,7 +180,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 3,
       "number": 5,
       "title": "Exercitium 5",
       "tag": "<em>suus</em> (reflexivo) vs <em>eius</em> (anafórico)",
@@ -231,7 +227,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 4,
       "number": 6,
       "title": "Exercitium 6",
       "tag": "vocativo: a forma de chamar alguém",
@@ -306,7 +301,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 5,
       "number": 7,
       "title": "Exercitium 7",
       "tag": "léxico: <em>nūllus, accūsat, mēnsa, vacuus, bonus, pōnit, sūmit, discēdit, baculum, quod, is</em>",
@@ -350,7 +344,6 @@ const chapter: Chapter = {
       "references": []
     },
     {
-      "index": 6,
       "number": 8,
       "title": "Exercitium 8",
       "tag": "imperativo (-a/-e/-e/-ī) vs indicativo (-at/-et/-it/-it)",
@@ -409,7 +402,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 7,
       "number": 10,
       "title": "Exercitium 10 — léctiō grammatica",
       "tag": "análise: vocativo",
@@ -444,7 +436,6 @@ const chapter: Chapter = {
       ]
     },
     {
-      "index": 8,
       "number": 11,
       "title": "Exercitium 11 — léctiō grammatica",
       "tag": "análise: imperativo vs indicativo",
