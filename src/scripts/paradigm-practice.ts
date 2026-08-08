@@ -205,20 +205,35 @@ function init(): void {
 
   const maxSelect = form.querySelector<HTMLSelectElement>('#cfg-max')!;
   const minSelect = form.querySelector<HTMLSelectElement>('#cfg-min')!;
+  const noRepeatBox = form.querySelector<HTMLInputElement>('#cfg-no-repeat')!;
   maxSelect.addEventListener('change', () => syncAvailability(form));
   minSelect.addEventListener('change', () => syncAvailability(form));
   syncAvailability(form);
 
   let lastLemma: string | undefined;
+  let usedLemmas: string[] = [];
+  // Qualquer mudança na config muda o banco elegível — o histórico de
+  // "já sorteados" perde sentido e deve recomeçar.
+  form.addEventListener('change', (ev) => {
+    if (ev.target === noRepeatBox) return;
+    usedLemmas = [];
+  });
+
   generateBtn.addEventListener('click', () => {
     const cfg = readConfig(form);
-    const result = generateParadigm(cfg, lastLemma);
+    const exclude = noRepeatBox.checked ? usedLemmas : (lastLemma ? [lastLemma] : []);
+    const result = generateParadigm(cfg, exclude);
     if (emptyMsg) emptyMsg.hidden = !!result;
     if (!result) {
       root.innerHTML = '';
       return;
     }
     lastLemma = result.lemma;
+    if (noRepeatBox.checked) {
+      usedLemmas = result.cycleReset ? [result.lemma] : [...usedLemmas, result.lemma];
+    } else {
+      usedLemmas = [];
+    }
     mountExercise(root, result.tables, result.answers);
   });
 }

@@ -35,6 +35,9 @@ export interface GeneratedParadigm {
   tables: ParadigmTable[];
   answers: string[];
   lemma: string;
+  /** true quando `exclude` esgotou o banco elegível e precisou ser ignorado —
+   *  o chamador deve reiniciar seu histórico de "já sorteados" a partir daqui. */
+  cycleReset?: boolean;
 }
 
 /** Casos disponíveis no intervalo [minChapter, maxChapter] configurado. */
@@ -115,11 +118,13 @@ function buildVerbTable(entry: VerbEntry, voices: Voice[]): ParadigmTable {
  * Retorna null quando a configuração não deixa nenhum lema/caso/voz disponível
  * (a UI deve impedir isso, mas a engine também se protege).
  *
- * `avoidLemma`, quando informado, é excluído do sorteio se isso deixar pelo
- * menos um outro lema elegível — evita repetir a mesma tabela duas vezes
- * seguidas quando o banco filtrado é pequeno.
+ * `exclude`, quando informado, remove esses lemas do sorteio — usado tanto
+ * para o "não repetir o imediatamente anterior" (um item) quanto para o modo
+ * "evitar repetição" (o histórico inteiro já sorteado). Se excluir tudo,
+ * a exclusão é ignorada e `cycleReset` volta `true` para o chamador saber que
+ * o ciclo recomeçou.
  */
-export function generateParadigm(cfg: PracticeConfig, avoidLemma?: string): GeneratedParadigm | null {
+export function generateParadigm(cfg: PracticeConfig, exclude: string[] = []): GeneratedParadigm | null {
   const cases = cfg.cases.length ? cfg.cases : availableCases(cfg);
   const voices = cfg.voices.length ? cfg.voices : availableVoices(cfg);
   // Como cases/voices acima: seleção vazia = "sem restrição", não "nada elegível".
@@ -131,9 +136,14 @@ export function generateParadigm(cfg: PracticeConfig, avoidLemma?: string): Gene
   const pool = eligibleEntries(effectiveCfg);
   if (!pool.length) return null;
 
-  const candidates = avoidLemma && pool.length > 1
-    ? pool.filter(e => e.lemma !== avoidLemma)
-    : pool;
+  const excludeSet = new Set(exclude);
+  let candidates = excludeSet.size ? pool.filter(e => !excludeSet.has(e.lemma)) : pool;
+  let cycleReset = false;
+  if (!candidates.length) {
+    cycleReset = true;
+    const last = exclude[exclude.length - 1];
+    candidates = last && pool.length > 1 ? pool.filter(e => e.lemma !== last) : pool;
+  }
   const entry = candidates[Math.floor(Math.random() * candidates.length)];
   let table: ParadigmTable;
   if (entry.pos === 'noun') {
@@ -144,5 +154,5 @@ export function generateParadigm(cfg: PracticeConfig, avoidLemma?: string): Gene
     table = buildVerbTable(entry, voices);
   }
   const tables = [table];
-  return { tables, answers: resolveParadigmAnswers(tables, []), lemma: entry.lemma };
+  return { tables, answers: resolveParadigmAnswers(tables, []), lemma: entry.lemma, cycleReset };
 }
