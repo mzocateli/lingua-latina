@@ -45,13 +45,13 @@ const standardQuestions = paradigm
   <div class="exercise-body">
     <div class="exercise-main">
       {exercise.exemplum && (
-        <p class="exemplum" set:html={exercise.exemplum} />
+        <p class="exemplum" lang="la" set:html={exercise.exemplum} />
       )}
 
       {paradigm ? (
         <ParadigmTables tables={exercise.tables} />
       ) : (
-        <ol class="questions">
+        <ol class="questions" lang="la">
           {standardQuestions.map(q => (
             <li set:html={parseQuestion(q).html} />
           ))}
@@ -59,11 +59,24 @@ const standardQuestions = paradigm
       )}
 
       <div class="controls">
-        <button class="reveal-btn" type="button">Aperī responsa</button>
+        <button class="grade-btn" type="button" title="Marcar certo e errado sem mostrar as respostas">
+          Corrige
+        </button>
+        <button
+          class="retry-btn"
+          type="button"
+          title="Apagar só as lacunas erradas e tentar de novo"
+          hidden
+        >Iterum tentā</button>
         <button class="clear-btn" type="button" title="Limpar respostas deste exercício">Mundā</button>
         {exercise.references && exercise.references.length > 0 && (
           <ReferenceButton refs={exercise.references} chapter={chapter} />
         )}
+      </div>
+
+      <div class="controls controls-reveal">
+        <button class="reveal-btn" type="button">Aperī responsa</button>
+        <span class="controls-reveal-note">só depois de tentar</span>
       </div>
 
       <div class="answer">

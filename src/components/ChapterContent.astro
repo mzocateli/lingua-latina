@@ -1,6 +1,7 @@
 ---
-import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 import type { Chapter } from '~/lib/types';
+import { grammarOf, topicsOf, bareId } from '~/lib/content';
 
 interface Props {
   chapter: Chapter;
@@ -15,24 +16,18 @@ function stripHtml(s: string): string {
 }
 
 // ----- Grammar sections (file-per-section, sort by filename) -----
-const grammarSections = (await getCollection('grammar', (e: CollectionEntry<'grammar'>) => e.id.startsWith(`${slug}/`)))
-  .sort((a, b) => a.id.localeCompare(b.id));
 const grammarRendered = await Promise.all(
-  grammarSections.map(async (s) => {
+  (await grammarOf(slug)).map(async (s) => {
     const { Content } = await s.render();
     return { meta: s.data, Content };
   })
 );
 
 // ----- Topics (file-per-topic, sort by order frontmatter) -----
-const topicEntries = (await getCollection('topics', (e: CollectionEntry<'topics'>) => e.id.startsWith(`${slug}/`)))
-  .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
 const topicsRendered = await Promise.all(
-  topicEntries.map(async (t) => {
+  (await topicsOf(slug)).map(async (t) => {
     const { Content } = await t.render();
-    // Strip the `{slug}/` prefix from the collection id to get the bare topic id.
-    const id = t.id.replace(/^[^/]+\//, '').replace(/\.md$/, '');
-    return { id, meta: t.data, Content };
+    return { id: bareId(t.id), meta: t.data, Content };
   })
 );
 
@@ -97,7 +92,7 @@ const topicNames = topicsRendered.map(({ meta }) => stripHtml(meta.title));
             <dl class="vocab-list">
               {g.entries.map(entry => (
                 <>
-                  <dt class="vocab-lemma" set:html={entry.lemma} />
+                  <dt class="vocab-lemma" lang="la" set:html={entry.lemma} />
                   <dd class="vocab-gloss">
                     <Fragment set:html={entry.gloss} />
                     {entry.note && (

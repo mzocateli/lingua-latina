@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import { chapterIndex, chapters } from '~/lib/chapters';
-import { chapterHref } from '~/lib/paths';
+import { chapterHref, grammarHref, practiceHref } from '~/lib/paths';
 
 const cards = chapterIndex.map(ch => {
   const chapter = chapters[ch.slug];
@@ -11,6 +11,10 @@ const cards = chapterIndex.map(ch => {
     count: chapter?.exercises?.length || 0,
   };
 });
+
+const firstNumeral = chapterIndex[0]?.numeral ?? '';
+const lastNumeral = chapterIndex[chapterIndex.length - 1]?.numeral ?? '';
+const totalExercises = cards.reduce((n, c) => n + c.count, 0);
 ---
 
 <Layout
@@ -21,7 +25,9 @@ const cards = chapterIndex.map(ch => {
     <header class="frontis">
       <div class="kicker">Lingva Latina per se Illvstrata</div>
       <h1 class="title">Quaestiōnēs <em>Selectae</em></h1>
-      <div class="subtitle">Exercícios interativos · Capitvla II — XII</div>
+      <div class="subtitle">
+        Exercícios interativos · Capitvla {firstNumeral} — {lastNumeral} · {totalExercises} exercitia
+      </div>
       <div class="epigraph">
         "Repetitio est mater studiorum."<br />
         <cite>— proverbium scholasticum</cite>
@@ -30,8 +36,10 @@ const cards = chapterIndex.map(ch => {
 
     <div class="usage-hint">
       <strong>Ūsus.</strong> Escolha um capítulo abaixo. Em cada exercício, escreva nas lacunas
-      (os macrons <em>ā ē ī ō ū</em> são opcionais — pode digitar <em>servo</em> ou <em>servō</em>),
-      pressione <kbd>Enter</kbd> para ir ao próximo campo, e clique em <em>Aperī responsa</em> para corrigir.
+      (os macrons <em>ā ē ī ō ū</em> são opcionais — pode digitar <em>servo</em> ou <em>servō</em>)
+      e pressione <kbd>Enter</kbd> para ir ao próximo campo. <em>Corrige</em> marca o que está
+      certo e errado <strong>sem</strong> mostrar as respostas, para você poder tentar outra vez;
+      só depois disso vale abrir <em>Aperī responsa</em>.
     </div>
 
     <section id="capitula">
@@ -49,115 +57,28 @@ const cards = chapterIndex.map(ch => {
       </div>
     </section>
 
-    <section id="compendium">
-      <h2 class="section-title">Compendium Grammaticae <span class="roman">· resumo · cap. v–xii</span></h2>
-      <p style="font-style:italic; color:var(--ink-soft); max-width:70ch">
-        Resumo breve do que cada capítulo introduz. Use estes cartões como referência rápida antes
-        ou durante os exercícios.
-      </p>
+    <section id="alia">
+      <h2 class="section-title">Alia <span class="roman">· para além dos capítulos</span></h2>
+      <div class="entry-grid">
+        <a class="entry-card" href={grammarHref()}>
+          <div class="entry-marker">§</div>
+          <h3>Grammatica Latīna</h3>
+          <p>
+            Todo o resumo gramatical do site numa página só — capítulos
+            {firstNumeral} a {lastNumeral}, com link para o capítulo de origem de cada seção.
+            Serve de referência rápida antes ou durante os exercícios.
+          </p>
+        </a>
 
-      <div class="summary-grid">
-        <div class="summary-card">
-          <div class="cap">Capitulum V</div>
-          <h4>Acusativo e ablativo</h4>
-          <ul>
-            <li>Acus. sg/pl: <span class="ex">servum/servōs</span>, <span class="ex">ancillam/ancillās</span>, <span class="ex">cubiculum/cubicula</span>.
-              <span class="note">objeto direto: <em>Iūlius servum vocat</em>.</span></li>
-            <li>Abl. sg/pl: <span class="ex">servō/servīs</span>, <span class="ex">ancillā/ancillīs</span>, <span class="ex">cubiculō/cubiculīs</span>.
-              <span class="note">depois de <em>in, cum, ex, ab, sine</em>.</span></li>
-            <li>Verbo 3ª pessoa: <span class="ex">-t</span> sg, <span class="ex">-nt</span> pl.</li>
-            <li>Imperativo: <span class="ex">-ā/-ē/-e/-ī</span> sg, <span class="ex">-āte/-ēte/-ite/-īte</span> pl.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum VI</div>
-          <h4>Lugar e voz passiva</h4>
-          <ul>
-            <li>Para onde (acus.): <span class="ex">Rōmam, Tūsculum, ad vīllam</span>.</li>
-            <li>De onde (abl.): <span class="ex">Rōmā, Tūsculō, ab oppidō, ex vīllā</span>.</li>
-            <li>Onde (locativo / abl.): <span class="ex">Rōmae, Tūsculī, in oppidō</span>.</li>
-            <li>Passiva: <span class="ex">amātur/amantur, vidētur/videntur</span>.
-              <span class="note">Agente: <em>ā/ab + ablativo</em>.</span></li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum VII</div>
-          <h4>Dativo e pronomes</h4>
-          <ul>
-            <li>Dativo sg: m/n <span class="ex">-ō</span>, f <span class="ex">-ae</span>. Pl: <span class="ex">-īs</span>.</li>
-            <li><em>is, ea, id</em>: acus. <span class="ex">eum / eam / id</span>; dat. <span class="ex">eī</span>.</li>
-            <li><em>hic, haec, hoc</em>: <span class="ex">hic vir, haec rosa, hoc mālum</span>.</li>
-            <li>Relativo <em>quī, quae, quod</em>: acompanha o antecedente em gênero e número.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum VIII</div>
-          <h4>Genitivo e <em>quī/quae/quod</em></h4>
-          <ul>
-            <li>Genitivo sg: <span class="ex">-ī / -ae / -ī</span>; pl: <span class="ex">-ōrum / -ārum / -ōrum</span>.</li>
-            <li>Ablativo de preço: <span class="ex">duōbus sēstertiīs</span>.</li>
-            <li>Verbos em <em>-iō</em>: <span class="ex">accipit/accipiunt</span>; imp. <span class="ex">accipe! cape!</span></li>
-            <li><em>quī, quae, quod</em> — paradigma completo:
-              <span class="ex">acc. quem/quam/quod</span>, <span class="ex">gen. cuius</span>, <span class="ex">dat. cui</span>.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum IX</div>
-          <h4>Terceira declinação</h4>
-          <ul>
-            <li>Nōm. variável: <span class="ex">pāstor, ovis, nūbēs, mōns</span>; sempre gen. <span class="ex">-is</span>.</li>
-            <li>Acus. <span class="ex">-em</span>, dat. <span class="ex">-ī</span>, abl. <span class="ex">-e</span>; pl. <span class="ex">-ēs / -ibus</span>.</li>
-            <li>Gen. pl.: <span class="ex">-um</span> (consonantal: <em>pāstōrum</em>) ou <span class="ex">-ium</span> (i-stem: <em>ovium, montium</em>).
-              <span class="note">exceção: <em>canis → canum</em>.</span></li>
-            <li><em>ipse, ipsa, ipsum</em> (enfático); <em>dum</em> 'enquanto'/'até que'; <em>edere</em> sg. <em>ēst</em>, pl. <em>edunt</em>.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum X</div>
-          <h4>Infinitivo e <em>posse</em></h4>
-          <ul>
-            <li>Inf. ativo: <span class="ex">-āre / -ēre / -ere / -īre</span> (1/2/3/4ª).</li>
-            <li>Inf. passivo: <span class="ex">-ārī / -ērī / -ī / -īrī</span>.
-              <span class="note">3ª faz passivo só com <em>-ī</em>: <em>emī, pōnī, capī</em>.</span></li>
-            <li><em>posse</em> (potest/possunt), <em>velle</em> (vult/volunt), <em>necesse est</em> + dat. + inf.</li>
-            <li>Acus. + inf. com verbos de percepção: <em>Mārcus Quīntum cadere videt</em>.</li>
-            <li>Neutros 3ª: <em>flūmen, mare, animal</em> — pl. n./a. em <span class="ex">-a / -ia</span>.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum XI</div>
-          <h4>Acusativo com infinitivo</h4>
-          <ul>
-            <li>Discurso indireto: sujeito em <span class="ex">acusativo</span> + verbo em <span class="ex">infinitivo</span>.
-              <span class="note"><em>Puer dormit</em> → <em>Medicus puerum dormīre dīcit</em>.</span></li>
-            <li>Regem a construção: <em>vidēre, audīre, sentīre, iubēre, dīcere, putāre, gaudēre, necesse est</em>.
-              <span class="note">com <em>esse</em>, sujeito e predicativo vão ao acus.: <em>linguam rubram esse</em>.</span></li>
-            <li>Neutros 3ª consonantais: <span class="ex">corpus/corpora, ōs/ōra, crūs/crūra, caput/capita, cor/corda</span>.</li>
-            <li><em>posse</em> = <em>pot-</em> + <em>esse</em>; <span class="ex">dē</span> + abl.; abl. de respeito <em>pede aeger</em>.</li>
-            <li><em>noster, -tra, -trum</em>; <em>atque/ac</em>, <em>neque/nec</em>.</li>
-          </ul>
-        </div>
-
-        <div class="summary-card">
-          <div class="cap">Capitulum XII</div>
-          <h4>4ª declinação e comparativo</h4>
-          <ul>
-            <li>4ª decl.: <span class="ex">-us / -um / -ūs / -uī / -ū</span> · pl. <span class="ex">-ūs / -ūs / -uum / -ibus</span>.
-              <span class="note"><em>exercitus, exercitūs</em>; <em>manus</em> é feminino.</span></li>
-            <li>Adjetivos da 3ª: <em>brevis, breve</em> — abl. sg. <span class="ex">-ī</span>, gen. pl. <span class="ex">-ium</span>, n. pl. <span class="ex">-ia</span>.</li>
-            <li>Comparativo <span class="ex">-ior / -ius</span> + <em>quam</em> = ‘do que’.
-              <span class="note">declina como consonantal: <em>longiōre, longiōrum, longiōra</em>.</span></li>
-            <li>Dativo de posse: <em>Mārcō ūna soror est</em>; dativo com <em>imperāre / pārēre</em>.</li>
-            <li>Genitivo partitivo (<em>pars imperiī</em>); acus. de extensão (<em>duōs pedēs longus</em>); <em>mīlia passuum</em>.</li>
-            <li><em>plūrāle tantum</em>: <em>castra, arma, līberī</em>; <em>ferre</em> (fert/ferunt) e <em>fer! dūc! dīc! fac! es!</em></li>
-          </ul>
-        </div>
+        <a class="entry-card" href={practiceHref()}>
+          <div class="entry-marker">❦</div>
+          <h3>Prāctica</h3>
+          <p>
+            Tabelas de declinação e conjugação geradas na hora, no intervalo de
+            capítulos que você escolher. Repetição sem fim para o que ainda não
+            saiu automático.
+          </p>
+        </a>
       </div>
     </section>
 

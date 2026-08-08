@@ -564,12 +564,10 @@ details.topics-section > .content-intro{
 /* ============================================================
    Section jump bar (sticky)
    ============================================================ */
-[data-section-bar]{
-  position: sticky;
-  top: 0;     /* JS will adjust this to match the site-nav height */
-  z-index: 9;
-}
 .section-bar{
+  position: sticky;
+  top: 0;     /* JS adjusts this to match the site-nav height */
+  z-index: 9;
   background: rgba(245, 235, 215, 0.95);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -607,6 +605,30 @@ details.topics-section > .content-intro{
 }
 
 /* ============================================================
+   /grammatica — the whole compendium on one page
+   ============================================================ */
+.grammatica-chapter{
+  margin: 2.4rem 0 0;
+  scroll-margin-top: var(--section-bar-offset);
+}
+.grammatica-chapter .section-title{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.grammatica-jump{
+  margin-left: auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--burgundy);
+  white-space: nowrap;
+}
+
+/* ============================================================
    Move the usage hint down near the exercises (smaller, inline)
    ============================================================ */
 .usage-hint-inline{
@@ -633,6 +655,21 @@ details.topics-section > .content-intro{
   border-radius: 2px;
   font-size: 0.88em;
 }
+/* Collapsed by default: the instructions are the same on every chapter, so
+   they should not cost a screenful before the exercises. */
+details.usage-hint-inline > summary{
+  cursor: pointer;
+  list-style: none;
+}
+details.usage-hint-inline > summary::-webkit-details-marker{ display: none; }
+details.usage-hint-inline > summary::before{
+  content: "▸ ";
+  color: var(--gilt);
+  font-style: normal;
+}
+details.usage-hint-inline[open] > summary::before{ content: "▾ "; }
+details.usage-hint-inline[open] > summary{ margin-bottom: 0.4rem; }
+details.usage-hint-inline p{ margin: 0; }
 
 @media (max-width: 640px){
   details.grammar-section > summary,

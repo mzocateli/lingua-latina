@@ -13,6 +13,11 @@ export function indexHref(): string {
   return `${BASE}/`;
 }
 
-export function practiceHref(): string {
-  return `${BASE}/pratica/`;
+export function practiceHref(params?: Record<string, string>): string {
+  const qs = params ? new URLSearchParams(params).toString() : '';
+  return `${BASE}/pratica/${qs ? `?${qs}` : ''}`;
+}
+
+export function grammarHref(): string {
+  return `${BASE}/grammatica/`;
 }

@@ -12,6 +12,7 @@ import {
   type PracticeConfig,
 } from '~/lib/paradigm-generator';
 import type { CaseName, Declension, Conjugation, Voice } from '~/lib/grammar-progression';
+import { chapterIndex } from '~/data/chapters';
 import { wireExercise } from './exercise-runtime';
 
 function checkedValues(form: HTMLFormElement, name: string): string[] {
@@ -43,6 +44,78 @@ function readConfig(form: HTMLFormElement): PracticeConfig {
     cases: checkedValues(form, 'case') as CaseName[],
     voices: checkedValues(form, 'voice') as Voice[],
   };
+}
+
+/* ----- Config ⇄ query string -----------------------------------------
+ * The panel's state lives in the URL and nowhere else: reload keeps it, the
+ * link is shareable, and the site stores nothing. `PARAM_OF` maps each control
+ * group's `name` attribute to its short query key.
+ */
+
+const PARAM_OF: Record<string, string> = {
+  pos: 'pos',
+  declension: 'decl',
+  conjugation: 'coni',
+  case: 'casus',
+  voice: 'vox',
+};
+
+/** Applies `?…` to the form controls. Chapter range first, then availability,
+ *  so an explicit selection can never turn on something still locked. */
+function applyQuery(form: HTMLFormElement, params: URLSearchParams): void {
+  const min = form.querySelector<HTMLSelectElement>('#cfg-min')!;
+  const max = form.querySelector<HTMLSelectElement>('#cfg-max')!;
+  const de = params.get('de');
+  const ate = params.get('ate');
+  if (de && Array.from(min.options).some(o => o.value === de)) min.value = de;
+  if (ate && Array.from(max.options).some(o => o.value === ate)) max.value = ate;
+
+  syncAvailability(form);
+
+  for (const [name, key] of Object.entries(PARAM_OF)) {
+    const raw = params.get(key);
+    if (raw === null) continue;
+    const wanted = new Set(raw.split(',').filter(Boolean));
+    form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`).forEach(inp => {
+      if (inp.disabled) return;
+      inp.checked = wanted.has(inp.value);
+    });
+  }
+}
+
+/** Serializes the form into the query string, replacing the current entry so
+ *  the back button still leaves the page instead of walking config history. */
+function writeQuery(form: HTMLFormElement, cfg: PracticeConfig): void {
+  const params = new URLSearchParams();
+  params.set('de', cfg.minChapter);
+  params.set('ate', cfg.maxChapter);
+  for (const [name, key] of Object.entries(PARAM_OF)) {
+    params.set(key, checkedValues(form, name).join(','));
+  }
+  history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+}
+
+const NUMERAL_OF: Record<string, string> = Object.fromEntries(
+  chapterIndex.map(ch => [ch.slug, ch.numeral])
+);
+
+/** One-line description of the active config, shown on the collapsed panel. */
+function describeConfig(form: HTMLFormElement, cfg: PracticeConfig): string {
+  const range = cfg.minChapter === cfg.maxChapter
+    ? `cap. ${NUMERAL_OF[cfg.maxChapter]}`
+    : `cap. ${NUMERAL_OF[cfg.minChapter]}–${NUMERAL_OF[cfg.maxChapter]}`;
+
+  const parts = [range];
+  if (cfg.pos.includes('noun')) {
+    parts.push(`substantivos ${cfg.declensions.join('/')}ª`);
+  }
+  if (cfg.pos.includes('verb')) {
+    const voices = cfg.voices.length === 2 ? 'ativa e passiva' : cfg.voices[0] === 'passive' ? 'passiva' : 'ativa';
+    parts.push(`verbos ${cfg.conjugations.join('/')}ª (${voices})`);
+  }
+  const allCases = form.querySelectorAll('input[name="case"]:not(:disabled)').length;
+  parts.push(cfg.cases.length === allCases ? 'todos os casos' : `${cfg.cases.length} casos`);
+  return parts.join(' · ');
 }
 
 /** Re-derives which checkboxes are selectable from the current chapter range. */
@@ -168,17 +241,35 @@ function mountExercise(root: HTMLElement, tables: ParadigmTable[], answers: stri
   const main = el('div', 'exercise-main');
   main.appendChild(buildTablesDom(tables));
 
+  // Same two-step control layout as Exercise.astro: check first, reveal after.
   const controls = el('div', 'controls');
-  const revealBtn = el('button', 'reveal-btn');
-  revealBtn.type = 'button';
-  revealBtn.textContent = 'Aperī responsa';
+  const gradeBtn = el('button', 'grade-btn');
+  gradeBtn.type = 'button';
+  gradeBtn.title = 'Marcar certo e errado sem mostrar as respostas';
+  gradeBtn.textContent = 'Corrige';
+  const retryBtn = el('button', 'retry-btn');
+  retryBtn.type = 'button';
+  retryBtn.title = 'Apagar só as lacunas erradas e tentar de novo';
+  retryBtn.textContent = 'Iterum tentā';
+  retryBtn.hidden = true;
   const clearBtn = el('button', 'clear-btn');
   clearBtn.type = 'button';
   clearBtn.title = 'Limpar respostas deste exercício';
   clearBtn.textContent = 'Mundā';
-  controls.appendChild(revealBtn);
+  controls.appendChild(gradeBtn);
+  controls.appendChild(retryBtn);
   controls.appendChild(clearBtn);
   main.appendChild(controls);
+
+  const revealControls = el('div', 'controls controls-reveal');
+  const revealBtn = el('button', 'reveal-btn');
+  revealBtn.type = 'button';
+  revealBtn.textContent = 'Aperī responsa';
+  const revealNote = el('span', 'controls-reveal-note');
+  revealNote.textContent = 'só depois de tentar';
+  revealControls.appendChild(revealBtn);
+  revealControls.appendChild(revealNote);
+  main.appendChild(revealControls);
 
   const answerBox = el('div', 'answer');
   const answerHeader = el('span', 'answer-header');
@@ -203,12 +294,14 @@ function init(): void {
   const emptyMsg = document.querySelector<HTMLElement>('#cfg-empty-msg');
   if (!form || !root || !generateBtn) return;
 
+  const summaryText = document.querySelector<HTMLElement>('#cfg-summary');
   const maxSelect = form.querySelector<HTMLSelectElement>('#cfg-max')!;
   const minSelect = form.querySelector<HTMLSelectElement>('#cfg-min')!;
   const noRepeatBox = form.querySelector<HTMLInputElement>('#cfg-no-repeat')!;
   maxSelect.addEventListener('change', () => syncAvailability(form));
   minSelect.addEventListener('change', () => syncAvailability(form));
-  syncAvailability(form);
+
+  applyQuery(form, new URLSearchParams(location.search));
 
   let lastLemma: string | undefined;
   let usedLemmas: string[] = [];
@@ -219,13 +312,16 @@ function init(): void {
     usedLemmas = [];
   });
 
-  generateBtn.addEventListener('click', () => {
-    const cfg = readConfig(form);
+  function generate(): void {
+    const cfg = readConfig(form!);
+    if (summaryText) summaryText.textContent = describeConfig(form!, cfg);
+    writeQuery(form!, cfg);
+
     const exclude = noRepeatBox.checked ? usedLemmas : (lastLemma ? [lastLemma] : []);
     const result = generateParadigm(cfg, exclude);
     if (emptyMsg) emptyMsg.hidden = !!result;
     if (!result) {
-      root.innerHTML = '';
+      root!.innerHTML = '';
       return;
     }
     lastLemma = result.lemma;
@@ -234,8 +330,12 @@ function init(): void {
     } else {
       usedLemmas = [];
     }
-    mountExercise(root, result.tables, result.answers);
-  });
+    mountExercise(root!, result.tables, result.answers);
+  }
+
+  generateBtn.addEventListener('click', generate);
+  // No cold start: the page opens with something to fill in.
+  generate();
 }
 
 if (document.readyState === 'loading') {

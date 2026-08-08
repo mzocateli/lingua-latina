@@ -86,11 +86,34 @@ function isPhraseMode(article: HTMLElement): boolean {
   return article.getAttribute('data-phrase') === '1';
 }
 
+/** Removes the annotation spans this module inserts after a blank — the ✓/✗
+ *  mark and the revealed canonical answer. Both sit as immediate siblings, so
+ *  walk forward while the next element is one of ours. */
+export function clearAnnotations(inp: HTMLInputElement): void {
+  let next = inp.nextElementSibling;
+  while (next && (next.classList.contains('mark') || next.classList.contains('corrected'))) {
+    const after = next.nextElementSibling;
+    next.remove();
+    next = after;
+  }
+}
+
+/** Redundant, non-colour signal for correct/wrong — colour alone fails for
+ *  anyone who cannot distinguish the green from the burgundy. */
+function annotate(inp: HTMLInputElement, ok: boolean): void {
+  const span = document.createElement('span');
+  span.className = 'mark ' + (ok ? 'mark-ok' : 'mark-no');
+  span.textContent = ok ? '✓' : '✗';
+  span.setAttribute('aria-label', ok ? 'certo' : 'errado');
+  inp.insertAdjacentElement('afterend', span);
+}
+
 function setScore(article: HTMLElement, correct: number, total: number): void {
   let badge = article.querySelector<HTMLElement>('.score');
   if (!badge) {
     badge = document.createElement('span');
     badge.className = 'score';
+    badge.setAttribute('aria-live', 'polite');
     const head = article.querySelector('.exercise-head');
     if (head) head.appendChild(badge);
   }
@@ -98,38 +121,73 @@ function setScore(article: HTMLElement, correct: number, total: number): void {
   badge.classList.toggle('perfect', correct === total && total > 0);
 }
 
-export function gradeExercise(article: HTMLElement): void {
+export interface GradeResult {
+  /** Blanks answered correctly. */
+  correct: number;
+  /** Every blank in the exercise — the grading denominator. Empty placeholders
+   *  count here but can never score, exactly as the DSL documents. */
+  total: number;
+  /** Blanks marked wrong; drives the "try again" affordance. */
+  wrong: number;
+}
+
+export interface GradeOpts {
+  /** Write the canonical answer next to each wrong blank. Off by default:
+   *  plain grading has to leave room for a second attempt. */
+  reveal?: boolean;
+}
+
+export function gradeExercise(article: HTMLElement, opts?: GradeOpts): GradeResult {
   const key = exerciseKey(article);
-  if (!key) return;
+  if (!key) return { correct: 0, total: 0, wrong: 0 };
+  const reveal = !!(opts && opts.reveal);
   const phrase = isPhraseMode(article);
   const inputs = exerciseInputs(article);
   let correct = 0;
+  let wrong = 0;
   inputs.forEach((inp, i) => {
-    const next = inp.nextElementSibling;
-    if (next && next.classList && next.classList.contains('corrected')) next.remove();
+    clearAnnotations(inp);
     inp.classList.remove('correct', 'wrong');
     const expected = key[i] || '';
     if (!expected) return;
     if (isCorrect(inp.value, expected, { phraseMode: phrase })) {
       inp.classList.add('correct');
+      annotate(inp, true);
       correct++;
     } else {
       inp.classList.add('wrong');
-      const canonical = expected.split('|')[0];
-      const span = document.createElement('span');
-      span.className = 'corrected';
-      span.textContent = canonical;
-      inp.insertAdjacentElement('afterend', span);
+      wrong++;
+      if (reveal) {
+        const canonical = expected.split('|')[0];
+        const span = document.createElement('span');
+        span.className = 'corrected';
+        span.textContent = canonical;
+        inp.insertAdjacentElement('afterend', span);
+      }
+      annotate(inp, false);
     }
   });
   setScore(article, correct, inputs.length);
+  return { correct, total: inputs.length, wrong };
+}
+
+/** Empties only the blanks marked wrong and focuses the first of them, so the
+ *  learner can retrieve the form again instead of reading it off the page. */
+export function retryWrong(article: HTMLElement): void {
+  const wrong = exerciseInputs(article).filter(inp => inp.classList.contains('wrong'));
+  wrong.forEach(inp => {
+    inp.classList.remove('wrong');
+    inp.value = '';
+    inp.style.width = '';
+    clearAnnotations(inp);
+  });
+  if (wrong[0]) wrong[0].focus();
 }
 
 export function ungradeExercise(article: HTMLElement): void {
   exerciseInputs(article).forEach(inp => {
     inp.classList.remove('correct', 'wrong');
-    const next = inp.nextElementSibling;
-    if (next && next.classList && next.classList.contains('corrected')) next.remove();
+    clearAnnotations(inp);
   });
   const badge = article.querySelector('.score');
   if (badge) badge.remove();

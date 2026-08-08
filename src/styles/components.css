@@ -1,60 +1,48 @@
 /* ============================================================
    Lingua Latina — components.css
-   Shared components: chapter cards (index), summary grid,
-   call-to-action buttons.
+   Shared components: chapter cards and entry cards (index),
+   chapter table of contents, call-to-action buttons.
    ============================================================ */
 
-/* ----- Summary grid (Compendium Grammaticae cards) ----- */
-.summary-grid{
+/* ----- Entry cards (index: Grammatica, Practica) ----- */
+.entry-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  /* 260px matches .chapter-grid — anything larger overflows a 320px screen. */
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:1.2rem;
-  margin-top:1rem;
+  margin-top:1.4rem;
 }
-.summary-card{
+.entry-card{
+  display:block;
   background:var(--vellum);
   border:1px solid var(--rule);
   border-radius:2px;
-  padding:1.2rem 1.3rem;
+  padding:1.3rem 1.4rem;
   box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-.summary-card h4{
-  font-size:1.3rem;
+.entry-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--burgundy);
+  box-shadow:0 1px 0 rgba(60,40,20,.08), 0 16px 32px -18px rgba(60,40,20,.35);
+}
+.entry-marker{
+  font-size:1.5rem;
+  line-height:1;
+  color:var(--gilt);
+}
+.entry-card h3{
+  font-size:1.45rem;
+  line-height:1.25;   /* macrons in 'Grammatica Latina' need the headroom */
   color:var(--burgundy);
-  margin:0 0 .4rem;
+  margin:.35rem 0 .45rem;
   font-weight:600;
 }
-.summary-card .cap{
-  font-family:'Lora', serif;
-  font-style:italic;
-  font-size:.85rem;
-  color:var(--gilt);
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-.summary-card ul{
-  padding-left:1.1rem;
-  margin:.5rem 0 0;
-}
-.summary-card li{
-  margin:.35rem 0;
-  font-size:.97rem;
-}
-.summary-card .ex{
-  display:inline-block;
-  font-family:'Source Serif 4', serif;
-  font-style:italic;
-  color:var(--ink);
-  background:rgba(160,122,42,.12);
-  padding:0 .35em;
-  border-radius:2px;
-}
-.summary-card .note{
-  display:block;
-  color:var(--muted);
-  font-size:.88rem;
-  font-style:italic;
-  margin-top:.2rem;
+.entry-card p{
+  margin:0;
+  font-size:.95rem;
+  color:var(--ink-soft);
+  line-height:1.5;
 }
 
 /* ----- Chapter cards (index page) ----- */
@@ -145,24 +133,40 @@
   font-size:.92rem;
   margin-bottom:.4rem;
   font-weight:600;
+  cursor:pointer;
+  list-style:none;
 }
+.toc-title::-webkit-details-marker{display:none}
+.toc-title::before{content:"▸ "; color:var(--gilt)}
+details.toc[open] > .toc-title::before{content:"▾ "}
+.toc-count{
+  font-family:'Source Serif 4', serif;
+  font-variant:normal;
+  font-style:italic;
+  font-size:.85rem;
+  letter-spacing:0;
+  color:var(--muted);
+}
+.toc-count::before{content:"· "}
+
 .toc-list{
   display:flex;
-  flex-wrap:wrap;
-  gap:.4rem .8rem;
+  flex-direction:column;
+  gap:.28rem;
   list-style:none;
   padding:0;
   margin:0;
 }
 .toc-list a{
+  display:flex;
+  align-items:baseline;
+  gap:.5rem;
   font-family:'Source Serif 4', serif;
-  font-style:italic;
   font-size:.95rem;
   color:var(--ink-soft);
-  padding:.1rem .5rem;
-  border:1px solid rgba(139,111,58,.4);
+  padding:.16rem .5rem;
+  border:1px solid transparent;
   border-radius:2px;
-  background:rgba(255,255,255,.4);
   transition:all .15s ease;
 }
 .toc-list a:hover{
@@ -170,19 +174,106 @@
   color:var(--burgundy-deep);
   border-color:var(--burgundy);
 }
+.toc-num{
+  flex:none;
+  min-width:4.2em;
+  font-style:italic;
+  font-weight:600;
+  color:var(--burgundy);
+}
+.toc-tag{
+  color:var(--muted);
+  font-size:.92em;
+  line-height:1.35;
+}
+.toc-tag::before{content:"· "; color:var(--gilt)}
+
+/* No sticky sidebar variant: the exercises already give 210px of the 980px
+   wrap to the `auxilia` panel, so a second column would starve the Latin
+   text. The sticky `.section-bar` covers persistent navigation instead. */
+
+.chapter-practice-link{
+  margin:2rem 0 0;
+  text-align:center;
+  font-family:'Cormorant Garamond', serif;
+  font-style:italic;
+  font-size:1.05rem;
+}
 
 /* ----- Practice config panel (/pratica/) ----- */
-.practice-config{
+/* Shortcuts: each is a plain link carrying a ready-made query string. */
+.preset-bar{
   display:flex;
-  flex-direction:column;
-  gap:1rem;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin:1.4rem 0 .8rem;
+}
+.preset-btn{
+  font-family:'Cormorant Garamond', serif;
+  font-style:italic;
+  font-weight:600;
+  font-size:.95rem;
+  letter-spacing:.02em;
+  color:var(--burgundy);
+  padding:.3rem .85rem;
+  border:1px solid var(--rule);
+  background:var(--vellum);
+  border-radius:2px;
+  transition:all .15s ease;
+}
+.preset-btn:hover{
+  background:var(--burgundy);
+  color:var(--vellum);
+  border-color:var(--burgundy-deep);
+}
+
+/* Collapsed config panel - the drill matters more than its settings. */
+.practice-config-box{
   background:var(--vellum);
   border:1px solid var(--rule);
   border-left:4px solid var(--burgundy);
   border-radius:2px;
-  padding:1.2rem 1.4rem;
-  margin:1.4rem 0;
+  margin:.8rem 0 1rem;
   box-shadow:var(--shadow);
+}
+.practice-config-summary{
+  cursor:pointer;
+  list-style:none;
+  padding:.7rem 1.2rem;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.5rem;
+}
+.practice-config-summary::-webkit-details-marker{display:none}
+.practice-config-summary-label{
+  font-family:'Cormorant Garamond', serif;
+  font-style:italic;
+  font-weight:600;
+  letter-spacing:.03em;
+  color:var(--burgundy);
+}
+.practice-config-summary-label::before{content:"▸ "; color:var(--gilt)}
+.practice-config-box[open] .practice-config-summary-label::before{content:"▾ "}
+.practice-config-summary-text{
+  font-size:.88rem;
+  font-style:italic;
+  color:var(--muted);
+}
+
+.practice-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.8rem;
+  margin:0 0 1.4rem;
+}
+
+.practice-config{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  padding:0 1.2rem 1.2rem;
 }
 .practice-config fieldset{
   border:1px solid rgba(139,111,58,.35);
@@ -225,7 +316,7 @@
   color:var(--wrong);
 }
 #paradigm-practice-root:empty::before{
-  content:"Configure as opções acima e clique em \201cGerā tabulam\201d.";
+  content:"Nenhuma tabela — ajuste a configuração e clique em \201cGerā tabulam\201d.";
   display:block;
   color:var(--muted);
   font-style:italic;

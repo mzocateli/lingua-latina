@@ -1,6 +1,6 @@
 ---
 import { chapterIndex } from '~/lib/chapters';
-import { chapterHref, indexHref, practiceHref } from '~/lib/paths';
+import { chapterHref, indexHref, practiceHref, grammarHref } from '~/lib/paths';
 
 interface Props {
   activeSlug?: string | null;
@@ -35,6 +35,15 @@ const activeChapter = chapterIndex.find(ch => ch.slug === activeSlug);
       </li>
       <li>
         <a
+          href={grammarHref()}
+          class={activeSlug === 'grammatica' ? 'active' : ''}
+          title="Todo o resumo gramatical, capítulo a capítulo"
+        >
+          Grammatica
+        </a>
+      </li>
+      <li>
+        <a
           href={practiceHref()}
           class={activeSlug === 'pratica' ? 'active' : ''}
           title="Prática configurável de declinação e conjugação"
@@ -45,3 +54,7 @@ const activeChapter = chapterIndex.find(ch => ch.slug === activeSlug);
     </ul>
   </div>
 </nav>
+
+<script>
+  import '~/scripts/site-nav';
+</script>

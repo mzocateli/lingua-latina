@@ -6,7 +6,7 @@ import ChapterTOC from '~/components/ChapterTOC.astro';
 import Exercise from '~/components/Exercise.astro';
 import Pager from '~/components/Pager.astro';
 import { chapterIndex, getChapter } from '~/lib/chapters';
-import { indexHref } from '~/lib/paths';
+import { indexHref, practiceHref } from '~/lib/paths';
 
 export function getStaticPaths() {
   return chapterIndex.map(ch => ({ params: { slug: ch.slug } }));
@@ -20,6 +20,7 @@ if (!chapter) {
 
 const numeralLower = chapter.numeral.toLowerCase();
 const pageTitle = `Cap. ${chapter.numeral} — ${chapter.title} · Lingua Latīna`;
+const exerciseCount = (chapter.exercises || []).length;
 ---
 
 <Layout title={pageTitle} activeSlug={slug}>
@@ -39,14 +40,24 @@ const pageTitle = `Cap. ${chapter.numeral} — ${chapter.title} · Lingua Latīn
 
     <h2 class="section-title" id="exercitia-title">
       ✎ Exercitia <span class="roman">· cap. {numeralLower}</span>
+      <span
+        class="session-tally"
+        data-exercise-count={String(exerciseCount)}
+        aria-live="polite"
+        hidden
+      ></span>
     </h2>
 
-    <div class="usage-hint-inline">
-      <strong>Ūsus.</strong> Escreva nas lacunas (os macrons são opcionais).
-      Pressione <kbd>Enter</kbd> para ir ao próximo campo. Clique em
-      <em>Aperī responsa</em> para corrigir; <em>Mundā</em> para limpar.
-      Em exercício que custa, clica <em>Vide explicātionem</em> para revisar a regra.
-    </div>
+    <details class="usage-hint-inline">
+      <summary><strong>Ūsus</strong> — como usar esta página</summary>
+      <p>
+        Escreva nas lacunas (os macrons são opcionais). Pressione <kbd>Enter</kbd> para ir ao
+        próximo campo, ou para corrigir quando estiver no último. <em>Corrige</em> marca certo e
+        errado <strong>sem</strong> revelar as respostas; <em>Iterum tentā</em> apaga só o que
+        errou, para você tentar de novo. Só depois disso vale abrir <em>Aperī responsa</em>.
+        Em exercício que custa, clica <em>Vide explicātionem</em> para revisar a regra.
+      </p>
+    </details>
 
     <ChapterTOC chapter={chapter} />
 
@@ -55,6 +66,12 @@ const pageTitle = `Cap. ${chapter.numeral} — ${chapter.title} · Lingua Latīn
         <Exercise exercise={ex} chapter={chapter} />
       ))}
     </section>
+
+    <p class="chapter-practice-link">
+      <a href={practiceHref({ de: chapterIndex[0].slug, ate: slug! })}>
+        ❦ Praticar os paradigmas até o cap. {chapter.numeral}
+      </a>
+    </p>
 
     <Pager activeSlug={slug!} />
 

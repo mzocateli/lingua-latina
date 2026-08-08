@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { chapterIndex } from '~/lib/chapters';
+import { grammarOf } from '~/lib/content';
+import { chapterHref } from '~/lib/paths';
+
+/** One entry per chapter that actually has grammar files, in chapterIndex order. */
+const sections = (
+  await Promise.all(
+    chapterIndex.map(async (ch) => ({
+      ...ch,
+      blocks: await Promise.all(
+        (await grammarOf(ch.slug)).map(async (s) => {
+          const { Content } = await s.render();
+          return { meta: s.data, Content };
+        })
+      ),
+    }))
+  )
+).filter((ch) => ch.blocks.length > 0);
+
+const first = sections[0];
+const last = sections[sections.length - 1];
+const range = first && last ? `${first.numeral} — ${last.numeral}` : '';
+const totalBlocks = sections.reduce((n, ch) => n + ch.blocks.length, 0);
+---
+
+<Layout
+  title="Grammatica Latīna — Lingua Latīna"
+  description="Todo o resumo gramatical do site, capítulo a capítulo, reunido numa página."
+  activeSlug="grammatica"
+>
+  <nav class="section-bar" aria-label="Saltar para capítulo">
+    <ul class="section-bar-list">
+      {sections.map((ch) => (
+        <li>
+          <a href={`#gram-${ch.slug}`} class="section-bar-link">{ch.numeral}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <header class="chapter-header">
+      <div class="eyebrow">Lingua Latīna · Compendium</div>
+      <h1>
+        <span class="name">Grammatica Latīna</span>
+      </h1>
+      <p class="blurb">
+        Tudo o que cada capítulo introduz, reunido numa página só — {totalBlocks} seções,
+        capítulos {range}. Use como referência rápida antes ou durante os exercícios; cada
+        bloco leva ao capítulo de onde veio.
+      </p>
+    </header>
+
+    {sections.map((ch) => (
+      <section class="grammatica-chapter" id={`gram-${ch.slug}`}>
+        <h2 class="section-title">
+          Capitulum {ch.numeral} <span class="roman">· {ch.title}</span>
+          <a class="grammatica-jump" href={chapterHref(ch.slug)}>ad exercitia →</a>
+        </h2>
+
+        {ch.blocks.map(({ meta, Content }) => (
+          <details class="grammar-block" open>
+            <summary class="grammar-block-summary">
+              {meta.heading && <span class="grammar-heading" set:html={meta.heading} />}
+              {meta.bookRef && <span class="grammar-bookref" set:html={meta.bookRef} />}
+            </summary>
+            <div class="grammar-body"><Content /></div>
+          </details>
+        ))}
+      </section>
+    ))}
+
+    <div class="colophon">
+      Compendium grammaticae — capitula {range}.
+    </div>
+  </div>
+
+  <script>
+    import '~/scripts/section-bar';
+  </script>
+</Layout>

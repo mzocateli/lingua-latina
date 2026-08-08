@@ -13,7 +13,10 @@ Duas camadas paralelas, unidas pelo **`slug` do capítulo** (numeral romano min�
 | Prosa, gramática, vocabulário | `src/content/{grammar,topics,vocabulary}/` — Astro Content Collections | **Automática** (`id.startsWith(slug + '/')`) |
 
 Renderização: `src/pages/cap/[slug].astro` → `SectionBar` + `ChapterContent` + N × `Exercise` + `Pager`.
-JS do cliente: só `src/scripts/exercise-runtime.ts` (wiring de DOM) + `src/scripts/grader.ts` (correção), carregados por um único `<script>` hoisted. Nada inline nos componentes.
+JS do cliente, um módulo por responsabilidade, sempre por `<script>` hoisted — nada inline nos componentes:
+`exercise-runtime.ts` (wiring de DOM + contador de sessão) · `grader.ts` (correção) · `section-bar.ts` (barra sticky, auto-inicializado, importado por efeito colateral pelo runtime e direto por `/grammatica`) · `site-nav.ts` (Esc/clique-fora no menu) · `paradigm-practice.ts` (só `/pratica/`).
+
+Leitura das content collections passa por `src/lib/content.ts` (`grammarOf`, `topicsOf`, `bareId`) — não chamar `getCollection` direto em componente novo, senão a ordenação diverge.
 
 ## Adicionar um capítulo
 
@@ -29,7 +32,7 @@ Opcional, auto-descoberto (nada a registrar):
 - `src/content/topics/{slug}/{id}.md` — ordenado por `order`; o `id` é o nome do arquivo sem `.md` e é exatamente o que `exercise.references[]` cita.
 - `src/content/vocabulary/{slug}.yaml` — ausência é legítima (cap. IV e V não têm).
 
-Hardcoded, precisa de edição manual: `src/pages/index.astro` — o subtítulo `Capitvla II — X` (linha ~24) e os blocos `.summary-card` do compêndio.
+Nada mais é hardcoded na home: o subtítulo e os cartões derivam de `chapterIndex`, e o compêndio gramatical virou `src/pages/grammatica.astro`, gerado da collection `grammar`.
 
 Ao terminar: `npm run validate && npm run check && npm run build`.
 
@@ -90,6 +93,19 @@ Convenção de `number`: inteiro = exercício do livro; `"P1"`… = tabela de pa
 - Macrons **opcionais** (removidos dos dois lados), case-insensitive, pontuação removida, espaços colapsados.
 - `|` separa alternativas.
 - `phraseMode: true` → contenção de multiset: ordem livre e palavras extras toleradas; só falta de palavra reprova. Nesse modo `ab ≡ ā` e `ex ≡ ē`.
+
+**Corrigir ≠ revelar.** `gradeExercise(article, { reveal })` tem duas faces e a distinção é pedagógica, não cosmética:
+
+| | marca ✓/✗ | escreve a resposta | quem chama |
+|---|---|---|---|
+| `reveal: false` (default) | sim | **não** | botão `Corrige`, `Enter` na última lacuna |
+| `reveal: true` | sim | sim | botão `Aperī responsa` |
+
+Sem revelar, o aluno pode usar `Iterum tentā` (`retryWrong`) — apaga só as lacunas erradas e foca a primeira. Não introduzir nada que mostre a resposta no caminho `reveal: false`; é ele que sustenta a segunda tentativa.
+
+Marcação de acerto **nunca depende só de cor**: `annotate()` insere um `<span class="mark">` com ✓/✗ ao lado da lacuna. O denominador da nota é `inputs.length` — placeholders vazios contam e nunca pontuam, como a DSL documenta.
+
+Nada é persistido: sem `localStorage`. O contador de sessão vive em memória (`exercise-runtime.ts`) e a config da `/pratica/` vive na query string.
 
 ## Materiais-fonte
 

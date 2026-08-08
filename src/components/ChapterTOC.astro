@@ -1,20 +1,42 @@
 ---
-import type { Chapter } from '~/lib/types';
+import type { Chapter, Exercise } from '~/lib/types';
 
 interface Props {
   chapter: Chapter;
 }
 
 const { chapter } = Astro.props;
+const exercises = chapter.exercises || [];
+
+/** `tag` says what the exercise drills — exactly the scent the list needs.
+ *  Falls back to `title`, minus the bare "Exercitium 7" / "Tabula P1" forms
+ *  that would only repeat the chip next to them. */
+function labelFor(ex: Exercise): string | null {
+  if (ex.tag) return ex.tag;
+  const title = (ex.title || '').trim();
+  if (!title || /^(Exercitium|Tabula)\s+\S+$/i.test(title)) return null;
+  return title;
+}
+
+const items = exercises.map(ex => ({ number: ex.number, label: labelFor(ex) }));
+
+// Long chapters (VI, VII, VIII, XII) would otherwise push the first exercise
+// off the screen, so their list starts collapsed.
+const startOpen = items.length <= 10;
 ---
 
-<div class="toc">
-  <div class="toc-title">Exercitia</div>
+<details class="toc" open={startOpen}>
+  <summary class="toc-title">
+    Exercitia <span class="toc-count">{items.length}</span>
+  </summary>
   <ul class="toc-list">
-    {(chapter.exercises || []).map(ex => (
+    {items.map(item => (
       <li>
-        <a href={`#ex-${ex.number}`}>Ex. {ex.number}</a>
+        <a href={`#ex-${item.number}`}>
+          <span class="toc-num">Ex. {item.number}</span>
+          {item.label && <span class="toc-tag" set:html={item.label} />}
+        </a>
       </li>
     ))}
   </ul>
-</div>
+</details>

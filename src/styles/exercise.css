@@ -298,6 +298,31 @@ input.blank.wrong{
 }
 .corrected::before{content:"→ "; font-style:normal; color:var(--gilt)}
 
+/* Redundant marker so correct/wrong never depends on colour alone. */
+.mark{
+  display:inline-block;
+  margin-left:.2em;
+  font-style:normal;
+  font-size:.82em;
+  line-height:1;
+  vertical-align:baseline;
+}
+.mark-ok{color:var(--correct)}
+.mark-no{color:var(--wrong)}
+
+/* ----- Session tally (in-memory, resets on reload) ----- */
+.session-tally{
+  display:inline-block;
+  margin-left:.8rem;
+  font-family:'Source Serif 4', Georgia, serif;
+  font-style:italic;
+  font-size:.8rem;
+  letter-spacing:.02em;
+  color:var(--muted);
+  vertical-align:middle;
+}
+.session-tally[hidden]{display:none}
+
 /* ----- Score badge ----- */
 .score{
   display:inline-block;
@@ -368,6 +393,68 @@ input.blank.wrong{
 .clear-btn:hover{
   color:var(--ink);
   border-color:var(--ink-soft);
+}
+
+/* Primary action: check without giving the answer away. */
+.grade-btn{
+  appearance:none;
+  border:1px solid var(--burgundy);
+  background:var(--burgundy);
+  color:var(--vellum);
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-style:italic;
+  letter-spacing:.03em;
+  font-size:1rem;
+  padding:.4rem 1.1rem;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .18s ease;
+}
+.grade-btn:hover{
+  background:var(--burgundy-deep);
+  border-color:var(--burgundy-deep);
+}
+.grade-btn::before{content:"✎ "; color:var(--gilt)}
+
+.retry-btn{
+  appearance:none;
+  border:1px solid var(--gilt);
+  background:rgba(160,122,42,.10);
+  color:var(--burgundy-deep);
+  font-family:'Cormorant Garamond', serif;
+  font-weight:600;
+  font-style:italic;
+  letter-spacing:.03em;
+  font-size:.98rem;
+  padding:.35rem .9rem;
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .15s ease;
+}
+.retry-btn:hover{
+  background:var(--gilt);
+  color:var(--vellum);
+}
+.retry-btn[hidden]{display:none}
+.retry-btn::before{content:"↺ "; font-style:normal}
+
+/* Reveal is a deliberate second step, not a peer of the primary action. */
+.controls-reveal{
+  margin-top:.55rem;
+  padding-top:.55rem;
+  border-top:1px dotted var(--rule);
+}
+.controls-reveal .reveal-btn{
+  background:transparent;
+  font-weight:500;
+  font-size:.95rem;
+  padding:.32rem .8rem;
+}
+.controls-reveal-note{
+  font-style:italic;
+  font-size:.85rem;
+  color:var(--muted);
 }
 
 /* ----- Answer reveal block ----- */
